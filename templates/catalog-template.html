@@ -1,0 +1,1944 @@
+<!doctype html>
+<html lang='fr'>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width,initial-scale=1'/>
+<title>Catalogue - 129 Propriétés Pattaya</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:16px/1.5 system-ui;background:#fff;color:#0f172a}
+.container{max-width:1400px;margin:0 auto;padding:16px}
+.hdr{background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:20px 0}
+.hdr h1{margin:0;font-size:28px}
+.stats{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:30px;border-radius:12px;margin:20px 0;text-align:center}
+.stats h2{margin:0 0 20px 0;font-size:24px}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px}
+.sc{background:rgba(255,255,255,0.2);padding:20px;border-radius:10px;backdrop-filter:blur(10px)}
+.sc h3{margin:0;font-size:32px;font-weight:700}
+.sc p{margin:8px 0 0 0;opacity:0.9}
+.ms{background:#fff;border-radius:12px;padding:20px;margin:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.ms h2{margin:0 0 15px 0}
+#map{width:100%;height:500px;border-radius:8px}
+.sim{background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%);border-radius:20px;padding:30px;margin:30px 0;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+.sh{text-align:center;margin-bottom:30px}
+.sh h2{margin:0 0 10px 0;font-size:28px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sg2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:25px}
+.ig{display:flex;flex-direction:column;gap:8px}
+.ig label{font-weight:600;color:#374151;font-size:14px}
+.iw{position:relative}
+.iw input{width:100%;padding:12px 50px 12px 15px;border:2px solid #e5e7eb;border-radius:10px;font-size:16px;background:#fff}
+.iw input:focus{outline:none;border-color:#667eea;box-shadow:0 0 0 3px rgba(102,126,234,0.1)}
+.is{position:absolute;right:15px;top:12px;color:#9ca3af;font-weight:500;font-size:14px}
+.sa{text-align:center;margin:25px 0}
+.bs{background:linear-gradient(135deg,#10b981 0%,#059669 100%);color:#fff;border:none;padding:15px 40px;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;box-shadow:0 10px 25px rgba(16,185,129,0.3)}
+.bs:hover{transform:translateY(-2px);box-shadow:0 15px 35px rgba(16,185,129,0.4)}
+.sr{display:none;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:30px}
+.sr.show{display:grid}
+.rc{background:#fff;border-radius:15px;padding:20px;box-shadow:0 5px 15px rgba(0,0,0,0.08)}
+.rc:hover{transform:translateY(-5px)}
+.ri{font-size:32px;margin-bottom:10px}
+.rct h4{margin:0 0 8px 0;font-size:14px;color:#64748b}
+.rv{font-size:24px;font-weight:700;color:#0ea5e9}
+.rc.g .rv{color:#10b981}
+.rc.n .rv{color:#667eea}
+.rc.c .rv{color:#f59e0b}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin:20px 0}
+.card{border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;background:#fff;transition:transform .2s;box-shadow:0 2px 5px rgba(0,0,0,.05)}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(0,0,0,.1)}
+.cm{aspect-ratio:16/9;position:relative;background:#eee}
+.cm img{width:100%;height:100%;object-fit:cover}
+.cb{padding:15px}
+.ct{margin:0 0 8px 0;font-size:17px;font-weight:600}
+.m{color:#64748b;margin:0 0 8px 0;font-size:14px}
+.pi{margin:10px 0}
+.ps{font-size:14px;color:#64748b}
+.si{font-size:14px;color:#64748b;margin:10px 0}
+.ca{display:flex;gap:8px;margin-top:12px}
+.ca a{color:#fff;background:#0ea5e9;padding:10px 12px;border-radius:6px;text-decoration:none;font-size:14px;flex:1;text-align:center}
+.ca a:hover{background:#0369a1}
+.bwa{background:#25D366!important}
+.bwa:hover{background:#20b858!important}
+.mi{position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.7);color:#fff;font-size:12px;padding:6px 10px;border-radius:999px}
+.pc{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,.7);color:#fff;font-weight:700;padding:8px 12px;border-radius:10px}
+</style>
+<script src='https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY'></script>
+</head>
+<body>
+<header class='hdr'><div class='container'><h1>🏢 Catalogue Immobilier - Pattaya</h1></div></header>
+<div class='container'>
+<div class='stats'>
+<h2>📊 Statistiques</h2>
+<div class='sg'>
+<div class='sc'><h3>129</h3><p>Biens</p></div>
+<div class='sc'><h3>550</h3><p>Images</p></div>
+<div class='sc'><h3>฿2 687 744</h3><p>Prix moyen</p></div>
+<div class='sc'><h3>฿47 461</h3><p>Prix/m²</p></div>
+</div>
+</div>
+
+<div class='ms'>
+<h2>🗺️ Carte des Biens</h2>
+<div id='map'></div>
+</div>
+
+<div class='sim'>
+<div class='sh'><h2>💰 Simulateur de Rendement</h2><p>Calculez votre rentabilité</p></div>
+<div class='sg2'>
+<div class='ig'><label>Prix d'achat</label><div class='iw'><input type='number' id='bp' placeholder='2500000'/><span class='is'>THB</span></div></div>
+<div class='ig'><label>Loyer mensuel</label><div class='iw'><input type='number' id='mr' placeholder='15000'/><span class='is'>THB</span></div></div>
+<div class='ig'><label>Charges mensuelles</label><div class='iw'><input type='number' id='mc' placeholder='2000'/><span class='is'>THB</span></div></div>
+<div class='ig'><label>Taux d'occupation</label><div class='iw'><input type='number' id='or' placeholder='80' min='0' max='100'/><span class='is'>%</span></div></div>
+</div>
+<div class='sa'><button class='bs' onclick='calc()'>🧮 Calculer</button></div>
+<div class='sr' id='res'>
+<div class='rc g'><div class='ri'>📈</div><div class='rct'><h4>Rendement Brut</h4><div class='rv' id='gy'>-</div></div></div>
+<div class='rc n'><div class='ri'>💎</div><div class='rct'><h4>Rendement Net</h4><div class='rv' id='ny'>-</div></div></div>
+<div class='rc c'><div class='ri'>💰</div><div class='rct'><h4>Cash-flow Annuel</h4><div class='rv' id='cf'>-</div></div></div>
+<div class='rc'><div class='ri'>📅</div><div class='rct'><h4>Revenu Mensuel Net</h4><div class='rv' id='mi'>-</div></div></div>
+</div>
+</div>
+
+<div class='grid'><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_ta_63cd1/image_0.webp' alt='Bsl Ta' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 800 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Ta</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 42 857 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 42 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_ta_63cd1.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/amazon_residence_3a450/image_0.webp' alt='Amazon Residence' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 1 750 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Amazon Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 50 000 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 35 m²</div>
+<div class='ca'>
+<a href='/properties/amazon_residence_3a450.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_sb_b4ef9/image_0.webp' alt='Bsl Sb' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 4 500 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Sb</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 000 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 100 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_sb_b4ef9.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/royal_hill_c_9fee0/image_0.webp' alt='Royal Hill C' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 6 290 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Royal Hill C</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 251 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 139 m²</div>
+<div class='ca'>
+<a href='/properties/royal_hill_c_9fee0.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a1_e7bde/image_0.webp' alt='Jbc A1' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 000 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a1_e7bde.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/laguna_beach_2b_33914/image_0.webp' alt='Laguna Beach 2B' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Laguna Beach 2B</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 53 461 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 26 m²</div>
+<div class='ca'>
+<a href='/properties/laguna_beach_2b_33914.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_5d_a2117/image_0.webp' alt='View Talay 5D' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 590 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 5D</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 53 958 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 48 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_5d_a2117.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/angket_hip_residence_f9061/image_0.webp' alt='Angket Hip Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Angket Hip Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 39 189 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 37 m²</div>
+<div class='ca'>
+<a href='/properties/angket_hip_residence_f9061.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/tw_platinum_suites_7c143/image_0.webp' alt='Tw Platinum Suites' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 150 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Tw Platinum Suites</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 43 000 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 50 m²</div>
+<div class='ca'>
+<a href='/properties/tw_platinum_suites_7c143.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/pattaya_plaza_79bf1/image_0.webp' alt='Pattaya Plaza' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 200 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Pattaya Plaza</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 31 578 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 38 m²</div>
+<div class='ca'>
+<a href='/properties/pattaya_plaza_79bf1.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_1_b2f3c/image_0.webp' alt='View Talay 1' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 1 490 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 42 571 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 35 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_1_b2f3c.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/tw_platinum_suites_bb835/image_0.webp' alt='Tw Platinum Suites' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 950 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Tw Platinum Suites</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 43 333 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 45 m²</div>
+<div class='ca'>
+<a href='/properties/tw_platinum_suites_bb835.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/grande_caribbean_b4c82/image_0.webp' alt='Grande Caribbean' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Grande Caribbean</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 65 277 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 36 m²</div>
+<div class='ca'>
+<a href='/properties/grande_caribbean_b4c82.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/royal_hill_a_475e0/image_0.webp' alt='Royal Hill A' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 5 150 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Royal Hill A</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 41 869 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 123 m²</div>
+<div class='ca'>
+<a href='/properties/royal_hill_a_475e0.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/dusit_grand_view_f4492/image_0.webp' alt='Dusit Grand View' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 2 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Dusit Grand View</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 68 285 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 35 m²</div>
+<div class='ca'>
+<a href='/properties/dusit_grand_view_f4492.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a3_f5752/image_0.webp' alt='Jbc A3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 48 333 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a3_f5752.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_sa_cb0fc/image_0.webp' alt='Bsl Sa' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 790 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Sa</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 44 750 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 40 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_sa_cb0fc.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/tw_platinum_suites_4d4ca/image_0.webp' alt='Tw Platinum Suites' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Tw Platinum Suites</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 961 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 52 m²</div>
+<div class='ca'>
+<a href='/properties/tw_platinum_suites_4d4ca.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/angket_hip_residence_078cd/image_0.webp' alt='Angket Hip Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 300 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Angket Hip Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 44 594 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 74 m²</div>
+<div class='ca'>
+<a href='/properties/angket_hip_residence_078cd.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/park_lane_14d1c/image_0.webp' alt='Park Lane' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 700 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Park Lane</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 47 222 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 36 m²</div>
+<div class='ca'>
+<a href='/properties/park_lane_14d1c.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_5d_35d8a/image_0.webp' alt='View Talay 5D' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 790 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 5D</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 56 938 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 49 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_5d_35d8a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/angket_hip_residence_5dea1/image_0.webp' alt='Angket Hip Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 850 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Angket Hip Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 35 648 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 108 m²</div>
+<div class='ca'>
+<a href='/properties/angket_hip_residence_5dea1.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_5d_85235/image_0.webp' alt='View Talay 5D' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 690 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 5D</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 56 041 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 48 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_5d_85235.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a3_81320/image_0.webp' alt='Jbc A3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 900 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 52 000 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 75 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a3_81320.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a3_1a26b/image_0.webp' alt='Jbc A3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 48 333 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a3_1a26b.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/riviera_monaco_b0038/image_0.webp' alt='Riviera Monaco' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 2 790 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Riviera Monaco</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 93 000 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/riviera_monaco_b0038.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/cliff_44ded/image_0.webp' alt='Cliff' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 900 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Cliff</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 60 416 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 48 m²</div>
+<div class='ca'>
+<a href='/properties/cliff_44ded.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/rungfa_40a93/image_0.webp' alt='Rungfa' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 4 900 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Rungfa</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 33 561 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 146 m²</div>
+<div class='ca'>
+<a href='/properties/rungfa_40a93.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_s1_e54e7/image_0.webp' alt='Jbc S1' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 790 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc S1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 52 647 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 34 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_s1_e54e7.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/laguna_beach_1a_a4355/image_0.webp' alt='Laguna Beach 1A' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 650 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Laguna Beach 1A</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 51 960 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 51 m²</div>
+<div class='ca'>
+<a href='/properties/laguna_beach_1a_a4355.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_s1_44b4b/image_0.webp' alt='Jbc S1' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 900 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc S1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 57 352 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 68 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_s1_44b4b.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/laguna_beach_resort_3_ad77a/image_0.webp' alt='Laguna Beach Resort 3' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 1 999 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Laguna Beach Resort 3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 44 422 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 45 m²</div>
+<div class='ca'>
+<a href='/properties/laguna_beach_resort_3_ad77a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/city_garden_tower_e4e6d/image_0.webp' alt='City Garden Tower' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 650 000</div></div>
+<div class='cb'>
+<h3 class='ct'>City Garden Tower</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 104 285 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 35 m²</div>
+<div class='ca'>
+<a href='/properties/city_garden_tower_e4e6d.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/hyde_park_2_8cc8a/image_0.webp' alt='Hyde Park 2' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 1 900 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Hyde Park 2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 0 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 42 m²</div>
+<div class='ca'>
+<a href='/properties/hyde_park_2_8cc8a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/royal_hill_c_96c84/image_0.webp' alt='Royal Hill C' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 6 900 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Royal Hill C</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 46 938 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 147 m²</div>
+<div class='ca'>
+<a href='/properties/royal_hill_c_96c84.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a3_801ba/image_0.webp' alt='Jbc A3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 48 333 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a3_801ba.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a2_9834a/image_0.webp' alt='Jbc A2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 46 000 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 75 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a2_9834a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/residence_cc286/image_0.webp' alt='Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 290 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 44 038 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 52 m²</div>
+<div class='ca'>
+<a href='/properties/residence_cc286.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/acqua_condo_736a0/image_0.webp' alt='Acqua Condo' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 1 990 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Acqua Condo</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 55 277 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 36 m²</div>
+<div class='ca'>
+<a href='/properties/acqua_condo_736a0.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a2_07db2/image_0.webp' alt='Jbc A2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 650 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 44 166 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 60 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a2_07db2.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/new_nordic_vip_4_76d8d/image_0.webp' alt='New Nordic Vip 4' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>New Nordic Vip 4</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 312 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 32 m²</div>
+<div class='ca'>
+<a href='/properties/new_nordic_vip_4_76d8d.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/angket_hip_residence_10b8f/image_0.webp' alt='Angket Hip Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 480 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Angket Hip Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 40 000 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 37 m²</div>
+<div class='ca'>
+<a href='/properties/angket_hip_residence_10b8f.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/ponthep_garden_ville_5_112b6/image_0.webp' alt='Ponthep Garden Ville 5' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 2 690 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Ponthep Garden Ville 5</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 6 725 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 400 m²</div>
+<div class='ca'>
+<a href='/properties/ponthep_garden_ville_5_112b6.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/serenity_wongamat_9a7a2/image_0.webp' alt='Serenity Wongamat' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 2 690 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Serenity Wongamat</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 52 745 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 1 • 📐 51 m²</div>
+<div class='ca'>
+<a href='/properties/serenity_wongamat_9a7a2.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/siam_oriental_tropical_garden_0a33a/image_0.webp' alt='Siam Oriental Tropical Garden' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 1 590 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Siam Oriental Tropical Garden</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 46 764 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 34 m²</div>
+<div class='ca'>
+<a href='/properties/siam_oriental_tropical_garden_0a33a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/beach_mountain_6_651fd/image_0.webp' alt='Beach Mountain 6' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Beach Mountain 6</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 43 548 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 31 m²</div>
+<div class='ca'>
+<a href='/properties/beach_mountain_6_651fd.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/laguna_bay_1_ae998/image_0.webp' alt='Laguna Bay 1' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 290 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Laguna Bay 1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 55 853 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 41 m²</div>
+<div class='ca'>
+<a href='/properties/laguna_bay_1_ae998.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_8_2b5e4/image_0.webp' alt='View Talay 8' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 8</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 69 791 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 48 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_8_2b5e4.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_7_8e85e/image_0.webp' alt='View Talay 7' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 2 990 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 7</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 62 291 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 48 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_7_8e85e.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_5d_0d8f2/image_0.webp' alt='View Talay 5D' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 650 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 5D</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 55 208 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 48 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_5d_0d8f2.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/royal_hill_c_2d903/image_0.webp' alt='Royal Hill C' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 5 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Royal Hill C</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 39 781 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 137 m²</div>
+<div class='ca'>
+<a href='/properties/royal_hill_c_2d903.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_tc_08dc1/image_0.webp' alt='Bsl Tc' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 690 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Tc</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 41 219 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 41 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_tc_08dc1.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/new_nordic_vip_4_1df4d/image_0.webp' alt='New Nordic Vip 4' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>New Nordic Vip 4</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 43 939 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 33 m²</div>
+<div class='ca'>
+<a href='/properties/new_nordic_vip_4_1df4d.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_tc_13891/image_0.webp' alt='Bsl Tc' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Tc</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 33 095 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 42 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_tc_13891.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/new_nordic_vip_4_e21ab/image_0.webp' alt='New Nordic Vip 4' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 490 000</div></div>
+<div class='cb'>
+<h3 class='ct'>New Nordic Vip 4</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 151 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 33 m²</div>
+<div class='ca'>
+<a href='/properties/new_nordic_vip_4_e21ab.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a2_b1f4c/image_0.webp' alt='Jbc A2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 47 000 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 50 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a2_b1f4c.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/majestic_b9ed7/image_0.webp' alt='Majestic' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 850 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Majestic</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 32 456 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 57 m²</div>
+<div class='ca'>
+<a href='/properties/majestic_b9ed7.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_ta_63d24/image_0.webp' alt='Bsl Ta' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 490 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Ta</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 41 547 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 84 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_ta_63d24.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/angket_hip_residence_bcba8/image_0.webp' alt='Angket Hip Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 850 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Angket Hip Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 39 041 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 73 m²</div>
+<div class='ca'>
+<a href='/properties/angket_hip_residence_bcba8.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/peak_condo_28e2a/image_0.webp' alt='Peak Condo' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 5 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Peak Condo</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 50 952 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 105 m²</div>
+<div class='ca'>
+<a href='/properties/peak_condo_28e2a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/laguna_beach_resort_bc572/image_0.webp' alt='Laguna Beach Resort' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 3 900 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Laguna Beach Resort</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 48 750 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 80 m²</div>
+<div class='ca'>
+<a href='/properties/laguna_beach_resort_bc572.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a2_533de/image_0.webp' alt='Jbc A2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 550 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 51 666 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a2_533de.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/angket_hip_residence_4f0b5/image_0.webp' alt='Angket Hip Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 650 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Angket Hip Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 35 106 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 47 m²</div>
+<div class='ca'>
+<a href='/properties/angket_hip_residence_4f0b5.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_tb_7af0c/image_0.webp' alt='Bsl Tb' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 250 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Tb</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 39 634 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 82 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_tb_7af0c.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_1b_a7993/image_0.webp' alt='View Talay 1B' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 590 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 1B</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 49 687 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 32 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_1b_a7993.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/plaza_residence_9b32b/image_0.webp' alt='Plaza Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Plaza Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 50 000 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 47 m²</div>
+<div class='ca'>
+<a href='/properties/plaza_residence_9b32b.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/keha_65131/image_0.webp' alt='Keha' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 250 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Keha</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 35 156 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 64 m²</div>
+<div class='ca'>
+<a href='/properties/keha_65131.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/angket_hip_residence_4c466/image_0.webp' alt='Angket Hip Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 770 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Angket Hip Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 37 432 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 74 m²</div>
+<div class='ca'>
+<a href='/properties/angket_hip_residence_4c466.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_te_217c6/image_0.webp' alt='Bsl Te' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 4 250 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Te</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 39 351 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 108 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_te_217c6.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/park_lane_66e43/image_0.webp' alt='Park Lane' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Park Lane</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 46 621 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 74 m²</div>
+<div class='ca'>
+<a href='/properties/park_lane_66e43.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a3_815c0/image_0.webp' alt='Jbc A3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 000 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a3_815c0.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/cliff_d2cc0/image_0.webp' alt='Cliff' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 200 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Cliff</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 66 666 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 48 m²</div>
+<div class='ca'>
+<a href='/properties/cliff_d2cc0.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/royal_hill_a_41d80/image_0.webp' alt='Royal Hill A' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 7 500 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Royal Hill A</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 47 169 THB/m²</div></div>
+<div class='si'>🛏️ 3 • 🚿 1 • 📐 159 m²</div>
+<div class='ca'>
+<a href='/properties/royal_hill_a_41d80.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/atlantis_condo_resort_e1760/image_0.webp' alt='Atlantis Condo Resort' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 1 990 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Atlantis Condo Resort</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 55 277 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 36 m²</div>
+<div class='ca'>
+<a href='/properties/atlantis_condo_resort_e1760.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_te_6c320/image_0.webp' alt='Bsl Te' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 950 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Te</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 47 023 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 84 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_te_6c320.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_8_bc4f5/image_0.webp' alt='View Talay 8' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 8</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 70 625 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 48 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_8_bc4f5.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_1b_9cdcf/image_0.webp' alt='View Talay 1B' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 1B</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 52 343 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 64 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_1b_9cdcf.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_s1_fa939/image_0.webp' alt='Jbc S1' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 500 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc S1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 51 470 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 68 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_s1_fa939.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a2_387f6/image_0.webp' alt='Jbc A2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 000 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a2_387f6.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/cozy_beach_view_f78fc/image_0.webp' alt='Cozy Beach View' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 2 300 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Cozy Beach View</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 65 714 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 35 m²</div>
+<div class='ca'>
+<a href='/properties/cozy_beach_view_f78fc.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/angket_hip_residence_02ea5/image_0.webp' alt='Angket Hip Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 4 250 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Angket Hip Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 39 351 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 108 m²</div>
+<div class='ca'>
+<a href='/properties/angket_hip_residence_02ea5.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a2_b585b/image_0.webp' alt='Jbc A2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 000 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a2_b585b.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/new_nordic_trend_4_d334e/image_0.webp' alt='New Nordic Trend 4' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 550 000</div></div>
+<div class='cb'>
+<h3 class='ct'>New Nordic Trend 4</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 588 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 34 m²</div>
+<div class='ca'>
+<a href='/properties/new_nordic_trend_4_d334e.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_1b_e7903/image_0.webp' alt='View Talay 1B' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 4 400 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 1B</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 46 315 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 95 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_1b_e7903.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/new_nordic_vip_3_5282b/image_0.webp' alt='New Nordic Vip 3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 450 000</div></div>
+<div class='cb'>
+<h3 class='ct'>New Nordic Vip 3</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 38 157 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 38 m²</div>
+<div class='ca'>
+<a href='/properties/new_nordic_vip_3_5282b.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/new_nordic_vip_5_51ce1/image_0.webp' alt='New Nordic Vip 5' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 490 000</div></div>
+<div class='cb'>
+<h3 class='ct'>New Nordic Vip 5</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 51 379 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 29 m²</div>
+<div class='ca'>
+<a href='/properties/new_nordic_vip_5_51ce1.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_s2_b09ae/image_0.webp' alt='Jbc S2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 950 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc S2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 57 352 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 34 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_s2_b09ae.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_sc_c5a6a/image_0.webp' alt='Bsl Sc' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 690 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Sc</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 42 250 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 40 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_sc_c5a6a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/beach_mountain_bang_saray_5707a/image_0.webp' alt='Beach Mountain Bang Saray' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 890 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Beach Mountain Bang Saray</h3>
+<p class='m'>📍 Bang Saray, Pattaya</p>
+<div class='pi'><div class='ps'>💰 31 500 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 60 m²</div>
+<div class='ca'>
+<a href='/properties/beach_mountain_bang_saray_5707a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/dusit_grand_condo_view_49253/image_0.webp' alt='Dusit Grand Condo View' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 4 350 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Dusit Grand Condo View</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 79 090 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 55 m²</div>
+<div class='ca'>
+<a href='/properties/dusit_grand_condo_view_49253.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a3_c05a7/image_0.webp' alt='Jbc A3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 490 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 49 666 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a3_c05a7.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/pattaya_chain_condotel_edf94/image_0.webp' alt='Pattaya Chain Condotel' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 690 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Pattaya Chain Condotel</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 50 754 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 53 m²</div>
+<div class='ca'>
+<a href='/properties/pattaya_chain_condotel_edf94.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/3_bedroom_garden_home_ab5a8/image_0.webp' alt='3 Bedroom Garden Home' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 6 500 000</div></div>
+<div class='cb'>
+<h3 class='ct'>3 Bedroom Garden Home</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 11 607 THB/m²</div></div>
+<div class='si'>🛏️ 3 • 🚿 2 • 📐 560 m²</div>
+<div class='ca'>
+<a href='/properties/3_bedroom_garden_home_ab5a8.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_5d_674df/image_0.webp' alt='View Talay 5D' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 5 750 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 5D</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 59 895 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 96 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_5d_674df.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_td_66f74/image_0.webp' alt='Bsl Td' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 850 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Td</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 44 047 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 42 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_td_66f74.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_tc_80db0/image_0.webp' alt='Bsl Tc' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 4 300 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Tc</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 41 346 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 104 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_tc_80db0.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/thep_thip_mansion_f7404/image_0.webp' alt='Thep Thip Mansion' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 250 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Thep Thip Mansion</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 41 666 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/thep_thip_mansion_f7404.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a1_bcba8/image_0.webp' alt='Jbc A1' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 650 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 55 000 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a1_bcba8.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/laguna_beach_2b_1bf32/image_0.webp' alt='Laguna Beach 2B' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Laguna Beach 2B</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 57 916 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 24 m²</div>
+<div class='ca'>
+<a href='/properties/laguna_beach_2b_1bf32.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a2_799db/image_0.webp' alt='Jbc A2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 600 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 53 333 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 30 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a2_799db.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_tc_2ac2d/image_0.webp' alt='Bsl Tc' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 190 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Tc</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 41 320 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 53 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_tc_2ac2d.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_1b_bf19c/image_0.webp' alt='View Talay 1B' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 790 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 1B</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 48 378 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 37 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_1b_bf19c.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_s1_adec0/image_0.webp' alt='Jbc S1' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 850 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc S1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 54 411 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 34 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_s1_adec0.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/royal_hill_c_bae03/image_0.webp' alt='Royal Hill C' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 5 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Royal Hill C</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 38 776 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 139 m²</div>
+<div class='ca'>
+<a href='/properties/royal_hill_c_bae03.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_tb_cbe48/image_0.webp' alt='Bsl Tb' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 750 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Tb</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 42 682 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 41 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_tb_cbe48.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_sc_7cd55/image_0.webp' alt='Bsl Sc' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 750 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Sc</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 41 666 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 42 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_sc_7cd55.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_ta_99fd3/image_0.webp' alt='Bsl Ta' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 790 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Ta</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 42 619 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 42 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_ta_99fd3.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/amazon_residence_975f0/image_0.webp' alt='Amazon Residence' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 1 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Amazon Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 39 714 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 35 m²</div>
+<div class='ca'>
+<a href='/properties/amazon_residence_975f0.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a3_35b99/image_0.webp' alt='Jbc A3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 200 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 36 666 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 60 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a3_35b99.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a2_9a136/image_0.webp' alt='Jbc A2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 47 800 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 50 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a2_9a136.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/park_lane_b1c7e/image_0.webp' alt='Park Lane' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 550 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Park Lane</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 43 055 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 36 m²</div>
+<div class='ca'>
+<a href='/properties/park_lane_b1c7e.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/view_talay_5d_c39a5/image_0.webp' alt='View Talay 5D' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 750 000</div></div>
+<div class='cb'>
+<h3 class='ct'>View Talay 5D</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 57 291 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 48 m²</div>
+<div class='ca'>
+<a href='/properties/view_talay_5d_c39a5.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_td_815d9/image_0.webp' alt='Bsl Td' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 850 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Td</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 44 047 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 42 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_td_815d9.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/park_lane_00fb8/image_0.webp' alt='Park Lane' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 650 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Park Lane</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 44 594 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 37 m²</div>
+<div class='ca'>
+<a href='/properties/park_lane_00fb8.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a3_3b711/image_0.webp' alt='Jbc A3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 850 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 47 500 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 60 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a3_3b711.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_sb_7dd67/image_0.webp' alt='Bsl Sb' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 950 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Sb</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 47 580 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 62 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_sb_7dd67.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_tc_b147b/image_0.webp' alt='Bsl Tc' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 850 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Tc</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 35 648 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 108 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_tc_b147b.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_s1_67008/image_0.webp' alt='Jbc S1' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 600 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc S1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 52 941 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 68 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_s1_67008.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/new_nordic_vip_3_28d89/image_0.webp' alt='New Nordic Vip 3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>New Nordic Vip 3</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 44 838 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 31 m²</div>
+<div class='ca'>
+<a href='/properties/new_nordic_vip_3_28d89.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/siam_oriental_twins_88d03/image_0.webp' alt='Siam Oriental Twins' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 3 850 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Siam Oriental Twins</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 46 951 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 82 m²</div>
+<div class='ca'>
+<a href='/properties/siam_oriental_twins_88d03.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/royal_hill_a_6c1e9/image_0.webp' alt='Royal Hill A' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 6 090 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Royal Hill A</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 49 512 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 123 m²</div>
+<div class='ca'>
+<a href='/properties/royal_hill_a_6c1e9.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/executive_residence_2_0061a/image_0.webp' alt='Executive Residence 2' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 4 500 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Executive Residence 2</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 000 THB/m²</div></div>
+<div class='si'>🛏️ 2 • 🚿 2 • 📐 100 m²</div>
+<div class='ca'>
+<a href='/properties/executive_residence_2_0061a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/bsl_sa_f0748/image_0.webp' alt='Bsl Sa' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 250 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Bsl Sa</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 45 000 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 50 m²</div>
+<div class='ca'>
+<a href='/properties/bsl_sa_f0748.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/laguna_beach_3_78b09/image_0.webp' alt='Laguna Beach 3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 490 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Laguna Beach 3</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 59 600 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 25 m²</div>
+<div class='ca'>
+<a href='/properties/laguna_beach_3_78b09.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/new_nordic_vip_3_a92f9/image_0.webp' alt='New Nordic Vip 3' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 490 000</div></div>
+<div class='cb'>
+<h3 class='ct'>New Nordic Vip 3</h3>
+<p class='m'>📍 Pratumnak, Pattaya</p>
+<div class='pi'><div class='ps'>💰 39 210 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 38 m²</div>
+<div class='ca'>
+<a href='/properties/new_nordic_vip_3_a92f9.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/plaza_residence_0350c/image_0.webp' alt='Plaza Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 390 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Plaza Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 50 851 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 47 m²</div>
+<div class='ca'>
+<a href='/properties/plaza_residence_0350c.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/angket_hip_residence_2075a/image_0.webp' alt='Angket Hip Residence' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 1 490 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Angket Hip Residence</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 40 270 THB/m²</div></div>
+<div class='si'>🛏️ 0 • 🚿 1 • 📐 37 m²</div>
+<div class='ca'>
+<a href='/properties/angket_hip_residence_2075a.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/jbc_a1_4648b/image_0.webp' alt='Jbc A1' loading='lazy'/>
+<div class='mi'>📸 4</div>
+<div class='pc'>฿ 2 800 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Jbc A1</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 46 666 THB/m²</div></div>
+<div class='si'>🛏️ 1 • 🚿 1 • 📐 60 m²</div>
+<div class='ca'>
+<a href='/properties/jbc_a1_4648b.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div><div class='card'>
+<div class='cm'><img src='/properties-images/spacious_3_bedroom_house_with_garden_5264b/image_0.webp' alt='Spacious 3 Bedroom House With Garden' loading='lazy'/>
+<div class='mi'>📸 6</div>
+<div class='pc'>฿ 5 500 000</div></div>
+<div class='cb'>
+<h3 class='ct'>Spacious 3 Bedroom House With Garden</h3>
+<p class='m'>📍 Jomtien, Pattaya</p>
+<div class='pi'><div class='ps'>💰 14 285 THB/m²</div></div>
+<div class='si'>🛏️ 3 • 🚿 3 • 📐 385 m²</div>
+<div class='ca'>
+<a href='/properties/spacious_3_bedroom_house_with_garden_5264b.html'>Voir détails</a>
+<a href='https://wa.me/66917255313' class='bwa' target='_blank'>WhatsApp</a>
+</div>
+</div></div></div>
+</div>
+
+<script>
+function initMap(){
+const c={lat:12.93,lng:100.88};
+const m=new google.maps.Map(document.getElementById('map'),{zoom:13,center:c});
+const iw=new google.maps.InfoWindow();
+const markers=[{lat:12.9492128,lng:100.9006271,title:'Bsl Ta',price:'1 800 000 THB'},
+{lat:12.8876789,lng:100.8880607,title:'Amazon Residence',price:'1 750 000 THB'},
+{lat:12.9457438,lng:100.8901986,title:'Bsl Sb',price:'4 500 000 THB'},
+{lat:12.9045884,lng:100.8713071,title:'Royal Hill C',price:'6 290 000 THB'},
+{lat:12.9452633,lng:100.8855867,title:'Jbc A1',price:'1 350 000 THB'},
+{lat:12.8944133,lng:100.8837818,title:'Laguna Beach 2B',price:'1 390 000 THB'},
+{lat:12.9024966,lng:100.8681604,title:'View Talay 5D',price:'2 590 000 THB'},
+{lat:12.8910758,lng:100.8850008,title:'Angket Hip Residence',price:'1 450 000 THB'},
+{lat:12.9048576,lng:100.8705989,title:'Tw Platinum Suites',price:'2 150 000 THB'},
+{lat:12.9344911,lng:100.8866978,title:'Pattaya Plaza',price:'1 200 000 THB'},
+{lat:12.9053559,lng:100.8708433,title:'View Talay 1',price:'1 490 000 THB'},
+{lat:12.9048576,lng:100.8705989,title:'Tw Platinum Suites',price:'1 950 000 THB'},
+{lat:12.9076517,lng:100.8693651,title:'Grande Caribbean',price:'2 350 000 THB'},
+{lat:12.9045884,lng:100.8713071,title:'Royal Hill A',price:'5 150 000 THB'},
+{lat:12.8937134,lng:100.8774177,title:'Dusit Grand View',price:'2 390 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Jbc A3',price:'1 450 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Bsl Sa',price:'1 790 000 THB'},
+{lat:12.9048576,lng:100.8705989,title:'Tw Platinum Suites',price:'2 390 000 THB'},
+{lat:12.8910758,lng:100.8850008,title:'Angket Hip Residence',price:'3 300 000 THB'},
+{lat:12.8887434,lng:100.8851476,title:'Park Lane',price:'1 700 000 THB'},
+{lat:12.9024966,lng:100.8681604,title:'View Talay 5D',price:'2 790 000 THB'},
+{lat:12.8910758,lng:100.8850008,title:'Angket Hip Residence',price:'3 850 000 THB'},
+{lat:12.9024966,lng:100.8681604,title:'View Talay 5D',price:'2 690 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Jbc A3',price:'3 900 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Jbc A3',price:'1 450 000 THB'},
+{lat:12.8590335,lng:100.899335,title:'Riviera Monaco',price:'2 790 000 THB'},
+{lat:12.9698704,lng:100.8866217,title:'Cliff',price:'2 900 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Rungfa',price:'4 900 000 THB'},
+{lat:12.9263772,lng:100.8815557,title:'Jbc S1',price:'1 790 000 THB'},
+{lat:12.8944133,lng:100.8837818,title:'Laguna Beach 1A',price:'2 650 000 THB'},
+{lat:12.9263772,lng:100.8815557,title:'Jbc S1',price:'3 900 000 THB'},
+{lat:12.8952308,lng:100.882998,title:'Laguna Beach Resort 3',price:'1 999 000 THB'},
+{lat:12.9214633,lng:100.8819753,title:'City Garden Tower',price:'3 650 000 THB'},
+{lat:12.9045884,lng:100.8713071,title:'Royal Hill C',price:'6 900 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Jbc A3',price:'1 450 000 THB'},
+{lat:12.8909917,lng:100.8795287,title:'Jbc A2',price:'3 450 000 THB'},
+{lat:12.9298799,lng:100.8939125,title:'Residence',price:'2 290 000 THB'},
+{lat:12.8932562,lng:100.8760022,title:'Acqua Condo',price:'1 990 000 THB'},
+{lat:12.8909917,lng:100.8795287,title:'Jbc A2',price:'2 650 000 THB'},
+{lat:12.9169939,lng:100.8629874,title:'New Nordic Vip 4',price:'1 450 000 THB'},
+{lat:12.8910758,lng:100.8850008,title:'Angket Hip Residence',price:'1 480 000 THB'},
+{lat:12.9599332,lng:100.949022,title:'Ponthep Garden Ville 5',price:'2 690 000 THB'},
+{lat:12.9693159,lng:100.8852675,title:'Serenity Wongamat',price:'2 690 000 THB'},
+{lat:12.9134591,lng:100.8619651,title:'Siam Oriental Tropical Garden',price:'1 590 000 THB'},
+{lat:12.8812863,lng:100.8867778,title:'Beach Mountain 6',price:'1 350 000 THB'},
+{lat:12.9112109,lng:100.8610532,title:'Laguna Bay 1',price:'2 290 000 THB'},
+{lat:12.8792448,lng:100.8848114,title:'View Talay 8',price:'3 350 000 THB'},
+{lat:12.8998551,lng:100.8675039,title:'View Talay 7',price:'2 990 000 THB'},
+{lat:12.9024966,lng:100.8681604,title:'View Talay 5D',price:'2 650 000 THB'},
+{lat:12.9045884,lng:100.8713071,title:'Royal Hill C',price:'5 450 000 THB'},
+{lat:12.9136013,lng:100.8832297,title:'Bsl Tc',price:'1 690 000 THB'},
+{lat:12.9169939,lng:100.8629874,title:'New Nordic Vip 4',price:'1 450 000 THB'},
+{lat:12.9136013,lng:100.8832297,title:'Bsl Tc',price:'1 390 000 THB'},
+{lat:12.9169939,lng:100.8629874,title:'New Nordic Vip 4',price:'1 490 000 THB'},
+{lat:12.8909917,lng:100.8795287,title:'Jbc A2',price:'2 350 000 THB'},
+{lat:12.8890399,lng:100.8873392,title:'Majestic',price:'1 850 000 THB'},
+{lat:12.9492128,lng:100.9006271,title:'Bsl Ta',price:'3 490 000 THB'},
+{lat:12.8910758,lng:100.8850008,title:'Angket Hip Residence',price:'2 850 000 THB'},
+{lat:12.9211136,lng:100.8620057,title:'Peak Condo',price:'5 350 000 THB'},
+{lat:12.8946226,lng:100.8790895,title:'Laguna Beach Resort',price:'3 900 000 THB'},
+{lat:12.8909917,lng:100.8795287,title:'Jbc A2',price:'1 550 000 THB'},
+{lat:12.8910758,lng:100.8850008,title:'Angket Hip Residence',price:'1 650 000 THB'},
+{lat:12.9820446,lng:100.9288845,title:'Bsl Tb',price:'3 250 000 THB'},
+{lat:12.9060046,lng:100.8700919,title:'View Talay 1B',price:'1 590 000 THB'},
+{lat:12.9344911,lng:100.8866978,title:'Plaza Residence',price:'2 350 000 THB'},
+{lat:12.9084628,lng:100.8915995,title:'Keha',price:'2 250 000 THB'},
+{lat:12.8910758,lng:100.8850008,title:'Angket Hip Residence',price:'2 770 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Bsl Te',price:'4 250 000 THB'},
+{lat:12.8887434,lng:100.8851476,title:'Park Lane',price:'3 450 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Jbc A3',price:'1 350 000 THB'},
+{lat:12.9698704,lng:100.8866217,title:'Cliff',price:'3 200 000 THB'},
+{lat:12.9045884,lng:100.8713071,title:'Royal Hill A',price:'7 500 000 THB'},
+{lat:12.8872982,lng:100.8827087,title:'Atlantis Condo Resort',price:'1 990 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Bsl Te',price:'3 950 000 THB'},
+{lat:12.8792448,lng:100.8848114,title:'View Talay 8',price:'3 390 000 THB'},
+{lat:12.9060046,lng:100.8700919,title:'View Talay 1B',price:'3 350 000 THB'},
+{lat:12.9263772,lng:100.8815557,title:'Jbc S1',price:'3 500 000 THB'},
+{lat:12.8909917,lng:100.8795287,title:'Jbc A2',price:'1 350 000 THB'},
+{lat:12.9192884,lng:100.8607273,title:'Cozy Beach View',price:'2 300 000 THB'},
+{lat:12.8910758,lng:100.8850008,title:'Angket Hip Residence',price:'4 250 000 THB'},
+{lat:12.8909917,lng:100.8795287,title:'Jbc A2',price:'1 350 000 THB'},
+{lat:12.9137082,lng:100.8633601,title:'New Nordic Trend 4',price:'1 550 000 THB'},
+{lat:12.9060046,lng:100.8700919,title:'View Talay 1B',price:'4 400 000 THB'},
+{lat:12.9168654,lng:100.8620563,title:'New Nordic Vip 3',price:'1 450 000 THB'},
+{lat:12.9147252,lng:100.8571107,title:'New Nordic Vip 5',price:'1 490 000 THB'},
+{lat:12.8893791,lng:100.8784641,title:'Jbc S2',price:'1 950 000 THB'},
+{lat:12.9152545,lng:100.8613988,title:'Bsl Sc',price:'1 690 000 THB'},
+{lat:12.7587089,lng:100.8823741,title:'Beach Mountain Bang Saray',price:'1 890 000 THB'},
+{lat:12.8937134,lng:100.8774177,title:'Dusit Grand Condo View',price:'4 350 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Jbc A3',price:'1 490 000 THB'},
+{lat:12.8739604,lng:100.8916843,title:'Pattaya Chain Condotel',price:'2 690 000 THB'},
+{lat:12.9338348,lng:100.9014083,title:'3 Bedroom Garden Home',price:'6 500 000 THB'},
+{lat:12.9024966,lng:100.8681604,title:'View Talay 5D',price:'5 750 000 THB'},
+{lat:12.9079573,lng:100.9137821,title:'Bsl Td',price:'1 850 000 THB'},
+{lat:12.9136013,lng:100.8832297,title:'Bsl Tc',price:'4 300 000 THB'},
+{lat:12.9097184,lng:100.8615437,title:'Thep Thip Mansion',price:'1 250 000 THB'},
+{lat:12.9452633,lng:100.8855867,title:'Jbc A1',price:'1 650 000 THB'},
+{lat:12.8944133,lng:100.8837818,title:'Laguna Beach 2B',price:'1 390 000 THB'},
+{lat:12.8909917,lng:100.8795287,title:'Jbc A2',price:'1 600 000 THB'},
+{lat:12.9136013,lng:100.8832297,title:'Bsl Tc',price:'2 190 000 THB'},
+{lat:12.9060046,lng:100.8700919,title:'View Talay 1B',price:'1 790 000 THB'},
+{lat:12.9263772,lng:100.8815557,title:'Jbc S1',price:'1 850 000 THB'},
+{lat:12.9045884,lng:100.8713071,title:'Royal Hill C',price:'5 390 000 THB'},
+{lat:12.9820446,lng:100.9288845,title:'Bsl Tb',price:'1 750 000 THB'},
+{lat:12.9152545,lng:100.8613988,title:'Bsl Sc',price:'1 750 000 THB'},
+{lat:12.9492128,lng:100.9006271,title:'Bsl Ta',price:'1 790 000 THB'},
+{lat:12.8876789,lng:100.8880607,title:'Amazon Residence',price:'1 390 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Jbc A3',price:'2 200 000 THB'},
+{lat:12.8909917,lng:100.8795287,title:'Jbc A2',price:'2 390 000 THB'},
+{lat:12.8887434,lng:100.8851476,title:'Park Lane',price:'1 550 000 THB'},
+{lat:12.9024966,lng:100.8681604,title:'View Talay 5D',price:'2 750 000 THB'},
+{lat:12.9079573,lng:100.9137821,title:'Bsl Td',price:'1 850 000 THB'},
+{lat:12.8887434,lng:100.8851476,title:'Park Lane',price:'1 650 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Jbc A3',price:'2 850 000 THB'},
+{lat:12.9457438,lng:100.8901986,title:'Bsl Sb',price:'2 950 000 THB'},
+{lat:12.9136013,lng:100.8832297,title:'Bsl Tc',price:'3 850 000 THB'},
+{lat:12.9263772,lng:100.8815557,title:'Jbc S1',price:'3 600 000 THB'},
+{lat:12.9168654,lng:100.8620563,title:'New Nordic Vip 3',price:'1 390 000 THB'},
+{lat:12.9139893,lng:100.8618482,title:'Siam Oriental Twins',price:'3 850 000 THB'},
+{lat:12.9045884,lng:100.8713071,title:'Royal Hill A',price:'6 090 000 THB'},
+{lat:12.9195794,lng:100.8645451,title:'Executive Residence 2',price:'4 500 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Bsl Sa',price:'2 250 000 THB'},
+{lat:12.8952308,lng:100.882998,title:'Laguna Beach 3',price:'1 490 000 THB'},
+{lat:12.9168654,lng:100.8620563,title:'New Nordic Vip 3',price:'1 490 000 THB'},
+{lat:12.9344911,lng:100.8866978,title:'Plaza Residence',price:'2 390 000 THB'},
+{lat:12.8910758,lng:100.8850008,title:'Angket Hip Residence',price:'1 490 000 THB'},
+{lat:12.923594,lng:100.8824376,title:'Jbc A1',price:'2 800 000 THB'},
+{lat:12.9338348,lng:100.9014083,title:'Spacious 3 Bedroom House With Garden',price:'5 500 000 THB'}];
+markers.forEach(mk=>{
+const mm=new google.maps.Marker({position:{lat:mk.lat,lng:mk.lng},map:m,title:mk.title});
+mm.addListener('click',()=>{
+iw.setContent(`<div style="padding:10px"><h3 style="margin:0 0 5px 0">${mk.title}</h3><p style="margin:0;color:#0ea5e9;font-weight:600">${mk.price}</p></div>`);
+iw.open(m,mm);
+});
+});
+}
+window.onload=initMap;
+
+function calc(){
+const bp=parseFloat(document.getElementById('bp').value)||0;
+const mr=parseFloat(document.getElementById('mr').value)||0;
+const mc=parseFloat(document.getElementById('mc').value)||0;
+const or=parseFloat(document.getElementById('or').value)/100||0.8;
+if(bp<=0||mr<=0){alert('Prix et loyer requis');return;}
+const ar=mr*12*or;
+const ac=mc*12;
+const nai=ar-ac;
+const mni=nai/12;
+const gy=(ar/bp)*100;
+const ny=(nai/bp)*100;
+document.getElementById('gy').textContent=gy.toFixed(2)+'%';
+document.getElementById('ny').textContent=ny.toFixed(2)+'%';
+document.getElementById('cf').textContent=nai.toLocaleString('fr-FR')+' THB';
+document.getElementById('mi').textContent=mni.toLocaleString('fr-FR')+' THB';
+document.getElementById('res').classList.add('show');
+}
+</script>
+</body>
+</html>
