@@ -1,0 +1,348 @@
+import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
+import { Sparkles, Shield, Clock, HeadphonesIcon } from 'lucide-react';
+import { prisma } from '@/lib/prisma';
+import Hero from '@/components/Hero';
+import ProcessSteps from '@/components/ProcessSteps';
+
+export default async function HomePage({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations('home');
+  const tCommon = await getTranslations('common');
+  
+  // Fetch latest blog posts
+  const blogPosts = await prisma.blogPost.findMany({
+    where: {
+      status: 'published',
+      language: locale,
+    },
+    take: 3,
+    orderBy: {
+      publishedAt: 'desc',
+    },
+    include: {
+      author: {
+        select: {
+          name: true,
+        },
+      },
+    },
+  });
+
+  // Fetch categories
+  const categories = await prisma.category.findMany({
+    where: { isActive: true },
+    include: {
+      translations: {
+        where: { locale },
+      },
+      services: {
+        where: { isActive: true },
+        select: { id: true },
+      },
+    },
+    orderBy: { order: 'asc' },
+    take: 12,
+  });
+
+  // Process steps
+  const processSteps = [
+    {
+      number: 1,
+      icon: '🔍',
+      title: 'Choose Service',
+      description: 'Browse and select from our wide range of professional services.',
+    },
+    {
+      number: 2,
+      icon: '📅',
+      title: 'Book Instantly',
+      description: 'Pick your preferred date, time, and professional with ease.',
+    },
+    {
+      number: 3,
+      icon: '✅',
+      title: 'Get Confirmed',
+      description: 'Receive instant confirmation with all service details.',
+    },
+    {
+      number: 4,
+      icon: '⭐',
+      title: 'Enjoy & Rate',
+      description: 'Experience quality service and share your feedback.',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <Hero
+        icon="🏠"
+        tagline="Your Trusted Service Platform"
+        title="Find Professional Services Near You"
+        subtitle="Connect with verified professionals across 15+ categories"
+        description="From home services to business consultations, book trusted professionals in minutes. Available in 16 languages across multiple countries."
+        ctaText="Browse Services"
+        ctaLink={`/${locale}/services`}
+        secondaryCtaText="View Categories"
+        secondaryCtaLink={`/${locale}/categories`}
+      />
+
+      {/* Features Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold text-center mb-12">{t('features.title')}</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">{t('features.verified.title')}</h3>
+              <p className="text-gray-600">{t('features.verified.description')}</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">{t('features.flexible.title')}</h3>
+              <p className="text-gray-600">{t('features.flexible.description')}</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">{t('features.quality.title')}</h3>
+              <p className="text-gray-600">{t('features.quality.description')}</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <HeadphonesIcon className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">{t('features.support.title')}</h3>
+              <p className="text-gray-600">{t('features.support.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Special Services Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Special Services</h2>
+            <p className="text-gray-600 text-lg">Premium services for all your needs</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <Link
+              href={`/${locale}/services/rental`}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all transform hover:-translate-y-2 text-center group border-2 border-transparent hover:border-blue-500"
+            >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+                🚗
+              </div>
+              <h3 className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors mb-2">
+                Vehicle Rental
+              </h3>
+              <p className="text-xs text-gray-500">Cars, SUVs & More</p>
+            </Link>
+
+            <Link
+              href={`/${locale}/services/real-estate`}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all transform hover:-translate-y-2 text-center group border-2 border-transparent hover:border-blue-500"
+            >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+                🏢
+              </div>
+              <h3 className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors mb-2">
+                Real Estate
+              </h3>
+              <p className="text-xs text-gray-500">Buy, Rent & Invest</p>
+            </Link>
+
+            <Link
+              href={`/${locale}/services/legal`}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all transform hover:-translate-y-2 text-center group border-2 border-transparent hover:border-blue-500"
+            >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+                ⚖️
+              </div>
+              <h3 className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors mb-2">
+                Legal Services
+              </h3>
+              <p className="text-xs text-gray-500">Expert Lawyers</p>
+            </Link>
+
+            <Link
+              href={`/${locale}/services/handyman`}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all transform hover:-translate-y-2 text-center group border-2 border-transparent hover:border-blue-500"
+            >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+                🔧
+              </div>
+              <h3 className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors mb-2">
+                Handyman
+              </h3>
+              <p className="text-xs text-gray-500">Repairs & Fixes</p>
+            </Link>
+
+            <Link
+              href={`/${locale}/services/transfer`}
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all transform hover:-translate-y-2 text-center group border-2 border-transparent hover:border-blue-500"
+            >
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+                🚕
+              </div>
+              <h3 className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors mb-2">
+                Transfers
+              </h3>
+              <p className="text-xs text-gray-500">Airport & City</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex justify-between items-center mb-12">
+            <h2 className="text-3xl font-bold">Popular Categories</h2>
+            <Link href={`/${locale}/categories`} className="text-blue-600 hover:underline">
+              View All →
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {categories.map((category) => {
+              const translation = category.translations[0];
+              if (!translation) return null;
+
+              return (
+                <Link
+                  key={category.id}
+                  href={`/${locale}/categories/${category.slug}`}
+                  className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all transform hover:-translate-y-1 text-center group"
+                >
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">
+                    {category.icon}
+                  </div>
+                  <h3 className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
+                    {translation.name}
+                  </h3>
+                  <div className="text-sm text-gray-500 mt-1">
+                    {category.services.length} services
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <ProcessSteps
+        title="How It Works"
+        subtitle="Book professional services in 4 simple steps"
+        steps={processSteps}
+      />
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold text-center mb-12">{t('stats.title')}</h2>
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">15</div>
+              <div className="text-gray-600">{t('stats.partnerTypes')}</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">150+</div>
+              <div className="text-gray-600">{t('stats.specialties')}</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">9</div>
+              <div className="text-gray-600">{t('stats.languages')}</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">10</div>
+              <div className="text-gray-600">{t('stats.countries')}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      {blogPosts.length > 0 && (
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-6xl">
+            <div className="flex justify-between items-center mb-12">
+              <h2 className="text-3xl font-bold">{tCommon('blog')}</h2>
+              <Link href={`/${locale}/blog`} className="text-blue-600 hover:underline">
+                View All →
+              </Link>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {blogPosts.map((post) => (
+                <Link
+                  key={post.id}
+                  href={`/${locale}/blog/${post.slug}`}
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  {post.featuredImage && (
+                    <img
+                      src={post.featuredImage}
+                      alt={post.title}
+                      className="w-full h-48 object-cover"
+                    />
+                  )}
+                  <div className="p-6">
+                    <div className="flex gap-2 mb-2">
+                      {post.categories.slice(0, 2).map((cat) => (
+                        <span
+                          key={cat}
+                          className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded"
+                        >
+                          {cat}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="font-semibold text-lg mb-2 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <span>{post.author.name}</span>
+                      <span className="mx-2">•</span>
+                      <span>{new Date(post.publishedAt!).toLocaleDateString()}</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* CTA Section */}
+      <section className="bg-blue-600 text-white py-16 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-bold mb-4">{t('cta.title')}</h2>
+          <p className="text-xl mb-8 text-blue-100">{t('cta.subtitle')}</p>
+          <div className="flex gap-4 justify-center">
+            <Link
+              href="/api-doc"
+              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            >
+              {t('cta.apiDocs')}
+            </Link>
+            <Link
+              href={`/${locale}/services`}
+              className="inline-block bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 transition-colors border-2 border-white"
+            >
+              {t('cta.browseServices')}
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

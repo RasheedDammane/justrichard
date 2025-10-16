@@ -1,0 +1,420 @@
+{
+  "common": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "blog": "Blog",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse"
+  },
+  "home": {
+    "hero": {
+      "title": "Plataforma CommunityHub",
+      "subtitle": "Encuentra profesionales verificados para todas tus necesidades",
+      "cta": "Explorar servicios"
+    },
+    "search": {
+      "selectLocation": "Selecciona tu ubicación",
+      "selectLanguage": "Seleccionar idioma",
+      "allLocations": "Todas las ubicaciones"
+    },
+    "features": {
+      "title": "Por qué elegirnos",
+      "verified": {
+        "title": "Profesionales verificados",
+        "description": "Todos los socios están verificados y son de confianza"
+      },
+      "flexible": {
+        "title": "Disponibilidad 24/7",
+        "description": "Reserva servicios en cualquier momento y lugar"
+      },
+      "quality": {
+        "title": "Servicio de calidad",
+        "description": "Solo profesionales mejor valorados"
+      },
+      "support": {
+        "title": "Soporte 24/7",
+        "description": "Estamos aquí para ayudarte en cualquier momento"
+      }
+    },
+    "partners": {
+      "title": "Socios profesionales",
+      "viewAll": "Ver todas las APIs",
+      "profiles": "perfiles",
+      "realEstate": "Bienes raíces",
+      "accountants": "Contadores",
+      "translators": "Traductores",
+      "visaAgents": "Agentes de visa",
+      "business": "Consultores de negocios",
+      "architects": "Arquitectos",
+      "photographers": "Fotógrafos",
+      "coaches": "Entrenadores",
+      "doctors": "Médicos",
+      "dentists": "Dentistas",
+      "lawyers": "Abogados",
+      "vehicles": "Vehículos"
+    },
+    "stats": {
+      "title": "Estadísticas de la plataforma",
+      "partnerTypes": "Tipos de socios",
+      "specialties": "Especialidades",
+      "languages": "Idiomas",
+      "countries": "Países"
+    },
+    "cta": {
+      "title": "¿Listo para comenzar?",
+      "subtitle": "Explora nuestras APIs y encuentra el profesional perfecto para tus necesidades",
+      "apiDocs": "Documentación de API",
+      "browseServices": "Explorar servicios"
+    }
+  },
+  "blog": {
+    "title": "Blog y noticias",
+    "subtitle": "Últimos artículos, consejos e información",
+    "noPosts": "Aún no hay publicaciones de blog disponibles",
+    "backHome": "Volver al inicio",
+    "readMore": "Leer más",
+    "relatedPosts": "Publicaciones relacionadas"
+  },
+  "services": {
+    "realEstate": {
+      "name": "Agentes Inmobiliarios",
+      "tagline": "Servicios Profesionales",
+      "description": "Encuentre agentes inmobiliarios de confianza para comprar, vender o alquilar propiedades",
+      "cta": "Explorar Profesionales",
+      "howItWorks": "Cómo Funciona"
+    },
+    "accounting": {
+      "name": "Contadores",
+      "tagline": "Servicios Profesionales",
+      "description": "Servicios profesionales de contabilidad e impuestos para individuos y empresas",
+      "cta": "Explorar Profesionales",
+      "howItWorks": "Cómo Funciona"
+    },
+    "translation": {
+      "name": "Traductores",
+      "tagline": "Servicios Profesionales",
+      "description": "Servicios expertos de traducción en múltiples idiomas",
+      "cta": "Explorar Profesionales",
+      "howItWorks": "Cómo Funciona"
+    },
+    "visa": {
+      "name": "Agentes de Visa",
+      "tagline": "Servicios Profesionales",
+      "description": "Servicios profesionales de visa e inmigración",
+      "cta": "Explorar Profesionales",
+      "howItWorks": "Cómo Funciona"
+    },
+    "businessConsulting": {
+      "name": "Consultores de Negocios",
+      "tagline": "Servicios Profesionales",
+      "description": "Servicios expertos de creación y consultoría empresarial",
+      "cta": "Explorar Profesionales",
+      "howItWorks": "Cómo Funciona"
+    },
+    "architecture": {
+      "name": "Arquitectos",
+      "tagline": "Servicios Profesionales",
+      "description": "Servicios profesionales de diseño y planificación arquitectónica",
+      "cta": "Explorar Profesionales",
+      "howItWorks": "Cómo Funciona"
+    },
+    "photography": {
+      "name": "Fotógrafos",
+      "tagline": "Servicios Profesionales",
+      "description": "Servicios de fotografía profesional para todas las ocasiones",
+      "cta": "Explorar Profesionales",
+      "howItWorks": "Cómo Funciona"
+    },
+    "coaching": {
+      "name": "Coaches",
+      "tagline": "Desarrollo Personal",
+      "description": "Servicios de coaching personal y profesional",
+      "cta": "Explorar Coaches",
+      "howItWorks": "Cómo Funciona"
+    },
+    "medical": {
+      "name": "Médicos",
+      "tagline": "Servicios de Salud",
+      "description": "Profesionales médicos calificados para consultas y tratamientos",
+      "cta": "Explorar Médicos",
+      "howItWorks": "Cómo Funciona"
+    },
+    "dental": {
+      "name": "Dentistas",
+      "tagline": "Cuidado Dental",
+      "description": "Cuidado y tratamientos dentales profesionales",
+      "cta": "Explorar Dentistas",
+      "howItWorks": "Cómo Funciona"
+    },
+    "legal": {
+      "name": "Abogados",
+      "tagline": "Servicios Legales",
+      "description": "Profesionales legales experimentados para todas sus necesidades jurídicas",
+      "cta": "Explorar Abogados",
+      "howItWorks": "Cómo Funciona"
+    },
+    "handyman": {
+      "name": "Manitas",
+      "tagline": "Servicios del Hogar",
+      "description": "Manitas calificados para reparaciones y mantenimiento del hogar",
+      "cta": "Explorar Manitas",
+      "howItWorks": "Cómo Funciona"
+    }
+  },
+  "processSteps": {
+    "title": "Cómo Funciona",
+    "subtitle": "Reserve servicios profesionales en 4 simples pasos",
+    "step1": {
+      "title": "Explorar Profesionales",
+      "description": "Explore profesionales verificados en su área"
+    },
+    "step2": {
+      "title": "Reservar Servicio",
+      "description": "Seleccione su profesional preferido y programe"
+    },
+    "step3": {
+      "title": "Obtener Confirmación",
+      "description": "Reciba confirmación instantánea con detalles"
+    },
+    "step4": {
+      "title": "Calificar y Reseñar",
+      "description": "Comparta su experiencia y ayude a otros"
+    }
+  },
+  "whyChooseUs": {
+    "title": "¿Por qué elegir CommunityHub?",
+    "verified": {
+      "title": "Profesionales Verificados",
+      "description": "Todos los profesionales están verificados y certificados"
+    },
+    "topRated": {
+      "title": "Mejor Calificados",
+      "description": "Solo los mejores profesionales con 4+ estrellas"
+    },
+    "bestPrices": {
+      "title": "Mejores Precios",
+      "description": "Precios competitivos con costos transparentes"
+    },
+    "support": {
+      "title": "Soporte 24/7",
+      "description": "Soporte al cliente disponible en cualquier momento"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "careers": "Careers",
+      "press": "Press",
+      "blog": "Blog",
+      "partners": "Partners",
+      "pressMedia": "Prensa y Medios"
+    },
+    "services": {
+      "title": "Servicios",
+      "allServices": "All Services",
+      "categories": "Categories",
+      "professionals": "Professionals",
+      "pricing": "Pricing",
+      "popularServices": "Servicios Populares",
+      "homeServices": "Servicios del Hogar",
+      "vehicleRental": "Alquiler de Vehículos",
+      "realEstate": "Bienes Raíces",
+      "legalServices": "Servicios Legales",
+      "transfers": "Traslados",
+      "medical": "Médico",
+      "viewAllServices": "Ver Todos los Servicios"
+    },
+    "support": {
+      "title": "Support",
+      "helpCenter": "Help Center",
+      "contactUs": "Contact Us",
+      "faq": "FAQ",
+      "safety": "Safety",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "supportHelp": "Soporte y Ayuda",
+      "customerSupport": "Atención al Cliente",
+      "safetyGuidelines": "Pautas de Seguridad",
+      "cookies": "Política de Cookies",
+      "legalNotice": "Aviso Legal",
+      "sitemap": "Mapa del Sitio",
+      "accessibility": "Accesibilidad"
+    },
+    "connect": {
+      "title": "Connect",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "followUs": "Síguenos"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Get the latest news and offers",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "error": "An error occurred. Please try again.",
+      "updates": "Reciba actualizaciones sobre nuevos servicios y promociones",
+      "yourEmail": "Su correo electrónico"
+    },
+    "copyright": "© {year} JustRichard. All rights reserved.",
+    "allRightsReserved": "All rights reserved",
+    "madeWith": "Made with",
+    "in": "in",
+    "description": "Su plataforma confiable que conecta a clientes con profesionales verificados en más de 15 categorías en varios países.",
+    "currency": {
+      "title": "Moneda",
+      "select": "Seleccionar moneda"
+    },
+    "platformName": "CommunityHub",
+    "tagline": "Su plataforma confiable que conecta a clientes con profesionales verificados en más de 15 categorías en varios países.",
+    "professionals": {
+      "title": "Para Profesionales",
+      "becomeProvider": "Convertirse en Proveedor",
+      "providerBenefits": "Beneficios para Proveedores",
+      "partnerships": "Asociaciones"
+    },
+    "legal": {
+      "title": "Legal",
+      "companyLegal": "Empresa y Legal"
+    },
+    "location": {
+      "availableCountries": "Países Disponibles",
+      "availableLanguages": "Idiomas Disponibles"
+    },
+    "app": {
+      "title": "Descargar App",
+      "downloadApp": "Descargar App",
+      "downloadOn": "Descargar en",
+      "appStore": "App Store",
+      "getItOn": "DISPONIBLE EN",
+      "googlePlay": "Google Play"
+    },
+    "registrationInfo": "Nº de Registro: 123456789 | ID Fiscal: AE123456789 | Licenciado por Dubai Economy",
+    "disclaimer": {
+      "title": "Aviso Legal:",
+      "text": "CommunityHub actúa como una plataforma de mercado que conecta proveedores de servicios con clientes. No empleamos proveedores de servicios y no somos responsables de los servicios prestados. Todos los proveedores son profesionales independientes. Los precios y la disponibilidad están sujetos a cambios. Se aplican términos y condiciones.",
+      "paymentTitle": "Pago y Reembolsos:",
+      "paymentText": "Los pagos se procesan de forma segura a través de nuestros socios certificados. Las políticas de reembolso varían según el proveedor de servicios. Revise los términos de cada proveedor antes de reservar."
+    }
+  },
+  "about": {
+    "title": "About CommunityHub",
+    "intro": "CommunityHub is your trusted platform connecting you with verified professionals and services across multiple countries.",
+    "mission": {
+      "title": "Our Mission",
+      "content": "We aim to simplify your life by providing easy access to quality services and trusted professionals."
+    },
+    "offer": {
+      "title": "What We Offer",
+      "item1": "Verified professionals across 15+ categories",
+      "item2": "Services in multiple countries",
+      "item3": "Support for 9 languages",
+      "item4": "Easy booking and communication",
+      "item5": "Transparent pricing and reviews",
+      "item6": "24/7 customer support"
+    },
+    "values": {
+      "title": "Our Values",
+      "trust": {
+        "title": "Trust & Safety",
+        "desc": "All professionals are verified and vetted for your peace of mind."
+      },
+      "quality": {
+        "title": "Quality",
+        "desc": "We maintain high standards to ensure excellent service delivery."
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "desc": "Available in 9 languages across multiple countries."
+      },
+      "support": {
+        "title": "Support",
+        "desc": "Our team is always here to help you."
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy describes how we collect, use, and protect your personal information.",
+    "lastUpdated": "Last updated"
+  },
+  "careers": {
+    "title": "Careers at CommunityHub",
+    "intro": "Join our team and help connect people with trusted professionals worldwide.",
+    "positions": "Open Positions",
+    "apply": "Apply Now"
+  },
+  "press": {
+    "title": "Press & Media",
+    "intro": "Latest news and press releases from CommunityHub.",
+    "contact": "Media Contact",
+    "download": "Download Press Kit"
+  },
+  "partnerships": {
+    "title": "Partnerships",
+    "intro": "Partner with CommunityHub to grow your business.",
+    "benefits": "Partnership Benefits",
+    "contact": "Contact Us"
+  },
+  "providerBenefits": {
+    "title": "Provider Benefits",
+    "intro": "Discover the advantages of becoming a service provider on CommunityHub.",
+    "benefits": "Key Benefits",
+    "join": "Join Now"
+  },
+  "help": {
+    "title": "Help Center",
+    "intro": "Find answers to common questions and get support.",
+    "search": "Search help articles",
+    "topics": "Popular Topics"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "intro": "Find quick answers to the most common questions.",
+    "categories": "FAQ Categories"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Get in touch with our team.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "safety": {
+    "title": "Safety Guidelines",
+    "intro": "Your safety is our priority. Follow these guidelines for a secure experience.",
+    "guidelines": "Safety Tips"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "intro": "Please read these terms carefully before using our services.",
+    "lastUpdated": "Last updated"
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "intro": "We use cookies to improve your experience on our platform.",
+    "whatAre": "What are cookies",
+    "types": "Types of cookies we use"
+  },
+  "legalNotice": {
+    "title": "Legal Notice",
+    "intro": "Important legal information about CommunityHub.",
+    "company": "Company Information",
+    "compliance": "Regulatory Compliance"
+  }
+}

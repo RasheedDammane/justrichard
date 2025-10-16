@@ -1,0 +1,177 @@
+{
+  "common": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "blog": "Blog",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "login": "Giriş Yap",
+    "signup": "Kayıt Ol"
+  },
+  "home": {
+    "hero": {
+      "title": "CommunityHub Platformu",
+      "subtitle": "Tüm ihtiyaçlarınız için doğrulanmış profesyoneller bulun",
+      "cta": "Hizmetleri Keşfet"
+    },
+    "search": {
+      "selectLocation": "Konumunuzu Seçin",
+      "selectLanguage": "Dil Seçin",
+      "allLocations": "Tüm Konumlar"
+    },
+    "features": {
+      "title": "Neden Bizi Seçmelisiniz",
+      "verified": {
+        "title": "Doğrulanmış Profesyoneller",
+        "description": "Tüm ortaklar doğrulanmış ve güvenilirdir"
+      },
+      "flexible": {
+        "title": "7/24 Erişilebilirlik",
+        "description": "Her zaman, her yerde hizmet rezervasyonu yapın"
+      },
+      "quality": {
+        "title": "Kaliteli Hizmet",
+        "description": "Sadece en yüksek puanlı profesyoneller"
+      },
+      "support": {
+        "title": "7/24 Destek",
+        "description": "Her zaman yardımınıza hazırız"
+      }
+    },
+    "partners": {
+      "title": "Profesyonel Ortaklar",
+      "viewAll": "Tüm API'leri Görüntüle",
+      "profiles": "profiller",
+      "realEstate": "Gayrimenkul",
+      "accountants": "Muhasebeciler",
+      "translators": "Çevirmenler",
+      "visaAgents": "Vize Acenteleri",
+      "business": "İş Danışmanları",
+      "architects": "Mimarlar",
+      "photographers": "Fotoğrafçılar",
+      "coaches": "Koçlar",
+      "doctors": "Doktorlar",
+      "dentists": "Diş Hekimleri",
+      "lawyers": "Avukatlar",
+      "vehicles": "Araçlar"
+    },
+    "stats": {
+      "title": "Platform İstatistikleri",
+      "partnerTypes": "Ortak Türleri",
+      "specialties": "Uzmanlıklar",
+      "languages": "Diller",
+      "countries": "Ülkeler"
+    },
+    "cta": {
+      "title": "Başlamaya Hazır mısınız?",
+      "subtitle": "API'lerimizi keşfedin ve ihtiyaçlarınız için mükemmel profesyoneli bulun",
+      "apiDocs": "API Dokümantasyonu",
+      "browseServices": "Hizmetlere Göz Atın"
+    }
+  },
+  "blog": {
+    "title": "Blog ve Haberler",
+    "subtitle": "En son makaleler, ipuçları ve görüşler",
+    "noPosts": "Henüz gönderi yok",
+    "backHome": "Ana Sayfaya Dön",
+    "readMore": "Devamını Oku",
+    "relatedPosts": "İlgili Gönderiler"
+  },
+  "services": {
+    "realEstate": {
+      "name": "Emlak Danışmanları",
+      "tagline": "Profesyonel Hizmetler",
+      "description": "Güvenilir emlak danışmanları bulun",
+      "cta": "Profesyonellere Göz Atın",
+      "howItWorks": "Nasıl Çalışır"
+    },
+    "accounting": {
+      "name": "Muhasebeciler",
+      "tagline": "Profesyonel Hizmetler",
+      "description": "Profesyonel muhasebe ve vergi hizmetleri",
+      "cta": "Profesyonellere Göz Atın",
+      "howItWorks": "Nasıl Çalışır"
+    },
+    "medical": {
+      "name": "Doktorlar",
+      "tagline": "Sağlık Hizmetleri",
+      "description": "Nitelikli tıp uzmanları",
+      "cta": "Doktorlara Göz Atın",
+      "howItWorks": "Nasıl Çalışır"
+    },
+    "dental": {
+      "name": "Diş Hekimleri",
+      "tagline": "Diş Bakımı",
+      "description": "Profesyonel diş bakımı ve tedavisi",
+      "cta": "Diş Hekimlerine Göz Atın",
+      "howItWorks": "Nasıl Çalışır"
+    },
+    "legal": {
+      "name": "Avukatlar",
+      "tagline": "Hukuki Hizmetler",
+      "description": "Deneyimli hukuk uzmanları",
+      "cta": "Avukatlara Göz Atın",
+      "howItWorks": "Nasıl Çalışır"
+    }
+  },
+  "processSteps": {
+    "title": "Nasıl Çalışır",
+    "subtitle": "4 basit adımda profesyonel hizmet rezervasyonu",
+    "step1": {
+      "title": "Göz Atın",
+      "description": "Doğrulanmış profesyonelleri keşfedin"
+    },
+    "step2": {
+      "title": "Rezervasyon Yapın",
+      "description": "Seçin ve planlayın"
+    },
+    "step3": {
+      "title": "Onay Alın",
+      "description": "Anında onay alın"
+    },
+    "step4": {
+      "title": "Değerlendirin",
+      "description": "Deneyiminizi paylaşın"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Neden CommunityHub?",
+    "verified": {
+      "title": "Doğrulanmış Profesyoneller",
+      "description": "Hepsi doğrulanmış ve sertifikalı"
+    },
+    "topRated": {
+      "title": "En Yüksek Puanlı",
+      "description": "Sadece en iyi profesyoneller"
+    },
+    "bestPrices": {
+      "title": "En İyi Fiyatlar",
+      "description": "Rekabetçi fiyatlandırma"
+    },
+    "support": {
+      "title": "7/24 Destek",
+      "description": "Her zaman destek"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Şirket",
+      "about": "Hakkımızda",
+      "careers": "Kariyer",
+      "blog": "Blog"
+    },
+    "support": {
+      "title": "Destek",
+      "help": "Yardım Merkezi",
+      "terms": "Şartlar",
+      "privacy": "Gizlilik"
+    },
+    "business": {
+      "title": "İşletmeler İçin",
+      "becomeProvider": "Sağlayıcı Olun",
+      "partnerships": "Ortaklıklar"
+    },
+    "followUs": "Bizi Takip Edin",
+    "copyright": "© 2025 CommunityHub. Tüm hakları saklıdır."
+  }
+}

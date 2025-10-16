@@ -1,0 +1,262 @@
+{
+  "common": {
+    "home": "홈",
+    "services": "서비스",
+    "blog": "블로그",
+    "about": "소개",
+    "contact": "연락처",
+    "login": "로그인",
+    "signup": "가입"
+  },
+  "services": {
+    "realEstate": {
+      "name": "부동산 중개인",
+      "tagline": "전문 서비스",
+      "description": "부동산 매매 또는 임대를 위한 신뢰할 수 있는 부동산 중개인 찾기",
+      "cta": "전문가 찾아보기",
+      "howItWorks": "작동 방식"
+    },
+    "medical": {
+      "name": "의사",
+      "tagline": "의료 서비스",
+      "description": "상담 및 치료를 위한 자격을 갖춘 의료 전문가",
+      "cta": "의사 찾아보기",
+      "howItWorks": "작동 방식"
+    }
+  },
+  "processSteps": {
+    "title": "작동 방식",
+    "subtitle": "4단계로 전문 서비스 예약",
+    "step1": {
+      "title": "전문가 찾아보기",
+      "description": "귀하의 지역에서 검증된 전문가 탐색"
+    },
+    "step2": {
+      "title": "서비스 예약",
+      "description": "선호하는 전문가를 선택하고 일정 잡기"
+    },
+    "step3": {
+      "title": "확인 받기",
+      "description": "세부 정보와 함께 즉시 확인 받기"
+    },
+    "step4": {
+      "title": "평가하기",
+      "description": "경험을 공유하고 다른 사람들 돕기"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "careers": "Careers",
+      "press": "Press",
+      "blog": "블로그",
+      "partners": "Partners",
+      "pressMedia": "언론 & 미디어"
+    },
+    "services": {
+      "title": "서비스",
+      "allServices": "All Services",
+      "categories": "Categories",
+      "professionals": "Professionals",
+      "pricing": "Pricing",
+      "popularServices": "인기 서비스",
+      "homeServices": "가정 서비스",
+      "vehicleRental": "차량 렌탈",
+      "realEstate": "부동산",
+      "legalServices": "법률 서비스",
+      "transfers": "이동 서비스",
+      "medical": "의료",
+      "viewAllServices": "모든 서비스 보기"
+    },
+    "support": {
+      "title": "Support",
+      "helpCenter": "Help Center",
+      "contactUs": "Contact Us",
+      "faq": "FAQ",
+      "safety": "Safety",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "supportHelp": "지원 & 도움말",
+      "customerSupport": "고객 지원",
+      "safetyGuidelines": "안전 지침",
+      "cookies": "쿠키 정책",
+      "legalNotice": "법적 고지",
+      "sitemap": "사이트맵",
+      "accessibility": "접근성"
+    },
+    "connect": {
+      "title": "Connect",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "followUs": "팔로우하기"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Get the latest news and offers",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "error": "An error occurred. Please try again.",
+      "updates": "새로운 서비스 및 프로모션 업데이트 받기",
+      "yourEmail": "이메일"
+    },
+    "copyright": "© {year} JustRichard. All rights reserved.",
+    "allRightsReserved": "All rights reserved",
+    "madeWith": "Made with",
+    "in": "in",
+    "description": "여러 국가에서 15개 이상의 카테고리에 걸쳐 검증된 전문가와 고객을 연결하는 신뢰할 수 있는 플랫폼입니다.",
+    "currency": {
+      "title": "통화",
+      "select": "통화 선택"
+    },
+    "platformName": "CommunityHub",
+    "tagline": "여러 국가에서 15개 이상의 카테고리에 걸쳐 검증된 전문가와 고객을 연결하는 신뢰할 수 있는 플랫폼입니다.",
+    "professionals": {
+      "title": "전문가를 위한",
+      "becomeProvider": "제공자 되기",
+      "providerBenefits": "제공자 혜택",
+      "partnerships": "파트너십"
+    },
+    "legal": {
+      "title": "법률",
+      "companyLegal": "회사 & 법률"
+    },
+    "location": {
+      "availableCountries": "이용 가능한 국가",
+      "availableLanguages": "이용 가능한 언어"
+    },
+    "app": {
+      "title": "앱 다운로드",
+      "downloadApp": "앱 다운로드",
+      "downloadOn": "다운로드",
+      "appStore": "App Store",
+      "getItOn": "다운로드",
+      "googlePlay": "Google Play"
+    },
+    "registrationInfo": "등록 번호: 123456789 | 세금 ID: AE123456789 | Dubai Economy에서 라이선스",
+    "disclaimer": {
+      "title": "법적 면책조항:",
+      "text": "CommunityHub는 서비스 제공자와 고객을 연결하는 마켓플레이스 플랫폼으로 운영됩니다. 당사는 서비스 제공자를 고용하지 않으며 제공되는 서비스에 대해 책임지지 않습니다. 모든 제공자는 독립 전문가입니다. 가격과 가용성은 변경될 수 있습니다. 이용 약관이 적용됩니다.",
+      "paymentTitle": "결제 및 환불:",
+      "paymentText": "결제는 인증된 파트너를 통해 안전하게 처리됩니다. 환불 정책은 서비스 제공자에 따라 다릅니다. 예약하기 전에 각 제공자의 약관을 검토하세요."
+    }
+  },
+  "about": {
+    "title": "About CommunityHub",
+    "intro": "CommunityHub is your trusted platform connecting you with verified professionals and services across multiple countries.",
+    "mission": {
+      "title": "Our Mission",
+      "content": "We aim to simplify your life by providing easy access to quality services and trusted professionals."
+    },
+    "offer": {
+      "title": "What We Offer",
+      "item1": "Verified professionals across 15+ categories",
+      "item2": "Services in multiple countries",
+      "item3": "Support for 9 languages",
+      "item4": "Easy booking and communication",
+      "item5": "Transparent pricing and reviews",
+      "item6": "24/7 customer support"
+    },
+    "values": {
+      "title": "Our Values",
+      "trust": {
+        "title": "Trust & Safety",
+        "desc": "All professionals are verified and vetted for your peace of mind."
+      },
+      "quality": {
+        "title": "Quality",
+        "desc": "We maintain high standards to ensure excellent service delivery."
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "desc": "Available in 9 languages across multiple countries."
+      },
+      "support": {
+        "title": "Support",
+        "desc": "Our team is always here to help you."
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy describes how we collect, use, and protect your personal information.",
+    "lastUpdated": "Last updated"
+  },
+  "careers": {
+    "title": "Careers at CommunityHub",
+    "intro": "Join our team and help connect people with trusted professionals worldwide.",
+    "positions": "Open Positions",
+    "apply": "Apply Now"
+  },
+  "press": {
+    "title": "Press & Media",
+    "intro": "Latest news and press releases from CommunityHub.",
+    "contact": "Media Contact",
+    "download": "Download Press Kit"
+  },
+  "partnerships": {
+    "title": "Partnerships",
+    "intro": "Partner with CommunityHub to grow your business.",
+    "benefits": "Partnership Benefits",
+    "contact": "Contact Us"
+  },
+  "providerBenefits": {
+    "title": "Provider Benefits",
+    "intro": "Discover the advantages of becoming a service provider on CommunityHub.",
+    "benefits": "Key Benefits",
+    "join": "Join Now"
+  },
+  "help": {
+    "title": "Help Center",
+    "intro": "Find answers to common questions and get support.",
+    "search": "Search help articles",
+    "topics": "Popular Topics"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "intro": "Find quick answers to the most common questions.",
+    "categories": "FAQ Categories"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Get in touch with our team.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "safety": {
+    "title": "Safety Guidelines",
+    "intro": "Your safety is our priority. Follow these guidelines for a secure experience.",
+    "guidelines": "Safety Tips"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "intro": "Please read these terms carefully before using our services.",
+    "lastUpdated": "Last updated"
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "intro": "We use cookies to improve your experience on our platform.",
+    "whatAre": "What are cookies",
+    "types": "Types of cookies we use"
+  },
+  "legalNotice": {
+    "title": "Legal Notice",
+    "intro": "Important legal information about CommunityHub.",
+    "company": "Company Information",
+    "compliance": "Regulatory Compliance"
+  }
+}

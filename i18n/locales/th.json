@@ -1,0 +1,873 @@
+{
+  "common": {
+    "home": "หน้าแรก",
+    "blog": "บล็อก",
+    "about": "เกี่ยวกับ",
+    "services": "บริการ",
+    "contact": "ติดต่อ",
+    "login": "เข้าสู่ระบบ",
+    "signup": "สมัครสมาชิก",
+    "logout": "ออกจากระบบ",
+    "search": "ค้นหา",
+    "filter": "กรอง",
+    "sort": "เรียงลำดับ",
+    "clear": "ล้าง",
+    "apply": "ใช้",
+    "cancel": "ยกเลิก",
+    "save": "บันทึก",
+    "edit": "แก้ไข",
+    "delete": "ลบ",
+    "view": "ดู",
+    "back": "กลับ",
+    "next": "ถัดไป",
+    "previous": "ก่อนหน้า",
+    "loading": "กำลังโหลด...",
+    "error": "ข้อผิดพลาด",
+    "success": "สำเร็จ",
+    "warning": "คำเตือน",
+    "info": "ข้อมูล",
+    "confirm": "ยืนยัน",
+    "yes": "ใช่",
+    "no": "ไม่",
+    "ok": "ตกลง",
+    "close": "ปิด",
+    "submit": "ส่ง",
+    "reset": "รีเซ็ต",
+    "download": "ดาวน์โหลด",
+    "upload": "อัปโหลด",
+    "select": "เลือก",
+    "all": "ทั้งหมด",
+    "none": "ไม่มี",
+    "more": "เพิ่มเติม",
+    "less": "น้อยลง",
+    "show": "แสดง",
+    "hide": "ซ่อน",
+    "expand": "ขยาย",
+    "collapse": "ยุบ",
+    "required": "จำเป็น",
+    "optional": "ไม่บังคับ",
+    "language": "ภาษา",
+    "currency": "สกุลเงิน",
+    "country": "ประเทศ",
+    "city": "เมือง",
+    "address": "ที่อยู่",
+    "phone": "โทรศัพท์",
+    "email": "อีเมล",
+    "website": "เว็บไซต์",
+    "name": "ชื่อ",
+    "description": "คำอธิบาย",
+    "price": "ราคา",
+    "date": "วันที่",
+    "time": "เวลา",
+    "status": "สถานะ",
+    "rating": "คะแนน",
+    "reviews": "รีวิว",
+    "verified": "ยืนยันแล้ว",
+    "featured": "แนะนำ",
+    "popular": "ยอดนิยม",
+    "new": "ใหม่",
+    "recommended": "แนะนำ"
+  },
+  "nav": {
+    "properties": "Properties",
+    "vehicles": "Vehicles",
+    "transfers": "Transfers",
+    "services": "บริการ",
+    "professionals": "Professionals",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings",
+    "help": "Help"
+  },
+  "partners": {
+    "title": "Professional Partners",
+    "subtitle": "Find verified professionals for all your needs",
+    "realEstate": "Real Estate Agents",
+    "accountants": "Accountants",
+    "translators": "Translators",
+    "visaAgents": "Visa Agents",
+    "businessConsultants": "Business Consultants",
+    "architects": "Architects",
+    "photographers": "Photographers",
+    "coaches": "Coaches",
+    "doctors": "Doctors",
+    "dentists": "Dentists",
+    "lawyers": "Lawyers",
+    "domesticWorkers": "Domestic Workers",
+    "handymen": "Handymen",
+    "viewAll": "View All",
+    "findProfessional": "Find a Professional",
+    "bookNow": "Book Now",
+    "getQuote": "Get Quote",
+    "contactNow": "Contact Now"
+  },
+  "realEstate": {
+    "title": "Real Estate Agents",
+    "findAgent": "Find an Agent",
+    "specialties": {
+      "RESIDENTIAL_SALE": "Residential Sale",
+      "RESIDENTIAL_RENT": "Residential Rent",
+      "COMMERCIAL_SALE": "Commercial Sale",
+      "COMMERCIAL_RENT": "Commercial Rent",
+      "PROPERTY_MANAGEMENT": "Property Management",
+      "INVESTMENT": "Investment",
+      "LUXURY_PROPERTIES": "Luxury Properties",
+      "NEW_DEVELOPMENTS": "New Developments"
+    },
+    "filters": {
+      "specialty": "Specialty",
+      "location": "Location",
+      "language": "ภาษา",
+      "rating": "Minimum Rating",
+      "verifiedOnly": "Verified Only"
+    },
+    "agentProfile": {
+      "license": "License Number",
+      "agency": "Agency",
+      "experience": "Years of Experience",
+      "propertiesListed": "Properties Listed",
+      "propertiesSold": "Properties Sold",
+      "propertiesRented": "Properties Rented",
+      "commission": "Commission",
+      "salesCommission": "Sales Commission",
+      "rentalCommission": "Rental Commission"
+    }
+  },
+  "accounting": {
+    "title": "Accountants & Tax Experts",
+    "findAccountant": "Find an Accountant",
+    "services": {
+      "BOOKKEEPING": "Bookkeeping",
+      "TAX_DECLARATION": "Tax Declaration",
+      "AUDIT": "Audit",
+      "TAX_CONSULTING": "Tax Consulting",
+      "PAYROLL": "Payroll & HR",
+      "ANNUAL_CLOSING": "Annual Closing"
+    },
+    "filters": {
+      "service": "Service Type",
+      "certification": "Certification",
+      "software": "Software Used",
+      "acceptingClients": "Accepting New Clients"
+    },
+    "profile": {
+      "firm": "Firm Name",
+      "certifications": "Certifications",
+      "hourlyRate": "Hourly Rate",
+      "monthlyRetainer": "Monthly Retainer",
+      "activeClients": "Active Clients",
+      "softwareUsed": "Software Used"
+    }
+  },
+  "translation": {
+    "title": "Translators & Interpreters",
+    "findTranslator": "Find a Translator",
+    "types": {
+      "CERTIFIED": "Certified Translation",
+      "SWORN": "Sworn Translation",
+      "COMMERCIAL": "Commercial Translation",
+      "TECHNICAL": "Technical Translation",
+      "MEDICAL": "Medical Translation",
+      "WEBSITE": "Website Translation",
+      "INTERPRETATION": "Interpretation"
+    },
+    "filters": {
+      "languagePair": "Language Pair",
+      "type": "Translation Type",
+      "certified": "Certified Only",
+      "urgent": "Urgent Available"
+    },
+    "profile": {
+      "languagePairs": "Language Pairs",
+      "nativeLanguages": "Native Languages",
+      "pricePerWord": "Price per Word",
+      "pricePerPage": "Price per Page",
+      "pricePerHour": "Price per Hour",
+      "turnaround": "Standard Turnaround",
+      "expressAvailable": "Express Available",
+      "wordsTranslated": "Words Translated",
+      "onTimeDelivery": "On-Time Delivery Rate"
+    }
+  },
+  "visa": {
+    "title": "Visa & Permit Agents",
+    "findAgent": "Find a Visa Agent",
+    "types": {
+      "TOURIST_VISA": "Tourist Visa",
+      "RESIDENCE_VISA": "Residence Visa",
+      "WORK_VISA": "Work Visa",
+      "INVESTOR_VISA": "Investor Visa",
+      "WORK_PERMIT": "Work Permit",
+      "DRIVING_LICENSE": "Driving License",
+      "BUSINESS_LICENSE": "Business License",
+      "PROFESSIONAL_LICENSE": "Professional License",
+      "GOLDEN_VISA": "Golden Visa (UAE)",
+      "ELITE_VISA": "Elite Visa (Thailand)"
+    },
+    "profile": {
+      "agency": "Agency Name",
+      "servicesOffered": "Services Offered",
+      "countriesSupported": "Countries Supported",
+      "successRate": "Success Rate",
+      "avgProcessingTime": "Average Processing Time",
+      "consultationFee": "Consultation Fee",
+      "totalApplications": "Total Applications",
+      "approvedApplications": "Approved Applications"
+    }
+  },
+  "business": {
+    "title": "Business Setup Consultants",
+    "findConsultant": "Find a Consultant",
+    "companyTypes": {
+      "SOLE_PROPRIETORSHIP": "Sole Proprietorship",
+      "LLC": "LLC (SARL)",
+      "SA": "SA (Joint Stock)",
+      "SAS": "SAS (Simplified)",
+      "OFFSHORE_COMPANY": "Offshore Company",
+      "FREE_ZONE_COMPANY": "Free Zone Company",
+      "BRANCH_OFFICE": "Branch Office",
+      "REPRESENTATIVE_OFFICE": "Representative Office"
+    },
+    "profile": {
+      "servicesOffered": "Services Offered",
+      "industries": "Industries",
+      "avgSetupTime": "Average Setup Time",
+      "consultationFee": "Consultation Fee",
+      "additionalServices": "Additional Services",
+      "offersVisa": "Visa Assistance",
+      "offersBankAccount": "Bank Account Setup",
+      "offersOffice": "Office Setup",
+      "offersAccounting": "Accounting Services",
+      "companiesFormed": "Companies Formed"
+    }
+  },
+  "architecture": {
+    "title": "Architects & Designers",
+    "findArchitect": "Find an Architect",
+    "specialties": {
+      "RESIDENTIAL": "Residential",
+      "COMMERCIAL": "Commercial",
+      "INTERIOR_DESIGN": "Interior Design",
+      "LANDSCAPE": "Landscape",
+      "RENOVATION": "Renovation",
+      "SUSTAINABLE_DESIGN": "Sustainable Design",
+      "URBAN_PLANNING": "Urban Planning"
+    },
+    "profile": {
+      "firm": "Firm Name",
+      "license": "License Number",
+      "offersDesign": "Design Services",
+      "offersPlanning": "Planning Services",
+      "offersSupervision": "Supervision",
+      "offers3DRendering": "3D Rendering",
+      "pricePerSqm": "Price per m²",
+      "completedProjects": "Completed Projects",
+      "activeProjects": "Active Projects"
+    }
+  },
+  "photography": {
+    "title": "Photographers & Videographers",
+    "findPhotographer": "Find a Photographer",
+    "specialties": {
+      "REAL_ESTATE": "Real Estate",
+      "EVENTS": "Events",
+      "PORTRAITS": "Portraits",
+      "COMMERCIAL": "Commercial",
+      "PRODUCT": "Product",
+      "DRONE": "Drone",
+      "ARCHITECTURAL": "Architectural"
+    },
+    "profile": {
+      "equipment": "Equipment",
+      "hasDrone": "Drone Available",
+      "hasStudio": "Studio Available",
+      "offersEditing": "Editing Included",
+      "offersVideo": "Video Services",
+      "hourlyRate": "Hourly Rate",
+      "halfDayRate": "Half Day Rate",
+      "fullDayRate": "Full Day Rate",
+      "deliveryTime": "Standard Delivery",
+      "rushAvailable": "Rush Available"
+    }
+  },
+  "coaching": {
+    "title": "Professional Coaches",
+    "findCoach": "Find a Coach",
+    "types": {
+      "LIFE_COACHING": "Life Coaching",
+      "BUSINESS_COACHING": "Business Coaching",
+      "CAREER_COACHING": "Career Coaching",
+      "EXECUTIVE_COACHING": "Executive Coaching",
+      "HEALTH_WELLNESS": "Health & Wellness",
+      "FINANCIAL_COACHING": "Financial Coaching",
+      "RELATIONSHIP_COACHING": "Relationship Coaching",
+      "SPORTS_COACHING": "Sports Coaching",
+      "MINDFULNESS_COACHING": "Mindfulness Coaching",
+      "PRODUCTIVITY_COACHING": "Productivity Coaching"
+    },
+    "profile": {
+      "sessionDuration": "Session Duration",
+      "oneOnOneRate": "1-on-1 Rate",
+      "groupRate": "Group Rate",
+      "freeConsultation": "Free Consultation",
+      "packages": "Packages Available",
+      "totalSessions": "Total Sessions",
+      "approach": "Coaching Approach"
+    }
+  },
+  "domestic": {
+    "title": "Domestic Workers",
+    "findWorker": "Find a Worker",
+    "categories": {
+      "CHILDCARE": "Childcare",
+      "HOUSEKEEPING": "Housekeeping",
+      "COOKING": "Cooking",
+      "NURSING": "Nursing",
+      "ELDERLY_CARE": "Elderly Care",
+      "SPECIAL_NEEDS_CARE": "Special Needs Care",
+      "PET_CARE": "Pet Care",
+      "DRIVER": "Driver"
+    },
+    "employmentTypes": {
+      "FULL_TIME": "Full Time",
+      "PART_TIME": "Part Time",
+      "LIVE_IN": "Live-In",
+      "LIVE_OUT": "Live-Out",
+      "HOURLY": "Hourly",
+      "DAILY": "Daily",
+      "WEEKLY": "Weekly",
+      "MONTHLY": "Monthly"
+    },
+    "profile": {
+      "experienceLevel": "Experience Level",
+      "yearsExperience": "Years of Experience",
+      "skills": "Skills",
+      "specialSkills": "Special Skills",
+      "employmentTypes": "Employment Types",
+      "liveInAvailable": "Live-In Available",
+      "rates": "Rates",
+      "hourlyRate": "Hourly Rate",
+      "dailyRate": "Daily Rate",
+      "monthlyRate": "Monthly Rate",
+      "liveInRate": "Live-In Rate",
+      "availability": "Availability",
+      "healthCertificate": "Health Certificate",
+      "backgroundCheck": "Background Check"
+    }
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "partners": "Partner Management",
+    "approvals": "Pending Approvals",
+    "users": "User Management",
+    "bookings": "Bookings",
+    "payments": "Payments",
+    "reports": "Reports",
+    "settings": "Settings",
+    "approve": "Approve",
+    "reject": "Reject",
+    "suspend": "Suspend",
+    "activate": "Activate",
+    "viewDetails": "View Details",
+    "editProfile": "Edit Profile",
+    "verificationStatus": "Verification Status",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "suspended": "Suspended"
+  },
+  "booking": {
+    "title": "Book a Service",
+    "selectDate": "Select Date",
+    "selectTime": "Select Time",
+    "duration": "Duration",
+    "location": "Location",
+    "notes": "Additional Notes",
+    "summary": "Booking Summary",
+    "total": "Total",
+    "confirmBooking": "Confirm Booking",
+    "bookingConfirmed": "Booking Confirmed",
+    "bookingFailed": "Booking Failed",
+    "viewBooking": "View Booking",
+    "cancelBooking": "Cancel Booking",
+    "rescheduleBooking": "Reschedule Booking"
+  },
+  "profile": {
+    "myProfile": "My Profile",
+    "editProfile": "Edit Profile",
+    "personalInfo": "Personal Information",
+    "professionalInfo": "Professional Information",
+    "certifications": "Certifications",
+    "portfolio": "Portfolio",
+    "availability": "Availability",
+    "pricing": "Pricing",
+    "reviews": "รีวิว",
+    "statistics": "Statistics",
+    "uploadCertificate": "Upload Certificate",
+    "uploadPhoto": "Upload Photo",
+    "saveChanges": "Save Changes"
+  },
+  "search": {
+    "searchPlaceholder": "Search for professionals, services...",
+    "filters": "Filters",
+    "sortBy": "Sort By",
+    "relevance": "Relevance",
+    "rating": "คะแนน",
+    "price": "ราคา",
+    "experience": "Experience",
+    "distance": "Distance",
+    "availability": "Availability",
+    "results": "Results",
+    "noResults": "No results found",
+    "showingResults": "Showing {{count}} results"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "invalidPhone": "Invalid phone number",
+    "minLength": "Minimum length is {{min}} characters",
+    "maxLength": "Maximum length is {{max}} characters",
+    "minValue": "Minimum value is {{min}}",
+    "maxValue": "Maximum value is {{max}}",
+    "invalidFormat": "Invalid format",
+    "passwordMismatch": "Passwords do not match",
+    "fileTooBig": "File size is too large",
+    "invalidFileType": "Invalid file type"
+  },
+  "messages": {
+    "success": {
+      "saved": "Successfully saved",
+      "updated": "Successfully updated",
+      "deleted": "Successfully deleted",
+      "created": "Successfully created",
+      "sent": "Successfully sent",
+      "uploaded": "Successfully uploaded"
+    },
+    "error": {
+      "generic": "An error occurred",
+      "notFound": "Not found",
+      "unauthorized": "Unauthorized",
+      "forbidden": "Forbidden",
+      "serverError": "Server error",
+      "networkError": "Network error"
+    }
+  },
+  "home": {
+    "hero": {
+      "tagline": "Your Trusted Service Platform",
+      "title": "Find Professional Services Near You",
+      "subtitle": "Connect with verified professionals across 15+ categories",
+      "description": "From home services to business consultations, book trusted professionals in minutes. Available in 16 languages across multiple countries.",
+      "ctaText": "Browse Services",
+      "secondaryCtaText": "View Categories"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "verified": {
+        "title": "Verified Professionals",
+        "description": "All our professionals are verified with validated credentials and certifications"
+      },
+      "flexible": {
+        "title": "Flexible Booking",
+        "description": "Book at your convenience, cancel or reschedule easily if needed"
+      },
+      "quality": {
+        "title": "Quality Service",
+        "description": "We guarantee high-quality service with experienced professionals"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Our customer support team is available 24/7 to assist you"
+      }
+    },
+    "specialServices": {
+      "title": "Special Services",
+      "subtitle": "Premium services for all your needs",
+      "vehicleRental": {
+        "title": "Vehicle Rental",
+        "subtitle": "Cars, SUVs & More"
+      },
+      "realEstate": {
+        "title": "Real Estate",
+        "subtitle": "Buy, Rent & Invest"
+      },
+      "legal": {
+        "title": "Legal Services",
+        "subtitle": "Expert Lawyers"
+      },
+      "handyman": {
+        "title": "Handyman",
+        "subtitle": "Repairs & Fixes"
+      },
+      "transfer": {
+        "title": "Transfers",
+        "subtitle": "Airport & City"
+      }
+    },
+    "categories": {
+      "title": "Popular Categories",
+      "viewAll": "View All",
+      "servicesCount": "{{count}} services"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Book professional services in 4 simple steps",
+      "step1": {
+        "title": "Choose Service",
+        "description": "Browse and select from our wide range of professional services."
+      },
+      "step2": {
+        "title": "Book Instantly",
+        "description": "Pick your preferred date, time, and professional with ease."
+      },
+      "step3": {
+        "title": "Get Confirmed",
+        "description": "Receive instant confirmation with all service details."
+      },
+      "step4": {
+        "title": "Enjoy & Rate",
+        "description": "Experience quality service and share your feedback."
+      }
+    },
+    "stats": {
+      "title": "Our Numbers",
+      "partnerTypes": "Partner Types",
+      "specialties": "Specialties",
+      "languages": "Languages",
+      "countries": "Countries",
+      "professionals": "Professionals",
+      "bookings": "Bookings",
+      "satisfaction": "Customer Satisfaction"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Join thousands of satisfied users who trust our platform",
+      "apiDocs": "API Documentation",
+      "browseServices": "Browse Services",
+      "becomePartner": "Become a Partner"
+    },
+    "blog": {
+      "title": "Latest Blog Posts",
+      "viewAll": "View All Posts",
+      "readMore": "Read More"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "careers": "Careers",
+      "press": "Press",
+      "blog": "บล็อก",
+      "partners": "Partners",
+      "pressMedia": "สื่อมวลชน"
+    },
+    "services": {
+      "title": "บริการ",
+      "allServices": "All Services",
+      "categories": "Categories",
+      "professionals": "Professionals",
+      "pricing": "Pricing",
+      "popularServices": "บริการยอดนิยม",
+      "homeServices": "บริการที่บ้าน",
+      "vehicleRental": "เช่ารถ",
+      "realEstate": "อสังหาริมทรัพย์",
+      "legalServices": "บริการทางกฎหมาย",
+      "transfers": "บริการรับ-ส่ง",
+      "medical": "การแพทย์",
+      "viewAllServices": "ดูบริการทั้งหมด"
+    },
+    "support": {
+      "title": "Support",
+      "helpCenter": "Help Center",
+      "contactUs": "Contact Us",
+      "faq": "FAQ",
+      "safety": "Safety",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "supportHelp": "การสนับสนุนและความช่วยเหลือ",
+      "customerSupport": "การสนับสนุนลูกค้า",
+      "safetyGuidelines": "แนวทางความปลอดภัย",
+      "cookies": "นโยบายคุกกี้",
+      "legalNotice": "ประกาศทางกฎหมาย",
+      "sitemap": "แผนผังเว็บไซต์",
+      "accessibility": "การเข้าถึง"
+    },
+    "connect": {
+      "title": "Connect",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "followUs": "ติดตามเรา"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Get the latest news and offers",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "error": "An error occurred. Please try again.",
+      "updates": "รับข้อมูลอัปเดตเกี่ยวกับบริการและโปรโมชันใหม่",
+      "yourEmail": "อีเมลของคุณ"
+    },
+    "copyright": "© {{year}} JustRichard. All rights reserved.",
+    "allRightsReserved": "All rights reserved",
+    "madeWith": "Made with",
+    "in": "in",
+    "description": "แพลตฟอร์มที่เชื่อถือได้ของคุณที่เชื่อมต่อลูกค้ากับผู้เชี่ยวชาญที่ผ่านการตรวจสอบในกว่า 15 หมวดหมู่ในหลายประเทศ",
+    "currency": {
+      "title": "สกุลเงิน",
+      "select": "เลือกสกุลเงิน"
+    },
+    "platformName": "CommunityHub",
+    "tagline": "แพลตฟอร์มที่เชื่อถือได้ของคุณที่เชื่อมต่อลูกค้ากับผู้เชี่ยวชาญที่ผ่านการตรวจสอบในกว่า 15 หมวดหมู่ในหลายประเทศ",
+    "professionals": {
+      "title": "สำหรับผู้เชี่ยวชาญ",
+      "becomeProvider": "เป็นผู้ให้บริการ",
+      "providerBenefits": "ผลประโยชน์สำหรับผู้ให้บริการ",
+      "partnerships": "ความร่วมมือ"
+    },
+    "legal": {
+      "title": "ทางกฎหมาย",
+      "companyLegal": "บริษัทและกฎหมาย"
+    },
+    "location": {
+      "availableCountries": "ประเทศที่ให้บริการ",
+      "availableLanguages": "ภาษาที่ให้บริการ"
+    },
+    "app": {
+      "title": "ดาวน์โหลดแอป",
+      "downloadApp": "ดาวน์โหลดแอป",
+      "downloadOn": "ดาวน์โหลดที่",
+      "appStore": "App Store",
+      "getItOn": "ดาวน์โหลดที่",
+      "googlePlay": "Google Play"
+    },
+    "registrationInfo": "เลขทะเบียน: 123456789 | เลขประจำตัวผู้เสียภาษี: AE123456789 | ได้รับอนุญาตจาก Dubai Economy",
+    "disclaimer": {
+      "title": "ข้อจำกัดความรับผิดทางกฎหมาย:",
+      "text": "CommunityHub ทำหน้าที่เป็นแพลตฟอร์มตลาดที่เชื่อมต่อผู้ให้บริการกับลูกค้า เราไม่ได้จ้างผู้ให้บริการและไม่รับผิดชอบต่อบริการที่ให้ ผู้ให้บริการทุกคนเป็นผู้เชี่ยวชาญอิสระ ราคาและความพร้อมอาจมีการเปลี่ยนแปลง ข้อกำหนดและเงื่อนไขมีผลบังคับใช้",
+      "paymentTitle": "การชำระเงินและการคืนเงิน:",
+      "paymentText": "การชำระเงินได้รับการประมวลผลอย่างปลอดภัยผ่านพันธมิตรที่ได้รับการรับรองของเรา นโยบายการคืนเงินแตกต่างกันไปตามผู้ให้บริการ โปรดตรวจสอบเงื่อนไขของผู้ให้บริการแต่ละรายก่อนทำการจอง"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "JustRichard - Find Verified Professionals Near You",
+      "description": "Connect with verified professionals across 15+ categories. Book home services, business consultations, and more. Available in 16 languages.",
+      "keywords": "professional services, verified professionals, service booking, home services, business consultations"
+    },
+    "services": {
+      "title": "Professional Services - JustRichard",
+      "description": "Browse our wide range of professional services. From home services to business consultations, find the right professional for your needs."
+    },
+    "about": {
+      "title": "About Us - JustRichard",
+      "description": "Learn how JustRichard connects clients with verified professionals across multiple countries and languages."
+    },
+    "contact": {
+      "title": "Contact Us - JustRichard",
+      "description": "Have questions? Our support team is here to help 24/7."
+    }
+  },
+  "languages": {
+    "en": "English",
+    "fr": "French",
+    "ar": "Arabic",
+    "th": "Thai",
+    "vi": "Vietnamese",
+    "ko": "Korean",
+    "es": "Spanish",
+    "de": "German",
+    "ru": "Russian",
+    "zh": "Chinese",
+    "ja": "Japanese",
+    "pt": "Portuguese",
+    "it": "Italian",
+    "nl": "Dutch",
+    "pl": "Polish",
+    "tr": "Turkish"
+  },
+  "countries": {
+    "qa": "Qatar",
+    "ae": "United Arab Emirates",
+    "sa": "Saudi Arabia",
+    "kw": "Kuwait",
+    "bh": "Bahrain",
+    "om": "Oman",
+    "th": "Thailand",
+    "vn": "Vietnam",
+    "fr": "France",
+    "us": "United States"
+  },
+  "rental": {
+    "title": "Vehicle Rental",
+    "subtitle": "Find the perfect vehicle for your needs",
+    "searchPlaceholder": "Search by brand, model, or type...",
+    "types": {
+      "SEDAN": "Sedan",
+      "SUV": "SUV",
+      "LUXURY": "Luxury",
+      "SPORTS": "Sports",
+      "VAN": "Van",
+      "TRUCK": "Truck",
+      "ELECTRIC": "Electric",
+      "HYBRID": "Hybrid"
+    },
+    "features": {
+      "AC": "Air Conditioning",
+      "GPS": "GPS",
+      "BLUETOOTH": "Bluetooth",
+      "PARKING_SENSORS": "Parking Sensors",
+      "BACKUP_CAMERA": "Backup Camera",
+      "SUNROOF": "Sunroof",
+      "LEATHER_SEATS": "Leather Seats",
+      "HEATED_SEATS": "Heated Seats"
+    },
+    "transmission": {
+      "AUTOMATIC": "Automatic",
+      "MANUAL": "Manual"
+    },
+    "fuel": {
+      "PETROL": "Petrol",
+      "DIESEL": "Diesel",
+      "ELECTRIC": "Electric",
+      "HYBRID": "Hybrid"
+    },
+    "pricePerDay": "Price per Day",
+    "availableNow": "Available Now",
+    "bookNow": "Book Now",
+    "viewDetails": "View Details",
+    "specifications": "Specifications",
+    "seats": "Seats",
+    "doors": "Doors",
+    "luggage": "Luggage",
+    "minAge": "Minimum Age",
+    "insurance": "Insurance",
+    "deliveryAvailable": "Delivery Available",
+    "unlimitedMileage": "Unlimited Mileage"
+  },
+  "transfer": {
+    "title": "Transfer Services",
+    "subtitle": "Reliable airport and city transfers",
+    "types": {
+      "AIRPORT_PICKUP": "Airport Pickup",
+      "AIRPORT_DROPOFF": "Airport Dropoff",
+      "CITY_TRANSFER": "City Transfer",
+      "HOURLY_RENTAL": "Hourly Rental",
+      "INTERCITY": "Intercity"
+    },
+    "vehicleTypes": {
+      "SEDAN": "Sedan (1-3 passengers)",
+      "SUV": "SUV (1-6 passengers)",
+      "VAN": "Van (1-12 passengers)",
+      "LUXURY": "Luxury (1-3 passengers)"
+    },
+    "from": "From",
+    "to": "To",
+    "pickupLocation": "Pickup Location",
+    "dropoffLocation": "Dropoff Location",
+    "pickupDate": "Pickup Date",
+    "pickupTime": "Pickup Time",
+    "passengers": "Passengers",
+    "luggage": "Luggage",
+    "flightNumber": "Flight Number (optional)",
+    "notes": "Special Notes",
+    "instantConfirmation": "Instant Confirmation",
+    "freeWaiting": "Free Waiting",
+    "meetAndGreet": "Meet & Greet",
+    "allInclusive": "All Inclusive",
+    "getQuote": "Get Quote",
+    "bookNow": "Book Now"
+  },
+  "handyman": {
+    "title": "Handyman Services",
+    "subtitle": "Find skilled handymen for your repairs",
+    "categories": {
+      "PLUMBING": "Plumbing",
+      "ELECTRICAL": "Electrical",
+      "CARPENTRY": "Carpentry",
+      "PAINTING": "Painting",
+      "AC_REPAIR": "AC Repair",
+      "APPLIANCE_REPAIR": "Appliance Repair",
+      "GENERAL_MAINTENANCE": "General Maintenance",
+      "CLEANING": "Cleaning"
+    },
+    "emergencyService": "24/7 Emergency Service",
+    "sameDay": "Same Day Service",
+    "certified": "Certified & Insured",
+    "warrantyIncluded": "Warranty Included",
+    "freeInspection": "Free Inspection",
+    "callNow": "Call Now",
+    "bookService": "Book Service",
+    "requestQuote": "Request Quote"
+  },
+  "legal": {
+    "title": "Legal Services",
+    "subtitle": "Consult with expert lawyers",
+    "specialties": {
+      "FAMILY_LAW": "Family Law",
+      "CORPORATE_LAW": "Corporate Law",
+      "REAL_ESTATE_LAW": "Real Estate Law",
+      "IMMIGRATION_LAW": "Immigration Law",
+      "CRIMINAL_LAW": "Criminal Law",
+      "LABOR_LAW": "Labor Law",
+      "INTELLECTUAL_PROPERTY": "Intellectual Property",
+      "TAX_LAW": "Tax Law"
+    },
+    "consultation": "Consultation",
+    "freeConsultation": "Free First Consultation",
+    "experiencedLawyers": "Experienced Lawyers",
+    "confidential": "Strictly Confidential",
+    "multilingualSupport": "Multilingual Support",
+    "scheduleConsultation": "Schedule Consultation",
+    "contactLawyer": "Contact Lawyer"
+  },
+  "cities": {
+    "france": {
+      "paris": "Paris",
+      "versailles": "Versailles",
+      "marseille": "Marseille",
+      "nice": "Nice",
+      "cannes": "Cannes",
+      "monaco": "Monaco",
+      "lyon": "Lyon",
+      "grenoble": "Grenoble",
+      "toulouse": "Toulouse",
+      "montpellier": "Montpellier",
+      "bordeaux": "Bordeaux"
+    },
+    "switzerland": {
+      "zurich": "Zurich",
+      "geneva": "Geneva",
+      "basel": "Basel",
+      "bern": "Bern",
+      "lausanne": "Lausanne",
+      "lucerne": "Lucerne"
+    },
+    "belgium": {
+      "brussels": "Brussels",
+      "antwerp": "Antwerp",
+      "ghent": "Ghent",
+      "bruges": "Bruges",
+      "liege": "Liège",
+      "charleroi": "Charleroi"
+    }
+  },
+  "regions": {
+    "france": {
+      "ile-de-france": "Île-de-France",
+      "paca": "Provence-Alpes-Côte d'Azur",
+      "auvergne-rhone-alpes": "Auvergne-Rhône-Alpes",
+      "occitanie": "Occitanie",
+      "nouvelle-aquitaine": "Nouvelle-Aquitaine"
+    },
+    "belgium": {
+      "brussels": "Brussels-Capital Region",
+      "flanders": "Flanders",
+      "wallonia": "Wallonia"
+    }
+  }
+}

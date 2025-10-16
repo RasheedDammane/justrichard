@@ -1,0 +1,307 @@
+// Enhanced Building Model - Super Entity for Partners
+// This file shows the enhanced Building model structure
+
+enum BuildingType {
+  RESIDENTIAL      // Résidentiel
+  COMMERCIAL       // Commercial
+  MIXED_USE        // Mixte
+  OFFICE           // Bureau
+  RETAIL           // Commerce
+  HOTEL            // Hôtel
+  INDUSTRIAL       // Industriel
+}
+
+enum BuildingAmenity {
+  // Security
+  SECURITY_24_7
+  CCTV
+  ACCESS_CONTROL
+  CONCIERGE
+  
+  // Facilities
+  GYM
+  SWIMMING_POOL
+  PARKING
+  ELEVATOR
+  GARDEN
+  PLAYGROUND
+  SAUNA
+  STEAM_ROOM
+  JACUZZI
+  
+  // Services
+  MAINTENANCE
+  CLEANING
+  LAUNDRY
+  RECEPTION
+  VALET_PARKING
+  
+  // Utilities
+  CENTRAL_AC
+  CENTRAL_HEATING
+  BACKUP_GENERATOR
+  WATER_TANKS
+  SOLAR_PANELS
+  
+  // Connectivity
+  WIFI
+  FIBER_OPTIC
+  SMART_HOME
+}
+
+model Building {
+  id              String          @id @default(cuid())
+  
+  // Basic Information
+  name            String          // English name
+  nameAr          String?         // Arabic
+  nameFr          String?         // French
+  nameTh          String?         // Thai
+  nameRu          String?         // Russian
+  nameKo          String?         // Korean
+  nameEs          String?         // Spanish
+  nameVi          String?         // Vietnamese
+  nameTl          String?         // Tagalog
+  nameIt          String?         // Italian
+  nameNo          String?         // Norwegian
+  nameTr          String?         // Turkish
+  namePt          String?         // Portuguese
+  nameAf          String?         // Afrikaans
+  nameJa          String?         // Japanese
+  nameDe          String?         // German
+  
+  slug            String          @unique
+  
+  // Developer & Management
+  developer       String?         // Developer name (DAMAC, EMAAR, etc.)
+  managementCompany String?       // Property management company
+  
+  // Type & Category
+  buildingType    BuildingType    @default(RESIDENTIAL)
+  category        String[]        // Tags: luxury, affordable, eco-friendly, etc.
+  
+  // Location
+  countryId       String
+  cityId          String
+  regionId        String?
+  address         String?
+  streetAddress   String?
+  postalCode      String?
+  latitude        Float?
+  longitude       Float?
+  mapUrl          String?         // Google Maps URL
+  
+  // Building Details
+  yearBuilt       Int?
+  yearRenovated   Int?
+  totalFloors     Int?
+  totalUnits      Int?
+  totalArea       Float?          // Square meters
+  plotArea        Float?          // Land area
+  
+  // Descriptions (Multilingual)
+  description     String?         @db.Text
+  descriptionAr   String?         @db.Text
+  descriptionFr   String?         @db.Text
+  
+  // Features & Amenities
+  amenities       BuildingAmenity[]
+  features        String[]        // Custom features
+  
+  // Media
+  images          String[]        // Array of image URLs
+  videos          String[]        // Array of video URLs
+  virtualTour     String?         // 360° tour URL
+  floorPlans      String[]        // Floor plan images
+  brochure        String?         // PDF brochure URL
+  
+  // Contact & Hours
+  phone           String?
+  email           String?
+  website         String?
+  officeHours     Json?           // Opening hours
+  
+  // Services Offered (as a Building)
+  servicesOffered String[]        // real_estate, cleaning, moving, maintenance, etc.
+  
+  // Rating & Reviews
+  rating          Float?          @default(0)
+  totalReviews    Int             @default(0)
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?         @db.Text
+  keywords        String[]
+  
+  // Status & Visibility
+  isActive        Boolean         @default(true)
+  isFeatured      Boolean         @default(false)
+  isVerified      Boolean         @default(false)
+  
+  // Timestamps
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  // Relations
+  country         Country         @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  city            City            @relation(fields: [cityId], references: [id], onDelete: Cascade)
+  region          Region?         @relation(fields: [regionId], references: [id])
+  
+  // Properties in this building
+  properties      Property[]
+  
+  // Partners operating in this building
+  buildingPartners BuildingPartner[]
+  
+  // Services offered by the building
+  buildingServices BuildingService[]
+  
+  // Reviews for the building
+  buildingReviews BuildingReview[]
+  
+  // Blog posts about this building
+  blogPosts       BlogPost[]      @relation("BuildingPosts")
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([regionId])
+  @@index([developer])
+  @@index([buildingType])
+  @@index([isActive])
+  @@index([isFeatured])
+  @@index([slug])
+  @@index([rating])
+}
+
+// Junction table: Building <-> Partners
+model BuildingPartner {
+  id              String          @id @default(cuid())
+  buildingId      String
+  partnerId       String
+  partnerType     String          // real_estate, accountant, translator, etc.
+  
+  // Relationship details
+  isExclusive     Boolean         @default(false)
+  isPrimary       Boolean         @default(false)
+  startDate       DateTime?
+  endDate         DateTime?
+  
+  // Contact in building
+  officeNumber    String?
+  floor           Int?
+  phoneExtension  String?
+  
+  // Status
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  building        Building        @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  
+  // Relations to different partner types
+  realEstateAgent RealEstateAgent? @relation(fields: [partnerId], references: [id])
+  accountant      Accountant?      @relation(fields: [partnerId], references: [id])
+  translator      Translator?      @relation(fields: [partnerId], references: [id])
+  // Add other partner types...
+  
+  @@unique([buildingId, partnerId, partnerType])
+  @@index([buildingId])
+  @@index([partnerId])
+  @@index([partnerType])
+  @@index([isActive])
+}
+
+// Services offered by the building itself
+model BuildingService {
+  id              String          @id @default(cuid())
+  buildingId      String
+  
+  // Service details
+  serviceType     String          // cleaning, maintenance, moving, security, etc.
+  name            String
+  nameAr          String?
+  description     String?         @db.Text
+  descriptionAr   String?         @db.Text
+  
+  // Pricing
+  price           Float?
+  currency        String          @default("USD")
+  pricingType     String?         // fixed, hourly, monthly, etc.
+  
+  // Availability
+  isAvailable     Boolean         @default(true)
+  schedule        Json?           // Available hours/days
+  
+  // Contact
+  contactPerson   String?
+  contactPhone    String?
+  contactEmail    String?
+  
+  // Status
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  building        Building        @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  
+  @@index([buildingId])
+  @@index([serviceType])
+  @@index([isActive])
+}
+
+// Reviews for buildings
+model BuildingReview {
+  id              String          @id @default(cuid())
+  buildingId      String
+  userId          String
+  
+  // Review content
+  rating          Int             // 1-5
+  title           String?
+  comment         String?         @db.Text
+  
+  // Review categories
+  locationRating  Int?            // 1-5
+  facilitiesRating Int?           // 1-5
+  managementRating Int?           // 1-5
+  valueRating     Int?            // 1-5
+  
+  // Media
+  images          String[]
+  
+  // Status
+  isVerified      Boolean         @default(false)
+  status          String          @default("pending") // pending, approved, rejected
+  
+  // Timestamps
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  building        Building        @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  user            User            @relation(fields: [userId], references: [id])
+  
+  @@index([buildingId])
+  @@index([userId])
+  @@index([rating])
+  @@index([status])
+}
+
+// Add to existing models:
+
+// Add to RealEstateAgent model:
+// buildingPartnerships BuildingPartner[]
+
+// Add to Accountant model:
+// buildingPartnerships BuildingPartner[]
+
+// Add to Translator model:
+// buildingPartnerships BuildingPartner[]
+
+// etc. for all partner types...
+
+// Add to User model:
+// buildingReviews BuildingReview[]
+
+// Add to BlogPost model:
+// building    Building? @relation("BuildingPosts", fields: [buildingId], references: [id])
+// buildingId  String?

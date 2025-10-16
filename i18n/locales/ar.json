@@ -1,0 +1,873 @@
+{
+  "common": {
+    "home": "الرئيسية",
+    "about": "عن",
+    "services": "الخدمات",
+    "contact": "اتصل",
+    "login": "تسجيل الدخول",
+    "signup": "التسجيل",
+    "logout": "تسجيل الخروج",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "clear": "مسح",
+    "apply": "تطبيق",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "back": "رجوع",
+    "next": "التالي",
+    "previous": "السابق",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجاح",
+    "warning": "تحذير",
+    "info": "معلومات",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا",
+    "ok": "موافق",
+    "close": "إغلاق",
+    "submit": "إرسال",
+    "reset": "إعادة تعيين",
+    "download": "تحميل",
+    "upload": "رفع",
+    "select": "اختر",
+    "all": "الكل",
+    "none": "لا شيء",
+    "more": "المزيد",
+    "less": "أقل",
+    "show": "إظهار",
+    "hide": "إخفاء",
+    "expand": "توسيع",
+    "collapse": "طي",
+    "required": "مطلوب",
+    "optional": "اختياري",
+    "language": "اللغة",
+    "currency": "العملة",
+    "country": "البلد",
+    "city": "المدينة",
+    "address": "العنوان",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "website": "الموقع الإلكتروني",
+    "name": "الاسم",
+    "description": "الوصف",
+    "price": "السعر",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "status": "الحالة",
+    "rating": "التقييم",
+    "reviews": "التقييمات",
+    "verified": "موثق",
+    "featured": "مميز",
+    "popular": "شائع",
+    "new": "جديد",
+    "recommended": "موصى به",
+    "blog": "Blog"
+  },
+  "nav": {
+    "properties": "العقارات",
+    "vehicles": "المركبات",
+    "transfers": "النقل",
+    "services": "الخدمات",
+    "professionals": "المحترفون",
+    "dashboard": "لوحة التحكم",
+    "profile": "الملف الشخصي",
+    "settings": "الإعدادات",
+    "help": "المساعدة"
+  },
+  "partners": {
+    "title": "الشركاء المحترفون",
+    "subtitle": "ابحث عن محترفين موثقين لجميع احتياجاتك",
+    "realEstate": "وكلاء العقارات",
+    "accountants": "المحاسبون",
+    "translators": "المترجمون",
+    "visaAgents": "وكلاء التأشيرات",
+    "businessConsultants": "مستشارو الأعمال",
+    "architects": "المهندسون المعماريون",
+    "photographers": "المصورون",
+    "coaches": "المدربون",
+    "doctors": "الأطباء",
+    "dentists": "أطباء الأسنان",
+    "lawyers": "المحامون",
+    "domesticWorkers": "العمالة المنزلية",
+    "handymen": "الفنيون",
+    "viewAll": "عرض الكل",
+    "findProfessional": "ابحث عن محترف",
+    "bookNow": "احجز الآن",
+    "getQuote": "احصل على عرض سعر",
+    "contactNow": "اتصل الآن"
+  },
+  "realEstate": {
+    "title": "وكلاء العقارات",
+    "findAgent": "ابحث عن وكيل",
+    "specialties": {
+      "RESIDENTIAL_SALE": "بيع سكني",
+      "RESIDENTIAL_RENT": "إيجار سكني",
+      "COMMERCIAL_SALE": "بيع تجاري",
+      "COMMERCIAL_RENT": "إيجار تجاري",
+      "PROPERTY_MANAGEMENT": "إدارة العقارات",
+      "INVESTMENT": "استثمار",
+      "LUXURY_PROPERTIES": "عقارات فاخرة",
+      "NEW_DEVELOPMENTS": "مشاريع جديدة"
+    },
+    "filters": {
+      "specialty": "التخصص",
+      "location": "الموقع",
+      "language": "اللغة",
+      "rating": "الحد الأدنى للتقييم",
+      "verifiedOnly": "موثق فقط"
+    },
+    "agentProfile": {
+      "license": "رقم الترخيص",
+      "agency": "الوكالة",
+      "experience": "سنوات الخبرة",
+      "propertiesListed": "العقارات المدرجة",
+      "propertiesSold": "العقارات المباعة",
+      "propertiesRented": "العقارات المؤجرة",
+      "commission": "العمولة",
+      "salesCommission": "عمولة البيع",
+      "rentalCommission": "عمولة الإيجار"
+    }
+  },
+  "accounting": {
+    "title": "المحاسبون وخبراء الضرائب",
+    "findAccountant": "ابحث عن محاسب",
+    "services": {
+      "BOOKKEEPING": "مسك الدفاتر",
+      "TAX_DECLARATION": "الإقرار الضريبي",
+      "AUDIT": "التدقيق",
+      "TAX_CONSULTING": "الاستشارات الضريبية",
+      "PAYROLL": "الرواتب والموارد البشرية",
+      "ANNUAL_CLOSING": "الإقفال السنوي"
+    },
+    "filters": {
+      "service": "نوع الخدمة",
+      "certification": "الشهادة",
+      "software": "البرامج المستخدمة",
+      "acceptingClients": "يقبل عملاء جدد"
+    },
+    "profile": {
+      "firm": "اسم الشركة",
+      "certifications": "الشهادات",
+      "hourlyRate": "السعر بالساعة",
+      "monthlyRetainer": "الاشتراك الشهري",
+      "activeClients": "العملاء النشطون",
+      "softwareUsed": "البرامج المستخدمة"
+    }
+  },
+  "translation": {
+    "title": "المترجمون والمترجمون الفوريون",
+    "findTranslator": "ابحث عن مترجم",
+    "types": {
+      "CERTIFIED": "ترجمة معتمدة",
+      "SWORN": "ترجمة محلفة",
+      "COMMERCIAL": "ترجمة تجارية",
+      "TECHNICAL": "ترجمة تقنية",
+      "MEDICAL": "ترجمة طبية",
+      "WEBSITE": "ترجمة مواقع",
+      "INTERPRETATION": "ترجمة فورية"
+    },
+    "filters": {
+      "languagePair": "زوج اللغات",
+      "type": "نوع الترجمة",
+      "certified": "معتمد فقط",
+      "urgent": "عاجل متاح"
+    },
+    "profile": {
+      "languagePairs": "أزواج اللغات",
+      "nativeLanguages": "اللغات الأم",
+      "pricePerWord": "السعر لكل كلمة",
+      "pricePerPage": "السعر لكل صفحة",
+      "pricePerHour": "السعر بالساعة",
+      "turnaround": "وقت التسليم القياسي",
+      "expressAvailable": "التسليم السريع متاح",
+      "wordsTranslated": "الكلمات المترجمة",
+      "onTimeDelivery": "معدل التسليم في الوقت المحدد"
+    }
+  },
+  "visa": {
+    "title": "وكلاء التأشيرات والتصاريح",
+    "findAgent": "ابحث عن وكيل تأشيرات",
+    "types": {
+      "TOURIST_VISA": "تأشيرة سياحية",
+      "RESIDENCE_VISA": "تأشيرة إقامة",
+      "WORK_VISA": "تأشيرة عمل",
+      "INVESTOR_VISA": "تأشيرة مستثمر",
+      "WORK_PERMIT": "تصريح عمل",
+      "DRIVING_LICENSE": "رخصة قيادة",
+      "BUSINESS_LICENSE": "رخصة تجارية",
+      "PROFESSIONAL_LICENSE": "رخصة مهنية",
+      "GOLDEN_VISA": "التأشيرة الذهبية (الإمارات)",
+      "ELITE_VISA": "تأشيرة النخبة (تايلاند)"
+    },
+    "profile": {
+      "agency": "اسم الوكالة",
+      "servicesOffered": "الخدمات المقدمة",
+      "countriesSupported": "البلدان المدعومة",
+      "successRate": "معدل النجاح",
+      "avgProcessingTime": "متوسط وقت المعالجة",
+      "consultationFee": "رسوم الاستشارة",
+      "totalApplications": "إجمالي الطلبات",
+      "approvedApplications": "الطلبات الموافق عليها"
+    }
+  },
+  "business": {
+    "title": "مستشارو تأسيس الشركات",
+    "findConsultant": "ابحث عن مستشار",
+    "companyTypes": {
+      "SOLE_PROPRIETORSHIP": "مؤسسة فردية",
+      "LLC": "شركة ذات مسؤولية محدودة",
+      "SA": "شركة مساهمة",
+      "SAS": "شركة مساهمة مبسطة",
+      "OFFSHORE_COMPANY": "شركة خارجية",
+      "FREE_ZONE_COMPANY": "شركة منطقة حرة",
+      "BRANCH_OFFICE": "مكتب فرع",
+      "REPRESENTATIVE_OFFICE": "مكتب تمثيلي"
+    },
+    "profile": {
+      "servicesOffered": "الخدمات المقدمة",
+      "industries": "الصناعات",
+      "avgSetupTime": "متوسط وقت التأسيس",
+      "consultationFee": "رسوم الاستشارة",
+      "additionalServices": "خدمات إضافية",
+      "offersVisa": "مساعدة في التأشيرة",
+      "offersBankAccount": "فتح حساب بنكي",
+      "offersOffice": "إعداد المكتب",
+      "offersAccounting": "خدمات المحاسبة",
+      "companiesFormed": "الشركات المؤسسة"
+    }
+  },
+  "architecture": {
+    "title": "المهندسون المعماريون والمصممون",
+    "findArchitect": "ابحث عن مهندس معماري",
+    "specialties": {
+      "RESIDENTIAL": "سكني",
+      "COMMERCIAL": "تجاري",
+      "INTERIOR_DESIGN": "تصميم داخلي",
+      "LANDSCAPE": "تنسيق حدائق",
+      "RENOVATION": "تجديد",
+      "SUSTAINABLE_DESIGN": "تصميم مستدام",
+      "URBAN_PLANNING": "تخطيط عمراني"
+    },
+    "profile": {
+      "firm": "اسم الشركة",
+      "license": "رقم الترخيص",
+      "offersDesign": "خدمات التصميم",
+      "offersPlanning": "خدمات التخطيط",
+      "offersSupervision": "الإشراف",
+      "offers3DRendering": "التصميم ثلاثي الأبعاد",
+      "pricePerSqm": "السعر لكل متر مربع",
+      "completedProjects": "المشاريع المنجزة",
+      "activeProjects": "المشاريع النشطة"
+    }
+  },
+  "photography": {
+    "title": "المصورون ومصورو الفيديو",
+    "findPhotographer": "ابحث عن مصور",
+    "specialties": {
+      "REAL_ESTATE": "عقارات",
+      "EVENTS": "فعاليات",
+      "PORTRAITS": "صور شخصية",
+      "COMMERCIAL": "تجاري",
+      "PRODUCT": "منتجات",
+      "DRONE": "طائرة بدون طيار",
+      "ARCHITECTURAL": "معماري"
+    },
+    "profile": {
+      "equipment": "المعدات",
+      "hasDrone": "طائرة بدون طيار متاحة",
+      "hasStudio": "استوديو متاح",
+      "offersEditing": "التحرير مشمول",
+      "offersVideo": "خدمات الفيديو",
+      "hourlyRate": "السعر بالساعة",
+      "halfDayRate": "سعر نصف يوم",
+      "fullDayRate": "سعر يوم كامل",
+      "deliveryTime": "وقت التسليم القياسي",
+      "rushAvailable": "التسليم السريع متاح"
+    }
+  },
+  "coaching": {
+    "title": "المدربون المحترفون",
+    "findCoach": "ابحث عن مدرب",
+    "types": {
+      "LIFE_COACHING": "تدريب الحياة",
+      "BUSINESS_COACHING": "تدريب الأعمال",
+      "CAREER_COACHING": "تدريب المهنة",
+      "EXECUTIVE_COACHING": "التدريب التنفيذي",
+      "HEALTH_WELLNESS": "الصحة والعافية",
+      "FINANCIAL_COACHING": "التدريب المالي",
+      "RELATIONSHIP_COACHING": "تدريب العلاقات",
+      "SPORTS_COACHING": "التدريب الرياضي",
+      "MINDFULNESS_COACHING": "تدريب اليقظة",
+      "PRODUCTIVITY_COACHING": "تدريب الإنتاجية"
+    },
+    "profile": {
+      "sessionDuration": "مدة الجلسة",
+      "oneOnOneRate": "سعر الجلسة الفردية",
+      "groupRate": "سعر الجلسة الجماعية",
+      "freeConsultation": "استشارة مجانية",
+      "packages": "الباقات المتاحة",
+      "totalSessions": "إجمالي الجلسات",
+      "approach": "نهج التدريب"
+    }
+  },
+  "domestic": {
+    "title": "العمالة المنزلية",
+    "findWorker": "ابحث عن عامل",
+    "categories": {
+      "CHILDCARE": "رعاية الأطفال",
+      "HOUSEKEEPING": "التدبير المنزلي",
+      "COOKING": "الطبخ",
+      "NURSING": "التمريض",
+      "ELDERLY_CARE": "رعاية المسنين",
+      "SPECIAL_NEEDS_CARE": "رعاية ذوي الاحتياجات الخاصة",
+      "PET_CARE": "رعاية الحيوانات الأليفة",
+      "DRIVER": "سائق"
+    },
+    "employmentTypes": {
+      "FULL_TIME": "دوام كامل",
+      "PART_TIME": "دوام جزئي",
+      "LIVE_IN": "مقيم",
+      "LIVE_OUT": "غير مقيم",
+      "HOURLY": "بالساعة",
+      "DAILY": "يومي",
+      "WEEKLY": "أسبوعي",
+      "MONTHLY": "شهري"
+    },
+    "profile": {
+      "experienceLevel": "مستوى الخبرة",
+      "yearsExperience": "سنوات الخبرة",
+      "skills": "المهارات",
+      "specialSkills": "المهارات الخاصة",
+      "employmentTypes": "أنواع التوظيف",
+      "liveInAvailable": "الإقامة متاحة",
+      "rates": "الأسعار",
+      "hourlyRate": "السعر بالساعة",
+      "dailyRate": "السعر اليومي",
+      "monthlyRate": "السعر الشهري",
+      "liveInRate": "سعر الإقامة",
+      "availability": "التوفر",
+      "healthCertificate": "شهادة صحية",
+      "backgroundCheck": "فحص الخلفية"
+    }
+  },
+  "admin": {
+    "dashboard": "لوحة تحكم المسؤول",
+    "partners": "إدارة الشركاء",
+    "approvals": "الموافقات المعلقة",
+    "users": "إدارة المستخدمين",
+    "bookings": "الحجوزات",
+    "payments": "المدفوعات",
+    "reports": "التقارير",
+    "settings": "الإعدادات",
+    "approve": "موافقة",
+    "reject": "رفض",
+    "suspend": "تعليق",
+    "activate": "تفعيل",
+    "viewDetails": "عرض التفاصيل",
+    "editProfile": "تعديل الملف الشخصي",
+    "verificationStatus": "حالة التحقق",
+    "pending": "قيد الانتظار",
+    "approved": "موافق عليه",
+    "rejected": "مرفوض",
+    "suspended": "معلق"
+  },
+  "booking": {
+    "title": "احجز خدمة",
+    "selectDate": "اختر التاريخ",
+    "selectTime": "اختر الوقت",
+    "duration": "المدة",
+    "location": "الموقع",
+    "notes": "ملاحظات إضافية",
+    "summary": "ملخص الحجز",
+    "total": "الإجمالي",
+    "confirmBooking": "تأكيد الحجز",
+    "bookingConfirmed": "تم تأكيد الحجز",
+    "bookingFailed": "فشل الحجز",
+    "viewBooking": "عرض الحجز",
+    "cancelBooking": "إلغاء الحجز",
+    "rescheduleBooking": "إعادة جدولة الحجز"
+  },
+  "profile": {
+    "myProfile": "ملفي الشخصي",
+    "editProfile": "تعديل الملف الشخصي",
+    "personalInfo": "المعلومات الشخصية",
+    "professionalInfo": "المعلومات المهنية",
+    "certifications": "الشهادات",
+    "portfolio": "معرض الأعمال",
+    "availability": "التوفر",
+    "pricing": "التسعير",
+    "reviews": "التقييمات",
+    "statistics": "الإحصائيات",
+    "uploadCertificate": "رفع شهادة",
+    "uploadPhoto": "رفع صورة",
+    "saveChanges": "حفظ التغييرات"
+  },
+  "search": {
+    "searchPlaceholder": "ابحث عن محترفين، خدمات...",
+    "filters": "التصفيات",
+    "sortBy": "ترتيب حسب",
+    "relevance": "الصلة",
+    "rating": "التقييم",
+    "price": "السعر",
+    "experience": "الخبرة",
+    "distance": "المسافة",
+    "availability": "التوفر",
+    "results": "النتائج",
+    "noResults": "لم يتم العثور على نتائج",
+    "showingResults": "عرض {{count}} نتيجة"
+  },
+  "validation": {
+    "required": "هذا الحقل مطلوب",
+    "invalidEmail": "عنوان بريد إلكتروني غير صالح",
+    "invalidPhone": "رقم هاتف غير صالح",
+    "minLength": "الحد الأدنى للطول هو {{min}} حرفًا",
+    "maxLength": "الحد الأقصى للطول هو {{max}} حرفًا",
+    "minValue": "الحد الأدنى للقيمة هو {{min}}",
+    "maxValue": "الحد الأقصى للقيمة هو {{max}}",
+    "invalidFormat": "تنسيق غير صالح",
+    "passwordMismatch": "كلمات المرور غير متطابقة",
+    "fileTooBig": "حجم الملف كبير جدًا",
+    "invalidFileType": "نوع ملف غير صالح"
+  },
+  "messages": {
+    "success": {
+      "saved": "تم الحفظ بنجاح",
+      "updated": "تم التحديث بنجاح",
+      "deleted": "تم الحذف بنجاح",
+      "created": "تم الإنشاء بنجاح",
+      "sent": "تم الإرسال بنجاح",
+      "uploaded": "تم الرفع بنجاح"
+    },
+    "error": {
+      "generic": "حدث خطأ",
+      "notFound": "غير موجود",
+      "unauthorized": "غير مصرح",
+      "forbidden": "محظور",
+      "serverError": "خطأ في الخادم",
+      "networkError": "خطأ في الشبكة"
+    }
+  },
+  "home": {
+    "hero": {
+      "tagline": "منصة الخدمات الموثوقة",
+      "title": "ابحث عن الخدمات المهنية بالقرب منك",
+      "subtitle": "تواصل مع محترفين موثقين في أكثر من 15 فئة",
+      "description": "من الخدمات المنزلية إلى الاستشارات التجارية، احجز محترفين موثوقين في دقائق. متاح بـ 16 لغة في عدة دول.",
+      "ctaText": "تصفح الخدمات",
+      "secondaryCtaText": "عرض الفئات"
+    },
+    "features": {
+      "title": "لماذا تختارنا",
+      "verified": {
+        "title": "محترفون موثقون",
+        "description": "جميع محترفينا موثقون بمؤهلات وشهادات معتمدة"
+      },
+      "flexible": {
+        "title": "حجز مرن",
+        "description": "احجز في الوقت المناسب لك، ألغِ أو أعد الجدولة بسهولة إذا لزم الأمر"
+      },
+      "quality": {
+        "title": "خدمة عالية الجودة",
+        "description": "نضمن خدمة عالية الجودة مع محترفين ذوي خبرة"
+      },
+      "support": {
+        "title": "دعم على مدار الساعة",
+        "description": "فريق دعم العملاء لدينا متاح على مدار الساعة لمساعدتك"
+      }
+    },
+    "specialServices": {
+      "title": "خدمات خاصة",
+      "subtitle": "خدمات متميزة لجميع احتياجاتك",
+      "vehicleRental": {
+        "title": "تأجير المركبات",
+        "subtitle": "سيارات، سيارات دفع رباعي والمزيد"
+      },
+      "realEstate": {
+        "title": "العقارات",
+        "subtitle": "شراء، إيجار واستثمار"
+      },
+      "legal": {
+        "title": "الخدمات القانونية",
+        "subtitle": "محامون خبراء"
+      },
+      "handyman": {
+        "title": "الفني",
+        "subtitle": "إصلاحات وصيانة"
+      },
+      "transfer": {
+        "title": "النقل",
+        "subtitle": "المطار والمدينة"
+      }
+    },
+    "categories": {
+      "title": "الفئات الشائعة",
+      "viewAll": "عرض الكل",
+      "servicesCount": "{{count}} خدمة"
+    },
+    "howItWorks": {
+      "title": "كيف يعمل",
+      "subtitle": "احجز الخدمات المهنية في 4 خطوات بسيطة",
+      "step1": {
+        "title": "اختر الخدمة",
+        "description": "تصفح واختر من مجموعتنا الواسعة من الخدمات المهنية."
+      },
+      "step2": {
+        "title": "احجز فورًا",
+        "description": "اختر التاريخ والوقت والمحترف المفضل لديك بسهولة."
+      },
+      "step3": {
+        "title": "احصل على التأكيد",
+        "description": "استلم تأكيدًا فوريًا مع جميع تفاصيل الخدمة."
+      },
+      "step4": {
+        "title": "استمتع وقيّم",
+        "description": "استمتع بخدمة عالية الجودة وشارك تعليقاتك."
+      }
+    },
+    "stats": {
+      "title": "أرقامنا",
+      "partnerTypes": "أنواع الشركاء",
+      "specialties": "التخصصات",
+      "languages": "اللغات",
+      "countries": "الدول",
+      "professionals": "المحترفون",
+      "bookings": "الحجوزات",
+      "satisfaction": "رضا العملاء"
+    },
+    "cta": {
+      "title": "جاهز للبدء؟",
+      "subtitle": "انضم إلى آلاف المستخدمين الراضين الذين يثقون بمنصتنا",
+      "apiDocs": "وثائق API",
+      "browseServices": "تصفح الخدمات",
+      "becomePartner": "كن شريكًا"
+    },
+    "blog": {
+      "title": "أحدث منشورات المدونة",
+      "viewAll": "عرض جميع المنشورات",
+      "readMore": "اقرأ المزيد"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "الشركة",
+      "about": "عنا",
+      "careers": "وظائف",
+      "press": "الصحافة",
+      "blog": "المدونة",
+      "partners": "الشركاء",
+      "pressMedia": "الصحافة والإعلام"
+    },
+    "services": {
+      "title": "الخدمات",
+      "allServices": "جميع الخدمات",
+      "categories": "الفئات",
+      "professionals": "المحترفون",
+      "pricing": "التسعير",
+      "popularServices": "الخدمات الشائعة",
+      "homeServices": "الخدمات المنزلية",
+      "vehicleRental": "تأجير المركبات",
+      "realEstate": "العقارات",
+      "legalServices": "الخدمات القانونية",
+      "transfers": "النقل",
+      "medical": "الطبية",
+      "viewAllServices": "عرض جميع الخدمات"
+    },
+    "support": {
+      "title": "الدعم",
+      "helpCenter": "مركز المساعدة",
+      "contactUs": "اتصل بنا",
+      "faq": "الأسئلة الشائعة",
+      "safety": "الأمان",
+      "terms": "شروط الخدمة",
+      "privacy": "سياسة الخصوصية",
+      "supportHelp": "الدعم والمساعدة",
+      "customerSupport": "دعم العملاء",
+      "safetyGuidelines": "إرشادات السلامة",
+      "cookies": "سياسة ملفات تعريف الارتباط",
+      "legalNotice": "إشعار قانوني",
+      "sitemap": "خريطة الموقع",
+      "accessibility": "إمكانية الوصول"
+    },
+    "connect": {
+      "title": "تواصل معنا",
+      "facebook": "فيسبوك",
+      "twitter": "تويتر",
+      "instagram": "إنستغرام",
+      "linkedin": "لينكد إن",
+      "youtube": "يوتيوب",
+      "followUs": "تابعنا"
+    },
+    "newsletter": {
+      "title": "النشرة الإخبارية",
+      "description": "احصل على آخر الأخبار والعروض",
+      "placeholder": "عنوان بريدك الإلكتروني",
+      "subscribe": "اشترك",
+      "success": "شكرًا لك على الاشتراك!",
+      "error": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+      "updates": "احصل على تحديثات حول الخدمات والعروض الجديدة",
+      "yourEmail": "بريدك الإلكتروني"
+    },
+    "copyright": "© {{year}} JustRichard. جميع الحقوق محفوظة.",
+    "allRightsReserved": "جميع الحقوق محفوظة",
+    "madeWith": "صنع بـ",
+    "in": "في",
+    "description": "منصتك الموثوقة لربط العملاء بمحترفين معتمدين في أكثر من 15 فئة في عدة دول.",
+    "currency": {
+      "title": "العملة",
+      "select": "اختر العملة"
+    },
+    "platformName": "CommunityHub",
+    "tagline": "منصتك الموثوقة لربط العملاء بمحترفين معتمدين في أكثر من 15 فئة في عدة دول.",
+    "professionals": {
+      "title": "للمحترفين",
+      "becomeProvider": "كن مزود خدمة",
+      "providerBenefits": "مزايا مقدمي الخدمة",
+      "partnerships": "الشراكات"
+    },
+    "legal": {
+      "title": "قانوني",
+      "companyLegal": "الشركة والقانون"
+    },
+    "location": {
+      "availableCountries": "البلدان المتاحة",
+      "availableLanguages": "اللغات المتاحة"
+    },
+    "app": {
+      "title": "تحميل التطبيق",
+      "downloadApp": "تحميل التطبيق",
+      "downloadOn": "التحميل من",
+      "appStore": "آب ستور",
+      "getItOn": "احصل عليه من",
+      "googlePlay": "جوجل بلاي"
+    },
+    "registrationInfo": "رقم التسجيل: 123456789 | الرقم الضريبي: AE123456789 | مرخص من قبل اقتصادية دبي",
+    "disclaimer": {
+      "title": "إخلاء مسؤولية قانوني:",
+      "text": "تعمل CommunityHub كمنصة سوق تربط مقدمي الخدمات بالعملاء. نحن لا نوظف مقدمي الخدمات ولسنا مسؤولين عن الخدمات المقدمة. جميع مقدمي الخدمات محترفون مستقلون. الأسعار والتوافر عرضة للتغيير. تطبق الشروط والأحكام.",
+      "paymentTitle": "الدفع والاسترداد:",
+      "paymentText": "تتم معالجة المدفوعات بأمان من خلال شركائنا المعتمدين. تختلف سياسات الاسترداد حسب مزود الخدمة. يرجى مراجعة شروط كل مزود قبل الحجز."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "JustRichard - ابحث عن محترفين موثقين بالقرب منك",
+      "description": "تواصل مع محترفين موثقين في أكثر من 15 فئة. احجز الخدمات المنزلية والاستشارات التجارية والمزيد. متاح بـ 16 لغة.",
+      "keywords": "خدمات مهنية، محترفون موثقون، حجز الخدمات، خدمات منزلية، استشارات تجارية"
+    },
+    "services": {
+      "title": "الخدمات المهنية - JustRichard",
+      "description": "تصفح مجموعتنا الواسعة من الخدمات المهنية. من الخدمات المنزلية إلى الاستشارات التجارية، اعثر على المحترف المناسب لاحتياجاتك."
+    },
+    "about": {
+      "title": "عنا - JustRichard",
+      "description": "تعرف على كيفية ربط JustRichard العملاء بمحترفين موثقين عبر عدة دول ولغات."
+    },
+    "contact": {
+      "title": "اتصل بنا - JustRichard",
+      "description": "هل لديك أسئلة؟ فريق الدعم لدينا هنا لمساعدتك على مدار الساعة."
+    }
+  },
+  "languages": {
+    "en": "الإنجليزية",
+    "fr": "الفرنسية",
+    "ar": "العربية",
+    "th": "التايلاندية",
+    "vi": "الفيتنامية",
+    "ko": "الكورية",
+    "es": "الإسبانية",
+    "de": "الألمانية",
+    "ru": "الروسية",
+    "zh": "الصينية",
+    "ja": "اليابانية",
+    "pt": "البرتغالية",
+    "it": "الإيطالية",
+    "nl": "الهولندية",
+    "pl": "البولندية",
+    "tr": "التركية"
+  },
+  "countries": {
+    "qa": "قطر",
+    "ae": "الإمارات العربية المتحدة",
+    "sa": "المملكة العربية السعودية",
+    "kw": "الكويت",
+    "bh": "البحرين",
+    "om": "عمان",
+    "th": "تايلاند",
+    "vn": "فيتنام",
+    "fr": "فرنسا",
+    "us": "الولايات المتحدة"
+  },
+  "rental": {
+    "title": "تأجير المركبات",
+    "subtitle": "اعثر على المركبة المثالية لاحتياجاتك",
+    "searchPlaceholder": "ابحث حسب العلامة التجارية أو الموديل أو النوع...",
+    "types": {
+      "SEDAN": "سيدان",
+      "SUV": "دفع رباعي",
+      "LUXURY": "فاخرة",
+      "SPORTS": "رياضية",
+      "VAN": "فان",
+      "TRUCK": "شاحنة",
+      "ELECTRIC": "كهربائية",
+      "HYBRID": "هجينة"
+    },
+    "features": {
+      "AC": "تكييف الهواء",
+      "GPS": "نظام تحديد المواقع",
+      "BLUETOOTH": "بلوتوث",
+      "PARKING_SENSORS": "حساسات الوقوف",
+      "BACKUP_CAMERA": "كاميرا خلفية",
+      "SUNROOF": "فتحة سقف",
+      "LEATHER_SEATS": "مقاعد جلدية",
+      "HEATED_SEATS": "مقاعد مدفأة"
+    },
+    "transmission": {
+      "AUTOMATIC": "أوتوماتيك",
+      "MANUAL": "يدوي"
+    },
+    "fuel": {
+      "PETROL": "بنزين",
+      "DIESEL": "ديزل",
+      "ELECTRIC": "كهربائي",
+      "HYBRID": "هجين"
+    },
+    "pricePerDay": "السعر لليوم",
+    "availableNow": "متاح الآن",
+    "bookNow": "احجز الآن",
+    "viewDetails": "عرض التفاصيل",
+    "specifications": "المواصفات",
+    "seats": "المقاعد",
+    "doors": "الأبواب",
+    "luggage": "الأمتعة",
+    "minAge": "الحد الأدنى للسن",
+    "insurance": "التأمين",
+    "deliveryAvailable": "التوصيل متاح",
+    "unlimitedMileage": "مسافة غير محدودة"
+  },
+  "transfer": {
+    "title": "خدمات النقل",
+    "subtitle": "نقل موثوق من وإلى المطار والمدينة",
+    "types": {
+      "AIRPORT_PICKUP": "استقبال من المطار",
+      "AIRPORT_DROPOFF": "توصيل إلى المطار",
+      "CITY_TRANSFER": "نقل داخل المدينة",
+      "HOURLY_RENTAL": "إيجار بالساعة",
+      "INTERCITY": "بين المدن"
+    },
+    "vehicleTypes": {
+      "SEDAN": "سيدان (1-3 ركاب)",
+      "SUV": "دفع رباعي (1-6 ركاب)",
+      "VAN": "فان (1-12 راكب)",
+      "LUXURY": "فاخرة (1-3 ركاب)"
+    },
+    "from": "من",
+    "to": "إلى",
+    "pickupLocation": "موقع الاستقبال",
+    "dropoffLocation": "موقع التوصيل",
+    "pickupDate": "تاريخ الاستقبال",
+    "pickupTime": "وقت الاستقبال",
+    "passengers": "الركاب",
+    "luggage": "الأمتعة",
+    "flightNumber": "رقم الرحلة (اختياري)",
+    "notes": "ملاحظات خاصة",
+    "instantConfirmation": "تأكيد فوري",
+    "freeWaiting": "انتظار مجاني",
+    "meetAndGreet": "الاستقبال والترحيب",
+    "allInclusive": "شامل الكل",
+    "getQuote": "احصل على عرض سعر",
+    "bookNow": "احجز الآن"
+  },
+  "handyman": {
+    "title": "خدمات الفنيين",
+    "subtitle": "اعثر على فنيين مهرة للإصلاحات",
+    "categories": {
+      "PLUMBING": "السباكة",
+      "ELECTRICAL": "الكهرباء",
+      "CARPENTRY": "النجارة",
+      "PAINTING": "الدهان",
+      "AC_REPAIR": "إصلاح التكييف",
+      "APPLIANCE_REPAIR": "إصلاح الأجهزة",
+      "GENERAL_MAINTENANCE": "الصيانة العامة",
+      "CLEANING": "التنظيف"
+    },
+    "emergencyService": "خدمة الطوارئ على مدار الساعة",
+    "sameDay": "خدمة في نفس اليوم",
+    "certified": "معتمد ومؤمن",
+    "warrantyIncluded": "ضمان مشمول",
+    "freeInspection": "فحص مجاني",
+    "callNow": "اتصل الآن",
+    "bookService": "احجز خدمة",
+    "requestQuote": "اطلب عرض سعر"
+  },
+  "legal": {
+    "title": "الخدمات القانونية",
+    "subtitle": "استشر محامين خبراء",
+    "specialties": {
+      "FAMILY_LAW": "قانون الأسرة",
+      "CORPORATE_LAW": "قانون الشركات",
+      "REAL_ESTATE_LAW": "قانون العقارات",
+      "IMMIGRATION_LAW": "قانون الهجرة",
+      "CRIMINAL_LAW": "القانون الجنائي",
+      "LABOR_LAW": "قانون العمل",
+      "INTELLECTUAL_PROPERTY": "الملكية الفكرية",
+      "TAX_LAW": "القانون الضريبي"
+    },
+    "consultation": "استشارة",
+    "freeConsultation": "استشارة أولى مجانية",
+    "experiencedLawyers": "محامون ذوو خبرة",
+    "confidential": "سري للغاية",
+    "multilingualSupport": "دعم متعدد اللغات",
+    "scheduleConsultation": "جدولة استشارة",
+    "contactLawyer": "اتصل بمحامٍ"
+  },
+  "cities": {
+    "france": {
+      "paris": "باريس",
+      "versailles": "فرساي",
+      "marseille": "مرسيليا",
+      "nice": "نيس",
+      "cannes": "كان",
+      "monaco": "موناكو",
+      "lyon": "ليون",
+      "grenoble": "غرونوبل",
+      "toulouse": "تولوز",
+      "montpellier": "مونبلييه",
+      "bordeaux": "بوردو"
+    },
+    "switzerland": {
+      "zurich": "زيورخ",
+      "geneva": "جنيف",
+      "basel": "بازل",
+      "bern": "برن",
+      "lausanne": "لوزان",
+      "lucerne": "لوسرن"
+    },
+    "belgium": {
+      "brussels": "بروكسل",
+      "antwerp": "أنتويرب",
+      "ghent": "غنت",
+      "bruges": "بروج",
+      "liege": "لييج",
+      "charleroi": "شارلروا"
+    }
+  },
+  "regions": {
+    "france": {
+      "ile-de-france": "إيل دو فرانس",
+      "paca": "بروفانس ألب كوت دازور",
+      "auvergne-rhone-alpes": "أوفيرني رون ألب",
+      "occitanie": "أوكسيتانيا",
+      "nouvelle-aquitaine": "نوفيل أكيتين"
+    },
+    "belgium": {
+      "brussels": "منطقة بروكسل العاصمة",
+      "flanders": "فلاندرز",
+      "wallonia": "والونيا"
+    }
+  }
+}

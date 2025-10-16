@@ -1,0 +1,895 @@
+{
+  "common": {
+    "home": "Accueil",
+    "blog": "Blog",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact",
+    "login": "Connexion",
+    "signup": "Inscription",
+    "logout": "Déconnexion",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "clear": "Effacer",
+    "apply": "Appliquer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "warning": "Avertissement",
+    "info": "Information",
+    "confirm": "Confirmer",
+    "yes": "Oui",
+    "no": "Non",
+    "ok": "OK",
+    "close": "Fermer",
+    "submit": "Soumettre",
+    "reset": "Réinitialiser",
+    "download": "Télécharger",
+    "upload": "Téléverser",
+    "select": "Sélectionner",
+    "all": "Tout",
+    "none": "Aucun",
+    "more": "Plus",
+    "less": "Moins",
+    "show": "Afficher",
+    "hide": "Masquer",
+    "expand": "Développer",
+    "collapse": "Réduire",
+    "required": "Requis",
+    "optional": "Optionnel",
+    "language": "Langue",
+    "currency": "Devise",
+    "country": "Pays",
+    "city": "Ville",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "website": "Site web",
+    "name": "Nom",
+    "description": "Description",
+    "price": "Prix",
+    "date": "Date",
+    "time": "Heure",
+    "status": "Statut",
+    "rating": "Note",
+    "reviews": "Avis",
+    "verified": "Vérifié",
+    "featured": "En vedette",
+    "popular": "Populaire",
+    "new": "Nouveau",
+    "recommended": "Recommandé"
+  },
+  "nav": {
+    "home": "Accueil",
+    "properties": "Propriétés",
+    "vehicles": "Véhicules",
+    "transfers": "Transferts",
+    "services": "Services",
+    "professionals": "Professionnels",
+    "dashboard": "Tableau de bord",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "help": "Aide",
+    "allServices": "Tous les Services",
+    "categories": "Catégories",
+    "vehicleRentals": "Location de Véhicules",
+    "realEstate": "Immobilier",
+    "medical": "Médical",
+    "myBookings": "Mes Réservations",
+    "adminDashboard": "Tableau de Bord Admin",
+    "logout": "Déconnexion",
+    "login": "Connexion",
+    "signUp": "Inscription",
+    "customerAccount": "Compte Client",
+    "forBookingServices": "Pour réserver des services",
+    "providerAccount": "Compte Professionnel",
+    "forOfferingServices": "Pour offrir des services",
+    "locationAndLanguage": "LOCALISATION ET LANGUE",
+    "signUpAs": "S'INSCRIRE EN TANT QUE :",
+    "customer": "Client",
+    "bookServices": "Réserver des services",
+    "professional": "Professionnel",
+    "offerServices": "Offrir des services",
+    "admin": "Admin"
+  },
+  "partners": {
+    "title": "Partenaires Professionnels",
+    "subtitle": "Trouvez des professionnels vérifiés pour tous vos besoins",
+    "realEstate": "Agents Immobiliers",
+    "accountants": "Comptables",
+    "translators": "Traducteurs",
+    "visaAgents": "Agents de Visa",
+    "businessConsultants": "Consultants d'Affaires",
+    "architects": "Architectes",
+    "photographers": "Photographes",
+    "coaches": "Coachs",
+    "doctors": "Médecins",
+    "dentists": "Dentistes",
+    "lawyers": "Avocats",
+    "domesticWorkers": "Personnel Domestique",
+    "handymen": "Artisans",
+    "viewAll": "Voir Tout",
+    "findProfessional": "Trouver un Professionnel",
+    "bookNow": "Réserver",
+    "getQuote": "Obtenir un Devis",
+    "contactNow": "Contacter"
+  },
+  "realEstate": {
+    "title": "Agents Immobiliers",
+    "findAgent": "Trouver un Agent",
+    "specialties": {
+      "RESIDENTIAL_SALE": "Vente Résidentielle",
+      "RESIDENTIAL_RENT": "Location Résidentielle",
+      "COMMERCIAL_SALE": "Vente Commerciale",
+      "COMMERCIAL_RENT": "Location Commerciale",
+      "PROPERTY_MANAGEMENT": "Gestion Immobilière",
+      "INVESTMENT": "Investissement",
+      "LUXURY_PROPERTIES": "Propriétés de Luxe",
+      "NEW_DEVELOPMENTS": "Nouveaux Développements"
+    },
+    "filters": {
+      "specialty": "Spécialité",
+      "location": "Localisation",
+      "language": "Langue",
+      "rating": "Note Minimale",
+      "verifiedOnly": "Vérifiés Uniquement"
+    },
+    "agentProfile": {
+      "license": "Numéro de Licence",
+      "agency": "Agence",
+      "experience": "Années d'Expérience",
+      "propertiesListed": "Propriétés Listées",
+      "propertiesSold": "Propriétés Vendues",
+      "propertiesRented": "Propriétés Louées",
+      "commission": "Commission",
+      "salesCommission": "Commission de Vente",
+      "rentalCommission": "Commission de Location"
+    }
+  },
+  "accounting": {
+    "title": "Comptables et Experts Fiscaux",
+    "findAccountant": "Trouver un Comptable",
+    "services": {
+      "BOOKKEEPING": "Tenue de Comptabilité",
+      "TAX_DECLARATION": "Déclaration Fiscale",
+      "AUDIT": "Audit",
+      "TAX_CONSULTING": "Conseil Fiscal",
+      "PAYROLL": "Paie et RH",
+      "ANNUAL_CLOSING": "Clôture Annuelle"
+    },
+    "filters": {
+      "service": "Type de Service",
+      "certification": "Certification",
+      "software": "Logiciel Utilisé",
+      "acceptingClients": "Accepte de Nouveaux Clients"
+    },
+    "profile": {
+      "firm": "Nom du Cabinet",
+      "certifications": "Certifications",
+      "hourlyRate": "Tarif Horaire",
+      "monthlyRetainer": "Forfait Mensuel",
+      "activeClients": "Clients Actifs",
+      "softwareUsed": "Logiciels Utilisés"
+    }
+  },
+  "translation": {
+    "title": "Traducteurs et Interprètes",
+    "findTranslator": "Trouver un Traducteur",
+    "types": {
+      "CERTIFIED": "Traduction Certifiée",
+      "SWORN": "Traduction Assermentée",
+      "COMMERCIAL": "Traduction Commerciale",
+      "TECHNICAL": "Traduction Technique",
+      "MEDICAL": "Traduction Médicale",
+      "WEBSITE": "Traduction de Site Web",
+      "INTERPRETATION": "Interprétation"
+    },
+    "filters": {
+      "languagePair": "Paire de Langues",
+      "type": "Type de Traduction",
+      "certified": "Certifié Uniquement",
+      "urgent": "Urgent Disponible"
+    },
+    "profile": {
+      "languagePairs": "Paires de Langues",
+      "nativeLanguages": "Langues Maternelles",
+      "pricePerWord": "Prix par Mot",
+      "pricePerPage": "Prix par Page",
+      "pricePerHour": "Prix par Heure",
+      "turnaround": "Délai Standard",
+      "expressAvailable": "Express Disponible",
+      "wordsTranslated": "Mots Traduits",
+      "onTimeDelivery": "Taux de Livraison à Temps"
+    }
+  },
+  "visa": {
+    "title": "Agents de Visa et Permis",
+    "findAgent": "Trouver un Agent de Visa",
+    "types": {
+      "TOURIST_VISA": "Visa Touristique",
+      "RESIDENCE_VISA": "Visa de Résidence",
+      "WORK_VISA": "Visa de Travail",
+      "INVESTOR_VISA": "Visa Investisseur",
+      "WORK_PERMIT": "Permis de Travail",
+      "DRIVING_LICENSE": "Permis de Conduire",
+      "BUSINESS_LICENSE": "Licence Commerciale",
+      "PROFESSIONAL_LICENSE": "Licence Professionnelle",
+      "GOLDEN_VISA": "Visa d'Or (EAU)",
+      "ELITE_VISA": "Visa Elite (Thaïlande)"
+    },
+    "profile": {
+      "agency": "Nom de l'Agence",
+      "servicesOffered": "Services Offerts",
+      "countriesSupported": "Pays Supportés",
+      "successRate": "Taux de Réussite",
+      "avgProcessingTime": "Temps de Traitement Moyen",
+      "consultationFee": "Frais de Consultation",
+      "totalApplications": "Total des Demandes",
+      "approvedApplications": "Demandes Approuvées"
+    }
+  },
+  "business": {
+    "title": "Consultants en Création d'Entreprise",
+    "findConsultant": "Trouver un Consultant",
+    "companyTypes": {
+      "SOLE_PROPRIETORSHIP": "Entreprise Individuelle",
+      "LLC": "SARL",
+      "SA": "SA",
+      "SAS": "SAS",
+      "OFFSHORE_COMPANY": "Société Offshore",
+      "FREE_ZONE_COMPANY": "Société en Zone Franche",
+      "BRANCH_OFFICE": "Bureau de Succursale",
+      "REPRESENTATIVE_OFFICE": "Bureau de Représentation"
+    },
+    "profile": {
+      "servicesOffered": "Services Offerts",
+      "industries": "Industries",
+      "avgSetupTime": "Temps de Configuration Moyen",
+      "consultationFee": "Frais de Consultation",
+      "additionalServices": "Services Additionnels",
+      "offersVisa": "Assistance Visa",
+      "offersBankAccount": "Ouverture de Compte Bancaire",
+      "offersOffice": "Configuration de Bureau",
+      "offersAccounting": "Services Comptables",
+      "companiesFormed": "Entreprises Créées"
+    }
+  },
+  "architecture": {
+    "title": "Architectes et Designers",
+    "findArchitect": "Trouver un Architecte",
+    "specialties": {
+      "RESIDENTIAL": "Résidentiel",
+      "COMMERCIAL": "Commercial",
+      "INTERIOR_DESIGN": "Design d'Intérieur",
+      "LANDSCAPE": "Paysagisme",
+      "RENOVATION": "Rénovation",
+      "SUSTAINABLE_DESIGN": "Design Durable",
+      "URBAN_PLANNING": "Urbanisme"
+    },
+    "profile": {
+      "firm": "Nom du Cabinet",
+      "license": "Numéro de Licence",
+      "offersDesign": "Services de Design",
+      "offersPlanning": "Services de Planification",
+      "offersSupervision": "Supervision",
+      "offers3DRendering": "Rendu 3D",
+      "pricePerSqm": "Prix par m²",
+      "completedProjects": "Projets Complétés",
+      "activeProjects": "Projets Actifs"
+    }
+  },
+  "photography": {
+    "title": "Photographes et Vidéastes",
+    "findPhotographer": "Trouver un Photographe",
+    "specialties": {
+      "REAL_ESTATE": "Immobilier",
+      "EVENTS": "Événements",
+      "PORTRAITS": "Portraits",
+      "COMMERCIAL": "Commercial",
+      "PRODUCT": "Produits",
+      "DRONE": "Drone",
+      "ARCHITECTURAL": "Architectural"
+    },
+    "profile": {
+      "equipment": "Équipement",
+      "hasDrone": "Drone Disponible",
+      "hasStudio": "Studio Disponible",
+      "offersEditing": "Édition Incluse",
+      "offersVideo": "Services Vidéo",
+      "hourlyRate": "Tarif Horaire",
+      "halfDayRate": "Tarif Demi-Journée",
+      "fullDayRate": "Tarif Journée Complète",
+      "deliveryTime": "Délai de Livraison Standard",
+      "rushAvailable": "Livraison Rapide Disponible"
+    }
+  },
+  "coaching": {
+    "title": "Coachs Professionnels",
+    "findCoach": "Trouver un Coach",
+    "types": {
+      "LIFE_COACHING": "Coaching de Vie",
+      "BUSINESS_COACHING": "Coaching d'Affaires",
+      "CAREER_COACHING": "Coaching de Carrière",
+      "EXECUTIVE_COACHING": "Coaching Exécutif",
+      "HEALTH_WELLNESS": "Santé et Bien-être",
+      "FINANCIAL_COACHING": "Coaching Financier",
+      "RELATIONSHIP_COACHING": "Coaching Relationnel",
+      "SPORTS_COACHING": "Coaching Sportif",
+      "MINDFULNESS_COACHING": "Coaching de Pleine Conscience",
+      "PRODUCTIVITY_COACHING": "Coaching de Productivité"
+    },
+    "profile": {
+      "sessionDuration": "Durée de Session",
+      "oneOnOneRate": "Tarif Individuel",
+      "groupRate": "Tarif de Groupe",
+      "freeConsultation": "Consultation Gratuite",
+      "packages": "Forfaits Disponibles",
+      "totalSessions": "Total des Sessions",
+      "approach": "Approche de Coaching"
+    }
+  },
+  "domestic": {
+    "title": "Personnel Domestique",
+    "findWorker": "Trouver un Travailleur",
+    "categories": {
+      "CHILDCARE": "Garde d'Enfants",
+      "HOUSEKEEPING": "Entretien Ménager",
+      "COOKING": "Cuisine",
+      "NURSING": "Soins Infirmiers",
+      "ELDERLY_CARE": "Soins aux Personnes Âgées",
+      "SPECIAL_NEEDS_CARE": "Soins Spécialisés",
+      "PET_CARE": "Soins aux Animaux",
+      "DRIVER": "Chauffeur"
+    },
+    "employmentTypes": {
+      "FULL_TIME": "Temps Plein",
+      "PART_TIME": "Temps Partiel",
+      "LIVE_IN": "Avec Hébergement",
+      "LIVE_OUT": "Sans Hébergement",
+      "HOURLY": "Horaire",
+      "DAILY": "Quotidien",
+      "WEEKLY": "Hebdomadaire",
+      "MONTHLY": "Mensuel"
+    },
+    "profile": {
+      "experienceLevel": "Niveau d'Expérience",
+      "yearsExperience": "Années d'Expérience",
+      "skills": "Compétences",
+      "specialSkills": "Compétences Spéciales",
+      "employmentTypes": "Types d'Emploi",
+      "liveInAvailable": "Hébergement Disponible",
+      "rates": "Tarifs",
+      "hourlyRate": "Tarif Horaire",
+      "dailyRate": "Tarif Quotidien",
+      "monthlyRate": "Tarif Mensuel",
+      "liveInRate": "Tarif avec Hébergement",
+      "availability": "Disponibilité",
+      "healthCertificate": "Certificat de Santé",
+      "backgroundCheck": "Vérification des Antécédents"
+    }
+  },
+  "admin": {
+    "dashboard": "Tableau de Bord Admin",
+    "partners": "Gestion des Partenaires",
+    "approvals": "Approbations en Attente",
+    "users": "Gestion des Utilisateurs",
+    "bookings": "Réservations",
+    "payments": "Paiements",
+    "reports": "Rapports",
+    "settings": "Paramètres",
+    "approve": "Approuver",
+    "reject": "Rejeter",
+    "suspend": "Suspendre",
+    "activate": "Activer",
+    "viewDetails": "Voir les Détails",
+    "editProfile": "Modifier le Profil",
+    "verificationStatus": "Statut de Vérification",
+    "pending": "En Attente",
+    "approved": "Approuvé",
+    "rejected": "Rejeté",
+    "suspended": "Suspendu"
+  },
+  "booking": {
+    "title": "Réserver un Service",
+    "selectDate": "Sélectionner la Date",
+    "selectTime": "Sélectionner l'Heure",
+    "duration": "Durée",
+    "location": "Localisation",
+    "notes": "Notes Additionnelles",
+    "summary": "Résumé de la Réservation",
+    "total": "Total",
+    "confirmBooking": "Confirmer la Réservation",
+    "bookingConfirmed": "Réservation Confirmée",
+    "bookingFailed": "Échec de la Réservation",
+    "viewBooking": "Voir la Réservation",
+    "cancelBooking": "Annuler la Réservation",
+    "rescheduleBooking": "Reprogrammer la Réservation"
+  },
+  "profile": {
+    "myProfile": "Mon Profil",
+    "editProfile": "Modifier le Profil",
+    "personalInfo": "Informations Personnelles",
+    "professionalInfo": "Informations Professionnelles",
+    "certifications": "Certifications",
+    "portfolio": "Portfolio",
+    "availability": "Disponibilité",
+    "pricing": "Tarification",
+    "reviews": "Avis",
+    "statistics": "Statistiques",
+    "uploadCertificate": "Téléverser un Certificat",
+    "uploadPhoto": "Téléverser une Photo",
+    "saveChanges": "Enregistrer les Modifications"
+  },
+  "search": {
+    "searchPlaceholder": "Rechercher des professionnels, services...",
+    "filters": "Filtres",
+    "sortBy": "Trier par",
+    "relevance": "Pertinence",
+    "rating": "Note",
+    "price": "Prix",
+    "experience": "Expérience",
+    "distance": "Distance",
+    "availability": "Disponibilité",
+    "results": "Résultats",
+    "noResults": "Aucun résultat trouvé",
+    "showingResults": "Affichage de {{count}} résultats"
+  },
+  "validation": {
+    "required": "Ce champ est requis",
+    "invalidEmail": "Adresse email invalide",
+    "invalidPhone": "Numéro de téléphone invalide",
+    "minLength": "La longueur minimale est de {{min}} caractères",
+    "maxLength": "La longueur maximale est de {{max}} caractères",
+    "minValue": "La valeur minimale est {{min}}",
+    "maxValue": "La valeur maximale est {{max}}",
+    "invalidFormat": "Format invalide",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "fileTooBig": "La taille du fichier est trop grande",
+    "invalidFileType": "Type de fichier invalide"
+  },
+  "messages": {
+    "success": {
+      "saved": "Enregistré avec succès",
+      "updated": "Mis à jour avec succès",
+      "deleted": "Supprimé avec succès",
+      "created": "Créé avec succès",
+      "sent": "Envoyé avec succès",
+      "uploaded": "Téléversé avec succès"
+    },
+    "error": {
+      "generic": "Une erreur s'est produite",
+      "notFound": "Non trouvé",
+      "unauthorized": "Non autorisé",
+      "forbidden": "Interdit",
+      "serverError": "Erreur serveur",
+      "networkError": "Erreur réseau"
+    }
+  },
+  "home": {
+    "hero": {
+      "tagline": "Votre Plateforme de Services de Confiance",
+      "title": "Trouvez des Services Professionnels Près de Chez Vous",
+      "subtitle": "Connectez-vous avec des professionnels vérifiés dans plus de 15 catégories",
+      "description": "Des services à domicile aux consultations d'affaires, réservez des professionnels de confiance en quelques minutes. Disponible en 16 langues dans plusieurs pays.",
+      "ctaText": "Parcourir les Services",
+      "secondaryCtaText": "Voir les Catégories"
+    },
+    "features": {
+      "title": "Pourquoi Nous Choisir",
+      "verified": {
+        "title": "Professionnels Vérifiés",
+        "description": "Tous nos professionnels sont vérifiés avec des références et certifications validées"
+      },
+      "flexible": {
+        "title": "Réservation Flexible",
+        "description": "Réservez à votre convenance, annulez ou reprogrammez facilement si nécessaire"
+      },
+      "quality": {
+        "title": "Service de Qualité",
+        "description": "Nous garantissons un service de haute qualité avec des professionnels expérimentés"
+      },
+      "support": {
+        "title": "Support 24/7",
+        "description": "Notre équipe de support client est disponible 24h/24 et 7j/7 pour vous aider"
+      }
+    },
+    "specialServices": {
+      "title": "Services Spéciaux",
+      "subtitle": "Services premium pour tous vos besoins",
+      "vehicleRental": {
+        "title": "Location de Véhicules",
+        "subtitle": "Voitures, SUV et Plus"
+      },
+      "realEstate": {
+        "title": "Immobilier",
+        "subtitle": "Acheter, Louer et Investir"
+      },
+      "legal": {
+        "title": "Services Juridiques",
+        "subtitle": "Avocats Experts"
+      },
+      "handyman": {
+        "title": "Artisan",
+        "subtitle": "Réparations et Dépannage"
+      },
+      "transfer": {
+        "title": "Transferts",
+        "subtitle": "Aéroport et Ville"
+      }
+    },
+    "categories": {
+      "title": "Catégories Populaires",
+      "viewAll": "Voir Tout",
+      "servicesCount": "{{count}} services"
+    },
+    "howItWorks": {
+      "title": "Comment Ça Marche",
+      "subtitle": "Réservez des services professionnels en 4 étapes simples",
+      "step1": {
+        "title": "Choisissez un Service",
+        "description": "Parcourez et sélectionnez parmi notre large gamme de services professionnels."
+      },
+      "step2": {
+        "title": "Réservez Instantanément",
+        "description": "Choisissez votre date, heure et professionnel préférés en toute simplicité."
+      },
+      "step3": {
+        "title": "Recevez la Confirmation",
+        "description": "Recevez une confirmation instantanée avec tous les détails du service."
+      },
+      "step4": {
+        "title": "Profitez et Évaluez",
+        "description": "Profitez d'un service de qualité et partagez vos commentaires."
+      }
+    },
+    "stats": {
+      "title": "Nos Chiffres",
+      "partnerTypes": "Types de Partenaires",
+      "specialties": "Spécialités",
+      "languages": "Langues",
+      "countries": "Pays",
+      "professionals": "Professionnels",
+      "bookings": "Réservations",
+      "satisfaction": "Satisfaction Client"
+    },
+    "cta": {
+      "title": "Prêt à Commencer?",
+      "subtitle": "Rejoignez des milliers d'utilisateurs satisfaits qui font confiance à notre plateforme",
+      "apiDocs": "Documentation API",
+      "browseServices": "Parcourir les Services",
+      "becomePartner": "Devenir Partenaire"
+    },
+    "blog": {
+      "title": "Derniers Articles du Blog",
+      "viewAll": "Voir Tous les Articles",
+      "readMore": "Lire Plus"
+    }
+  },
+  "footer": {
+    "platformName": "CommunityHub",
+    "tagline": "Votre plateforme de confiance connectant les clients avec des professionnels vérifiés dans plus de 15 catégories et plusieurs pays.",
+    "description": "Votre plateforme de confiance connectant les clients avec des professionnels vérifiés dans plus de 15 catégories et plusieurs pays.",
+    "company": {
+      "title": "Entreprise",
+      "about": "À Propos de Nous",
+      "careers": "Carrières",
+      "press": "Presse",
+      "blog": "Blog",
+      "pressMedia": "Presse et Médias",
+      "partners": "Partenaires"
+    },
+    "services": {
+      "title": "Services",
+      "popularServices": "Services Populaires",
+      "allServices": "Tous les Services",
+      "categories": "Catégories",
+      "professionals": "Professionnels",
+      "pricing": "Tarification",
+      "homeServices": "Services à Domicile",
+      "vehicleRental": "Location de Véhicules",
+      "realEstate": "Immobilier",
+      "legalServices": "Services Juridiques",
+      "transfers": "Transferts",
+      "medical": "Médical",
+      "viewAllServices": "Voir Tous les Services"
+    },
+    "professionals": {
+      "title": "Pour les Professionnels",
+      "becomeProvider": "Devenir Prestataire",
+      "providerBenefits": "Avantages pour les Prestataires",
+      "partnerships": "Partenariats"
+    },
+    "support": {
+      "title": "Support",
+      "supportHelp": "Support et Aide",
+      "customerSupport": "Support Client",
+      "helpCenter": "Centre d'Aide",
+      "contactUs": "Nous Contacter",
+      "faq": "FAQ",
+      "safety": "Sécurité",
+      "safetyGuidelines": "Règles de Sécurité",
+      "terms": "Conditions d'Utilisation",
+      "privacy": "Politique de Confidentialité",
+      "cookies": "Politique de Cookies",
+      "legalNotice": "Mention Légale",
+      "sitemap": "Plan du Site",
+      "accessibility": "Accessibilité"
+    },
+    "legal": {
+      "title": "Légal",
+      "companyLegal": "Entreprise et Légal"
+    },
+    "connect": {
+      "title": "Nous Suivre",
+      "followUs": "Suivez-Nous",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Recevez les dernières nouvelles et offres",
+      "updates": "Recevez des mises à jour sur les nouveaux services et promotions",
+      "placeholder": "Votre adresse email",
+      "yourEmail": "Votre email",
+      "subscribe": "S'abonner",
+      "success": "Merci de votre inscription!",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "location": {
+      "availableCountries": "Pays Disponibles",
+      "availableLanguages": "Langues Disponibles"
+    },
+    "app": {
+      "title": "Télécharger Notre Application",
+      "downloadApp": "Télécharger Notre Application",
+      "downloadOn": "Télécharger sur",
+      "appStore": "App Store",
+      "getItOn": "DISPONIBLE SUR",
+      "googlePlay": "Google Play"
+    },
+    "copyright": "© {{year}} CommunityHub Platform. Tous droits réservés.",
+    "allRightsReserved": "Tous droits réservés",
+    "registrationInfo": "Nº d'enregistrement : 123456789 | ID Fiscal : AE123456789 | Licencié par Dubai Economy",
+    "madeWith": "Fait avec",
+    "in": "à",
+    "disclaimer": {
+      "title": "Avertissement Légal :",
+      "text": "CommunityHub agit en tant que plateforme de mise en relation entre prestataires de services et clients. Nous n'employons pas de prestataires et ne sommes pas responsables des services fournis. Tous les prestataires sont des professionnels indépendants. Les prix et la disponibilité sont susceptibles de changer. Les conditions générales s'appliquent.",
+      "paymentTitle": "Paiement et Remboursements :",
+      "paymentText": "Les paiements sont traités en toute sécurité via nos partenaires certifiés. Les politiques de remboursement varient selon le prestataire de services. Veuillez consulter les conditions de chaque prestataire avant de réserver."
+    },
+    "currency": {
+      "title": "Devise",
+      "select": "Sélectionner la devise"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "JustRichard - Trouvez des Professionnels Vérifiés Près de Chez Vous",
+      "description": "Connectez-vous avec des professionnels vérifiés dans plus de 15 catégories. Réservez des services à domicile, consultations d'affaires, et plus encore. Disponible en 16 langues.",
+      "keywords": "services professionnels, professionnels vérifiés, réservation de services, services à domicile, consultations d'affaires"
+    },
+    "services": {
+      "title": "Services Professionnels - JustRichard",
+      "description": "Parcourez notre large gamme de services professionnels. Des services à domicile aux consultations d'affaires, trouvez le bon professionnel pour vos besoins."
+    },
+    "about": {
+      "title": "À Propos de Nous - JustRichard",
+      "description": "Découvrez comment JustRichard connecte les clients avec des professionnels vérifiés dans plusieurs pays et langues."
+    },
+    "contact": {
+      "title": "Nous Contacter - JustRichard",
+      "description": "Des questions? Notre équipe de support est là pour vous aider 24h/24 et 7j/7."
+    }
+  },
+  "languages": {
+    "en": "Anglais",
+    "fr": "Français",
+    "ar": "Arabe",
+    "th": "Thaï",
+    "vi": "Vietnamien",
+    "ko": "Coréen",
+    "es": "Espagnol",
+    "de": "Allemand",
+    "ru": "Russe",
+    "zh": "Chinois",
+    "ja": "Japonais",
+    "pt": "Portugais",
+    "it": "Italien",
+    "nl": "Néerlandais",
+    "pl": "Polonais",
+    "tr": "Turc"
+  },
+  "countries": {
+    "qa": "Qatar",
+    "ae": "Émirats Arabes Unis",
+    "sa": "Arabie Saoudite",
+    "kw": "Koweït",
+    "bh": "Bahreïn",
+    "om": "Oman",
+    "th": "Thaïlande",
+    "vn": "Vietnam",
+    "fr": "France",
+    "us": "États-Unis"
+  },
+  "rental": {
+    "title": "Location de Véhicules",
+    "subtitle": "Trouvez le véhicule parfait pour vos besoins",
+    "searchPlaceholder": "Rechercher par marque, modèle ou type...",
+    "types": {
+      "SEDAN": "Berline",
+      "SUV": "SUV",
+      "LUXURY": "Luxe",
+      "SPORTS": "Sport",
+      "VAN": "Minibus",
+      "TRUCK": "Camion",
+      "ELECTRIC": "Électrique",
+      "HYBRID": "Hybride"
+    },
+    "features": {
+      "AC": "Climatisation",
+      "GPS": "GPS",
+      "BLUETOOTH": "Bluetooth",
+      "PARKING_SENSORS": "Capteurs de Stationnement",
+      "BACKUP_CAMERA": "Caméra de Recul",
+      "SUNROOF": "Toit Ouvrant",
+      "LEATHER_SEATS": "Sièges en Cuir",
+      "HEATED_SEATS": "Sièges Chauffants"
+    },
+    "transmission": {
+      "AUTOMATIC": "Automatique",
+      "MANUAL": "Manuelle"
+    },
+    "fuel": {
+      "PETROL": "Essence",
+      "DIESEL": "Diesel",
+      "ELECTRIC": "Électrique",
+      "HYBRID": "Hybride"
+    },
+    "pricePerDay": "Prix par Jour",
+    "availableNow": "Disponible Maintenant",
+    "bookNow": "Réserver Maintenant",
+    "viewDetails": "Voir les Détails",
+    "specifications": "Spécifications",
+    "seats": "Sièges",
+    "doors": "Portes",
+    "luggage": "Bagages",
+    "minAge": "Âge Minimum",
+    "insurance": "Assurance",
+    "deliveryAvailable": "Livraison Disponible",
+    "unlimitedMileage": "Kilométrage Illimité"
+  },
+  "transfer": {
+    "title": "Services de Transfert",
+    "subtitle": "Transferts aéroport et ville fiables",
+    "types": {
+      "AIRPORT_PICKUP": "Prise en Charge Aéroport",
+      "AIRPORT_DROPOFF": "Dépose Aéroport",
+      "CITY_TRANSFER": "Transfert Ville",
+      "HOURLY_RENTAL": "Location Horaire",
+      "INTERCITY": "Interurbain"
+    },
+    "vehicleTypes": {
+      "SEDAN": "Berline (1-3 passagers)",
+      "SUV": "SUV (1-6 passagers)",
+      "VAN": "Minibus (1-12 passagers)",
+      "LUXURY": "Luxe (1-3 passagers)"
+    },
+    "from": "De",
+    "to": "À",
+    "pickupLocation": "Lieu de Prise en Charge",
+    "dropoffLocation": "Lieu de Dépose",
+    "pickupDate": "Date de Prise en Charge",
+    "pickupTime": "Heure de Prise en Charge",
+    "passengers": "Passagers",
+    "luggage": "Bagages",
+    "flightNumber": "Numéro de Vol (optionnel)",
+    "notes": "Notes Spéciales",
+    "instantConfirmation": "Confirmation Instantanée",
+    "freeWaiting": "Attente Gratuite",
+    "meetAndGreet": "Service d'Accueil",
+    "allInclusive": "Tout Inclus",
+    "getQuote": "Obtenir un Devis",
+    "bookNow": "Réserver Maintenant"
+  },
+  "handyman": {
+    "title": "Services d'Artisan",
+    "subtitle": "Trouvez des artisans qualifiés pour vos réparations",
+    "categories": {
+      "PLUMBING": "Plomberie",
+      "ELECTRICAL": "Électricité",
+      "CARPENTRY": "Menuiserie",
+      "PAINTING": "Peinture",
+      "AC_REPAIR": "Réparation Climatisation",
+      "APPLIANCE_REPAIR": "Réparation Électroménager",
+      "GENERAL_MAINTENANCE": "Entretien Général",
+      "CLEANING": "Nettoyage"
+    },
+    "emergencyService": "Service d'Urgence 24/7",
+    "sameDay": "Service le Jour Même",
+    "certified": "Certifié et Assuré",
+    "warrantyIncluded": "Garantie Incluse",
+    "freeInspection": "Inspection Gratuite",
+    "callNow": "Appeler Maintenant",
+    "bookService": "Réserver un Service",
+    "requestQuote": "Demander un Devis"
+  },
+  "legal": {
+    "title": "Services Juridiques",
+    "subtitle": "Consultez des avocats experts",
+    "specialties": {
+      "FAMILY_LAW": "Droit de la Famille",
+      "CORPORATE_LAW": "Droit des Sociétés",
+      "REAL_ESTATE_LAW": "Droit Immobilier",
+      "IMMIGRATION_LAW": "Droit de l'Immigration",
+      "CRIMINAL_LAW": "Droit Pénal",
+      "LABOR_LAW": "Droit du Travail",
+      "INTELLECTUAL_PROPERTY": "Propriété Intellectuelle",
+      "TAX_LAW": "Droit Fiscal"
+    },
+    "consultation": "Consultation",
+    "freeConsultation": "Première Consultation Gratuite",
+    "experiencedLawyers": "Avocats Expérimentés",
+    "confidential": "Strictement Confidentiel",
+    "multilingualSupport": "Support Multilingue",
+    "scheduleConsultation": "Planifier une Consultation",
+    "contactLawyer": "Contacter un Avocat"
+  },
+  "cities": {
+    "france": {
+      "paris": "Paris",
+      "versailles": "Versailles",
+      "marseille": "Marseille",
+      "nice": "Nice",
+      "cannes": "Cannes",
+      "monaco": "Monaco",
+      "lyon": "Lyon",
+      "grenoble": "Grenoble",
+      "toulouse": "Toulouse",
+      "montpellier": "Montpellier",
+      "bordeaux": "Bordeaux"
+    },
+    "switzerland": {
+      "zurich": "Zurich",
+      "geneva": "Genève",
+      "basel": "Bâle",
+      "bern": "Berne",
+      "lausanne": "Lausanne",
+      "lucerne": "Lucerne"
+    },
+    "belgium": {
+      "brussels": "Bruxelles",
+      "antwerp": "Anvers",
+      "ghent": "Gand",
+      "bruges": "Bruges",
+      "liege": "Liège",
+      "charleroi": "Charleroi"
+    }
+  },
+  "regions": {
+    "france": {
+      "ile-de-france": "Île-de-France",
+      "paca": "Provence-Alpes-Côte d'Azur",
+      "auvergne-rhone-alpes": "Auvergne-Rhône-Alpes",
+      "occitanie": "Occitanie",
+      "nouvelle-aquitaine": "Nouvelle-Aquitaine"
+    },
+    "belgium": {
+      "brussels": "Région de Bruxelles-Capitale",
+      "flanders": "Flandre",
+      "wallonia": "Wallonie"
+    }
+  }
+}

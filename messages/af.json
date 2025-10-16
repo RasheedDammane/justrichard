@@ -1,0 +1,177 @@
+{
+  "common": {
+    "home": "Tuis",
+    "services": "Dienste",
+    "blog": "Blog",
+    "about": "Oor ons",
+    "contact": "Kontak",
+    "login": "Teken aan",
+    "signup": "Registreer"
+  },
+  "home": {
+    "hero": {
+      "title": "CommunityHub Platform",
+      "subtitle": "Vind geverifieerde professionele persone vir al jou behoeftes",
+      "cta": "Verken dienste"
+    },
+    "search": {
+      "selectLocation": "Kies jou ligging",
+      "selectLanguage": "Kies taal",
+      "allLocations": "Alle liggings"
+    },
+    "features": {
+      "title": "Hoekom ons kies",
+      "verified": {
+        "title": "Geverifieerde professionele persone",
+        "description": "Alle vennote is geverifieer en betroubaar"
+      },
+      "flexible": {
+        "title": "24/7 Beskikbaarheid",
+        "description": "Bespreek dienste enige tyd, enige plek"
+      },
+      "quality": {
+        "title": "Kwaliteit diens",
+        "description": "Slegs top-gegradeerde professionele persone"
+      },
+      "support": {
+        "title": "24/7 Ondersteuning",
+        "description": "Ons is hier om enige tyd te help"
+      }
+    },
+    "partners": {
+      "title": "Professionele vennote",
+      "viewAll": "Sien alle API's",
+      "profiles": "profiele",
+      "realEstate": "Eiendom",
+      "accountants": "Rekenmeesters",
+      "translators": "Vertalers",
+      "visaAgents": "Visum agente",
+      "business": "Besigheidskonsultante",
+      "architects": "Argitekte",
+      "photographers": "Fotograwe",
+      "coaches": "Afrigters",
+      "doctors": "Dokters",
+      "dentists": "Tandartse",
+      "lawyers": "Prokureurs",
+      "vehicles": "Voertuie"
+    },
+    "stats": {
+      "title": "Platform statistieke",
+      "partnerTypes": "Vennoot tipes",
+      "specialties": "Spesialiteite",
+      "languages": "Tale",
+      "countries": "Lande"
+    },
+    "cta": {
+      "title": "Gereed om te begin?",
+      "subtitle": "Verken ons API's en vind die perfekte professionele persoon vir jou behoeftes",
+      "apiDocs": "API Dokumentasie",
+      "browseServices": "Blaai deur dienste"
+    }
+  },
+  "blog": {
+    "title": "Blog en Nuus",
+    "subtitle": "Nuutste artikels, wenke en insigte",
+    "noPosts": "Geen plasings beskikbaar nie",
+    "backHome": "Terug na Tuis",
+    "readMore": "Lees Meer",
+    "relatedPosts": "Verwante Plasings"
+  },
+  "services": {
+    "realEstate": {
+      "name": "Eiendomsagente",
+      "tagline": "Professionele Dienste",
+      "description": "Vind betroubare eiendomsagente",
+      "cta": "Blaai deur Professionele",
+      "howItWorks": "Hoe Dit Werk"
+    },
+    "accounting": {
+      "name": "Rekenmeesters",
+      "tagline": "Professionele Dienste",
+      "description": "Professionele rekeningkunde en belastingdienste",
+      "cta": "Blaai deur Professionele",
+      "howItWorks": "Hoe Dit Werk"
+    },
+    "medical": {
+      "name": "Dokters",
+      "tagline": "Gesondheidsdienste",
+      "description": "Gekwalifiseerde mediese professionele",
+      "cta": "Blaai deur Dokters",
+      "howItWorks": "Hoe Dit Werk"
+    },
+    "dental": {
+      "name": "Tandartse",
+      "tagline": "Tandheelkundige Sorg",
+      "description": "Professionele tandheelkundige sorg",
+      "cta": "Blaai deur Tandartse",
+      "howItWorks": "Hoe Dit Werk"
+    },
+    "legal": {
+      "name": "Prokureurs",
+      "tagline": "Regsdienste",
+      "description": "Ervare regsprofessionele",
+      "cta": "Blaai deur Prokureurs",
+      "howItWorks": "Hoe Dit Werk"
+    }
+  },
+  "processSteps": {
+    "title": "Hoe Dit Werk",
+    "subtitle": "Bespreek professionele dienste in 4 eenvoudige stappe",
+    "step1": {
+      "title": "Blaai deur",
+      "description": "Verken geverifieerde professionele"
+    },
+    "step2": {
+      "title": "Bespreek",
+      "description": "Kies en skeduleer"
+    },
+    "step3": {
+      "title": "Kry Bevestiging",
+      "description": "Ontvang onmiddellike bevestiging"
+    },
+    "step4": {
+      "title": "Evalueer",
+      "description": "Deel jou ervaring"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Hoekom CommunityHub Kies?",
+    "verified": {
+      "title": "Geverifieerde Professionele",
+      "description": "Almal geverifieer en gesertifiseer"
+    },
+    "topRated": {
+      "title": "Top Gegradeer",
+      "description": "Slegs die beste professionele"
+    },
+    "bestPrices": {
+      "title": "Beste Pryse",
+      "description": "Mededingende pryse"
+    },
+    "support": {
+      "title": "24/7 Ondersteuning",
+      "description": "Ondersteuning enige tyd"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Maatskappy",
+      "about": "Oor Ons",
+      "careers": "Loopbane",
+      "blog": "Blog"
+    },
+    "support": {
+      "title": "Ondersteuning",
+      "help": "Hulpsentrum",
+      "terms": "Terme",
+      "privacy": "Privaatheid"
+    },
+    "business": {
+      "title": "Vir Besighede",
+      "becomeProvider": "Word 'n Verskaffer",
+      "partnerships": "Vennootskappe"
+    },
+    "followUs": "Volg Ons",
+    "copyright": "© 2025 CommunityHub. Alle regte voorbehou."
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "common": {
+    "home": "ホーム",
+    "services": "サービス",
+    "blog": "ブログ",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "login": "ログイン",
+    "signup": "新規登録"
+  },
+  "home": {
+    "hero": {
+      "title": "CommunityHubプラットフォーム",
+      "subtitle": "あらゆるニーズに対応する認証済みプロフェッショナルを見つける",
+      "cta": "サービスを探す"
+    },
+    "search": {
+      "selectLocation": "場所を選択",
+      "selectLanguage": "言語を選択",
+      "allLocations": "すべての場所"
+    },
+    "features": {
+      "title": "選ばれる理由",
+      "verified": {
+        "title": "認証済みプロフェッショナル",
+        "description": "すべてのパートナーは認証済みで信頼できます"
+      },
+      "flexible": {
+        "title": "24時間365日対応",
+        "description": "いつでもどこでもサービスを予約"
+      },
+      "quality": {
+        "title": "高品質サービス",
+        "description": "最高評価のプロフェッショナルのみ"
+      },
+      "support": {
+        "title": "24時間365日サポート",
+        "description": "いつでもサポートいたします"
+      }
+    },
+    "partners": {
+      "title": "プロフェッショナルパートナー",
+      "viewAll": "すべてのAPIを表示",
+      "profiles": "プロフィール",
+      "realEstate": "不動産",
+      "accountants": "会計士",
+      "translators": "翻訳者",
+      "visaAgents": "ビザエージェント",
+      "business": "ビジネスコンサルタント",
+      "architects": "建築家",
+      "photographers": "写真家",
+      "coaches": "コーチ",
+      "doctors": "医師",
+      "dentists": "歯科医",
+      "lawyers": "弁護士",
+      "vehicles": "車両"
+    },
+    "stats": {
+      "title": "プラットフォーム統計",
+      "partnerTypes": "パートナータイプ",
+      "specialties": "専門分野",
+      "languages": "言語",
+      "countries": "国"
+    },
+    "cta": {
+      "title": "始める準備はできましたか？",
+      "subtitle": "APIを探索して、ニーズに最適なプロフェッショナルを見つけましょう",
+      "apiDocs": "APIドキュメント",
+      "browseServices": "サービスを閲覧"
+    }
+  },
+  "blog": {
+    "title": "ブログとニュース",
+    "subtitle": "最新の記事、ヒント、インサイト",
+    "noPosts": "投稿はまだありません",
+    "backHome": "ホームに戻る",
+    "readMore": "続きを読む",
+    "relatedPosts": "関連投稿"
+  },
+  "services": {
+    "realEstate": {
+      "name": "不動産エージェント",
+      "tagline": "プロフェッショナルサービス",
+      "description": "信頼できる不動産エージェントを見つける",
+      "cta": "プロフェッショナルを見る",
+      "howItWorks": "仕組み"
+    },
+    "accounting": {
+      "name": "会計士",
+      "tagline": "プロフェッショナルサービス",
+      "description": "プロフェッショナルな会計・税務サービス",
+      "cta": "プロフェッショナルを見る",
+      "howItWorks": "仕組み"
+    },
+    "medical": {
+      "name": "医師",
+      "tagline": "医療サービス",
+      "description": "資格のある医療専門家",
+      "cta": "医師を見る",
+      "howItWorks": "仕組み"
+    },
+    "dental": {
+      "name": "歯科医",
+      "tagline": "歯科ケア",
+      "description": "プロフェッショナルな歯科ケアと治療",
+      "cta": "歯科医を見る",
+      "howItWorks": "仕組み"
+    },
+    "legal": {
+      "name": "弁護士",
+      "tagline": "法律サービス",
+      "description": "経験豊富な法律専門家",
+      "cta": "弁護士を見る",
+      "howItWorks": "仕組み"
+    }
+  },
+  "processSteps": {
+    "title": "仕組み",
+    "subtitle": "4つの簡単なステップでプロフェッショナルサービスを予約",
+    "step1": {
+      "title": "閲覧",
+      "description": "検証済みのプロフェッショナルを探索"
+    },
+    "step2": {
+      "title": "予約",
+      "description": "選択してスケジュール"
+    },
+    "step3": {
+      "title": "確認を受ける",
+      "description": "即座に確認を受け取る"
+    },
+    "step4": {
+      "title": "評価",
+      "description": "経験を共有"
+    }
+  },
+  "whyChooseUs": {
+    "title": "なぜCommunityHub？",
+    "verified": {
+      "title": "検証済みプロフェッショナル",
+      "description": "すべて検証済みで認定済み"
+    },
+    "topRated": {
+      "title": "トップ評価",
+      "description": "最高のプロフェッショナルのみ"
+    },
+    "bestPrices": {
+      "title": "最高の価格",
+      "description": "競争力のある価格"
+    },
+    "support": {
+      "title": "24/7サポート",
+      "description": "いつでもサポート"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "会社",
+      "about": "会社概要",
+      "careers": "キャリア",
+      "blog": "ブログ"
+    },
+    "support": {
+      "title": "サポート",
+      "help": "ヘルプセンター",
+      "terms": "利用規約",
+      "privacy": "プライバシー"
+    },
+    "business": {
+      "title": "ビジネス向け",
+      "becomeProvider": "プロバイダーになる",
+      "partnerships": "パートナーシップ"
+    },
+    "followUs": "フォローする",
+    "copyright": "© 2025 CommunityHub. 全著作権所有。"
+  }
+}

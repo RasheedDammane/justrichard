@@ -1,0 +1,222 @@
+[
+  {
+    "nom": "Plomberie Dupont & Fils",
+    "adresse": "123 Rue de Rivoli, 75001 Paris, France",
+    "telephone": "+33 1 42 60 12 34",
+    "note": 4.8,
+    "nombreAvis": 156,
+    "siteWeb": "https://plomberie-dupont.fr",
+    "horaires": [
+      "lundi: 08:00 – 18:00",
+      "mardi: 08:00 – 18:00",
+      "mercredi: 08:00 – 18:00",
+      "jeudi: 08:00 – 18:00",
+      "vendredi: 08:00 – 18:00",
+      "samedi: 09:00 – 13:00",
+      "dimanche: Fermé"
+    ],
+    "latitude": 48.8606111,
+    "longitude": 2.3376311,
+    "placeId": "ChIJD7fiBh9u5kcRYJSMaMOCCwQ",
+    "types": ["plumber", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJD7fiBh9u5kcRYJSMaMOCCwQ"
+  },
+  {
+    "nom": "SOS Plombier Paris 24/7",
+    "adresse": "45 Avenue des Champs-Élysées, 75008 Paris, France",
+    "telephone": "+33 1 98 76 54 32",
+    "note": 4.5,
+    "nombreAvis": 89,
+    "siteWeb": "https://sosplombierparis.com",
+    "horaires": [
+      "lundi: Ouvert 24h/24",
+      "mardi: Ouvert 24h/24",
+      "mercredi: Ouvert 24h/24",
+      "jeudi: Ouvert 24h/24",
+      "vendredi: Ouvert 24h/24",
+      "samedi: Ouvert 24h/24",
+      "dimanche: Ouvert 24h/24"
+    ],
+    "latitude": 48.8698,
+    "longitude": 2.3078,
+    "placeId": "ChIJabcd1234567890efgh",
+    "types": ["plumber", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJabcd1234567890efgh"
+  },
+  {
+    "nom": "Paris Plomberie Services",
+    "adresse": "78 Boulevard Saint-Germain, 75005 Paris, France",
+    "telephone": "+33 1 43 26 89 45",
+    "note": 4.7,
+    "nombreAvis": 203,
+    "siteWeb": "https://paris-plomberie-services.fr",
+    "horaires": [
+      "lundi: 07:00 – 19:00",
+      "mardi: 07:00 – 19:00",
+      "mercredi: 07:00 – 19:00",
+      "jeudi: 07:00 – 19:00",
+      "vendredi: 07:00 – 19:00",
+      "samedi: 08:00 – 17:00",
+      "dimanche: Urgences uniquement"
+    ],
+    "latitude": 48.8534,
+    "longitude": 2.3488,
+    "placeId": "ChIJxyz9876543210",
+    "types": ["plumber", "general_contractor", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJxyz9876543210"
+  },
+  {
+    "nom": "Artisan Plombier Expert",
+    "adresse": "15 Rue du Faubourg Saint-Antoine, 75011 Paris, France",
+    "telephone": "+33 1 48 05 67 23",
+    "note": 4.9,
+    "nombreAvis": 312,
+    "siteWeb": "https://artisan-plombier-expert.com",
+    "horaires": [
+      "lundi: 08:00 – 18:00",
+      "mardi: 08:00 – 18:00",
+      "mercredi: 08:00 – 18:00",
+      "jeudi: 08:00 – 18:00",
+      "vendredi: 08:00 – 18:00",
+      "samedi: 09:00 – 14:00",
+      "dimanche: Fermé"
+    ],
+    "latitude": 48.8526,
+    "longitude": 2.3715,
+    "placeId": "ChIJqrs456789tuv",
+    "types": ["plumber", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJqrs456789tuv"
+  },
+  {
+    "nom": "Plomberie Rapide Paris",
+    "adresse": "92 Rue La Fayette, 75010 Paris, France",
+    "telephone": "+33 1 42 82 15 78",
+    "note": 4.3,
+    "nombreAvis": 67,
+    "siteWeb": "Non renseigné",
+    "horaires": [
+      "lundi: 09:00 – 17:00",
+      "mardi: 09:00 – 17:00",
+      "mercredi: 09:00 – 17:00",
+      "jeudi: 09:00 – 17:00",
+      "vendredi: 09:00 – 17:00",
+      "samedi: Fermé",
+      "dimanche: Fermé"
+    ],
+    "latitude": 48.8785,
+    "longitude": 2.3515,
+    "placeId": "ChIJdef012345xyz",
+    "types": ["plumber", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJdef012345xyz"
+  },
+  {
+    "nom": "Dépannage Plomberie Pro",
+    "adresse": "34 Avenue de la République, 75011 Paris, France",
+    "telephone": "+33 1 43 55 22 88",
+    "note": 4.6,
+    "nombreAvis": 145,
+    "siteWeb": "https://depannage-plomberie-pro.fr",
+    "horaires": [
+      "lundi: 08:30 – 18:30",
+      "mardi: 08:30 – 18:30",
+      "mercredi: 08:30 – 18:30",
+      "jeudi: 08:30 – 18:30",
+      "vendredi: 08:30 – 18:30",
+      "samedi: 09:00 – 13:00",
+      "dimanche: Fermé"
+    ],
+    "latitude": 48.8631,
+    "longitude": 2.3806,
+    "placeId": "ChIJghi789012def",
+    "types": ["plumber", "home_goods_store", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJghi789012def"
+  },
+  {
+    "nom": "Plomberie Chauffage Martin",
+    "adresse": "56 Rue de Charonne, 75011 Paris, France",
+    "telephone": "+33 1 43 72 34 56",
+    "note": 4.7,
+    "nombreAvis": 189,
+    "siteWeb": "https://plomberie-chauffage-martin.fr",
+    "horaires": [
+      "lundi: 07:30 – 18:00",
+      "mardi: 07:30 – 18:00",
+      "mercredi: 07:30 – 18:00",
+      "jeudi: 07:30 – 18:00",
+      "vendredi: 07:30 – 18:00",
+      "samedi: 08:00 – 16:00",
+      "dimanche: Fermé"
+    ],
+    "latitude": 48.8534,
+    "longitude": 2.3823,
+    "placeId": "ChIJjkl345678mno",
+    "types": ["plumber", "plumbing", "heating_contractor", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJjkl345678mno"
+  },
+  {
+    "nom": "Express Plombier",
+    "adresse": "18 Rue du Commerce, 75015 Paris, France",
+    "telephone": "+33 1 45 78 92 34",
+    "note": 4.4,
+    "nombreAvis": 98,
+    "siteWeb": "https://express-plombier.com",
+    "horaires": [
+      "lundi: 08:00 – 19:00",
+      "mardi: 08:00 – 19:00",
+      "mercredi: 08:00 – 19:00",
+      "jeudi: 08:00 – 19:00",
+      "vendredi: 08:00 – 19:00",
+      "samedi: 09:00 – 18:00",
+      "dimanche: 10:00 – 16:00"
+    ],
+    "latitude": 48.8458,
+    "longitude": 2.2945,
+    "placeId": "ChIJpqr567890stu",
+    "types": ["plumber", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJpqr567890stu"
+  },
+  {
+    "nom": "Plomberie d'Urgence Paris",
+    "adresse": "103 Boulevard de Belleville, 75011 Paris, France",
+    "telephone": "+33 1 43 38 45 67",
+    "note": 4.2,
+    "nombreAvis": 74,
+    "siteWeb": "Non renseigné",
+    "horaires": [
+      "lundi: Ouvert 24h/24",
+      "mardi: Ouvert 24h/24",
+      "mercredi: Ouvert 24h/24",
+      "jeudi: Ouvert 24h/24",
+      "vendredi: Ouvert 24h/24",
+      "samedi: Ouvert 24h/24",
+      "dimanche: Ouvert 24h/24"
+    ],
+    "latitude": 48.8697,
+    "longitude": 2.3812,
+    "placeId": "ChIJuvw012345vwx",
+    "types": ["plumber", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJuvw012345vwx"
+  },
+  {
+    "nom": "Société Générale de Plomberie",
+    "adresse": "25 Rue de la Pompe, 75016 Paris, France",
+    "telephone": "+33 1 45 53 89 12",
+    "note": 4.8,
+    "nombreAvis": 267,
+    "siteWeb": "https://sgp-paris.fr",
+    "horaires": [
+      "lundi: 08:00 – 17:30",
+      "mardi: 08:00 – 17:30",
+      "mercredi: 08:00 – 17:30",
+      "jeudi: 08:00 – 17:30",
+      "vendredi: 08:00 – 17:30",
+      "samedi: Fermé",
+      "dimanche: Fermé"
+    ],
+    "latitude": 48.8633,
+    "longitude": 2.2798,
+    "placeId": "ChIJyz123456789a",
+    "types": ["plumber", "general_contractor", "point_of_interest", "establishment"],
+    "googleMapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJyz123456789a"
+  }
+]

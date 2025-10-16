@@ -1,0 +1,4361 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  PROVIDER
+  ADMIN
+  MANAGER
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  emailVerified DateTime?
+  password      String?
+  name          String?
+  phone         String?
+  image         String?
+  role          Role      @default(CUSTOMER)
+  locale        String    @default("en")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  profile       Profile?
+  addresses     Address[]
+  bookings      Booking[]
+  reviews       Review[]
+  savedServices SavedService[]
+  accounts      Account[]
+  sessions      Session[]
+  blogPosts     BlogPost[]
+  blogComments  BlogComment[]
+  blogLikes     BlogLike[]
+  buildingReviews BuildingReview[]
+  chatMessages  ChatMessage[]
+  bookingIntents BookingIntent[]
+
+  @@index([email])
+  @@index([role])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Profile {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  bio             String?  @db.Text
+  avatar          String?
+  dateOfBirth     DateTime?
+  gender          String?
+  nationalId      String?
+  isVerified      Boolean  @default(false)
+  rating          Float?
+  totalBookings   Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  providerProfile ProviderProfile?
+
+  @@index([userId])
+}
+
+model ProviderProfile {
+  id               String   @id @default(cuid())
+  profileId        String   @unique
+  licenseNumber    String?
+  experienceYears  Int?
+  specializations  String[] // Array of service categories
+  isAvailable      Boolean  @default(true)
+  hourlyRate       Float?
+  completedJobs    Int      @default(0)
+  rating           Float?
+  totalReviews     Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  profile          Profile       @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  services         Service[]
+  availabilities   Availability[]
+  bookings         Booking[]
+
+  @@index([profileId])
+  @@index([isAvailable])
+}
+
+model Address {
+  id           String   @id @default(cuid())
+  userId       String
+  label        String   // "Home", "Work", etc.
+  street       String
+  building     String?
+  apartment    String?
+  city         String
+  region       String
+  country      String
+  postalCode   String?
+  latitude     Float?
+  longitude    Float?
+  isDefault    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  bookings     Booking[]
+
+  @@index([userId])
+  @@index([city])
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  icon        String?
+  image       String?
+  isActive    Boolean   @default(true)
+  order       Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  translations CategoryTranslation[]
+  services     Service[]
+
+  @@index([slug])
+  @@index([isActive])
+}
+
+model CategoryTranslation {
+  id          String   @id @default(cuid())
+  categoryId  String
+  locale      String
+  name        String
+  description String?  @db.Text
+  seoTitle    String?
+  seoDescription String? @db.Text
+
+  category    Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@unique([categoryId, locale])
+  @@index([categoryId])
+  @@index([locale])
+}
+
+model Service {
+  id              String   @id @default(cuid())
+  categoryId      String
+  slug            String   @unique
+  image           String?
+  images          String[] // Multiple images
+  duration        Int      // in minutes
+  basePrice       Float
+  currency        String   @default("USD")
+  isActive        Boolean  @default(true)
+  isFeatured      Boolean  @default(false)
+  rating          Float?
+  totalReviews    Int      @default(0)
+  totalBookings   Int      @default(0)
+  providerId      String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  category        Category @relation(fields: [categoryId], references: [id])
+  provider        ProviderProfile? @relation(fields: [providerId], references: [id])
+  translations    ServiceTranslation[]
+  prices          ServicePrice[]
+  addons          ServiceAddon[]
+  bookings        Booking[]
+  reviews         Review[]
+  savedBy         SavedService[]
+  partners        PartnerService[]
+  bookingIntents  BookingIntent[]
+
+  @@index([categoryId])
+  @@index([slug])
+  @@index([isActive])
+  @@index([isFeatured])
+  @@index([providerId])
+}
+
+model ServiceTranslation {
+  id          String  @id @default(cuid())
+  serviceId   String
+  locale      String
+  name        String
+  description String  @db.Text
+  includes    String[] // What's included
+  excludes    String[] // What's not included
+  seoTitle    String?
+  seoDescription String? @db.Text
+
+  service     Service @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@unique([serviceId, locale])
+  @@index([serviceId])
+  @@index([locale])
+}
+
+model ServicePrice {
+  id        String   @id @default(cuid())
+  serviceId String
+  region    String   // "UAE", "KSA", etc.
+  city      String?  // Optional city-specific pricing
+  price     Float
+  currency  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  service   Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@unique([serviceId, region, city])
+  @@index([serviceId])
+  @@index([region])
+}
+
+model ServiceAddon {
+  id          String   @id @default(cuid())
+  serviceId   String
+  price       Float
+  duration    Int?     // additional minutes
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  service     Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  translations ServiceAddonTranslation[]
+  bookingAddons BookingAddon[]
+
+  @@index([serviceId])
+  @@index([isActive])
+}
+
+model ServiceAddonTranslation {
+  id       String @id @default(cuid())
+  addonId  String
+  locale   String
+  name     String
+  description String? @db.Text
+
+  addon    ServiceAddon @relation(fields: [addonId], references: [id], onDelete: Cascade)
+
+  @@unique([addonId, locale])
+  @@index([addonId])
+  @@index([locale])
+}
+
+model Booking {
+  id              String        @id @default(cuid())
+  userId          String
+  serviceId       String
+  providerId      String?
+  addressId       String
+  scheduledDate   DateTime
+  scheduledTime   String        // "09:00", "14:30"
+  duration        Int           // total minutes
+  status          BookingStatus @default(PENDING)
+  paymentStatus   PaymentStatus @default(PENDING)
+  subtotal        Float
+  tax             Float         @default(0)
+  discount        Float         @default(0)
+  total           Float
+  currency        String        @default("USD")
+  promoCode       String?
+  notes           String?       @db.Text
+  cancellationReason String?    @db.Text
+  completedAt     DateTime?
+  cancelledAt     DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  user            User          @relation(fields: [userId], references: [id])
+  service         Service       @relation(fields: [serviceId], references: [id])
+  provider        ProviderProfile? @relation(fields: [providerId], references: [id])
+  address         Address       @relation(fields: [addressId], references: [id])
+  addons          BookingAddon[]
+  payment         Payment?
+  review          Review?
+
+  @@index([userId])
+  @@index([serviceId])
+  @@index([providerId])
+  @@index([status])
+  @@index([scheduledDate])
+}
+
+model BookingAddon {
+  id        String   @id @default(cuid())
+  bookingId String
+  addonId   String
+  quantity  Int      @default(1)
+  price     Float
+  createdAt DateTime @default(now())
+
+  booking   Booking      @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  addon     ServiceAddon @relation(fields: [addonId], references: [id])
+
+  @@index([bookingId])
+  @@index([addonId])
+}
+
+model Payment {
+  id              String        @id @default(cuid())
+  bookingId       String        @unique
+  stripePaymentId String?       @unique
+  amount          Float
+  currency        String
+  status          PaymentStatus @default(PENDING)
+  paymentMethod   String?       // "card", "wallet", etc.
+  refundAmount    Float?
+  refundedAt      DateTime?
+  paidAt          DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  booking         Booking       @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+
+  @@index([bookingId])
+  @@index([stripePaymentId])
+  @@index([status])
+}
+
+model Review {
+  id          String   @id @default(cuid())
+  bookingId   String   @unique
+  userId      String
+  serviceId   String
+  rating      Int      // 1-5
+  comment     String?  @db.Text
+  isVerified  Boolean  @default(true) // Verified purchase
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  booking     Booking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  user        User     @relation(fields: [userId], references: [id])
+  service     Service  @relation(fields: [serviceId], references: [id])
+
+  @@index([userId])
+  @@index([serviceId])
+  @@index([rating])
+  @@index([isPublished])
+}
+
+model SavedService {
+  id        String   @id @default(cuid())
+  userId    String
+  serviceId String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  service   Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, serviceId])
+  @@index([userId])
+  @@index([serviceId])
+}
+
+model Availability {
+  id         String   @id @default(cuid())
+  providerId String
+  dayOfWeek  Int      // 0-6 (Sunday-Saturday)
+  startTime  String   // "09:00"
+  endTime    String   // "17:00"
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  provider   ProviderProfile @relation(fields: [providerId], references: [id], onDelete: Cascade)
+
+  @@index([providerId])
+  @@index([dayOfWeek])
+  @@index([isActive])
+}
+
+model Promotion {
+  id          String   @id @default(cuid())
+  code        String   @unique
+  type        String   // "PERCENTAGE", "FIXED"
+  value       Float
+  minAmount   Float?
+  maxDiscount Float?
+  usageLimit  Int?
+  usageCount  Int      @default(0)
+  startsAt    DateTime
+  expiresAt   DateTime
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([code])
+  @@index([isActive])
+  @@index([expiresAt])
+}
+
+model CMSPage {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  translations CMSPageTranslation[]
+
+  @@index([slug])
+  @@index([isActive])
+}
+
+model CMSPageTranslation {
+  id          String  @id @default(cuid())
+  pageId      String
+  locale      String
+  title       String
+  content     String  @db.Text
+  seoTitle    String?
+  seoDescription String? @db.Text
+
+  page        CMSPage @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([pageId, locale])
+  @@index([pageId])
+  @@index([locale])
+}
+
+model Media {
+  id        String   @id @default(cuid())
+  filename  String
+  url       String
+  mimeType  String
+  size      Int      // bytes
+  alt       String?
+  createdAt DateTime @default(now())
+
+  @@index([mimeType])
+}
+
+enum PartnerStatus {
+  PENDING
+  ACTIVE
+  SUSPENDED
+  INACTIVE
+}
+
+enum PartnerType {
+  INDIVIDUAL
+  COMPANY
+  FRANCHISE
+}
+
+model Partner {
+  id              String        @id @default(cuid())
+  name            String
+  email           String        @unique
+  phone           String?
+  companyName     String?
+  type            PartnerType   @default(INDIVIDUAL)
+  status          PartnerStatus @default(PENDING)
+  logo            String?
+  website         String?
+  description     String?       @db.Text
+  address         String?
+  city            String?
+  country         String?
+  taxId           String?
+  bankAccount     String?
+  commissionRate  Float         @default(15) // Percentage
+  rating          Float?
+  totalServices   Int           @default(0)
+  totalRevenue    Float         @default(0)
+  isVerified      Boolean       @default(false)
+  verifiedAt      DateTime?
+  onboardedAt     DateTime?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  services        PartnerService[]
+  documents       PartnerDocument[]
+  chatbots        Chatbot[]
+
+  @@index([email])
+  @@index([status])
+  @@index([type])
+}
+
+model PartnerService {
+  id          String   @id @default(cuid())
+  partnerId   String
+  serviceId   String
+  isActive    Boolean  @default(true)
+  customPrice Float?
+  createdAt   DateTime @default(now())
+
+  partner     Partner  @relation(fields: [partnerId], references: [id], onDelete: Cascade)
+  service     Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@unique([partnerId, serviceId])
+  @@index([partnerId])
+  @@index([serviceId])
+}
+
+model PartnerDocument {
+  id          String   @id @default(cuid())
+  partnerId   String
+  type        String   // "license", "insurance", "contract", "id"
+  name        String
+  url         String
+  isVerified  Boolean  @default(false)
+  verifiedAt  DateTime?
+  expiresAt   DateTime?
+  uploadedAt  DateTime @default(now())
+
+  partner     Partner  @relation(fields: [partnerId], references: [id], onDelete: Cascade)
+
+  @@index([partnerId])
+  @@index([type])
+}
+
+enum ChatbotType {
+  CUSTOMER_SUPPORT
+  BOOKING_ASSISTANT
+  FAQ
+  SALES
+  TECHNICAL
+}
+
+enum IndustryType {
+  CLEANING
+  MAINTENANCE
+  BEAUTY
+  HEALTHCARE
+  EDUCATION
+  FOOD
+  TRANSPORT
+  GENERAL
+}
+
+model Chatbot {
+  id              String       @id @default(cuid())
+  name            String
+  type            ChatbotType
+  industry        IndustryType @default(GENERAL)
+  partnerId       String?
+  description     String?      @db.Text
+  avatar          String?
+  welcomeMessage  String?      @db.Text
+  isActive        Boolean      @default(true)
+  language        String       @default("en")
+  config          Json?        // Configuration JSON
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  partner         Partner?     @relation(fields: [partnerId], references: [id], onDelete: SetNull)
+  intents         ChatbotIntent[]
+  conversations   ChatbotConversation[]
+
+  @@index([type])
+  @@index([industry])
+  @@index([partnerId])
+  @@index([isActive])
+}
+
+model ChatbotIntent {
+  id          String   @id @default(cuid())
+  chatbotId   String
+  name        String
+  patterns    String[] // Regex patterns or keywords
+  responses   String[] // Possible responses
+  action      String?  // Optional action to trigger
+  priority    Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  chatbot     Chatbot  @relation(fields: [chatbotId], references: [id], onDelete: Cascade)
+
+  @@index([chatbotId])
+  @@index([name])
+}
+
+model ChatbotConversation {
+  id          String   @id @default(cuid())
+  chatbotId   String
+  userId      String?
+  sessionId   String
+  messages    Json     // Array of messages
+  startedAt   DateTime @default(now())
+  endedAt     DateTime?
+  rating      Int?     // 1-5
+  feedback    String?  @db.Text
+
+  chatbot     Chatbot  @relation(fields: [chatbotId], references: [id], onDelete: Cascade)
+
+  @@index([chatbotId])
+  @@index([sessionId])
+  @@index([userId])
+}
+
+enum LogLevel {
+  INFO
+  WARN
+  ERROR
+  DEBUG
+}
+
+model ErrorLog {
+  id        String   @id @default(cuid())
+  level     LogLevel
+  message   String   @db.Text
+  context   String?  @db.Text // JSON string
+  stack     String?  @db.Text
+  errorName String?
+  userId    String?
+  path      String?
+  method    String?
+  resolved  Boolean  @default(false)
+  resolvedAt DateTime?
+  resolvedBy String?
+  notes     String?  @db.Text
+  createdAt DateTime @default(now())
+
+  @@index([level])
+  @@index([userId])
+  @@index([path])
+  @@index([resolved])
+  @@index([createdAt])
+}
+
+enum NotificationType {
+  INFO
+  WARNING
+  ERROR
+  SUCCESS
+}
+
+model Notification {
+  id          String           @id @default(cuid())
+  userId      String?
+  type        NotificationType @default(INFO)
+  title       String
+  message     String           @db.Text
+  link        String?
+  isRead      Boolean          @default(false)
+  readAt      DateTime?
+  createdAt   DateTime         @default(now())
+
+  @@index([userId])
+  @@index([isRead])
+  @@index([createdAt])
+}
+
+enum ActivityAction {
+  CREATE
+  UPDATE
+  DELETE
+  LOGIN
+  LOGOUT
+  EXPORT
+  IMPORT
+}
+
+model ActivityLog {
+  id          String         @id @default(cuid())
+  userId      String
+  action      ActivityAction
+  entityType  String         // "User", "Booking", "Partner", etc.
+  entityId    String?
+  description String         @db.Text
+  metadata    Json?          // Additional data
+  ipAddress   String?
+  userAgent   String?
+  createdAt   DateTime       @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([entityType])
+  @@index([createdAt])
+}
+
+model Webhook {
+  id          String   @id @default(cuid())
+  name        String
+  url         String
+  events      String[] // Array of event types
+  secret      String?
+  isActive    Boolean  @default(true)
+  lastTriggered DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([isActive])
+}
+
+model Currency {
+  id          String   @id @default(cuid())
+  code        String   @unique // ISO 4217 code (USD, EUR, MAD, etc.)
+  name        String
+  symbol      String
+  isActive    Boolean  @default(true)
+  isDefault   Boolean  @default(false)
+  decimalPlaces Int    @default(2)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  exchangeRatesFrom ExchangeRate[] @relation("FromCurrency")
+  exchangeRatesTo   ExchangeRate[] @relation("ToCurrency")
+
+  @@index([code])
+  @@index([isActive])
+  @@index([isDefault])
+}
+
+model ExchangeRate {
+  id              String   @id @default(cuid())
+  fromCurrencyId  String
+  toCurrencyId    String
+  rate            Float
+  source          String?  // API source (e.g., "exchangerate-api", "manual")
+  lastUpdated     DateTime @default(now())
+  createdAt       DateTime @default(now())
+
+  fromCurrency Currency @relation("FromCurrency", fields: [fromCurrencyId], references: [id], onDelete: Cascade)
+  toCurrency   Currency @relation("ToCurrency", fields: [toCurrencyId], references: [id], onDelete: Cascade)
+
+  @@unique([fromCurrencyId, toCurrencyId])
+  @@index([fromCurrencyId])
+  @@index([toCurrencyId])
+  @@index([lastUpdated])
+}
+
+enum PaymentMethod {
+  CARD
+  CASH
+  BANK_TRANSFER
+  CRYPTO_BTC
+  CRYPTO_ETH
+  CRYPTO_USDT
+  CRYPTO_BNB
+}
+
+model Country {
+  id          String   @id @default(cuid())
+  code        String   @unique // ISO 3166-1 alpha-2 (AE, PH, QA, etc.)
+  name        String   // English name
+  nameAr      String?  // Arabic
+  nameFr      String?  // French
+  nameTh      String?  // Thai
+  nameRu      String?  // Russian
+  nameKo      String?  // Korean
+  nameEs      String?  // Spanish
+  nameVi      String?  // Vietnamese
+  nameTl      String?  // Tagalog
+  nameIt      String?  // Italian
+  nameNo      String?  // Norwegian
+  nameTr      String?  // Turkish
+  namePt      String?  // Portuguese
+  nameAf      String?  // Afrikaans
+  nameJa      String?  // Japanese
+  nameDe      String?  // German
+  
+  slug        String?  @unique
+  description String?  @db.Text
+  
+  dialCode    String   // +971, +63, etc.
+  currency    String   // AED, PHP, QAR, etc.
+  
+  // Media
+  flag        String?  // Flag emoji or image URL
+  icon        String?  // Icon/emoji
+  thumbnail   String?  // Thumbnail image
+  images      String[] // Gallery images
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?  @db.Text
+  keywords        String[]
+  
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  regions     Region[]
+  cities      City[]
+  properties  Property[]
+  vehicles    Vehicle[]
+  transfers   Transfer[]
+  handymanServices HandymanService[]
+  doctors     Doctor[]
+  dentists    Dentist[]
+  lawyers     Lawyer[]
+  companyFormations CompanyFormation[]
+  accountingServices AccountingServiceModel[]
+  translationServices TranslationService[]
+  permitServices PermitService[]
+  buildings   Building[]
+
+  @@index([code])
+  @@index([isActive])
+}
+
+model Region {
+  id          String   @id @default(cuid())
+  countryId   String
+  name        String   // English name
+  nameAr      String?  // Arabic
+  nameFr      String?  // French
+  nameTh      String?  // Thai
+  nameRu      String?  // Russian
+  nameKo      String?  // Korean
+  nameEs      String?  // Spanish
+  nameVi      String?  // Vietnamese
+  nameTl      String?  // Tagalog
+  code        String?  // Region code if applicable
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  country     Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  districts   District[]
+  cities      City[]
+  properties  Property[]
+  buildings   Building[]
+
+  @@index([countryId])
+  @@index([isActive])
+}
+
+model District {
+  id          String   @id @default(cuid())
+  regionId    String
+  name        String   // English name
+  nameAr      String?  // Arabic
+  nameFr      String?  // French
+  nameTh      String?  // Thai
+  nameRu      String?  // Russian
+  nameKo      String?  // Korean
+  nameEs      String?  // Spanish
+  nameVi      String?  // Vietnamese
+  nameTl      String?  // Tagalog
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  region      Region   @relation(fields: [regionId], references: [id], onDelete: Cascade)
+  cities      City[]
+
+  @@index([regionId])
+  @@index([isActive])
+}
+
+model City {
+  id          String   @id @default(cuid())
+  countryId   String
+  regionId    String?
+  districtId  String?
+  name        String   // English name
+  nameAr      String?  // Arabic
+  nameFr      String?  // French
+  nameTh      String?  // Thai
+  nameRu      String?  // Russian
+  nameKo      String?  // Korean
+  nameEs      String?  // Spanish
+  nameVi      String?  // Vietnamese
+  nameTl      String?  // Tagalog
+  nameIt      String?  // Italian
+  nameNo      String?  // Norwegian
+  nameTr      String?  // Turkish
+  namePt      String?  // Portuguese
+  nameAf      String?  // Afrikaans
+  nameJa      String?  // Japanese
+  nameDe      String?  // German
+  
+  slug        String?  @unique
+  description String?  @db.Text
+  
+  latitude    Float?
+  longitude   Float?
+  
+  // Media
+  icon        String?  // Icon/emoji
+  thumbnail   String?  // Thumbnail image
+  images      String[] // Gallery images
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?  @db.Text
+  keywords        String[]
+  
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  country     Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  region      Region?  @relation(fields: [regionId], references: [id], onDelete: SetNull)
+  district    District? @relation(fields: [districtId], references: [id], onDelete: SetNull)
+  properties  Property[]
+  buildings   Building[]
+  vehicles    Vehicle[]
+  handymanServices HandymanService[]
+  doctors     Doctor[]
+  dentists    Dentist[]
+  lawyers     Lawyer[]
+  companyFormations CompanyFormation[]
+  accountingServices AccountingServiceModel[]
+  translationServices TranslationService[]
+  permitServices PermitService[]
+  coaches     Coach[]
+  domesticWorkers DomesticWorker[]
+  realEstateAgents RealEstateAgent[]
+  accountants Accountant[]
+  translators Translator[]
+  visaAgents  VisaAgent[]
+  businessConsultants BusinessConsultant[]
+  architects  Architect[]
+  photographers Photographer[]
+  blogPosts   BlogPost[]
+
+  @@index([countryId])
+  @@index([regionId])
+  @@index([districtId])
+  @@index([isActive])
+}
+
+model Building {
+  id              String   @id @default(cuid())
+  
+  // Basic Information
+  name            String   // English name
+  nameAr          String?  // Arabic
+  nameFr          String?  // French
+  nameTh          String?  // Thai
+  nameRu          String?  // Russian
+  nameKo          String?  // Korean
+  nameEs          String?  // Spanish
+  nameVi          String?  // Vietnamese
+  nameTl          String?  // Tagalog
+  nameIt          String?  // Italian
+  nameNo          String?  // Norwegian
+  nameTr          String?  // Turkish
+  namePt          String?  // Portuguese
+  nameAf          String?  // Afrikaans
+  nameJa          String?  // Japanese
+  nameDe          String?  // German
+  
+  slug            String?  @unique
+  
+  // Developer & Management
+  developer       String?  // Developer name (DAMAC, EMAAR, etc.)
+  managementCompany String?
+  buildingType    String   @default("RESIDENTIAL")
+  category        String[]
+  
+  // Location
+  countryId       String
+  cityId          String
+  regionId        String?
+  address         String?
+  streetAddress   String?
+  postalCode      String?
+  latitude        Float?
+  longitude       Float?
+  mapUrl          String?
+  
+  // Building Details
+  yearBuilt       Int?
+  yearRenovated   Int?
+  totalFloors     Int?
+  totalUnits      Int?
+  totalArea       Float?
+  plotArea        Float?
+  
+  // Descriptions
+  description     String?  @db.Text
+  descriptionAr   String?  @db.Text
+  descriptionFr   String?  @db.Text
+  
+  // Features & Amenities
+  amenities       String[]
+  features        String[]
+  
+  // Media
+  images          String[]
+  videos          String[]
+  virtualTour     String?
+  floorPlans      String[]
+  brochure        String?
+  
+  // Contact
+  phone           String?
+  email           String?
+  website         String?
+  officeHours     Json?
+  
+  // Services
+  servicesOffered String[]
+  
+  // Rating
+  rating          Float?   @default(0)
+  totalReviews    Int      @default(0)
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?  @db.Text
+  keywords        String[]
+  
+  // Status
+  isActive        Boolean  @default(true)
+  isFeatured      Boolean  @default(false)
+  isVerified      Boolean  @default(false)
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  country         Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  city            City     @relation(fields: [cityId], references: [id], onDelete: Cascade)
+  region          Region?  @relation(fields: [regionId], references: [id])
+  properties      Property[]
+  buildingPartners BuildingPartner[]
+  buildingServices BuildingService[]
+  buildingReviews BuildingReview[]
+
+  @@index([countryId])
+  @@index([cityId])
+  @@index([regionId])
+  @@index([developer])
+  @@index([buildingType])
+  @@index([isActive])
+  @@index([isFeatured])
+  @@index([slug])
+  @@index([rating])
+}
+
+model Language {
+  id          String   @id @default(cuid())
+  code        String   @unique // ISO 639-1 (en, fr, ar, th, ru, ko, etc.)
+  name        String
+  nativeName  String
+  direction   String   @default("ltr") // ltr or rtl
+  isActive    Boolean  @default(true)
+  isDefault   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([code])
+  @@index([isActive])
+  @@index([isDefault])
+}
+
+model CryptoPayment {
+  id              String   @id @default(cuid())
+  bookingId       String?
+  userId          String
+  cryptocurrency  String   // BTC, ETH, USDT, BNB
+  amount          Float
+  amountCrypto    Float
+  walletAddress   String
+  transactionHash String?
+  status          String   @default("pending") // pending, confirmed, failed
+  network         String?  // mainnet, testnet, BSC, etc.
+  confirmations   Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([bookingId])
+  @@index([userId])
+  @@index([status])
+  @@index([transactionHash])
+}
+
+enum PropertyType {
+  APARTMENT
+  HOUSE
+  VILLA
+  STUDIO
+  PENTHOUSE
+  TOWNHOUSE
+  DUPLEX
+  LAND
+  COMMERCIAL
+  OFFICE
+}
+
+enum PropertyStatus {
+  DRAFT
+  PENDING_REVIEW
+  PUBLISHED
+  RENTED
+  SOLD
+  ARCHIVED
+}
+
+enum ListingType {
+  FOR_SALE
+  FOR_RENT
+  BOTH
+}
+
+model Property {
+  id                String         @id @default(cuid())
+  slug              String?        @unique
+  title             String
+  description       String         @db.Text
+  propertyType      PropertyType
+  listingType       ListingType
+  status            PropertyStatus @default(DRAFT)
+  
+  // Location
+  countryId         String
+  regionId          String?
+  cityId            String?
+  buildingId        String?
+  address           String
+  latitude          Float?
+  longitude         Float?
+  
+  // Pricing
+  salePrice         Float?
+  rentPrice         Float?         // Monthly rent
+  pricePerSqm       Float?         // Price per square meter
+  currency          String         @default("MAD")
+  
+  // Details
+  area              Float          // in square meters
+  bedrooms          Int
+  bathrooms         Int
+  floors            Int?
+  parkingSpaces     Int            @default(0)
+  yearBuilt         Int?
+  
+  // Costs
+  monthlyCharges    Float?         // Monthly maintenance/HOA fees
+  transferFees      Float?         // Transfer/registration fees
+  agencyCommission  Float?         // Agency commission percentage
+  
+  // Features
+  isFurnished       Boolean        @default(false)
+  hasGarden         Boolean        @default(false)
+  hasPool           Boolean        @default(false)
+  hasElevator       Boolean        @default(false)
+  hasBalcony        Boolean        @default(false)
+  hasSecurity       Boolean        @default(false)
+  
+  // Media
+  images            String[]       // Array of image URLs
+  videos            String[]       // Array of video URLs
+  virtualTour       String?        // 360 tour URL
+  
+  // Ownership
+  ownerId           String
+  agentId           String?
+  
+  // Metadata
+  views             Int            @default(0)
+  featured          Boolean        @default(false)
+  publishedAt       DateTime?
+  expiresAt         DateTime?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  
+  country           Country        @relation(fields: [countryId], references: [id])
+  region            Region?        @relation(fields: [regionId], references: [id])
+  city              City?          @relation(fields: [cityId], references: [id])
+  building          Building?      @relation(fields: [buildingId], references: [id])
+  translations      PropertyTranslation[]
+  amenities         PropertyAmenity[]
+  reviews           PropertyReview[]
+  inquiries         PropertyInquiry[]
+  viewingRequests   ViewingRequest[]
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([buildingId])
+  @@index([slug])
+  @@index([propertyType])
+  @@index([listingType])
+  @@index([status])
+  @@index([featured])
+  @@index([publishedAt])
+}
+
+model PropertyTranslation {
+  id          String  @id @default(cuid())
+  propertyId  String
+  locale      String
+  title       String
+  description String  @db.Text
+  features    String[]
+  seoTitle    String?
+  seoDescription String? @db.Text
+  
+  property    Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  
+  @@unique([propertyId, locale])
+  @@index([propertyId])
+  @@index([locale])
+}
+
+model Amenity {
+  id          String   @id @default(cuid())
+  name        String   // English name
+  nameAr      String?  // Arabic
+  nameFr      String?  // French
+  nameTh      String?  // Thai
+  nameRu      String?  // Russian
+  nameKo      String?  // Korean
+  nameEs      String?  // Spanish
+  nameVi      String?  // Vietnamese
+  nameTl      String?  // Tagalog
+  icon        String?
+  category    String   // Interior, Exterior, Building, Neighborhood
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  
+  properties  PropertyAmenity[]
+  
+  @@index([category])
+  @@index([isActive])
+}
+
+model PropertyAmenity {
+  id          String   @id @default(cuid())
+  propertyId  String
+  amenityId   String
+  
+  property    Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  amenity     Amenity  @relation(fields: [amenityId], references: [id], onDelete: Cascade)
+  
+  @@unique([propertyId, amenityId])
+  @@index([propertyId])
+  @@index([amenityId])
+}
+
+model PropertyReview {
+  id          String   @id @default(cuid())
+  propertyId  String
+  userId      String
+  rating      Int      // 1-5
+  comment     String?  @db.Text
+  createdAt   DateTime @default(now())
+  
+  property    Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  
+  @@index([propertyId])
+  @@index([userId])
+}
+
+model PropertyInquiry {
+  id          String   @id @default(cuid())
+  propertyId  String
+  userId      String
+  name        String
+  email       String
+  phone       String?
+  message     String   @db.Text
+  inquiryType String   // viewing, information, offer
+  status      String   @default("new") // new, contacted, closed
+  createdAt   DateTime @default(now())
+  
+  property    Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  
+  @@index([propertyId])
+  @@index([userId])
+  @@index([status])
+}
+
+model ViewingRequest {
+  id              String   @id @default(cuid())
+  propertyId      String
+  userId          String
+  requestedDate   DateTime
+  requestedTime   String
+  status          String   @default("pending") // pending, confirmed, cancelled, completed
+  notes           String?  @db.Text
+  createdAt       DateTime @default(now())
+  
+  property        Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  
+  @@index([propertyId])
+  @@index([userId])
+  @@index([status])
+  @@index([requestedDate])
+}
+
+enum VehicleType {
+  CAR
+  MOTORBIKE
+  SCOOTER
+  QUAD
+  BUGGY
+  JETSKI
+  BOAT
+  YACHT
+  BICYCLE
+}
+
+enum TransferType {
+  AIRPORT_PICKUP
+  AIRPORT_DROPOFF
+  CITY_TO_CITY
+  HOURLY
+  DAILY
+}
+
+model Vehicle {
+  id              String       @id @default(cuid())
+  slug            String?      @unique
+  name            String
+  nameAr          String?
+  nameFr          String?
+  nameTh          String?
+  description     String       @db.Text
+  vehicleType     VehicleType
+  brand           String?
+  model           String?
+  year            Int?
+  seats           Int?
+  transmission    String?      // Automatic, Manual
+  fuelType        String?      // Petrol, Diesel, Electric, Hybrid
+  
+  // Pricing
+  pricePerDay     Float
+  pricePerWeek    Float?
+  pricePerMonth   Float?
+  pricePerHour    Float?       // For jetski, boats
+  currency        String       @default("MAD")
+  deposit         Float?
+  
+  // Requirements
+  minAge          Int          @default(21)
+  licenseRequired Boolean      @default(true)
+  
+  // Location
+  countryId       String
+  cityId          String
+  
+  // Features
+  features        String[]     // GPS, AC, Bluetooth, etc.
+  images          String[]
+  
+  // Availability
+  isAvailable     Boolean      @default(true)
+  ownerId         String
+  
+  // Metadata
+  totalBookings   Int          @default(0)
+  rating          Float        @default(0)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  
+  country         Country      @relation(fields: [countryId], references: [id])
+  city            City         @relation(fields: [cityId], references: [id])
+  translations    VehicleTranslation[]
+  rentals         VehicleRental[]
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([slug])
+  @@index([vehicleType])
+  @@index([isAvailable])
+}
+
+model VehicleTranslation {
+  id          String  @id @default(cuid())
+  vehicleId   String
+  locale      String
+  name        String
+  description String  @db.Text
+  features    String[]
+  seoTitle    String?
+  seoDescription String? @db.Text
+  
+  vehicle     Vehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+  
+  @@unique([vehicleId, locale])
+  @@index([vehicleId])
+  @@index([locale])
+}
+
+model VehicleRental {
+  id              String   @id @default(cuid())
+  vehicleId       String
+  userId          String
+  startDate       DateTime
+  endDate         DateTime
+  pickupLocation  String
+  dropoffLocation String?
+  
+  // Pricing
+  totalDays       Int
+  pricePerDay     Float
+  totalPrice      Float
+  deposit         Float?
+  currency        String   @default("MAD")
+  
+  // Status
+  status          String   @default("pending") // pending, confirmed, active, completed, cancelled
+  paymentStatus   String   @default("pending") // pending, paid, refunded
+  
+  // Additional
+  driverLicense   String?
+  notes           String?  @db.Text
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  vehicle         Vehicle  @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+  
+  @@index([vehicleId])
+  @@index([userId])
+  @@index([status])
+  @@index([startDate])
+  @@index([endDate])
+}
+
+model Transfer {
+  id              String       @id @default(cuid())
+  slug            String?      @unique
+  name            String
+  nameAr          String?
+  nameFr          String?
+  nameTh          String?
+  description     String       @db.Text
+  transferType    TransferType
+  
+  // Route
+  fromLocation    String
+  toLocation      String
+  distance        Float?       // in km
+  duration        Int?         // in minutes
+  
+  // Vehicle Info
+  vehicleType     String       // Sedan, SUV, Van, Bus
+  maxPassengers   Int
+  maxLuggage      Int?
+  
+  // Pricing
+  price           Float
+  pricePerPerson  Float?
+  currency        String       @default("MAD")
+  
+  // Location
+  countryId       String
+  fromCityId      String?
+  toCityId        String?
+  
+  // Features
+  features        String[]     // AC, WiFi, Water, etc.
+  images          String[]
+  
+  // Availability
+  isAvailable     Boolean      @default(true)
+  providerId      String
+  
+  // Metadata
+  totalBookings   Int          @default(0)
+  rating          Float        @default(0)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  
+  country         Country      @relation(fields: [countryId], references: [id])
+  translations    TransferTranslation[]
+  bookings        TransferBooking[]
+  
+  @@index([countryId])
+  @@index([slug])
+  @@index([transferType])
+  @@index([isAvailable])
+}
+
+model TransferTranslation {
+  id          String  @id @default(cuid())
+  transferId  String
+  locale      String
+  name        String
+  description String  @db.Text
+  fromLocationName String
+  toLocationName   String
+  features    String[]
+  seoTitle    String?
+  seoDescription String? @db.Text
+  
+  transfer    Transfer @relation(fields: [transferId], references: [id], onDelete: Cascade)
+  
+  @@unique([transferId, locale])
+  @@index([transferId])
+  @@index([locale])
+}
+
+model TransferBooking {
+  id              String   @id @default(cuid())
+  transferId      String
+  userId          String
+  
+  // Schedule
+  pickupDate      DateTime
+  pickupTime      String
+  pickupLocation  String
+  dropoffLocation String
+  
+  // Passengers
+  passengers      Int
+  luggage         Int?
+  
+  // Flight Info (for airport transfers)
+  flightNumber    String?
+  flightTime      String?
+  
+  // Pricing
+  totalPrice      Float
+  currency        String   @default("MAD")
+  
+  // Status
+  status          String   @default("pending") // pending, confirmed, completed, cancelled
+  paymentStatus   String   @default("pending") // pending, paid, refunded
+  
+  // Additional
+  specialRequests String?  @db.Text
+  driverName      String?
+  driverPhone     String?
+  vehiclePlate    String?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  transfer        Transfer @relation(fields: [transferId], references: [id], onDelete: Cascade)
+  
+  @@index([transferId])
+  @@index([userId])
+  @@index([status])
+  @@index([pickupDate])
+}
+
+enum HandymanCategory {
+  PLUMBING
+  ELECTRICAL
+  HVAC
+  CARPENTRY
+  PAINTING
+  LOCKSMITH
+  TILING_FLOORING
+  ROOFING
+  MASONRY
+  APPLIANCES
+  GARDENING
+  CLEANING
+}
+
+enum InterventionType {
+  DIAGNOSTIC
+  REPAIR
+  INSTALLATION
+  MAINTENANCE
+  EMERGENCY
+  RENOVATION
+}
+
+enum UrgencyLevel {
+  CRITICAL      // 0-2h, +100%
+  HIGH          // 2-6h, +50%
+  MEDIUM        // 24-48h, normal
+  LOW           // 3-7 days, normal
+}
+
+model HandymanService {
+  id              String            @id @default(cuid())
+  slug            String?           @unique
+  name            String
+  nameAr          String?
+  nameFr          String?
+  nameTh          String?
+  nameRu          String?
+  nameKo          String?
+  nameEs          String?
+  nameVi          String?
+  nameTl          String?
+  description     String            @db.Text
+  category        HandymanCategory
+  interventionType InterventionType
+  
+  // Pricing
+  basePrice       Float
+  pricePerHour    Float?
+  estimatedDuration Int?            // in minutes
+  currency        String            @default("MAD")
+  
+  // Urgency pricing multipliers
+  criticalMultiplier Float          @default(2.0)   // +100%
+  highMultiplier     Float          @default(1.5)   // +50%
+  
+  // Location
+  countryId       String
+  cityId          String?
+  
+  // Provider
+  providerId      String
+  isAvailable     Boolean           @default(true)
+  availability24h Boolean           @default(false)  // Available 24/7
+  
+  // Features
+  features        String[]          // Tools included, warranty, etc.
+  images          String[]
+  
+  // Requirements
+  requiresInspection Boolean         @default(false)
+  minNoticeHours  Int               @default(2)
+  
+  // Metadata
+  totalBookings   Int               @default(0)
+  rating          Float             @default(0)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  country         Country           @relation(fields: [countryId], references: [id])
+  city            City?             @relation(fields: [cityId], references: [id])
+  translations    HandymanServiceTranslation[]
+  requests        HandymanRequest[]
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([slug])
+  @@index([category])
+  @@index([interventionType])
+  @@index([isAvailable])
+}
+
+model HandymanServiceTranslation {
+  id          String  @id @default(cuid())
+  serviceId   String
+  locale      String
+  name        String
+  description String  @db.Text
+  categoryName String
+  features    String[]
+  seoTitle    String?
+  seoDescription String? @db.Text
+  
+  service     HandymanService @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  
+  @@unique([serviceId, locale])
+  @@index([serviceId])
+  @@index([locale])
+}
+
+model HandymanRequest {
+  id              String            @id @default(cuid())
+  serviceId       String
+  userId          String
+  
+  // Problem details
+  problemTitle    String
+  problemDescription String         @db.Text
+  urgencyLevel    UrgencyLevel
+  
+  // Schedule
+  preferredDate   DateTime?
+  preferredTime   String?
+  flexibleSchedule Boolean          @default(false)
+  
+  // Location
+  address         String
+  cityId          String
+  buildingId      String?
+  floor           String?
+  accessInstructions String?        @db.Text
+  
+  // Pricing
+  quotedPrice     Float?
+  finalPrice      Float?
+  urgencyFee      Float?            // Additional fee for urgency
+  currency        String            @default("MAD")
+  
+  // Status
+  status          String            @default("pending") // pending, quoted, accepted, in_progress, completed, cancelled
+  paymentStatus   String            @default("pending") // pending, paid, refunded
+  
+  // Assignment
+  technicianId    String?
+  technicianName  String?
+  technicianPhone String?
+  estimatedArrival DateTime?
+  actualArrival   DateTime?
+  completedAt     DateTime?
+  
+  // Media
+  images          String[]          // Problem photos
+  beforeImages    String[]
+  afterImages     String[]
+  
+  // Additional
+  notes           String?           @db.Text
+  customerRating  Int?              // 1-5
+  customerReview  String?           @db.Text
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  service         HandymanService   @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  
+  @@index([serviceId])
+  @@index([userId])
+  @@index([status])
+  @@index([urgencyLevel])
+  @@index([preferredDate])
+  @@index([cityId])
+}
+
+enum MedicalSpecialty {
+  // Médecine Générale
+  GENERAL_PRACTITIONER
+  FAMILY_DOCTOR
+  
+  // Spécialités Médicales
+  CARDIOLOGIST
+  DERMATOLOGIST
+  ENDOCRINOLOGIST
+  GASTROENTEROLOGIST
+  GYNECOLOGIST
+  OBSTETRICIAN
+  NEPHROLOGIST
+  NEUROLOGIST
+  ONCOLOGIST
+  OPHTHALMOLOGIST
+  ENT
+  PEDIATRICIAN
+  PULMONOLOGIST
+  PSYCHIATRIST
+  RHEUMATOLOGIST
+  UROLOGIST
+  
+  // Spécialités Chirurgicales
+  GENERAL_SURGEON
+  ORTHOPEDIC_SURGEON
+  PLASTIC_SURGEON
+  CARDIOVASCULAR_SURGEON
+  NEUROSURGEON
+  
+  // Autres
+  ALLERGIST
+  ANESTHESIOLOGIST
+  GERIATRICIAN
+  HEMATOLOGIST
+  INFECTIOUS_DISEASE
+  SPORTS_MEDICINE
+  NUTRITIONIST
+  RADIOLOGIST
+}
+
+enum DentalSpecialty {
+  GENERAL_DENTIST
+  DENTAL_HYGIENIST
+  ORTHODONTIST
+  PERIODONTIST
+  ENDODONTIST
+  PROSTHODONTIST
+  ORAL_SURGEON
+  PEDIATRIC_DENTIST
+  COSMETIC_DENTIST
+  IMPLANTOLOGIST
+}
+
+enum ConsultationType {
+  CONSULTATION
+  FOLLOWUP
+  EMERGENCY
+  SURGERY
+  TELEMEDICINE
+  HOME_VISIT
+}
+
+enum MedicalUrgency {
+  CRITICAL      // 0-1h
+  URGENT        // 1-4h
+  SEMI_URGENT   // 4-24h
+  NORMAL        // Scheduled
+}
+
+model Doctor {
+  id              String            @id @default(cuid())
+  userId          String?           // Link to User if registered
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  title           String?           // Dr., Prof., etc.
+  specialty       MedicalSpecialty
+  subSpecialties  String[]          // Additional specialties
+  
+  // Professional Info
+  licenseNumber   String            @unique
+  yearsExperience Int
+  education       String[]          // Degrees, certifications
+  languages       String[]          // Languages spoken
+  
+  // Practice Info
+  clinicName      String?
+  countryId       String
+  cityId          String
+  address         String
+  phone           String
+  email           String
+  website         String?
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  acceptsEmergency Boolean          @default(false)
+  acceptsTelemedicine Boolean       @default(false)
+  acceptsHomeVisit Boolean          @default(false)
+  
+  // Pricing
+  consultationFee Float
+  emergencyFee    Float?
+  telemedicineFee Float?
+  homeVisitFee    Float?
+  currency        String            @default("MAD")
+  
+  // Insurance
+  acceptsInsurance Boolean          @default(false)
+  insuranceProviders String[]
+  
+  // Schedule
+  workingHours    Json?             // { monday: "9-17", ... }
+  
+  // Media
+  profileImage    String?
+  clinicImages    String[]
+  certificates    String[]
+  
+  // Metadata
+  totalAppointments Int             @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  verified        Boolean           @default(false)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  country         Country           @relation(fields: [countryId], references: [id])
+  city            City              @relation(fields: [cityId], references: [id])
+  appointments    MedicalAppointment[]
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([specialty])
+  @@index([isAvailable])
+  @@index([verified])
+}
+
+model Dentist {
+  id              String            @id @default(cuid())
+  userId          String?
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  title           String?
+  specialty       DentalSpecialty
+  subSpecialties  String[]
+  
+  // Professional Info
+  licenseNumber   String            @unique
+  yearsExperience Int
+  education       String[]
+  languages       String[]
+  
+  // Practice Info
+  clinicName      String?
+  countryId       String
+  cityId          String
+  address         String
+  phone           String
+  email           String
+  website         String?
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  acceptsEmergency Boolean          @default(false)
+  
+  // Pricing
+  consultationFee Float
+  cleaningFee     Float?
+  emergencyFee    Float?
+  currency        String            @default("MAD")
+  
+  // Insurance
+  acceptsInsurance Boolean          @default(false)
+  insuranceProviders String[]
+  
+  // Equipment
+  hasXRay         Boolean           @default(false)
+  has3DScanner    Boolean           @default(false)
+  
+  // Schedule
+  workingHours    Json?
+  
+  // Media
+  profileImage    String?
+  clinicImages    String[]
+  certificates    String[]
+  
+  // Metadata
+  totalAppointments Int             @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  verified        Boolean           @default(false)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  country         Country           @relation(fields: [countryId], references: [id])
+  city            City              @relation(fields: [cityId], references: [id])
+  appointments    DentalAppointment[]
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([specialty])
+  @@index([isAvailable])
+  @@index([verified])
+}
+
+model MedicalAppointment {
+  id              String            @id @default(cuid())
+  doctorId        String
+  userId          String
+  
+  // Appointment Details
+  consultationType ConsultationType
+  urgencyLevel    MedicalUrgency
+  appointmentDate DateTime
+  appointmentTime String
+  duration        Int               @default(30) // minutes
+  
+  // Patient Info
+  patientName     String
+  patientAge      Int?
+  patientGender   String?
+  patientPhone    String
+  
+  // Reason
+  chiefComplaint  String
+  symptoms        String?           @db.Text
+  medicalHistory  String?           @db.Text
+  currentMedications String?        @db.Text
+  allergies       String?
+  
+  // Location
+  location        String?           // Clinic address or home address
+  
+  // Pricing
+  consultationFee Float
+  additionalFees  Float?
+  totalFee        Float
+  currency        String            @default("MAD")
+  
+  // Status
+  status          String            @default("pending") // pending, confirmed, completed, cancelled, no_show
+  paymentStatus   String            @default("pending")
+  
+  // Medical Records
+  diagnosis       String?           @db.Text
+  prescription    String?           @db.Text
+  labTests        String[]
+  notes           String?           @db.Text
+  
+  // Follow-up
+  requiresFollowup Boolean          @default(false)
+  followupDate    DateTime?
+  
+  // Rating
+  patientRating   Int?
+  patientReview   String?           @db.Text
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  doctor          Doctor            @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  
+  @@index([doctorId])
+  @@index([userId])
+  @@index([status])
+  @@index([urgencyLevel])
+  @@index([appointmentDate])
+}
+
+model DentalAppointment {
+  id              String            @id @default(cuid())
+  dentistId       String
+  userId          String
+  
+  // Appointment Details
+  consultationType ConsultationType
+  urgencyLevel    MedicalUrgency
+  appointmentDate DateTime
+  appointmentTime String
+  duration        Int               @default(30)
+  
+  // Patient Info
+  patientName     String
+  patientAge      Int?
+  patientPhone    String
+  
+  // Dental Issue
+  chiefComplaint  String
+  affectedTeeth   String?           // Tooth numbers
+  painLevel       Int?              // 1-10
+  symptoms        String?           @db.Text
+  dentalHistory   String?           @db.Text
+  allergies       String?
+  
+  // Pricing
+  consultationFee Float
+  treatmentFee    Float?
+  totalFee        Float
+  currency        String            @default("MAD")
+  
+  // Status
+  status          String            @default("pending")
+  paymentStatus   String            @default("pending")
+  
+  // Treatment Records
+  diagnosis       String?           @db.Text
+  treatmentPlan   String?           @db.Text
+  treatmentDone   String?           @db.Text
+  xrayImages      String[]
+  notes           String?           @db.Text
+  
+  // Follow-up
+  requiresFollowup Boolean          @default(false)
+  followupDate    DateTime?
+  
+  // Rating
+  patientRating   Int?
+  patientReview   String?           @db.Text
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  dentist         Dentist           @relation(fields: [dentistId], references: [id], onDelete: Cascade)
+  
+  @@index([dentistId])
+  @@index([userId])
+  @@index([status])
+  @@index([urgencyLevel])
+  @@index([appointmentDate])
+}
+
+enum LawyerSpecialty {
+  // Droit des Affaires
+  COMMERCIAL_LAW
+  CORPORATE_LAW
+  BANKING_LAW
+  INTELLECTUAL_PROPERTY
+  
+  // Droit Civil
+  FAMILY_LAW
+  REAL_ESTATE_LAW
+  INHERITANCE_LAW
+  CONTRACT_LAW
+  
+  // Droit Pénal
+  CRIMINAL_LAW
+  BUSINESS_CRIMINAL_LAW
+  
+  // Droit du Travail
+  LABOR_LAW
+  SOCIAL_LAW
+  
+  // Autres
+  TAX_LAW
+  ADMINISTRATIVE_LAW
+  IMMIGRATION_LAW
+  MARITIME_LAW
+  ENVIRONMENTAL_LAW
+  CONSUMER_LAW
+  HEALTH_LAW
+  INTERNATIONAL_LAW
+}
+
+enum CompanyType {
+  SOLE_PROPRIETORSHIP
+  LLC
+  SA
+  SAS
+  OFFSHORE_COMPANY
+  FREE_ZONE_COMPANY
+  BRANCH_OFFICE
+  REPRESENTATIVE_OFFICE
+}
+
+enum AccountingServiceType {
+  BOOKKEEPING
+  TAX_DECLARATION
+  AUDIT
+  TAX_CONSULTING
+  PAYROLL
+  ANNUAL_CLOSING
+}
+
+enum TranslationType {
+  CERTIFIED
+  SWORN
+  COMMERCIAL
+  TECHNICAL
+  MEDICAL
+  WEBSITE
+  INTERPRETATION
+}
+
+enum PermitType {
+  TOURIST_VISA
+  RESIDENCE_VISA
+  WORK_VISA
+  INVESTOR_VISA
+  WORK_PERMIT
+  DRIVING_LICENSE
+  BUSINESS_LICENSE
+  PROFESSIONAL_LICENSE
+  GOLDEN_VISA
+  ELITE_VISA
+}
+
+model Lawyer {
+  id              String            @id @default(cuid())
+  userId          String?
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  specialty       LawyerSpecialty
+  subSpecialties  String[]
+  
+  // Professional Info
+  barNumber       String            @unique
+  yearsExperience Int
+  education       String[]
+  languages       String[]
+  
+  // Practice Info
+  firmName        String?
+  countryId       String
+  cityId          String
+  address         String
+  phone           String
+  email           String
+  website         String?
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  acceptsEmergency Boolean          @default(false)
+  
+  // Pricing
+  consultationFee Float
+  hourlyRate      Float?
+  currency        String            @default("MAD")
+  
+  // Specialization
+  courtAppearance Boolean           @default(false)
+  contractDrafting Boolean          @default(false)
+  legalAdvice     Boolean           @default(true)
+  
+  // Media
+  profileImage    String?
+  certificates    String[]
+  
+  // Metadata
+  totalCases      Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  verified        Boolean           @default(false)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  country         Country           @relation(fields: [countryId], references: [id])
+  city            City              @relation(fields: [cityId], references: [id])
+  consultations   LegalConsultation[]
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([specialty])
+  @@index([isAvailable])
+  @@index([verified])
+}
+
+model CompanyFormation {
+  id              String            @id @default(cuid())
+  userId          String
+  
+  // Company Details
+  companyName     String
+  companyType     CompanyType
+  businessActivity String
+  numberOfPartners Int              @default(1)
+  
+  // Location
+  countryId       String
+  cityId          String
+  preferredLocation String?
+  
+  // Services Required
+  needsLicense    Boolean           @default(true)
+  needsVisa       Boolean           @default(false)
+  needsBankAccount Boolean          @default(false)
+  needsOffice     Boolean           @default(false)
+  
+  // Pricing
+  packagePrice    Float
+  additionalFees  Float?
+  totalPrice      Float
+  currency        String            @default("MAD")
+  
+  // Status
+  status          String            @default("pending") // pending, in_progress, completed, cancelled
+  paymentStatus   String            @default("pending")
+  
+  // Timeline
+  estimatedDays   Int?
+  startDate       DateTime?
+  completionDate  DateTime?
+  
+  // Documents
+  documents       String[]
+  licenseNumber   String?
+  registrationNumber String?
+  
+  // Notes
+  notes           String?           @db.Text
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  country         Country           @relation(fields: [countryId], references: [id])
+  city            City              @relation(fields: [cityId], references: [id])
+  
+  @@index([userId])
+  @@index([countryId])
+  @@index([cityId])
+  @@index([status])
+  @@index([companyType])
+}
+
+model AccountingServiceModel {
+  id              String            @id @default(cuid())
+  providerId      String
+  
+  // Service Info
+  name            String
+  serviceType     AccountingServiceType @default(BOOKKEEPING)
+  description     String            @db.Text
+  
+  // Location
+  countryId       String
+  cityId          String
+  
+  // Pricing
+  monthlyFee      Float?
+  annualFee       Float?
+  perTransactionFee Float?
+  currency        String            @default("MAD")
+  
+  // Features
+  features        String[]
+  softwareUsed    String[]          // QuickBooks, Xero, etc.
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  
+  // Metadata
+  totalClients    Int               @default(0)
+  rating          Float             @default(0)
+  verified        Boolean           @default(false)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  country         Country           @relation(fields: [countryId], references: [id])
+  city            City              @relation(fields: [cityId], references: [id])
+  bookings        AccountingBooking[]
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([serviceType])
+  @@index([isAvailable])
+}
+
+model TranslationService {
+  id              String            @id @default(cuid())
+  providerId      String
+  
+  // Service Info
+  name            String
+  translationType TranslationType
+  description     String            @db.Text
+  
+  // Languages
+  fromLanguage    String
+  toLanguage      String
+  
+  // Location
+  countryId       String
+  cityId          String
+  
+  // Pricing
+  pricePerWord    Float?
+  pricePerPage    Float?
+  pricePerHour    Float?            // For interpretation
+  minimumCharge   Float?
+  currency        String            @default("MAD")
+  
+  // Turnaround
+  standardDays    Int               @default(3)
+  expressAvailable Boolean          @default(false)
+  expressDays     Int?
+  
+  // Certification
+  isCertified     Boolean           @default(false)
+  isSworn         Boolean           @default(false)
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  
+  // Metadata
+  totalProjects   Int               @default(0)
+  rating          Float             @default(0)
+  verified        Boolean           @default(false)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  country         Country           @relation(fields: [countryId], references: [id])
+  city            City              @relation(fields: [cityId], references: [id])
+  orders          TranslationOrder[]
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([translationType])
+  @@index([fromLanguage])
+  @@index([toLanguage])
+  @@index([isAvailable])
+}
+
+model PermitService {
+  id              String            @id @default(cuid())
+  providerId      String
+  
+  // Service Info
+  name            String
+  permitType      PermitType
+  description     String            @db.Text
+  
+  // Location
+  countryId       String
+  cityId          String?
+  
+  // Requirements
+  requirements    String[]
+  documentsNeeded String[]
+  
+  // Pricing
+  serviceFee      Float
+  governmentFee   Float?
+  totalFee        Float
+  currency        String            @default("MAD")
+  
+  // Timeline
+  processingDays  Int
+  validityDays    Int?              // Visa validity
+  
+  // Features
+  includesPickup  Boolean           @default(false)
+  includesDelivery Boolean          @default(false)
+  urgentAvailable Boolean           @default(false)
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  
+  // Metadata
+  totalApplications Int             @default(0)
+  successRate     Float             @default(0)
+  rating          Float             @default(0)
+  verified        Boolean           @default(false)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  country         Country           @relation(fields: [countryId], references: [id])
+  city            City?             @relation(fields: [cityId], references: [id])
+  applications    PermitApplication[]
+  
+  @@index([countryId])
+  @@index([cityId])
+  @@index([permitType])
+  @@index([isAvailable])
+}
+
+model LegalConsultation {
+  id              String            @id @default(cuid())
+  lawyerId        String
+  userId          String
+  
+  // Consultation Details
+  subject         String
+  description     String            @db.Text
+  consultationType String           // online, in_person, phone
+  
+  // Schedule
+  consultationDate DateTime
+  consultationTime String
+  duration        Int               @default(60)
+  
+  // Pricing
+  consultationFee Float
+  additionalFees  Float?
+  totalFee        Float
+  currency        String            @default("MAD")
+  
+  // Status
+  status          String            @default("pending")
+  paymentStatus   String            @default("pending")
+  
+  // Documents
+  documents       String[]
+  notes           String?           @db.Text
+  
+  // Follow-up
+  requiresFollowup Boolean          @default(false)
+  followupDate    DateTime?
+  
+  // Rating
+  clientRating    Int?
+  clientReview    String?           @db.Text
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  lawyer          Lawyer            @relation(fields: [lawyerId], references: [id], onDelete: Cascade)
+  
+  @@index([lawyerId])
+  @@index([userId])
+  @@index([status])
+  @@index([consultationDate])
+}
+
+model AccountingBooking {
+  id              String            @id @default(cuid())
+  serviceId       String
+  userId          String
+  
+  // Company Info
+  companyName     String
+  companyType     String?
+  taxNumber       String?
+  
+  // Service Details
+  serviceType     String
+  startDate       DateTime
+  contractPeriod  Int               @default(12) // months
+  
+  // Pricing
+  monthlyFee      Float
+  setupFee        Float?
+  totalFee        Float
+  currency        String            @default("MAD")
+  
+  // Status
+  status          String            @default("pending")
+  paymentStatus   String            @default("pending")
+  
+  // Notes
+  notes           String?           @db.Text
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  service         AccountingServiceModel @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  
+  @@index([serviceId])
+  @@index([userId])
+  @@index([status])
+}
+
+model TranslationOrder {
+  id              String            @id @default(cuid())
+  serviceId       String
+  userId          String
+  
+  // Order Details
+  documentType    String
+  wordCount       Int?
+  pageCount       Int?
+  sourceLanguage  String
+  targetLanguage  String
+  
+  // Urgency
+  isUrgent        Boolean           @default(false)
+  deadline        DateTime
+  
+  // Pricing
+  translationFee  Float
+  urgencyFee      Float?
+  certificationFee Float?
+  totalFee        Float
+  currency        String            @default("MAD")
+  
+  // Status
+  status          String            @default("pending") // pending, in_progress, completed, delivered
+  paymentStatus   String            @default("pending")
+  
+  // Documents
+  sourceDocuments String[]
+  translatedDocuments String[]
+  
+  // Delivery
+  deliveryMethod  String?           // email, pickup, courier
+  deliveredAt     DateTime?
+  
+  // Rating
+  clientRating    Int?
+  clientReview    String?           @db.Text
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  service         TranslationService @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  
+  @@index([serviceId])
+  @@index([userId])
+  @@index([status])
+  @@index([deadline])
+}
+
+model PermitApplication {
+  id              String            @id @default(cuid())
+  serviceId       String
+  userId          String
+  
+  // Applicant Info
+  fullName        String
+  nationality     String
+  passportNumber  String
+  dateOfBirth     DateTime
+  
+  // Application Details
+  permitType      String
+  purpose         String?
+  duration        Int?              // days
+  
+  // Documents
+  documents       String[]
+  photos          String[]
+  
+  // Pricing
+  serviceFee      Float
+  governmentFee   Float?
+  urgencyFee      Float?
+  totalFee        Float
+  currency        String            @default("MAD")
+  
+  // Status
+  status          String            @default("pending") // pending, submitted, approved, rejected, delivered
+  paymentStatus   String            @default("pending")
+  
+  // Timeline
+  submittedAt     DateTime?
+  approvedAt      DateTime?
+  deliveredAt     DateTime?
+  expiryDate      DateTime?
+  
+  // Tracking
+  applicationNumber String?
+  trackingNumber  String?
+  
+  // Notes
+  notes           String?           @db.Text
+  rejectionReason String?           @db.Text
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  service         PermitService     @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+  
+  @@index([serviceId])
+  @@index([userId])
+  @@index([status])
+  @@index([applicationNumber])
+}
+
+enum CoachingType {
+  LIFE_COACHING
+  BUSINESS_COACHING
+  CAREER_COACHING
+  EXECUTIVE_COACHING
+  HEALTH_WELLNESS
+  FINANCIAL_COACHING
+  RELATIONSHIP_COACHING
+  SPORTS_COACHING
+  MINDFULNESS_COACHING
+  PRODUCTIVITY_COACHING
+}
+
+enum SessionFormat {
+  ONE_ON_ONE
+  GROUP
+  ONLINE
+  IN_PERSON
+  HYBRID
+}
+
+model Coach {
+  id              String            @id @default(cuid())
+  userId          String            @unique
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  bio             String?           @db.Text
+  coachingTypes   CoachingType[]    // Multiple types allowed
+  specializations String[]
+  
+  // Professional Info
+  certifications  String[]
+  certificateFiles String[]         // URLs to certificate uploads
+  yearsExperience Int
+  education       String[]
+  languages       String[]          // ISO codes: ar, en, fr, etc.
+  
+  // Practice Info
+  companyName     String?
+  countries       String[]          // Multiple countries (1-3)
+  cityId          String
+  address         String?
+  phone           String
+  email           String
+  website         String?
+  socialLinks     Json?             // { linkedin, twitter, instagram }
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  offersOnline    Boolean           @default(true)
+  offersInPerson  Boolean           @default(false)
+  offersGroup     Boolean           @default(false)
+  
+  // Pricing (per format)
+  oneOnOneRate    Float
+  groupRate       Float?
+  onlineRate      Float?
+  inPersonRate    Float?
+  currency        String            @default("MAD")
+  
+  // Packages (enabled/disabled)
+  pack5Enabled    Boolean           @default(true)
+  pack5Price      Float?
+  pack5Discount   Float             @default(10) // percentage
+  pack10Enabled   Boolean           @default(true)
+  pack10Price     Float?
+  pack10Discount  Float             @default(15)
+  pack20Enabled   Boolean           @default(true)
+  pack20Price     Float?
+  pack20Discount  Float             @default(20)
+  packValidityDays Int              @default(365) // 12 months
+  
+  // Free Consultation
+  freeConsultation Boolean          @default(false)
+  freeConsultDuration Int           @default(30) // minutes
+  
+  // Session Info
+  sessionDuration Int               @default(60) // minutes
+  
+  // Policies
+  cancellationHours Int             @default(24) // Free cancellation window
+  rescheduleAllowed Boolean         @default(true)
+  rescheduleLimit Int               @default(1) // Times per booking
+  bookingWindowDays Int             @default(30) // How far in advance
+  
+  // Approach & Philosophy
+  coachingApproach String?          @db.Text
+  targetAudience  String[]
+  successStories  String?           @db.Text
+  
+  // Media
+  profileImage    String?
+  videoIntro      String?
+  
+  // Validation Status
+  status          String            @default("pending") // pending, approved, rejected
+  verified        Boolean           @default(false)
+  verifiedAt      DateTime?
+  rejectionReason String?           @db.Text
+  
+  // Metadata
+  totalSessions   Int               @default(0)
+  totalClients    Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  noShowCount     Int               @default(0)
+  occupancyRate   Float             @default(0)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  city            City              @relation(fields: [cityId], references: [id])
+  sessions        CoachingSession[]
+  packages        CoachingPackage[]
+  availabilities  CoachAvailability[]
+  reviews         CoachReview[]
+  
+  @@index([userId])
+  @@index([cityId])
+  @@index([status])
+  @@index([verified])
+  @@index([rating])
+}
+
+model CoachAvailability {
+  id              String            @id @default(cuid())
+  coachId         String
+  
+  // Recurring Schedule
+  dayOfWeek       Int               // 0=Sunday, 1=Monday, etc.
+  startTime       String            // HH:mm format
+  endTime         String
+  
+  // Format & Location
+  format          SessionFormat
+  location        String?           // For in-person
+  meetingLink     String?           // For online
+  timezone        String            @default("UTC")
+  
+  // Exceptions (holidays, absences)
+  isException     Boolean           @default(false)
+  exceptionDate   DateTime?
+  exceptionReason String?
+  
+  // Status
+  isActive        Boolean           @default(true)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  coach           Coach             @relation(fields: [coachId], references: [id], onDelete: Cascade)
+  
+  @@index([coachId])
+  @@index([dayOfWeek])
+  @@index([isActive])
+}
+
+model CoachingSession {
+  id              String            @id @default(cuid())
+  coachId         String
+  userId          String
+  packagePurchaseId String?         // If from a package
+  
+  // Session Details
+  sessionType     String            // free_consultation, regular, follow_up
+  sessionFormat   SessionFormat
+  coachingType    CoachingType
+  topic           String
+  goals           String?           @db.Text
+  
+  // Schedule
+  sessionDate     DateTime
+  sessionTime     String
+  duration        Int               @default(60)
+  timezone        String            @default("UTC")
+  
+  // Location (for in-person)
+  location        String?
+  meetingLink     String?           // For online sessions
+  
+  // Pricing
+  sessionFee      Float
+  originalFee     Float?            // Before discount
+  currency        String            @default("MAD")
+  
+  // Free Consultation Tracking
+  isFreeConsultation Boolean        @default(false)
+  
+  // Status
+  status          String            @default("pending") // pending, confirmed, completed, cancelled, no_show
+  paymentStatus   String            @default("pending") // pending, paid, failed, refunded
+  
+  // Cancellation/Reschedule
+  cancelledAt     DateTime?
+  cancelledBy     String?           // user_id who cancelled
+  cancellationReason String?        @db.Text
+  rescheduledCount Int              @default(0)
+  
+  // Session Notes
+  preSessionNotes String?           @db.Text
+  sessionNotes    String?           @db.Text
+  actionItems     String[]
+  homework        String?           @db.Text
+  attachments     String[]
+  
+  // Follow-up
+  requiresFollowup Boolean          @default(false)
+  followupDate    DateTime?
+  
+  // Reminders Sent
+  reminder24hSent Boolean           @default(false)
+  reminder2hSent  Boolean           @default(false)
+  
+  // Recording (if applicable)
+  recordingUrl    String?
+  
+  // Completion
+  completedAt     DateTime?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  coach           Coach             @relation(fields: [coachId], references: [id], onDelete: Cascade)
+  
+  @@index([coachId])
+  @@index([userId])
+  @@index([status])
+  @@index([sessionDate])
+  @@index([paymentStatus])
+  @@index([isFreeConsultation])
+}
+
+model CoachingPackage {
+  id              String            @id @default(cuid())
+  coachId         String
+  
+  // Package Info
+  name            String
+  description     String            @db.Text
+  numberOfSessions Int              // 5, 10, or 20
+  validityDays    Int               @default(365)
+  
+  // Pricing
+  totalPrice      Float
+  pricePerSession Float
+  discountPercent Float
+  savings         Float
+  currency        String            @default("MAD")
+  
+  // Features
+  includes        String[]
+  benefits        String[]
+  
+  // Availability
+  isActive        Boolean           @default(true)
+  isPopular       Boolean           @default(false)
+  
+  // Metadata
+  totalPurchases  Int               @default(0)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  coach           Coach             @relation(fields: [coachId], references: [id], onDelete: Cascade)
+  purchases       PackagePurchase[]
+  
+  @@index([coachId])
+  @@index([isActive])
+  @@index([isPopular])
+}
+
+model PackagePurchase {
+  id              String            @id @default(cuid())
+  packageId       String
+  userId          String
+  coachId         String
+  
+  // Purchase Details
+  numberOfSessions Int
+  sessionsUsed    Int               @default(0)
+  sessionsRemaining Int
+  
+  // Pricing
+  totalPrice      Float
+  currency        String            @default("MAD")
+  
+  // Validity
+  purchaseDate    DateTime          @default(now())
+  expiryDate      DateTime
+  isExpired       Boolean           @default(false)
+  
+  // Payment
+  paymentStatus   String            @default("pending") // pending, paid, failed, refunded
+  paymentId       String?
+  
+  // Status
+  status          String            @default("active") // active, completed, expired, cancelled
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  package         CoachingPackage   @relation(fields: [packageId], references: [id], onDelete: Cascade)
+  
+  @@index([packageId])
+  @@index([userId])
+  @@index([coachId])
+  @@index([status])
+  @@index([expiryDate])
+}
+
+model CoachReview {
+  id              String            @id @default(cuid())
+  coachId         String
+  userId          String
+  sessionId       String            @unique
+  
+  // Review Details
+  rating          Int               // 1-5
+  comment         String?           @db.Text
+  attachments     String[]          // Proof of completion
+  
+  // Moderation
+  isModerated     Boolean           @default(false)
+  moderatedAt     DateTime?
+  moderatedBy     String?
+  moderationNotes String?           @db.Text
+  isVisible       Boolean           @default(true)
+  
+  // Coach Response
+  coachResponse   String?           @db.Text
+  respondedAt     DateTime?
+  
+  // Metadata
+  isVerified      Boolean           @default(false)
+  helpfulCount    Int               @default(0)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  coach           Coach             @relation(fields: [coachId], references: [id], onDelete: Cascade)
+  
+  @@index([coachId])
+  @@index([userId])
+  @@index([rating])
+  @@index([isVisible])
+  @@index([createdAt])
+}
+
+model FreeConsultationUsage {
+  id              String            @id @default(cuid())
+  userId          String
+  coachId         String
+  sessionId       String            @unique
+  
+  // Tracking
+  usedAt          DateTime          @default(now())
+  
+  @@unique([userId, coachId])
+  @@index([userId])
+  @@index([coachId])
+}
+
+model CoachingPayment {
+  id              String            @id @default(cuid())
+  userId          String
+  coachId         String
+  sessionId       String?
+  packagePurchaseId String?
+  
+  // Payment Details
+  amount          Float
+  currency        String            @default("MAD")
+  paymentMethod   String            // stripe, cash, bank_transfer, crypto
+  
+  // Status
+  status          String            @default("pending") // pending, paid, failed, refunded
+  
+  // Stripe/PSP
+  paymentIntentId String?
+  chargeId        String?
+  
+  // Refund
+  refundAmount    Float?
+  refundReason    String?           @db.Text
+  refundedAt      DateTime?
+  
+  // Invoice
+  invoiceNumber   String?           @unique
+  invoiceUrl      String?
+  
+  // Metadata
+  metadata        Json?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  @@index([userId])
+  @@index([coachId])
+  @@index([status])
+  @@index([sessionId])
+  @@index([packagePurchaseId])
+}
+
+model CoachingNotification {
+  id              String            @id @default(cuid())
+  userId          String
+  type            String            // booking_confirmed, reminder_24h, reminder_2h, payment_failed, review_request
+  
+  // Content
+  title           String
+  message         String            @db.Text
+  data            Json?
+  
+  // Delivery
+  email           Boolean           @default(true)
+  push            Boolean           @default(false)
+  sms             Boolean           @default(false)
+  
+  // Status
+  sent            Boolean           @default(false)
+  sentAt          DateTime?
+  read            Boolean           @default(false)
+  readAt          DateTime?
+  
+  createdAt       DateTime          @default(now())
+  
+  @@index([userId])
+  @@index([type])
+  @@index([sent])
+  @@index([createdAt])
+}
+
+enum DomesticServiceCategory {
+  CHILDCARE
+  HOUSEKEEPING
+  COOKING
+  NURSING
+  ELDERLY_CARE
+  SPECIAL_NEEDS_CARE
+  PET_CARE
+  DRIVER
+}
+
+enum EmploymentType {
+  FULL_TIME
+  PART_TIME
+  LIVE_IN
+  LIVE_OUT
+  HOURLY
+  DAILY
+  WEEKLY
+  MONTHLY
+}
+
+enum ExperienceLevel {
+  ENTRY_LEVEL      // 0-2 years
+  INTERMEDIATE     // 2-5 years
+  EXPERIENCED      // 5-10 years
+  EXPERT           // 10+ years
+}
+
+model DomesticWorker {
+  id              String            @id @default(cuid())
+  userId          String            @unique
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  dateOfBirth     DateTime
+  gender          String
+  nationality     String
+  bio             String?           @db.Text
+  
+  // Category & Specializations
+  category        DomesticServiceCategory
+  subCategories   String[]          // Multiple specializations
+  
+  // Professional Info
+  experienceLevel ExperienceLevel
+  yearsExperience Int
+  certifications  String[]
+  certificateFiles String[]
+  education       String[]
+  languages       String[]          // ISO codes
+  
+  // Skills & Qualifications
+  skills          String[]
+  specialSkills   String[]          // e.g., "First Aid", "CPR", "Special Needs"
+  
+  // Location & Availability
+  countries       String[]          // Multiple countries
+  cityId          String
+  currentLocation String?
+  willingToRelocate Boolean         @default(false)
+  
+  // Employment Preferences
+  employmentTypes EmploymentType[]  // Multiple types accepted
+  liveInAvailable Boolean           @default(false)
+  liveOutAvailable Boolean          @default(true)
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  availableFrom   DateTime?
+  noticePeriod    Int?              // days
+  
+  // Schedule Preferences
+  workDays        String[]          // ["monday", "tuesday", ...]
+  workHours       Json?             // Flexible schedule
+  nightShiftAvailable Boolean       @default(false)
+  weekendAvailable Boolean          @default(false)
+  
+  // Pricing
+  hourlyRate      Float?
+  dailyRate       Float?
+  weeklyRate      Float?
+  monthlyRate     Float?
+  liveInRate      Float?            // Monthly rate for live-in
+  currency        String            @default("MAD")
+  
+  // Requirements
+  drivingLicense  Boolean           @default(false)
+  licenseType     String?           // A, B, C, etc.
+  ownVehicle      Boolean           @default(false)
+  smoker          Boolean           @default(false)
+  
+  // Health & Background
+  healthCertificate Boolean         @default(false)
+  backgroundCheck Boolean           @default(false)
+  references      Json?             // Array of references
+  
+  // Media
+  profileImage    String?
+  videoIntro      String?
+  portfolioImages String[]
+  
+  // Validation Status
+  status          String            @default("pending") // pending, approved, rejected, suspended
+  verified        Boolean           @default(false)
+  verifiedAt      DateTime?
+  rejectionReason String?           @db.Text
+  
+  // Metadata
+  totalJobs       Int               @default(0)
+  totalClients    Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  responseRate    Float             @default(0)
+  responseTime    Int?              // hours
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  city            City              @relation(fields: [cityId], references: [id])
+  jobs            DomesticJob[]
+  reviews         DomesticReview[]
+  
+  @@index([userId])
+  @@index([category])
+  @@index([cityId])
+  @@index([status])
+  @@index([verified])
+  @@index([rating])
+  @@index([isAvailable])
+}
+
+model DomesticJob {
+  id              String            @id @default(cuid())
+  workerId        String
+  clientId        String
+  
+  // Job Details
+  category        DomesticServiceCategory
+  subCategory     String
+  title           String
+  description     String            @db.Text
+  
+  // Employment Details
+  employmentType  EmploymentType
+  isLiveIn        Boolean           @default(false)
+  
+  // Schedule
+  startDate       DateTime
+  endDate         DateTime?         // null for ongoing
+  workDays        String[]
+  workHours       String            // e.g., "8:00-17:00"
+  hoursPerWeek    Int?
+  
+  // Location
+  cityId          String
+  address         String
+  accommodationProvided Boolean     @default(false)
+  mealsProvided   Boolean           @default(false)
+  
+  // Responsibilities
+  responsibilities String[]
+  requirements    String[]
+  
+  // Compensation
+  salary          Float
+  paymentFrequency String           // hourly, daily, weekly, monthly
+  currency        String            @default("MAD")
+  benefits        String[]          // health insurance, visa, etc.
+  
+  // Additional Terms
+  probationPeriod Int?              // days
+  noticePeriod    Int               @default(30) // days
+  contractDuration Int?             // months, null for indefinite
+  
+  // Status
+  status          String            @default("pending") // pending, active, completed, cancelled, terminated
+  paymentStatus   String            @default("pending")
+  
+  // Contract
+  contractSigned  Boolean           @default(false)
+  contractUrl     String?
+  signedAt        DateTime?
+  
+  // Completion
+  completedAt     DateTime?
+  terminationReason String?         @db.Text
+  
+  // Rating
+  workerRating    Int?              // Client rates worker
+  clientRating    Int?              // Worker rates client
+  workerReview    String?           @db.Text
+  clientReview    String?           @db.Text
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  worker          DomesticWorker    @relation(fields: [workerId], references: [id], onDelete: Cascade)
+  
+  @@index([workerId])
+  @@index([clientId])
+  @@index([category])
+  @@index([status])
+  @@index([startDate])
+  @@index([cityId])
+}
+
+model DomesticReview {
+  id              String            @id @default(cuid())
+  workerId        String
+  clientId        String
+  jobId           String            @unique
+  
+  // Review Details
+  rating          Int               // 1-5
+  punctuality     Int?              // 1-5
+  professionalism Int?              // 1-5
+  quality         Int?              // 1-5
+  communication   Int?              // 1-5
+  comment         String?           @db.Text
+  
+  // Moderation
+  isModerated     Boolean           @default(false)
+  moderatedAt     DateTime?
+  moderatedBy     String?
+  isVisible       Boolean           @default(true)
+  
+  // Worker Response
+  workerResponse  String?           @db.Text
+  respondedAt     DateTime?
+  
+  // Metadata
+  isVerified      Boolean           @default(false)
+  helpfulCount    Int               @default(0)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  worker          DomesticWorker    @relation(fields: [workerId], references: [id], onDelete: Cascade)
+  
+  @@index([workerId])
+  @@index([clientId])
+  @@index([rating])
+  @@index([isVisible])
+}
+
+model DomesticJobApplication {
+  id              String            @id @default(cuid())
+  jobPostingId    String
+  workerId        String
+  
+  // Application
+  coverLetter     String?           @db.Text
+  expectedSalary  Float?
+  availableFrom   DateTime
+  
+  // Status
+  status          String            @default("pending") // pending, reviewed, shortlisted, interviewed, accepted, rejected
+  
+  // Interview
+  interviewDate   DateTime?
+  interviewNotes  String?           @db.Text
+  
+  // Decision
+  rejectionReason String?           @db.Text
+  acceptedAt      DateTime?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  @@index([jobPostingId])
+  @@index([workerId])
+  @@index([status])
+}
+
+model DomesticJobPosting {
+  id              String            @id @default(cuid())
+  clientId        String
+  
+  // Job Details
+  category        DomesticServiceCategory
+  subCategory     String
+  title           String
+  description     String            @db.Text
+  
+  // Employment
+  employmentType  EmploymentType
+  isLiveIn        Boolean           @default(false)
+  
+  // Schedule
+  startDate       DateTime
+  workDays        String[]
+  workHours       String
+  hoursPerWeek    Int?
+  
+  // Location
+  cityId          String
+  accommodationProvided Boolean     @default(false)
+  mealsProvided   Boolean           @default(false)
+  
+  // Requirements
+  requirements    String[]
+  preferredGender String?
+  preferredAge    String?           // e.g., "25-40"
+  languagesRequired String[]
+  
+  // Compensation
+  salaryMin       Float
+  salaryMax       Float
+  currency        String            @default("MAD")
+  benefits        String[]
+  
+  // Status
+  status          String            @default("active") // active, filled, closed, expired
+  expiresAt       DateTime?
+  
+  // Metadata
+  viewCount       Int               @default(0)
+  applicationCount Int              @default(0)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  @@index([clientId])
+  @@index([category])
+  @@index([status])
+  @@index([cityId])
+  @@index([startDate])
+}
+
+enum RealEstateSpecialty {
+  RESIDENTIAL_SALE
+  RESIDENTIAL_RENT
+  COMMERCIAL_SALE
+  COMMERCIAL_RENT
+  PROPERTY_MANAGEMENT
+  INVESTMENT
+  LUXURY_PROPERTIES
+  NEW_DEVELOPMENTS
+}
+
+enum ArchitectureSpecialty {
+  RESIDENTIAL
+  COMMERCIAL
+  INTERIOR_DESIGN
+  LANDSCAPE
+  RENOVATION
+  SUSTAINABLE_DESIGN
+  URBAN_PLANNING
+}
+
+enum PhotographySpecialty {
+  REAL_ESTATE
+  EVENTS
+  PORTRAITS
+  COMMERCIAL
+  PRODUCT
+  DRONE
+  ARCHITECTURAL
+}
+
+model RealEstateAgent {
+  id              String            @id @default(cuid())
+  userId          String            @unique
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  bio             String?           @db.Text
+  
+  // Professional Info
+  licenseNumber   String            @unique
+  agencyName      String?
+  specialties     RealEstateSpecialty[]
+  yearsExperience Int
+  certifications  String[]
+  certificateFiles String[]
+  languages       String[]
+  
+  // Location
+  countries       String[]
+  cityId          String
+  officeAddress   String?
+  
+  // Services
+  handlesSales    Boolean           @default(true)
+  handlesRentals  Boolean           @default(true)
+  handlesManagement Boolean         @default(false)
+  
+  // Commission
+  salesCommission Float             @default(3.0) // percentage
+  rentalCommission Float            @default(100.0) // 1 month typically
+  currency        String            @default("MAD")
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  
+  // Media
+  profileImage    String?
+  officeImages    String[]
+  
+  // Validation
+  status          String            @default("pending")
+  verified        Boolean           @default(false)
+  verifiedAt      DateTime?
+  rejectionReason String?           @db.Text
+  
+  // Metrics
+  propertiesListed Int              @default(0)
+  propertiesSold  Int               @default(0)
+  propertiesRented Int              @default(0)
+  totalClients    Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  responseRate    Float             @default(0)
+  responseTime    Int?              // hours
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  city            City              @relation(fields: [cityId], references: [id])
+  reviews         AgentReview[]
+  
+  @@index([userId])
+  @@index([cityId])
+  @@index([status])
+  @@index([verified])
+  @@index([rating])
+}
+
+model Accountant {
+  id              String            @id @default(cuid())
+  userId          String            @unique
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  bio             String?           @db.Text
+  
+  // Professional Info
+  licenseNumber   String?           @unique
+  firmName        String?
+  certifications  String[]          // CPA, CA, ACCA, etc.
+  certificateFiles String[]
+  yearsExperience Int
+  languages       String[]
+  
+  // Specializations
+  specializations AccountingServiceType[]
+  
+  // Location
+  countries       String[]
+  cityId          String
+  officeAddress   String?
+  
+  // Services Offered
+  offersBookkeeping Boolean         @default(true)
+  offersTaxFiling Boolean           @default(true)
+  offersAudit     Boolean           @default(false)
+  offersPayroll   Boolean           @default(true)
+  
+  // Pricing
+  hourlyRate      Float?
+  monthlyRetainer Float?
+  currency        String            @default("MAD")
+  
+  // Software
+  softwareUsed    String[]          // QuickBooks, Xero, Sage, etc.
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  acceptsNewClients Boolean         @default(true)
+  
+  // Media
+  profileImage    String?
+  
+  // Validation
+  status          String            @default("pending")
+  verified        Boolean           @default(false)
+  verifiedAt      DateTime?
+  rejectionReason String?           @db.Text
+  
+  // Metrics
+  totalClients    Int               @default(0)
+  activeClients   Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  city            City              @relation(fields: [cityId], references: [id])
+  reviews         AccountantReview[]
+  
+  @@index([userId])
+  @@index([cityId])
+  @@index([status])
+  @@index([verified])
+  @@index([rating])
+}
+
+model Translator {
+  id              String            @id @default(cuid())
+  userId          String            @unique
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  bio             String?           @db.Text
+  
+  // Professional Info
+  certifications  String[]          // Sworn translator, etc.
+  certificateFiles String[]
+  yearsExperience Int
+  
+  // Language Pairs
+  languagePairs   Json              // [{from: "en", to: "ar", certified: true}]
+  nativeLanguages String[]
+  
+  // Specializations
+  specializations TranslationType[]
+  industries      String[]          // Legal, Medical, Technical, etc.
+  
+  // Location
+  countries       String[]
+  cityId          String
+  
+  // Services
+  offersCertified Boolean           @default(false)
+  offersSworn     Boolean           @default(false)
+  offersInterpretation Boolean      @default(false)
+  offersUrgent    Boolean           @default(false)
+  
+  // Pricing
+  pricePerWord    Float?
+  pricePerPage    Float?
+  pricePerHour    Float?            // For interpretation
+  minimumCharge   Float?
+  currency        String            @default("MAD")
+  
+  // Turnaround
+  standardDays    Int               @default(3)
+  expressAvailable Boolean          @default(false)
+  expressDays     Int?
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  acceptsNewClients Boolean         @default(true)
+  
+  // Media
+  profileImage    String?
+  sampleWork      String[]
+  
+  // Validation
+  status          String            @default("pending")
+  verified        Boolean           @default(false)
+  verifiedAt      DateTime?
+  rejectionReason String?           @db.Text
+  
+  // Metrics
+  totalProjects   Int               @default(0)
+  wordsTranslated Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  onTimeDelivery  Float             @default(100)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  city            City              @relation(fields: [cityId], references: [id])
+  reviews         TranslatorReview[]
+  
+  @@index([userId])
+  @@index([cityId])
+  @@index([status])
+  @@index([verified])
+  @@index([rating])
+}
+
+model VisaAgent {
+  id              String            @id @default(cuid())
+  userId          String            @unique
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  bio             String?           @db.Text
+  
+  // Professional Info
+  licenseNumber   String?           @unique
+  agencyName      String?
+  certifications  String[]
+  certificateFiles String[]
+  yearsExperience Int
+  languages       String[]
+  
+  // Services Offered
+  servicesOffered PermitType[]
+  countries       String[]          // Countries they can help with
+  cityId          String
+  
+  // Specializations
+  specializations String[]          // Golden Visa expert, Work permits, etc.
+  
+  // Pricing
+  consultationFee Float?
+  serviceFees     Json?             // {TOURIST_VISA: 500, WORK_VISA: 2000}
+  currency        String            @default("MAD")
+  
+  // Performance
+  successRate     Float             @default(0)
+  averageProcessingDays Int?
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  acceptsNewClients Boolean         @default(true)
+  offersUrgent    Boolean           @default(false)
+  
+  // Media
+  profileImage    String?
+  
+  // Validation
+  status          String            @default("pending")
+  verified        Boolean           @default(false)
+  verifiedAt      DateTime?
+  rejectionReason String?           @db.Text
+  
+  // Metrics
+  totalApplications Int             @default(0)
+  approvedApplications Int          @default(0)
+  totalClients    Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  city            City              @relation(fields: [cityId], references: [id])
+  reviews         VisaAgentReview[]
+  
+  @@index([userId])
+  @@index([cityId])
+  @@index([status])
+  @@index([verified])
+  @@index([rating])
+}
+
+model BusinessConsultant {
+  id              String            @id @default(cuid())
+  userId          String            @unique
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  bio             String?           @db.Text
+  
+  // Professional Info
+  certifications  String[]
+  certificateFiles String[]
+  yearsExperience Int
+  languages       String[]
+  
+  // Services Offered
+  servicesOffered CompanyType[]
+  countries       String[]
+  cityId          String
+  
+  // Specializations
+  specializations String[]          // Free zones, Offshore, etc.
+  industries      String[]          // Tech, Trading, Services, etc.
+  
+  // Packages
+  packagesOffered Json?             // Different setup packages
+  
+  // Pricing
+  consultationFee Float?
+  setupFees       Json?             // {LLC: 5000, OFFSHORE: 15000}
+  currency        String            @default("MAD")
+  
+  // Timeline
+  averageSetupDays Int?
+  
+  // Additional Services
+  offersVisa      Boolean           @default(false)
+  offersBankAccount Boolean         @default(false)
+  offersOffice    Boolean           @default(false)
+  offersAccounting Boolean          @default(false)
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  acceptsNewClients Boolean         @default(true)
+  
+  // Media
+  profileImage    String?
+  
+  // Validation
+  status          String            @default("pending")
+  verified        Boolean           @default(false)
+  verifiedAt      DateTime?
+  rejectionReason String?           @db.Text
+  
+  // Metrics
+  companiesFormed Int               @default(0)
+  totalClients    Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  city            City              @relation(fields: [cityId], references: [id])
+  reviews         BusinessConsultantReview[]
+  
+  @@index([userId])
+  @@index([cityId])
+  @@index([status])
+  @@index([verified])
+  @@index([rating])
+}
+
+model Architect {
+  id              String            @id @default(cuid())
+  userId          String            @unique
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  bio             String?           @db.Text
+  
+  // Professional Info
+  licenseNumber   String            @unique
+  firmName        String?
+  specialties     ArchitectureSpecialty[]
+  yearsExperience Int
+  certifications  String[]
+  certificateFiles String[]
+  languages       String[]
+  
+  // Location
+  countries       String[]
+  cityId          String
+  officeAddress   String?
+  
+  // Services
+  offersDesign    Boolean           @default(true)
+  offersPlanning  Boolean           @default(true)
+  offersSupervision Boolean         @default(false)
+  offers3DRendering Boolean         @default(false)
+  
+  // Pricing
+  pricePerSqm     Float?
+  hourlyRate      Float?
+  projectBasedPricing Boolean       @default(true)
+  currency        String            @default("MAD")
+  
+  // Portfolio
+  portfolioImages String[]
+  completedProjects Int             @default(0)
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  acceptsNewProjects Boolean        @default(true)
+  
+  // Media
+  profileImage    String?
+  
+  // Validation
+  status          String            @default("pending")
+  verified        Boolean           @default(false)
+  verifiedAt      DateTime?
+  rejectionReason String?           @db.Text
+  
+  // Metrics
+  totalProjects   Int               @default(0)
+  activeProjects  Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  city            City              @relation(fields: [cityId], references: [id])
+  reviews         ArchitectReview[]
+  
+  @@index([userId])
+  @@index([cityId])
+  @@index([status])
+  @@index([verified])
+  @@index([rating])
+}
+
+model Photographer {
+  id              String            @id @default(cuid())
+  userId          String            @unique
+  
+  // Personal Info
+  firstName       String
+  lastName        String
+  bio             String?           @db.Text
+  
+  // Professional Info
+  specialties     PhotographySpecialty[]
+  yearsExperience Int
+  languages       String[]
+  
+  // Location
+  countries       String[]
+  cityId          String
+  
+  // Equipment
+  equipment       String[]          // Camera models, drones, etc.
+  hasDrone        Boolean           @default(false)
+  hasStudio       Boolean           @default(false)
+  
+  // Services
+  offersEditing   Boolean           @default(true)
+  offersRushing   Boolean           @default(false)
+  offersVideo     Boolean           @default(false)
+  
+  // Pricing
+  hourlyRate      Float?
+  halfDayRate     Float?
+  fullDayRate     Float?
+  packages        Json?             // Different packages
+  currency        String            @default("MAD")
+  
+  // Turnaround
+  standardDeliveryDays Int          @default(7)
+  rushAvailable   Boolean           @default(false)
+  rushDeliveryDays Int?
+  
+  // Portfolio
+  portfolioImages String[]
+  portfolioUrl    String?
+  
+  // Availability
+  isAvailable     Boolean           @default(true)
+  acceptsNewBookings Boolean        @default(true)
+  
+  // Media
+  profileImage    String?
+  
+  // Validation
+  status          String            @default("pending")
+  verified        Boolean           @default(false)
+  verifiedAt      DateTime?
+  rejectionReason String?           @db.Text
+  
+  // Metrics
+  totalBookings   Int               @default(0)
+  totalClients    Int               @default(0)
+  rating          Float             @default(0)
+  reviewCount     Int               @default(0)
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  city            City              @relation(fields: [cityId], references: [id])
+  reviews         PhotographerReview[]
+  
+  @@index([userId])
+  @@index([cityId])
+  @@index([status])
+  @@index([verified])
+  @@index([rating])
+}
+
+// Review models for each partner type
+model AgentReview {
+  id              String            @id @default(cuid())
+  agentId         String
+  userId          String
+  
+  rating          Int
+  comment         String?           @db.Text
+  
+  isModerated     Boolean           @default(false)
+  isVisible       Boolean           @default(true)
+  
+  agentResponse   String?           @db.Text
+  respondedAt     DateTime?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  agent           RealEstateAgent   @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  
+  @@index([agentId])
+  @@index([userId])
+  @@index([rating])
+}
+
+model AccountantReview {
+  id              String            @id @default(cuid())
+  accountantId    String
+  userId          String
+  
+  rating          Int
+  comment         String?           @db.Text
+  
+  isModerated     Boolean           @default(false)
+  isVisible       Boolean           @default(true)
+  
+  accountantResponse String?        @db.Text
+  respondedAt     DateTime?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  accountant      Accountant        @relation(fields: [accountantId], references: [id], onDelete: Cascade)
+  
+  @@index([accountantId])
+  @@index([userId])
+  @@index([rating])
+}
+
+model TranslatorReview {
+  id              String            @id @default(cuid())
+  translatorId    String
+  userId          String
+  
+  rating          Int
+  accuracy        Int?
+  timeliness      Int?
+  communication   Int?
+  comment         String?           @db.Text
+  
+  isModerated     Boolean           @default(false)
+  isVisible       Boolean           @default(true)
+  
+  translatorResponse String?        @db.Text
+  respondedAt     DateTime?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  translator      Translator        @relation(fields: [translatorId], references: [id], onDelete: Cascade)
+  
+  @@index([translatorId])
+  @@index([userId])
+  @@index([rating])
+}
+
+model VisaAgentReview {
+  id              String            @id @default(cuid())
+  agentId         String
+  userId          String
+  
+  rating          Int
+  comment         String?           @db.Text
+  
+  isModerated     Boolean           @default(false)
+  isVisible       Boolean           @default(true)
+  
+  agentResponse   String?           @db.Text
+  respondedAt     DateTime?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  agent           VisaAgent         @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  
+  @@index([agentId])
+  @@index([userId])
+  @@index([rating])
+}
+
+model BusinessConsultantReview {
+  id              String            @id @default(cuid())
+  consultantId    String
+  userId          String
+  
+  rating          Int
+  comment         String?           @db.Text
+  
+  isModerated     Boolean           @default(false)
+  isVisible       Boolean           @default(true)
+  
+  consultantResponse String?        @db.Text
+  respondedAt     DateTime?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  consultant      BusinessConsultant @relation(fields: [consultantId], references: [id], onDelete: Cascade)
+  
+  @@index([consultantId])
+  @@index([userId])
+  @@index([rating])
+}
+
+model ArchitectReview {
+  id              String            @id @default(cuid())
+  architectId     String
+  userId          String
+  
+  rating          Int
+  creativity      Int?
+  professionalism Int?
+  communication   Int?
+  comment         String?           @db.Text
+  
+  isModerated     Boolean           @default(false)
+  isVisible       Boolean           @default(true)
+  
+  architectResponse String?         @db.Text
+  respondedAt     DateTime?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  architect       Architect         @relation(fields: [architectId], references: [id], onDelete: Cascade)
+  
+  @@index([architectId])
+  @@index([userId])
+  @@index([rating])
+}
+
+model PhotographerReview {
+  id              String            @id @default(cuid())
+  photographerId  String
+  userId          String
+  
+  rating          Int
+  quality         Int?
+  creativity      Int?
+  professionalism Int?
+  comment         String?           @db.Text
+  
+  isModerated     Boolean           @default(false)
+  isVisible       Boolean           @default(true)
+  
+  photographerResponse String?      @db.Text
+  respondedAt     DateTime?
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  photographer    Photographer      @relation(fields: [photographerId], references: [id], onDelete: Cascade)
+  
+  @@index([photographerId])
+  @@index([userId])
+  @@index([rating])
+}
+
+// Blog System
+model BlogPost {
+  id              String            @id @default(cuid())
+  
+  // Content
+  title           String
+  slug            String            @unique
+  excerpt         String?           @db.Text
+  content         String            @db.Text
+  featuredImage   String?
+  
+  // Metadata
+  authorId        String
+  author          User              @relation(fields: [authorId], references: [id])
+  
+  // Localization
+  language        String            // ISO code: en, ar, fr, etc.
+  countryCode     String?           // ISO code: AE, FR, TH, etc.
+  cityId          String?
+  city            City?             @relation(fields: [cityId], references: [id])
+  
+  // Categories & Tags
+  categories      String[]
+  tags            String[]
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?           @db.Text
+  keywords        String[]
+  
+  // Status
+  status          String            @default("draft") // draft, published, archived
+  publishedAt     DateTime?
+  
+  // Stats
+  viewCount       Int               @default(0)
+  likeCount       Int               @default(0)
+  commentCount    Int               @default(0)
+  
+  // Relations
+  comments        BlogComment[]
+  likes           BlogLike[]
+  
+  // Timestamps
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  @@index([slug])
+  @@index([authorId])
+  @@index([language])
+  @@index([countryCode])
+  @@index([cityId])
+  @@index([status])
+  @@index([publishedAt])
+  @@index([categories])
+}
+
+model BlogComment {
+  id              String            @id @default(cuid())
+  postId          String
+  post            BlogPost          @relation(fields: [postId], references: [id], onDelete: Cascade)
+  
+  userId          String
+  user            User              @relation(fields: [userId], references: [id])
+  
+  content         String            @db.Text
+  status          String            @default("pending") // pending, approved, rejected
+  
+  // Nested comments
+  parentId        String?
+  parent          BlogComment?      @relation("CommentReplies", fields: [parentId], references: [id])
+  replies         BlogComment[]     @relation("CommentReplies")
+  
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  
+  @@index([postId])
+  @@index([userId])
+  @@index([parentId])
+  @@index([status])
+}
+
+model BlogLike {
+  id              String            @id @default(cuid())
+  postId          String
+  post            BlogPost          @relation(fields: [postId], references: [id], onDelete: Cascade)
+  
+  userId          String
+  user            User              @relation(fields: [userId], references: [id])
+  
+  createdAt       DateTime          @default(now())
+  
+  @@unique([postId, userId])
+  @@index([postId])
+  @@index([userId])
+}
+
+// Building Partner Junction Table
+model BuildingPartner {
+  id              String          @id @default(cuid())
+  buildingId      String
+  partnerId       String
+  partnerType     String          // real_estate, accountant, translator, etc.
+  
+  // Relationship details
+  isExclusive     Boolean         @default(false)
+  isPrimary       Boolean         @default(false)
+  startDate       DateTime?
+  endDate         DateTime?
+  
+  // Contact in building
+  officeNumber    String?
+  floor           Int?
+  phoneExtension  String?
+  
+  // Status
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  building        Building        @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  
+  @@unique([buildingId, partnerId, partnerType])
+  @@index([buildingId])
+  @@index([partnerId])
+  @@index([partnerType])
+  @@index([isActive])
+}
+
+// Building Services
+model BuildingService {
+  id              String          @id @default(cuid())
+  buildingId      String
+  
+  // Service details
+  serviceType     String          // cleaning, maintenance, moving, security, etc.
+  name            String
+  nameAr          String?
+  description     String?         @db.Text
+  descriptionAr   String?         @db.Text
+  
+  // Pricing
+  price           Float?
+  currency        String          @default("USD")
+  pricingType     String?         // fixed, hourly, monthly, etc.
+  
+  // Availability
+  isAvailable     Boolean         @default(true)
+  schedule        Json?           // Available hours/days
+  
+  // Contact
+  contactPerson   String?
+  contactPhone    String?
+  contactEmail    String?
+  
+  // Status
+  isActive        Boolean         @default(true)
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  building        Building        @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  
+  @@index([buildingId])
+  @@index([serviceType])
+  @@index([isActive])
+}
+
+// Building Reviews
+model BuildingReview {
+  id              String          @id @default(cuid())
+  buildingId      String
+  userId          String
+  
+  // Review content
+  rating          Int             // 1-5
+  title           String?
+  comment         String?         @db.Text
+  
+  // Review categories
+  locationRating  Int?            // 1-5
+  facilitiesRating Int?           // 1-5
+  managementRating Int?           // 1-5
+  valueRating     Int?            // 1-5
+  
+  // Media
+  images          String[]
+  
+  // Status
+  isVerified      Boolean         @default(false)
+  status          String          @default("pending") // pending, approved, rejected
+  
+  // Timestamps
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  
+  building        Building        @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  user            User            @relation(fields: [userId], references: [id])
+  
+  @@index([buildingId])
+  @@index([userId])
+  @@index([rating])
+  @@index([status])
+}
+
+// Chatbot Models
+model ChatMessage {
+  id          String   @id @default(cuid())
+  sessionId   String
+  userId      String?
+  message     String   @db.Text
+  isBot       Boolean  @default(false)
+  intent      String?
+  timestamp   DateTime @default(now())
+  
+  user        User?    @relation(fields: [userId], references: [id])
+  
+  @@index([sessionId])
+  @@index([userId])
+  @@index([timestamp])
+}
+
+enum BookingIntentStatus {
+  PENDING
+  CONVERTED
+  ABANDONED
+}
+
+model BookingIntent {
+  id          String              @id @default(cuid())
+  sessionId   String
+  userId      String?
+  serviceId   String
+  status      BookingIntentStatus @default(PENDING)
+  data        Json?
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  
+  user        User?               @relation(fields: [userId], references: [id])
+  service     Service             @relation(fields: [serviceId], references: [id])
+  
+  @@index([sessionId])
+  @@index([userId])
+  @@index([serviceId])
+  @@index([status])
+}

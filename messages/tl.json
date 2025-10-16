@@ -1,0 +1,107 @@
+{
+  "blog": {
+    "title": "Blog at Balita",
+    "subtitle": "Pinakabagong artikulo, tips at insights",
+    "noPosts": "Walang available na posts",
+    "backHome": "Bumalik sa Home",
+    "readMore": "Magbasa pa",
+    "relatedPosts": "Kaugnay na Posts"
+  },
+  "services": {
+    "realEstate": {
+      "name": "Mga Ahente sa Real Estate",
+      "tagline": "Propesyonal na Serbisyo",
+      "description": "Maghanap ng pinagkakatiwalaang ahente para sa pagbili, pagbenta o pag-upa",
+      "cta": "Tingnan ang mga Propesyonal",
+      "howItWorks": "Paano Gumagana"
+    },
+    "accounting": {
+      "name": "Mga Accountant",
+      "tagline": "Propesyonal na Serbisyo",
+      "description": "Propesyonal na serbisyo sa accounting at buwis",
+      "cta": "Tingnan ang mga Propesyonal",
+      "howItWorks": "Paano Gumagana"
+    },
+    "medical": {
+      "name": "Mga Doktor",
+      "tagline": "Serbisyo sa Kalusugan",
+      "description": "Kwalipikadong propesyonal sa medisina",
+      "cta": "Tingnan ang mga Doktor",
+      "howItWorks": "Paano Gumagana"
+    },
+    "dental": {
+      "name": "Mga Dentista",
+      "tagline": "Pag-aalaga sa Ngipin",
+      "description": "Propesyonal na pag-aalaga at paggamot sa ngipin",
+      "cta": "Tingnan ang mga Dentista",
+      "howItWorks": "Paano Gumagana"
+    },
+    "legal": {
+      "name": "Mga Abogado",
+      "tagline": "Legal na Serbisyo",
+      "description": "Mga eksperto sa legal para sa lahat ng iyong pangangailangan",
+      "cta": "Tingnan ang mga Abogado",
+      "howItWorks": "Paano Gumagana"
+    }
+  },
+  "processSteps": {
+    "title": "Paano Gumagana",
+    "subtitle": "Mag-book ng propesyonal na serbisyo sa 4 simpleng hakbang",
+    "step1": {
+      "title": "Mag-browse",
+      "description": "Tuklasin ang verified na propesyonal"
+    },
+    "step2": {
+      "title": "Mag-book",
+      "description": "Pumili ng propesyonal at mag-schedule"
+    },
+    "step3": {
+      "title": "Makakuha ng Kumpirmasyon",
+      "description": "Tumanggap ng instant confirmation"
+    },
+    "step4": {
+      "title": "Mag-rate",
+      "description": "Ibahagi ang iyong karanasan"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Bakit Piliin ang CommunityHub?",
+    "verified": {
+      "title": "Verified na Propesyonal",
+      "description": "Lahat ay verified at certified"
+    },
+    "topRated": {
+      "title": "Pinakamataas na Rating",
+      "description": "Mga pinakamahusay na propesyonal"
+    },
+    "bestPrices": {
+      "title": "Pinakamahusay na Presyo",
+      "description": "Competitive pricing"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Suporta anumang oras"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Kumpanya",
+      "about": "Tungkol",
+      "careers": "Karera",
+      "blog": "Blog"
+    },
+    "support": {
+      "title": "Suporta",
+      "help": "Help Center",
+      "terms": "Mga Tuntunin",
+      "privacy": "Privacy"
+    },
+    "business": {
+      "title": "Para sa Negosyo",
+      "becomeProvider": "Maging Provider",
+      "partnerships": "Partnerships"
+    },
+    "followUs": "Sundan Kami",
+    "copyright": "© 2025 CommunityHub. Lahat ng karapatan ay nakalaan."
+  }
+}

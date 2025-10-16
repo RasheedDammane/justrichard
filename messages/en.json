@@ -1,0 +1,420 @@
+{
+  "common": {
+    "home": "Home",
+    "services": "Services",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "home": {
+    "hero": {
+      "title": "CommunityHub Platform",
+      "subtitle": "Find verified professionals for all your needs",
+      "cta": "Explore Services"
+    },
+    "search": {
+      "selectLocation": "Select Your Location",
+      "selectLanguage": "Select Language",
+      "allLocations": "All Locations"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "verified": {
+        "title": "Verified Professionals",
+        "description": "All partners are verified and trusted"
+      },
+      "flexible": {
+        "title": "24/7 Availability",
+        "description": "Book services anytime, anywhere"
+      },
+      "quality": {
+        "title": "Quality Service",
+        "description": "Top-rated professionals only"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "We're here to help anytime"
+      }
+    },
+    "partners": {
+      "title": "Professional Partners",
+      "viewAll": "View All APIs",
+      "profiles": "profiles",
+      "realEstate": "Real Estate",
+      "accountants": "Accountants",
+      "translators": "Translators",
+      "visaAgents": "Visa Agents",
+      "business": "Business Consultants",
+      "architects": "Architects",
+      "photographers": "Photographers",
+      "coaches": "Coaches",
+      "doctors": "Doctors",
+      "dentists": "Dentists",
+      "lawyers": "Lawyers",
+      "vehicles": "Vehicles"
+    },
+    "stats": {
+      "title": "Platform Statistics",
+      "partnerTypes": "Partner Types",
+      "specialties": "Specialties",
+      "languages": "Languages",
+      "countries": "Countries"
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "subtitle": "Explore our APIs and find the perfect professional for your needs",
+      "apiDocs": "API Documentation",
+      "browseServices": "Browse Services"
+    }
+  },
+  "blog": {
+    "title": "Blog & News",
+    "subtitle": "Latest articles, tips, and insights",
+    "noPosts": "No blog posts available yet",
+    "backHome": "Back to Home",
+    "readMore": "Read More",
+    "relatedPosts": "Related Posts"
+  },
+  "services": {
+    "realEstate": {
+      "name": "Real Estate Agents",
+      "tagline": "Professional Services",
+      "description": "Find trusted real estate agents for buying, selling, or renting properties",
+      "cta": "Browse Professionals",
+      "howItWorks": "How It Works"
+    },
+    "accounting": {
+      "name": "Accountants",
+      "tagline": "Professional Services",
+      "description": "Professional accounting and tax services for individuals and businesses",
+      "cta": "Browse Professionals",
+      "howItWorks": "How It Works"
+    },
+    "translation": {
+      "name": "Translators",
+      "tagline": "Professional Services",
+      "description": "Expert translation services in multiple languages",
+      "cta": "Browse Professionals",
+      "howItWorks": "How It Works"
+    },
+    "visa": {
+      "name": "Visa Agents",
+      "tagline": "Professional Services",
+      "description": "Professional visa and immigration services",
+      "cta": "Browse Professionals",
+      "howItWorks": "How It Works"
+    },
+    "businessConsulting": {
+      "name": "Business Consultants",
+      "tagline": "Professional Services",
+      "description": "Expert business setup and consulting services",
+      "cta": "Browse Professionals",
+      "howItWorks": "How It Works"
+    },
+    "architecture": {
+      "name": "Architects",
+      "tagline": "Professional Services",
+      "description": "Professional architectural design and planning services",
+      "cta": "Browse Professionals",
+      "howItWorks": "How It Works"
+    },
+    "photography": {
+      "name": "Photographers",
+      "tagline": "Professional Services",
+      "description": "Professional photography services for all occasions",
+      "cta": "Browse Professionals",
+      "howItWorks": "How It Works"
+    },
+    "coaching": {
+      "name": "Coaches",
+      "tagline": "Personal Development",
+      "description": "Personal and professional coaching services",
+      "cta": "Browse Coaches",
+      "howItWorks": "How It Works"
+    },
+    "medical": {
+      "name": "Doctors",
+      "tagline": "Healthcare Services",
+      "description": "Qualified medical professionals for consultations and treatments",
+      "cta": "Browse Doctors",
+      "howItWorks": "How It Works"
+    },
+    "dental": {
+      "name": "Dentists",
+      "tagline": "Dental Care",
+      "description": "Professional dental care and treatments",
+      "cta": "Browse Dentists",
+      "howItWorks": "How It Works"
+    },
+    "legal": {
+      "name": "Lawyers",
+      "tagline": "Legal Services",
+      "description": "Experienced legal professionals for all your legal needs",
+      "cta": "Browse Lawyers",
+      "howItWorks": "How It Works"
+    },
+    "handyman": {
+      "name": "Handymen",
+      "tagline": "Home Services",
+      "description": "Skilled handymen for home repairs and maintenance",
+      "cta": "Browse Handymen",
+      "howItWorks": "How It Works"
+    }
+  },
+  "processSteps": {
+    "title": "How It Works",
+    "subtitle": "Book professional services in 4 simple steps",
+    "step1": {
+      "title": "Browse Professionals",
+      "description": "Explore verified professionals in your area"
+    },
+    "step2": {
+      "title": "Book Service",
+      "description": "Select your preferred professional and schedule"
+    },
+    "step3": {
+      "title": "Get Confirmed",
+      "description": "Receive instant confirmation with details"
+    },
+    "step4": {
+      "title": "Rate & Review",
+      "description": "Share your experience and help others"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Why Choose CommunityHub?",
+    "verified": {
+      "title": "Verified Professionals",
+      "description": "All professionals are background-checked and verified"
+    },
+    "topRated": {
+      "title": "Top Rated",
+      "description": "Only the best professionals with 4+ star ratings"
+    },
+    "bestPrices": {
+      "title": "Best Prices",
+      "description": "Competitive pricing with transparent costs"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Customer support available anytime you need"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "careers": "Careers",
+      "press": "Press",
+      "blog": "Blog",
+      "partners": "Partners",
+      "pressMedia": "Press & Media"
+    },
+    "services": {
+      "title": "Services",
+      "allServices": "All Services",
+      "categories": "Categories",
+      "professionals": "Professionals",
+      "pricing": "Pricing",
+      "popularServices": "Popular Services",
+      "homeServices": "Home Services",
+      "vehicleRental": "Vehicle Rental",
+      "realEstate": "Real Estate",
+      "legalServices": "Legal Services",
+      "transfers": "Transfers",
+      "medical": "Medical",
+      "viewAllServices": "View All Services"
+    },
+    "support": {
+      "title": "Support",
+      "helpCenter": "Help Center",
+      "contactUs": "Contact Us",
+      "faq": "FAQ",
+      "safety": "Safety",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "supportHelp": "Support & Help",
+      "customerSupport": "Customer Support",
+      "safetyGuidelines": "Safety Guidelines",
+      "cookies": "Cookie Policy",
+      "legalNotice": "Legal Notice",
+      "sitemap": "Sitemap",
+      "accessibility": "Accessibility"
+    },
+    "connect": {
+      "title": "Connect",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "followUs": "Follow Us"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Get the latest news and offers",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "error": "An error occurred. Please try again.",
+      "updates": "Get updates on new services and promotions",
+      "yourEmail": "Your email"
+    },
+    "copyright": "© {year} JustRichard. All rights reserved.",
+    "allRightsReserved": "All rights reserved",
+    "madeWith": "Made with",
+    "in": "in",
+    "description": "Your trusted platform connecting customers with verified professionals across 15+ categories in multiple countries.",
+    "currency": {
+      "title": "Currency",
+      "select": "Select Currency"
+    },
+    "platformName": "CommunityHub",
+    "tagline": "Your trusted platform connecting customers with verified professionals across 15+ categories in multiple countries.",
+    "professionals": {
+      "title": "For Professionals",
+      "becomeProvider": "Become a Provider",
+      "providerBenefits": "Provider Benefits",
+      "partnerships": "Partnerships"
+    },
+    "legal": {
+      "title": "Legal",
+      "companyLegal": "Company & Legal"
+    },
+    "location": {
+      "availableCountries": "Available Countries",
+      "availableLanguages": "Available Languages"
+    },
+    "app": {
+      "title": "Download Our App",
+      "downloadApp": "Download Our App",
+      "downloadOn": "Download on the",
+      "appStore": "App Store",
+      "getItOn": "GET IT ON",
+      "googlePlay": "Google Play"
+    },
+    "registrationInfo": "Reg. No: 123456789 | Tax ID: AE123456789 | Licensed by Dubai Economy",
+    "disclaimer": {
+      "title": "Legal Disclaimer:",
+      "text": "CommunityHub acts as a marketplace platform connecting service providers with customers. We do not employ service providers and are not responsible for the services provided. All providers are independent professionals. Prices and availability are subject to change. Terms and conditions apply.",
+      "paymentTitle": "Payment & Refunds:",
+      "paymentText": "Payments are processed securely through our certified partners. Refund policies vary by service provider. Please review individual provider terms before booking."
+    }
+  },
+  "about": {
+    "title": "About CommunityHub",
+    "intro": "CommunityHub is your trusted platform connecting you with verified professionals and services across multiple countries.",
+    "mission": {
+      "title": "Our Mission",
+      "content": "We aim to simplify your life by providing easy access to quality services and trusted professionals."
+    },
+    "offer": {
+      "title": "What We Offer",
+      "item1": "Verified professionals across 15+ categories",
+      "item2": "Services in multiple countries",
+      "item3": "Support for 9 languages",
+      "item4": "Easy booking and communication",
+      "item5": "Transparent pricing and reviews",
+      "item6": "24/7 customer support"
+    },
+    "values": {
+      "title": "Our Values",
+      "trust": {
+        "title": "Trust & Safety",
+        "desc": "All professionals are verified and vetted for your peace of mind."
+      },
+      "quality": {
+        "title": "Quality",
+        "desc": "We maintain high standards to ensure excellent service delivery."
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "desc": "Available in 9 languages across multiple countries."
+      },
+      "support": {
+        "title": "Support",
+        "desc": "Our team is always here to help you."
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy describes how we collect, use, and protect your personal information.",
+    "lastUpdated": "Last updated"
+  },
+  "careers": {
+    "title": "Careers at CommunityHub",
+    "intro": "Join our team and help connect people with trusted professionals worldwide.",
+    "positions": "Open Positions",
+    "apply": "Apply Now"
+  },
+  "press": {
+    "title": "Press & Media",
+    "intro": "Latest news and press releases from CommunityHub.",
+    "contact": "Media Contact",
+    "download": "Download Press Kit"
+  },
+  "partnerships": {
+    "title": "Partnerships",
+    "intro": "Partner with CommunityHub to grow your business.",
+    "benefits": "Partnership Benefits",
+    "contact": "Contact Us"
+  },
+  "providerBenefits": {
+    "title": "Provider Benefits",
+    "intro": "Discover the advantages of becoming a service provider on CommunityHub.",
+    "benefits": "Key Benefits",
+    "join": "Join Now"
+  },
+  "help": {
+    "title": "Help Center",
+    "intro": "Find answers to common questions and get support.",
+    "search": "Search help articles",
+    "topics": "Popular Topics"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "intro": "Find quick answers to the most common questions.",
+    "categories": "FAQ Categories"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Get in touch with our team.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  },
+  "safety": {
+    "title": "Safety Guidelines",
+    "intro": "Your safety is our priority. Follow these guidelines for a secure experience.",
+    "guidelines": "Safety Tips"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "intro": "Please read these terms carefully before using our services.",
+    "lastUpdated": "Last updated"
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "intro": "We use cookies to improve your experience on our platform.",
+    "whatAre": "What are cookies",
+    "types": "Types of cookies we use"
+  },
+  "legalNotice": {
+    "title": "Legal Notice",
+    "intro": "Important legal information about CommunityHub.",
+    "company": "Company Information",
+    "compliance": "Regulatory Compliance"
+  }
+}

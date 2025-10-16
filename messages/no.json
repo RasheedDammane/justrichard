@@ -1,0 +1,177 @@
+{
+  "common": {
+    "home": "Hjem",
+    "services": "Tjenester",
+    "blog": "Blogg",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "login": "Logg inn",
+    "signup": "Registrer deg"
+  },
+  "home": {
+    "hero": {
+      "title": "CommunityHub Plattform",
+      "subtitle": "Finn verifiserte fagfolk for alle dine behov",
+      "cta": "Utforsk tjenester"
+    },
+    "search": {
+      "selectLocation": "Velg din plassering",
+      "selectLanguage": "Velg språk",
+      "allLocations": "Alle plasseringer"
+    },
+    "features": {
+      "title": "Hvorfor velge oss",
+      "verified": {
+        "title": "Verifiserte fagfolk",
+        "description": "Alle partnere er verifisert og pålitelige"
+      },
+      "flexible": {
+        "title": "24/7 tilgjengelighet",
+        "description": "Bestill tjenester når som helst, hvor som helst"
+      },
+      "quality": {
+        "title": "Kvalitetstjeneste",
+        "description": "Kun høyt rangerte fagfolk"
+      },
+      "support": {
+        "title": "24/7 støtte",
+        "description": "Vi er her for å hjelpe når som helst"
+      }
+    },
+    "partners": {
+      "title": "Profesjonelle partnere",
+      "viewAll": "Se alle API-er",
+      "profiles": "profiler",
+      "realEstate": "Eiendom",
+      "accountants": "Regnskapsførere",
+      "translators": "Oversettere",
+      "visaAgents": "Visumagenter",
+      "business": "Forretningskonsulenter",
+      "architects": "Arkitekter",
+      "photographers": "Fotografer",
+      "coaches": "Trenere",
+      "doctors": "Leger",
+      "dentists": "Tannleger",
+      "lawyers": "Advokater",
+      "vehicles": "Kjøretøy"
+    },
+    "stats": {
+      "title": "Plattformstatistikk",
+      "partnerTypes": "Partnertyper",
+      "specialties": "Spesialiteter",
+      "languages": "Språk",
+      "countries": "Land"
+    },
+    "cta": {
+      "title": "Klar til å komme i gang?",
+      "subtitle": "Utforsk våre API-er og finn den perfekte fagpersonen for dine behov",
+      "apiDocs": "API-dokumentasjon",
+      "browseServices": "Bla gjennom tjenester"
+    }
+  },
+  "blog": {
+    "title": "Blogg og Nyheter",
+    "subtitle": "Siste artikler, tips og innsikt",
+    "noPosts": "Ingen innlegg tilgjengelig",
+    "backHome": "Tilbake til Hjem",
+    "readMore": "Les mer",
+    "relatedPosts": "Relaterte Innlegg"
+  },
+  "services": {
+    "realEstate": {
+      "name": "Eiendomsmeglere",
+      "tagline": "Profesjonelle Tjenester",
+      "description": "Finn pålitelige eiendomsmeglere",
+      "cta": "Bla gjennom Fagfolk",
+      "howItWorks": "Hvordan det Fungerer"
+    },
+    "accounting": {
+      "name": "Regnskapsførere",
+      "tagline": "Profesjonelle Tjenester",
+      "description": "Profesjonelle regnskaps- og skattetjenester",
+      "cta": "Bla gjennom Fagfolk",
+      "howItWorks": "Hvordan det Fungerer"
+    },
+    "medical": {
+      "name": "Leger",
+      "tagline": "Helsetjenester",
+      "description": "Kvalifiserte medisinske fagfolk",
+      "cta": "Bla gjennom Leger",
+      "howItWorks": "Hvordan det Fungerer"
+    },
+    "dental": {
+      "name": "Tannleger",
+      "tagline": "Tannpleie",
+      "description": "Profesjonell tannpleie og behandling",
+      "cta": "Bla gjennom Tannleger",
+      "howItWorks": "Hvordan det Fungerer"
+    },
+    "legal": {
+      "name": "Advokater",
+      "tagline": "Juridiske Tjenester",
+      "description": "Erfarne juridiske fagfolk",
+      "cta": "Bla gjennom Advokater",
+      "howItWorks": "Hvordan det Fungerer"
+    }
+  },
+  "processSteps": {
+    "title": "Hvordan det Fungerer",
+    "subtitle": "Bestill profesjonelle tjenester i 4 enkle trinn",
+    "step1": {
+      "title": "Bla gjennom",
+      "description": "Utforsk verifiserte fagfolk"
+    },
+    "step2": {
+      "title": "Bestill",
+      "description": "Velg og planlegg"
+    },
+    "step3": {
+      "title": "Få Bekreftelse",
+      "description": "Motta øyeblikkelig bekreftelse"
+    },
+    "step4": {
+      "title": "Vurder",
+      "description": "Del din erfaring"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Hvorfor Velge CommunityHub?",
+    "verified": {
+      "title": "Verifiserte Fagfolk",
+      "description": "Alle er verifisert og sertifisert"
+    },
+    "topRated": {
+      "title": "Høyest Vurdert",
+      "description": "Bare de beste fagfolkene"
+    },
+    "bestPrices": {
+      "title": "Beste Priser",
+      "description": "Konkurransedyktige priser"
+    },
+    "support": {
+      "title": "24/7 Støtte",
+      "description": "Støtte når som helst"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Selskap",
+      "about": "Om Oss",
+      "careers": "Karrierer",
+      "blog": "Blogg"
+    },
+    "support": {
+      "title": "Støtte",
+      "help": "Hjelpesenter",
+      "terms": "Vilkår",
+      "privacy": "Personvern"
+    },
+    "business": {
+      "title": "For Bedrifter",
+      "becomeProvider": "Bli Leverandør",
+      "partnerships": "Partnerskap"
+    },
+    "followUs": "Følg Oss",
+    "copyright": "© 2025 CommunityHub. Alle rettigheter reservert."
+  }
+}

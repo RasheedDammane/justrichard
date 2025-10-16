@@ -1,0 +1,177 @@
+{
+  "common": {
+    "home": "Início",
+    "services": "Serviços",
+    "blog": "Blog",
+    "about": "Sobre",
+    "contact": "Contato",
+    "login": "Entrar",
+    "signup": "Cadastrar"
+  },
+  "home": {
+    "hero": {
+      "title": "Plataforma CommunityHub",
+      "subtitle": "Encontre profissionais verificados para todas as suas necessidades",
+      "cta": "Explorar serviços"
+    },
+    "search": {
+      "selectLocation": "Selecione sua localização",
+      "selectLanguage": "Selecionar idioma",
+      "allLocations": "Todas as localizações"
+    },
+    "features": {
+      "title": "Por que nos escolher",
+      "verified": {
+        "title": "Profissionais verificados",
+        "description": "Todos os parceiros são verificados e confiáveis"
+      },
+      "flexible": {
+        "title": "Disponibilidade 24/7",
+        "description": "Reserve serviços a qualquer hora, em qualquer lugar"
+      },
+      "quality": {
+        "title": "Serviço de qualidade",
+        "description": "Apenas profissionais com as melhores avaliações"
+      },
+      "support": {
+        "title": "Suporte 24/7",
+        "description": "Estamos aqui para ajudar a qualquer momento"
+      }
+    },
+    "partners": {
+      "title": "Parceiros profissionais",
+      "viewAll": "Ver todas as APIs",
+      "profiles": "perfis",
+      "realEstate": "Imobiliário",
+      "accountants": "Contadores",
+      "translators": "Tradutores",
+      "visaAgents": "Agentes de visto",
+      "business": "Consultores de negócios",
+      "architects": "Arquitetos",
+      "photographers": "Fotógrafos",
+      "coaches": "Treinadores",
+      "doctors": "Médicos",
+      "dentists": "Dentistas",
+      "lawyers": "Advogados",
+      "vehicles": "Veículos"
+    },
+    "stats": {
+      "title": "Estatísticas da plataforma",
+      "partnerTypes": "Tipos de parceiros",
+      "specialties": "Especialidades",
+      "languages": "Idiomas",
+      "countries": "Países"
+    },
+    "cta": {
+      "title": "Pronto para começar?",
+      "subtitle": "Explore nossas APIs e encontre o profissional perfeito para suas necessidades",
+      "apiDocs": "Documentação da API",
+      "browseServices": "Navegar pelos serviços"
+    }
+  },
+  "blog": {
+    "title": "Blog e Notícias",
+    "subtitle": "Últimos artigos, dicas e insights",
+    "noPosts": "Nenhuma postagem disponível",
+    "backHome": "Voltar ao Início",
+    "readMore": "Leia Mais",
+    "relatedPosts": "Posts Relacionados"
+  },
+  "services": {
+    "realEstate": {
+      "name": "Agentes Imobiliários",
+      "tagline": "Serviços Profissionais",
+      "description": "Encontre agentes imobiliários confiáveis",
+      "cta": "Procurar Profissionais",
+      "howItWorks": "Como Funciona"
+    },
+    "accounting": {
+      "name": "Contadores",
+      "tagline": "Serviços Profissionais",
+      "description": "Serviços profissionais de contabilidade e impostos",
+      "cta": "Procurar Profissionais",
+      "howItWorks": "Como Funciona"
+    },
+    "medical": {
+      "name": "Médicos",
+      "tagline": "Serviços de Saúde",
+      "description": "Profissionais médicos qualificados",
+      "cta": "Procurar Médicos",
+      "howItWorks": "Como Funciona"
+    },
+    "dental": {
+      "name": "Dentistas",
+      "tagline": "Cuidados Dentários",
+      "description": "Cuidados e tratamentos dentários profissionais",
+      "cta": "Procurar Dentistas",
+      "howItWorks": "Como Funciona"
+    },
+    "legal": {
+      "name": "Advogados",
+      "tagline": "Serviços Jurídicos",
+      "description": "Profissionais jurídicos experientes",
+      "cta": "Procurar Advogados",
+      "howItWorks": "Como Funciona"
+    }
+  },
+  "processSteps": {
+    "title": "Como Funciona",
+    "subtitle": "Reserve serviços profissionais em 4 passos simples",
+    "step1": {
+      "title": "Procurar",
+      "description": "Explore profissionais verificados"
+    },
+    "step2": {
+      "title": "Reservar",
+      "description": "Selecione e agende"
+    },
+    "step3": {
+      "title": "Obter Confirmação",
+      "description": "Receba confirmação instantânea"
+    },
+    "step4": {
+      "title": "Avaliar",
+      "description": "Compartilhe sua experiência"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Por que Escolher CommunityHub?",
+    "verified": {
+      "title": "Profissionais Verificados",
+      "description": "Todos verificados e certificados"
+    },
+    "topRated": {
+      "title": "Melhor Avaliados",
+      "description": "Apenas os melhores profissionais"
+    },
+    "bestPrices": {
+      "title": "Melhores Preços",
+      "description": "Preços competitivos"
+    },
+    "support": {
+      "title": "Suporte 24/7",
+      "description": "Suporte a qualquer momento"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Empresa",
+      "about": "Sobre Nós",
+      "careers": "Carreiras",
+      "blog": "Blog"
+    },
+    "support": {
+      "title": "Suporte",
+      "help": "Central de Ajuda",
+      "terms": "Termos",
+      "privacy": "Privacidade"
+    },
+    "business": {
+      "title": "Para Empresas",
+      "becomeProvider": "Tornar-se Fornecedor",
+      "partnerships": "Parcerias"
+    },
+    "followUs": "Siga-nos",
+    "copyright": "© 2025 CommunityHub. Todos os direitos reservados."
+  }
+}
