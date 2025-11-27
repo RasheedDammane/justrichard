@@ -29,5 +29,20 @@ export default async function Header({ lang }: { lang: string }) {
   const title = dynamicData?.title || staticData?.seo?.title || "JustRichard";
   const description = dynamicData?.description || staticData?.seo?.description || "";
 
-  return <HeaderClient title={title} description={description} />;
+  return (
+    <HeaderClient 
+      title={title} 
+      description={description}
+      logoUrl={dynamicData?.logoUrl}
+      logoText={dynamicData?.logoText}
+      logoAlt={dynamicData?.logoAlt}
+      ctaText={dynamicData?.ctaText}
+      ctaUrl={dynamicData?.ctaUrl}
+      ctaColor={dynamicData?.ctaColor}
+      bgColor={dynamicData?.bgColor}
+      textColor={dynamicData?.textColor}
+      isSticky={dynamicData?.isSticky}
+      showSearch={dynamicData?.showSearch}
+    />
+  );
 }
