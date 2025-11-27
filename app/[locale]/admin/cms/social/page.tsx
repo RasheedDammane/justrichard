@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Plus, Edit2, Trash2, Save, X, ArrowLeft, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Plus, Edit2, Trash2, Save, X, ArrowLeft, Facebook, Twitter, Instagram, Linkedin, Share2 } from 'lucide-react';
 
 interface SocialLink {
   id: string;
