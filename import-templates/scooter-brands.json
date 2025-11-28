@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Vespa",
+    "slug": "vespa",
+    "description": "Iconic Italian scooter manufacturer",
+    "country": "Italy",
+    "yearFounded": 1946,
+    "specialization": "Classic Scooters",
+    "website": "https://www.vespa.com",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Primavera", "Sprint", "GTS", "Elettrica"]
+  },
+  {
+    "name": "Honda Scooters",
+    "slug": "honda-scooters",
+    "description": "Japanese scooter manufacturer",
+    "country": "Japan",
+    "specialization": "Urban Mobility",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["PCX", "Forza", "SH", "ADV"]
+  },
+  {
+    "name": "Yamaha Scooters",
+    "slug": "yamaha-scooters",
+    "description": "Japanese scooter manufacturer",
+    "country": "Japan",
+    "specialization": "Performance Scooters",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["NMAX", "XMAX", "TMAX", "Aerox"]
+  },
+  {
+    "name": "Piaggio",
+    "slug": "piaggio",
+    "description": "Italian scooter manufacturer",
+    "country": "Italy",
+    "yearFounded": 1884,
+    "specialization": "Urban Scooters",
+    "isActive": true,
+    "popularModels": ["Liberty", "Medley", "Beverly"]
+  },
+  {
+    "name": "Aprilia",
+    "slug": "aprilia",
+    "description": "Italian scooter and motorcycle manufacturer",
+    "country": "Italy",
+    "specialization": "Sport Scooters",
+    "isActive": true,
+    "popularModels": ["SR GT", "SRV", "Scarabeo"]
+  },
+  {
+    "name": "NIU",
+    "slug": "niu",
+    "description": "Chinese electric scooter manufacturer",
+    "country": "China",
+    "yearFounded": 2014,
+    "specialization": "Electric Scooters",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["NQi", "MQi", "UQi"]
+  }
+]

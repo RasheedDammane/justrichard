@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Fresh Fruits",
+    "slug": "fresh-fruits",
+    "description": "Fresh seasonal fruits",
+    "icon": "🍎",
+    "order": 1,
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "name": "Fresh Vegetables",
+    "slug": "fresh-vegetables",
+    "description": "Farm-fresh vegetables",
+    "icon": "🥗",
+    "order": 2,
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "name": "Dairy Products",
+    "slug": "dairy-products",
+    "description": "Milk, cheese, yogurt and more",
+    "icon": "🥛",
+    "order": 3,
+    "isActive": true
+  },
+  {
+    "name": "Bakery",
+    "slug": "bakery",
+    "description": "Fresh bread and pastries",
+    "icon": "🍞",
+    "order": 4,
+    "isActive": true
+  },
+  {
+    "name": "Beverages",
+    "slug": "beverages",
+    "description": "Soft drinks, juices, water",
+    "icon": "🥤",
+    "order": 5,
+    "isActive": true
+  }
+]

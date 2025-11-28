@@ -4,10 +4,7 @@ import { Calendar, User, Eye, Heart, ArrowLeft, Tag, Share2, Clock, TrendingUp, 
 import { Metadata } from 'next';
 
 interface BlogPostPageProps {
-  params: {
-    locale: string;
-    slug: string;
-  };
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 async function getBlogPost(slug: string, locale: string) {

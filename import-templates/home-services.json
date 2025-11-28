@@ -1,0 +1,145 @@
+[
+  {
+    "name": "Professional Home Cleaning",
+    "slug": "professional-home-cleaning",
+    "category": "HOME_CLEANING",
+    "serviceType": "CLEANING",
+    "description": "Complete home deep cleaning service",
+    "duration": "3-4 hours",
+    "pricePerService": 200,
+    "pricePerHour": 60,
+    "currency": "AED",
+    "includedServices": [
+      "Dusting all surfaces",
+      "Vacuuming carpets",
+      "Mopping floors",
+      "Kitchen cleaning",
+      "Bathroom sanitization"
+    ],
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isFeatured": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Furniture Deep Cleaning",
+    "slug": "furniture-deep-cleaning",
+    "category": "FURNITURE_CLEANING",
+    "serviceType": "CLEANING",
+    "description": "Professional sofa and carpet cleaning",
+    "pricePerService": 150,
+    "currency": "AED",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true
+  },
+  {
+    "name": "Laundry & Dry Cleaning",
+    "slug": "laundry-dry-cleaning",
+    "category": "LAUNDRY",
+    "serviceType": "CLEANING",
+    "description": "Professional laundry and dry cleaning service",
+    "pricePerKg": 15,
+    "currency": "AED",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true
+  },
+  {
+    "name": "Plumbing Repair Service",
+    "slug": "plumbing-repair",
+    "category": "PLUMBING",
+    "serviceType": "HANDYMAN",
+    "description": "Expert plumbing repairs and installations",
+    "pricePerHour": 100,
+    "calloutFee": 50,
+    "currency": "AED",
+    "servicesOffered": [
+      "Leak repairs",
+      "Pipe installation",
+      "Drain cleaning",
+      "Water heater repair"
+    ],
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "name": "Electrical Services",
+    "slug": "electrical-services",
+    "category": "ELECTRICAL",
+    "serviceType": "HANDYMAN",
+    "description": "Licensed electrician for all electrical work",
+    "pricePerHour": 120,
+    "calloutFee": 50,
+    "currency": "AED",
+    "servicesOffered": [
+      "Wiring",
+      "Light fixture installation",
+      "Circuit breaker repair",
+      "Electrical safety inspection"
+    ],
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true
+  },
+  {
+    "name": "AC Repair & Maintenance",
+    "slug": "ac-repair-maintenance",
+    "category": "AC_REPAIR",
+    "serviceType": "HANDYMAN",
+    "description": "Air conditioning repair and maintenance",
+    "pricePerService": 150,
+    "pricePerHour": 100,
+    "currency": "AED",
+    "servicesOffered": [
+      "AC installation",
+      "AC repair",
+      "Regular maintenance",
+      "Gas refilling"
+    ],
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "name": "Carpentry Services",
+    "slug": "carpentry-services",
+    "category": "CARPENTRY",
+    "serviceType": "HANDYMAN",
+    "description": "Professional carpentry and woodwork",
+    "pricePerHour": 80,
+    "currency": "AED",
+    "servicesOffered": [
+      "Furniture assembly",
+      "Custom shelving",
+      "Door installation",
+      "Kitchen cabinet repair"
+    ],
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true
+  },
+  {
+    "name": "Painting Services",
+    "slug": "painting-services",
+    "category": "PAINTING",
+    "serviceType": "HANDYMAN",
+    "description": "Interior and exterior painting",
+    "pricePerRoom": 300,
+    "pricePerSqm": 15,
+    "currency": "AED",
+    "servicesOffered": [
+      "Interior painting",
+      "Exterior painting",
+      "Wall texture",
+      "Wallpaper installation"
+    ],
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true
+  }
+]

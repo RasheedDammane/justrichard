@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Luxury Villa in Palm Jumeirah",
+    "slug": "luxury-villa-palm-jumeirah",
+    "description": "Stunning 5-bedroom villa with private beach access",
+    "type": "VILLA",
+    "status": "FOR_SALE",
+    "bedrooms": 5,
+    "bathrooms": 6,
+    "area": 5000,
+    "price": 15000000,
+    "currency": "AED",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "latitude": 25.1124,
+    "longitude": 55.1390,
+    "images": [
+      "https://example.com/villa1.jpg",
+      "https://example.com/villa2.jpg"
+    ],
+    "features": ["Pool", "Garden", "Gym", "Maid Room"],
+    "isAvailable": true,
+    "isFeatured": true
+  },
+  {
+    "title": "Modern Apartment in Downtown",
+    "slug": "modern-apartment-downtown-dubai",
+    "description": "2-bedroom apartment with Burj Khalifa view",
+    "type": "APARTMENT",
+    "status": "FOR_RENT",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 1200,
+    "price": 120000,
+    "currency": "AED",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "latitude": 25.1972,
+    "longitude": 55.2744,
+    "images": [],
+    "features": ["Balcony", "Parking", "Security"],
+    "isAvailable": true,
+    "isFeatured": false
+  }
+]

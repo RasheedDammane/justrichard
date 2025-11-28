@@ -1,0 +1,912 @@
+{
+  "admin": {
+    "common": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "view": "View",
+      "search": "Search",
+      "filter": "Filter",
+      "export": "Export",
+      "import": "Import",
+      "refresh": "Refresh",
+      "loading": "Loading...",
+      "error": "Error",
+      "success": "Success",
+      "confirm": "Confirm",
+      "back": "Back",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Submit",
+      "reset": "Reset",
+      "clear": "Clear",
+      "apply": "Apply",
+      "close": "Close",
+      "open": "Open",
+      "download": "Download",
+      "upload": "Upload",
+      "select": "Select",
+      "selectAll": "Select All",
+      "deselectAll": "Deselect All",
+      "actions": "Actions",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "yes": "Yes",
+      "no": "No",
+      "all": "All",
+      "none": "None",
+      "other": "Other",
+      "name": "Name",
+      "description": "Description",
+      "date": "Date",
+      "time": "Time",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "featured": "Featured",
+      "available": "Available",
+      "unavailable": "Unavailable"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "users": "Users",
+      "properties": "Properties",
+      "services": "Services",
+      "bookings": "Bookings",
+      "categories": "Categories",
+      "partners": "Partners",
+      "doctors": "Doctors",
+      "lawyers": "Lawyers",
+      "coaches": "Coaches",
+      "maids": "Maids",
+      "motorbikes": "Motorbikes",
+      "rentalCars": "Rental Cars",
+      "yachts": "Yachts",
+      "activities": "Activities",
+      "suppliers": "Suppliers",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "maids": {
+      "title": "Maids",
+      "subtitle": "{count} maids in total",
+      "new": "New Maid",
+      "edit": "Edit Maid",
+      "addNew": "Add a new maid to the system",
+      "stats": {
+        "total": "Total",
+        "active": "Active",
+        "featured": "Featured",
+        "avgSalary": "Average Salary"
+      },
+      "table": {
+        "name": "Name",
+        "nationality": "Nationality",
+        "age": "Age",
+        "experience": "Experience",
+        "salary": "Salary",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Name",
+        "slug": "Slug",
+        "refNo": "Ref No",
+        "nationality": "Nationality",
+        "age": "Age",
+        "gender": "Gender",
+        "female": "Female",
+        "male": "Male",
+        "yearsOfExperience": "Years of Experience",
+        "monthlyFee": "Monthly Fee",
+        "country": "Country",
+        "city": "City",
+        "phone": "Phone",
+        "email": "Email",
+        "englishLevel": "English Level",
+        "arabicLevel": "Arabic Level",
+        "none": "None",
+        "basic": "Basic",
+        "good": "Good",
+        "fluent": "Fluent",
+        "active": "Active",
+        "featured": "Featured"
+      },
+      "units": {
+        "years": "years",
+        "month": "month"
+      }
+    },
+    "motorbikes": {
+      "title": "Motorbikes",
+      "subtitle": "{count} motorbikes in total",
+      "new": "New Motorbike",
+      "edit": "Edit Motorbike",
+      "addNew": "Add a new motorbike to the system",
+      "stats": {
+        "total": "Total",
+        "available": "Available",
+        "avgPriceDay": "Avg Price/day"
+      },
+      "table": {
+        "motorbike": "Motorbike",
+        "category": "Category",
+        "engine": "Engine",
+        "priceDay": "Price/day",
+        "location": "Location",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "brand": "Brand",
+        "model": "Model",
+        "slug": "Slug",
+        "year": "Year",
+        "category": "Category",
+        "engineSize": "Engine Size (cc)",
+        "seats": "Seats",
+        "transmission": "Transmission",
+        "automatic": "Automatic",
+        "manual": "Manual",
+        "fuelType": "Fuel Type",
+        "petrol": "Petrol",
+        "electric": "Electric",
+        "priceDay": "Price/day",
+        "priceWeek": "Price/week",
+        "priceMonth": "Price/month",
+        "currency": "Currency",
+        "country": "Country",
+        "city": "City",
+        "description": "Description",
+        "available": "Available"
+      }
+    },
+    "rentalCars": {
+      "title": "Rental Cars",
+      "subtitle": "{count} cars in total",
+      "new": "New Rental Car",
+      "edit": "Edit Rental Car",
+      "addNew": "Add a new rental car to the system",
+      "stats": {
+        "total": "Total",
+        "active": "Active",
+        "featured": "Featured",
+        "avgPriceDay": "Avg Price/day"
+      },
+      "table": {
+        "car": "Car",
+        "category": "Category",
+        "priceDay": "Price/day",
+        "location": "Location",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Name",
+        "slug": "Slug",
+        "brand": "Brand",
+        "model": "Model",
+        "year": "Year",
+        "category": "Category",
+        "economy": "Economy",
+        "compact": "Compact",
+        "sedan": "Sedan",
+        "suv": "SUV",
+        "luxury": "Luxury",
+        "sports": "Sports",
+        "van": "Van",
+        "color": "Color",
+        "doors": "Doors",
+        "seats": "Seats",
+        "fuelType": "Fuel Type",
+        "petrol": "Petrol",
+        "diesel": "Diesel",
+        "electric": "Electric",
+        "hybrid": "Hybrid",
+        "transmission": "Transmission",
+        "automatic": "Automatic",
+        "manual": "Manual",
+        "priceDay": "Price/day",
+        "priceWeek": "Price/week",
+        "priceMonth": "Price/month",
+        "country": "Country",
+        "city": "City",
+        "shortDescription": "Short Description",
+        "description": "Description",
+        "active": "Active",
+        "featured": "Featured",
+        "available": "Available"
+      }
+    },
+    "yachts": {
+      "title": "Yachts Management",
+      "subtitle": "Manage yacht rentals and bookings",
+      "new": "New Yacht",
+      "edit": "Edit Yacht",
+      "addNew": "Add Yacht",
+      "noYachts": "No yachts found",
+      "addFirstYacht": "Start by adding your first yacht",
+      "listTitle": "Yachts List",
+      "guests": "guests",
+      "stats": {
+        "total": "Total",
+        "totalYachts": "Total Yachts",
+        "featured": "Featured",
+        "featuredYachts": "Featured Yachts",
+        "avgPrice": "Avg Price",
+        "aedPerHour": "AED per hour",
+        "views": "Views",
+        "totalViews": "Total Views"
+      },
+      "table": {
+        "yacht": "Yacht",
+        "capacity": "Capacity",
+        "length": "Length",
+        "pricePerHour": "Price/Hour",
+        "location": "Location",
+        "views": "Views",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Name",
+        "slug": "Slug",
+        "brand": "Brand",
+        "model": "Model",
+        "year": "Year",
+        "length": "Length (ft)",
+        "capacity": "Capacity",
+        "cabins": "Cabins",
+        "bathrooms": "Bathrooms",
+        "crew": "Crew",
+        "speed": "Speed (knots)",
+        "fuelType": "Fuel Type",
+        "engineType": "Engine Type",
+        "manufacturer": "Manufacturer",
+        "priceHour": "Price/hour",
+        "price2Hours": "Price/2 hours",
+        "price3Hours": "Price/3 hours",
+        "price4Hours": "Price/4 hours",
+        "country": "Country",
+        "city": "City",
+        "description": "Description",
+        "shortDescription": "Short Description",
+        "features": "Features",
+        "amenities": "Amenities",
+        "included": "Included",
+        "notIncluded": "Not Included",
+        "active": "Active",
+        "featured": "Featured",
+        "available": "Available"
+      }
+    },
+    "providers": {
+      "title": "Providers",
+      "subtitle": "{count} providers in total",
+      "new": "New Provider",
+      "edit": "Edit Provider",
+      "addNew": "Add a new provider to the system",
+      "types": {
+        "doctor": "Doctor",
+        "lawyer": "Lawyer",
+        "coach": "Coach",
+        "activity": "Activity",
+        "supplier": "Supplier",
+        "transfer": "Transfer"
+      },
+      "stats": {
+        "total": "Total",
+        "active": "Active",
+        "verified": "Verified",
+        "avgRating": "Avg Rating"
+      },
+      "table": {
+        "name": "Name",
+        "type": "Type",
+        "specialty": "Specialty",
+        "rating": "Rating",
+        "location": "Location",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Name",
+        "slug": "Slug",
+        "type": "Type",
+        "specialty": "Specialty",
+        "description": "Description",
+        "shortDescription": "Short Description",
+        "phone": "Phone",
+        "email": "Email",
+        "website": "Website",
+        "address": "Address",
+        "country": "Country",
+        "city": "City",
+        "languages": "Languages",
+        "yearsOfExperience": "Years of Experience",
+        "consultationFee": "Consultation Fee",
+        "currency": "Currency",
+        "active": "Active",
+        "verified": "Verified",
+        "featured": "Featured"
+      }
+    },
+    "properties": {
+      "title": "Property Management",
+      "subtitle": "{count} property(ies) • {published} published",
+      "new": "New Property",
+      "edit": "Edit Property",
+      "addNew": "Add a property",
+      "noProperties": "No properties",
+      "addFirstProperty": "Start by adding your first property",
+      "stats": {
+        "total": "Total",
+        "draft": "Drafts",
+        "published": "Published",
+        "sold": "Sold",
+        "rented": "Rented"
+      },
+      "filters": {
+        "all": "All",
+        "draft": "Drafts",
+        "published": "Published",
+        "sold": "Sold",
+        "rented": "Rented"
+      },
+      "form": {
+        "title": "Title",
+        "description": "Description",
+        "propertyType": "Property Type",
+        "listingType": "Listing Type",
+        "status": "Status",
+        "price": "Price",
+        "salePrice": "Sale Price",
+        "rentPrice": "Rent Price",
+        "secondPrice": "Second Price (Optional)",
+        "currency": "Currency",
+        "pricePrefix": "Price Prefix",
+        "pricePrefixPlaceholder": "e.g., Starting from",
+        "pricePostfix": "After The Price",
+        "pricePostfixPlaceholder": "e.g., Monthly",
+        "pricePlaceholder": "Price Placeholder",
+        "enablePricePlaceholder": "Enable Price Placeholder",
+        "area": "Area Size",
+        "areaPostfix": "Size Postfix",
+        "areaPostfixPlaceholder": "e.g., Sq Ft",
+        "landArea": "Land Area",
+        "landAreaPostfix": "Land Area Size Postfix",
+        "bedrooms": "Bedrooms",
+        "bathrooms": "Bathrooms",
+        "rooms": "Rooms",
+        "garages": "Garages",
+        "garageSize": "Garage Size",
+        "garageSizePlaceholder": "e.g., 200 Sq Ft",
+        "floor": "Floor",
+        "furnished": "Furnished",
+        "yearBuilt": "Year Built",
+        "propertyId": "Property ID",
+        "propertyIdPlaceholder": "e.g., HZ-01",
+        "streetAddress": "Street Address",
+        "streetAddressPlaceholder": "Enter only the street name and building number",
+        "zipCode": "Zip/Postal Code",
+        "videoUrl": "Video URL",
+        "videoUrlPlaceholder": "e.g., https://www.youtube.com/watch?v=...",
+        "sliderImage": "Slider Image",
+        "customSlider": "Display on custom property slider?",
+        "floorPlans": "Floor Plans",
+        "documents": "Property Documents",
+        "authorType": "What information to display?",
+        "authorInfo": "Author Info",
+        "agentInfo": "Agent Info",
+        "agencyInfo": "Agency Info",
+        "noDisplay": "Do not display",
+        "loginRequired": "Login required to view?",
+        "loginRequiredHelp": "If Yes, only logged in users can view property details",
+        "featured": "Featured",
+        "featuredHelp": "Mark this property as featured?",
+        "images": "Images",
+        "imagesHelp": "Minimum size 1440x900",
+        "labels": "Labels"
+      },
+      "table": {
+        "property": "Property",
+        "type": "Type",
+        "price": "Price",
+        "location": "Location",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "users": {
+      "title": "User Management",
+      "subtitle": "Manage all platform users",
+      "new": "New User",
+      "edit": "Edit User",
+      "addNew": "Add a new user",
+      "listTitle": "Users List",
+      "deactivate": "Deactivate",
+      "stats": {
+        "totalUsers": "Total Users",
+        "customers": "Customers",
+        "providers": "Providers",
+        "admins": "Administrators"
+      },
+      "table": {
+        "user": "User",
+        "contact": "Contact",
+        "email": "Email",
+        "role": "Role",
+        "bookings": "Bookings",
+        "reviews": "Reviews",
+        "registration": "Registration",
+        "status": "Status",
+        "createdAt": "Created At",
+        "actions": "Actions"
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Welcome, {name}",
+      "overview": "Overview",
+      "recentActivity": "Recent Activity",
+      "quickStats": "Quick Stats",
+      "totalUsers": "Total Users",
+      "totalBookings": "Total Bookings",
+      "totalRevenue": "Total Revenue",
+      "activeServices": "Active Services",
+      "activeProviders": "Active Providers",
+      "bookingsByType": "Bookings by Type",
+      "bookingsByStatus": "Bookings by Status",
+      "recentBookings": "Recent Bookings",
+      "viewAll": "View all",
+      "noDataAvailable": "No data available",
+      "noRecentBookings": "No recent bookings",
+      "unresolvedErrors": "{count} Unresolved Error{plural}",
+      "viewAllLogs": "View all logs",
+      "client": "Client",
+      "type": "Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "status": "Status",
+      "total": "Total",
+      "actions": "Actions"
+    },
+    "services": {
+      "title": "Service Management",
+      "subtitle": "Manage all platform services",
+      "new": "New Service",
+      "edit": "Edit Service",
+      "addNew": "New Service",
+      "listTitle": "Services List",
+      "stats": {
+        "total": "Total Services",
+        "active": "Active Services",
+        "totalBookings": "Total Bookings"
+      },
+      "table": {
+        "service": "Service",
+        "category": "Category",
+        "bookings": "Bookings",
+        "reviews": "Reviews",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "bookings": {
+      "title": "Booking Management",
+      "subtitle": "Manage all platform bookings",
+      "new": "New Booking",
+      "edit": "Edit Booking",
+      "addNew": "Add a new booking",
+      "listTitle": "Bookings List",
+      "stats": {
+        "total": "Total",
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "revenue": "Revenue"
+      },
+      "status": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      },
+      "table": {
+        "client": "Client",
+        "service": "Service",
+        "dates": "Dates",
+        "type": "Type",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "status": "Status",
+        "total": "Total",
+        "actions": "Actions"
+      }
+    },
+    "categories": {
+      "title": "Category Management",
+      "subtitle": "Manage all service categories",
+      "new": "New Category",
+      "edit": "Edit Category",
+      "addNew": "New Category",
+      "listTitle": "Categories List",
+      "stats": {
+        "total": "Total Categories",
+        "active": "Active Categories",
+        "totalServices": "Total Services"
+      },
+      "table": {
+        "category": "Category",
+        "services": "Services",
+        "order": "Order",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "partners": {
+      "title": "Partner Management",
+      "subtitle": "Manage all partners and their onboarding",
+      "new": "New Partner",
+      "edit": "Edit Partner",
+      "addNew": "New Partner",
+      "listTitle": "Partners List",
+      "stats": {
+        "total": "Total Partners",
+        "active": "Active Partners",
+        "pending": "Pending",
+        "revenue": "Total Revenue"
+      },
+      "table": {
+        "partner": "Partner",
+        "services": "Services",
+        "revenue": "Revenue",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "doctors": {
+      "title": "Doctor Management",
+      "subtitle": "Manage all doctors and medical professionals",
+      "new": "New Doctor",
+      "edit": "Edit Doctor",
+      "addNew": "New Doctor",
+      "listTitle": "Doctors List",
+      "stats": {
+        "total": "Total Doctors",
+        "active": "Active Doctors",
+        "totalReviews": "Total Reviews",
+        "avgRating": "Average Rating"
+      },
+      "table": {
+        "doctor": "Doctor",
+        "location": "Location",
+        "reviews": "Reviews",
+        "rating": "Rating",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "lawyers": {
+      "title": "Lawyer Management",
+      "subtitle": "Manage all lawyers and legal professionals",
+      "new": "New Lawyer",
+      "edit": "Edit Lawyer",
+      "addNew": "New Lawyer",
+      "listTitle": "Lawyers List",
+      "stats": {
+        "total": "Total Lawyers",
+        "active": "Active Lawyers",
+        "totalReviews": "Total Reviews",
+        "avgRating": "Average Rating"
+      },
+      "table": {
+        "lawyer": "Lawyer",
+        "location": "Location",
+        "reviews": "Reviews",
+        "rating": "Rating",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "coaches": {
+      "title": "Coach Management",
+      "subtitle": "Manage all coaches and fitness professionals",
+      "new": "New Coach",
+      "edit": "Edit Coach",
+      "addNew": "New Coach",
+      "listTitle": "Coaches List",
+      "stats": {
+        "total": "Total Coaches",
+        "active": "Active Coaches",
+        "totalReviews": "Total Reviews",
+        "avgRating": "Average Rating"
+      },
+      "table": {
+        "coach": "Coach",
+        "location": "Location",
+        "reviews": "Reviews",
+        "rating": "Rating",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "activities": {
+      "title": "Activity Management",
+      "subtitle": "Manage all activities and experiences",
+      "new": "New Activity",
+      "edit": "Edit Activity",
+      "addNew": "New Activity",
+      "listTitle": "Activities List",
+      "stats": {
+        "total": "Total Activities",
+        "active": "Active Activities",
+        "totalReviews": "Total Reviews",
+        "avgRating": "Average Rating"
+      },
+      "table": {
+        "activity": "Activity",
+        "location": "Location",
+        "reviews": "Reviews",
+        "rating": "Rating",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "homeCleaning": {
+      "title": "Home Cleaning Services",
+      "subtitle": "Manage home cleaning services",
+      "new": "New Service",
+      "edit": "Edit Service",
+      "addNew": "Add Home Cleaning Service",
+      "listTitle": "Home Cleaning Services",
+      "stats": {
+        "total": "Total Services",
+        "active": "Active Services",
+        "totalBookings": "Total Bookings",
+        "avgRating": "Average Rating"
+      },
+      "table": {
+        "service": "Service",
+        "location": "Location",
+        "price": "Price",
+        "bookings": "Bookings",
+        "reviews": "Reviews",
+        "rating": "Rating",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "furnitureCleaning": {
+      "title": "Furniture Cleaning Services",
+      "subtitle": "Manage furniture cleaning services",
+      "new": "New Service",
+      "edit": "Edit Service",
+      "addNew": "Add Furniture Cleaning Service",
+      "listTitle": "Furniture Cleaning Services",
+      "stats": {
+        "total": "Total Services",
+        "active": "Active Services",
+        "totalBookings": "Total Bookings",
+        "avgRating": "Average Rating"
+      },
+      "table": {
+        "service": "Service",
+        "location": "Location",
+        "price": "Price",
+        "bookings": "Bookings",
+        "reviews": "Reviews",
+        "rating": "Rating",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "laundry": {
+      "title": "Laundry Services",
+      "subtitle": "Manage laundry services",
+      "new": "New Service",
+      "edit": "Edit Service",
+      "addNew": "Add Laundry Service",
+      "listTitle": "Laundry Services",
+      "stats": {
+        "total": "Total Services",
+        "active": "Active Services",
+        "totalBookings": "Total Bookings",
+        "avgRating": "Average Rating"
+      },
+      "table": {
+        "service": "Service",
+        "location": "Location",
+        "price": "Price",
+        "bookings": "Bookings",
+        "reviews": "Reviews",
+        "rating": "Rating",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "suppliers": {
+      "title": "Supplier Management",
+      "subtitle": "Manage all suppliers and vendors",
+      "new": "New Supplier",
+      "edit": "Edit Supplier",
+      "addNew": "New Supplier",
+      "listTitle": "Suppliers List",
+      "stats": {
+        "total": "Total Suppliers",
+        "active": "Active Suppliers",
+        "pending": "Pending",
+        "revenue": "Total Revenue"
+      },
+      "table": {
+        "supplier": "Supplier",
+        "services": "Services",
+        "revenue": "Revenue",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "transfers": {
+      "title": "Transfer Management",
+      "subtitle": "Manage all transfers and transportation",
+      "new": "New Transfer",
+      "edit": "Edit Transfer",
+      "addNew": "New Transfer",
+      "listTitle": "Transfers List",
+      "stats": {
+        "total": "Total Transfers",
+        "active": "Active Transfers",
+        "pending": "Pending",
+        "revenue": "Total Revenue"
+      },
+      "table": {
+        "transfer": "Transfer",
+        "services": "Services",
+        "revenue": "Revenue",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "blog": {
+      "title": "Blog Management",
+      "subtitle": "Manage all blog posts and articles",
+      "new": "New Post",
+      "edit": "Edit Post",
+      "addNew": "New Post",
+      "listTitle": "Blog Posts",
+      "stats": {
+        "total": "Total Posts",
+        "published": "Published",
+        "totalViews": "Total Views",
+        "totalComments": "Total Comments"
+      },
+      "table": {
+        "post": "Post",
+        "author": "Author",
+        "views": "Views",
+        "comments": "Comments",
+        "likes": "Likes",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "chatbots": {
+      "title": "Chatbot Management",
+      "subtitle": "Manage all chatbots and AI assistants",
+      "new": "New Chatbot",
+      "edit": "Edit Chatbot",
+      "addNew": "New Chatbot",
+      "import": "Import Chatbot",
+      "listTitle": "Chatbots List",
+      "stats": {
+        "total": "Total Chatbots",
+        "active": "Active",
+        "conversations": "Conversations"
+      }
+    },
+    "notifications": {
+      "title": "Notification Management",
+      "subtitle": "Manage all system notifications",
+      "new": "New Notification",
+      "edit": "Edit Notification",
+      "addNew": "Send Notification",
+      "listTitle": "Notifications List",
+      "stats": {
+        "total": "Total Sent",
+        "pending": "Pending",
+        "delivered": "Delivered"
+      }
+    },
+    "analytics": {
+      "title": "Analytics & Reports",
+      "subtitle": "View analytics and generate reports",
+      "new": "New Report",
+      "edit": "Edit Report",
+      "listTitle": "Analytics Dashboard",
+      "stats": {
+        "totalUsers": "Total Users",
+        "totalRevenue": "Total Revenue",
+        "totalBookings": "Total Bookings"
+      }
+    },
+    "promotions": {
+      "title": "Promotion Management",
+      "subtitle": "Manage all promotions and offers",
+      "new": "New Promotion",
+      "edit": "Edit Promotion",
+      "addNew": "New Promotion",
+      "listTitle": "Promotions List",
+      "stats": {
+        "total": "Total Promotions",
+        "active": "Active",
+        "expired": "Expired"
+      }
+    },
+    "currencies": {
+      "title": "Currency Management",
+      "subtitle": "Manage all currencies",
+      "new": "New Currency",
+      "edit": "Edit Currency",
+      "addNew": "New Currency",
+      "listTitle": "Currencies List"
+    },
+    "geography": {
+      "title": "Geography Management",
+      "subtitle": "Manage countries, cities, and locations",
+      "listTitle": "Geography"
+    },
+    "exchangeRates": {
+      "title": "Exchange Rates",
+      "subtitle": "Manage currency exchange rates",
+      "listTitle": "Exchange Rates"
+    },
+    "styles": {
+      "title": "Style Management",
+      "subtitle": "Customize appearance",
+      "listTitle": "Styles"
+    },
+    "routes": {
+      "title": "Route Management",
+      "subtitle": "Manage application routes",
+      "new": "New Route",
+      "edit": "Edit Route",
+      "listTitle": "Routes"
+    },
+    "legal": {
+      "title": "Legal Professionals",
+      "subtitle": "Manage lawyers and legal services",
+      "addNew": "Add Legal Professional",
+      "listTitle": "Legal Professionals List",
+      "stats": {
+        "total": "Total",
+        "published": "Published",
+        "featured": "Featured",
+        "draft": "Draft",
+        "countries": "Countries"
+      },
+      "table": {
+        "name": "Name",
+        "type": "Type",
+        "location": "Location",
+        "practiceAreas": "Practice Areas",
+        "languages": "Languages"
+      },
+      "types": {
+        "lawyer": "Lawyer",
+        "lawFirm": "Law Firm",
+        "legalAdvisor": "Legal Advisor",
+        "notary": "Notary"
+      },
+      "status": {
+        "published": "Published",
+        "draft": "Draft",
+        "archived": "Archived"
+      }
+    }
+  }
+}

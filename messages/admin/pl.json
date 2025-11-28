@@ -1,0 +1,519 @@
+{
+  "admin": {
+    "common": {
+      "add": "Dodaj",
+      "edit": "Edytuj",
+      "delete": "Usuń",
+      "save": "Zapisz",
+      "saving": "Zapisywanie...",
+      "cancel": "Anuluj",
+      "select": "Wybierz",
+      "search": "Szukaj",
+      "filter": "Filtruj",
+      "export": "Eksportuj",
+      "import": "Importuj",
+      "refresh": "Odśwież",
+      "total": "Razem",
+      "active": "Aktywny",
+      "inactive": "Nieaktywny",
+      "featured": "Wyróżniony",
+      "available": "Dostępny",
+      "unavailable": "Niedostępny",
+      "status": "Status",
+      "actions": "Działania",
+      "inTotal": "{count} w sumie",
+      "loading": "Ładowanie...",
+      "noData": "Brak danych",
+      "confirm": "Potwierdź",
+      "confirmDelete": "Czy na pewno chcesz usunąć ten element?",
+      "success": "Sukces",
+      "error": "Błąd",
+      "required": "Wymagane",
+      "view": "Wyświetl"
+    },
+    "navigation": {
+      "dashboard": "Panel",
+      "users": "Użytkownicy",
+      "properties": "Nieruchomości",
+      "services": "Usługi",
+      "bookings": "Rezerwacje",
+      "categories": "Kategorie",
+      "partners": "Partnerzy",
+      "doctors": "Lekarze",
+      "lawyers": "Prawnicy",
+      "coaches": "Trenerzy",
+      "maids": "Pomoc domowa",
+      "motorbikes": "Motocykle",
+      "rentalCars": "Wynajem samochodów",
+      "yachts": "Jachty",
+      "activities": "Aktywności",
+      "suppliers": "Dostawcy",
+      "settings": "Ustawienia",
+      "logout": "Wyloguj"
+    },
+    "dashboard": {
+      "title": "Panel",
+      "welcome": "Witaj, {name}",
+      "overview": "Przegląd",
+      "recentActivity": "Ostatnia aktywność",
+      "quickStats": "Szybkie statystyki",
+      "totalUsers": "Łączna liczba użytkowników",
+      "totalBookings": "Łączna liczba rezerwacji",
+      "totalRevenue": "Łączny przychód",
+      "activeProviders": "Aktywni dostawcy"
+    },
+    "users": {
+      "title": "Zarządzanie użytkownikami",
+      "subtitle": "Zarządzaj wszystkimi użytkownikami platformy",
+      "new": "Nowy użytkownik",
+      "edit": "Edytuj użytkownika",
+      "addNew": "Dodaj nowego użytkownika",
+      "listTitle": "Lista użytkowników",
+      "deactivate": "Dezaktywuj",
+      "stats": {
+        "totalUsers": "Łączna liczba użytkowników",
+        "customers": "Klienci",
+        "providers": "Dostawcy",
+        "admins": "Administratorzy"
+      },
+      "table": {
+        "user": "Użytkownik",
+        "contact": "Kontakt",
+        "email": "E-mail",
+        "role": "Rola",
+        "bookings": "Rezerwacje",
+        "reviews": "Opinie",
+        "registration": "Rejestracja",
+        "status": "Status",
+        "createdAt": "Utworzono",
+        "actions": "Działania"
+      }
+    },
+    "services": {
+      "title": "Zarządzanie usługami",
+      "subtitle": "Zarządzaj wszystkimi usługami platformy",
+      "new": "Nowa usługa",
+      "edit": "Edytuj usługę",
+      "addNew": "Nowa usługa",
+      "listTitle": "Lista usług",
+      "stats": {
+        "total": "Łączna liczba usług",
+        "active": "Aktywne usługi",
+        "totalBookings": "Łączna liczba rezerwacji"
+      },
+      "table": {
+        "service": "Usługa",
+        "category": "Kategoria",
+        "bookings": "Rezerwacje",
+        "reviews": "Opinie",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "bookings": {
+      "title": "Zarządzanie rezerwacjami",
+      "subtitle": "Zarządzaj wszystkimi rezerwacjami platformy",
+      "new": "Nowa rezerwacja",
+      "edit": "Edytuj rezerwację",
+      "addNew": "Dodaj nową rezerwację",
+      "listTitle": "Lista rezerwacji",
+      "stats": {
+        "total": "Razem",
+        "pending": "Oczekujące",
+        "confirmed": "Potwierdzone",
+        "completed": "Zakończone",
+        "cancelled": "Anulowane",
+        "revenue": "Przychód"
+      },
+      "status": {
+        "pending": "Oczekujące",
+        "confirmed": "Potwierdzone",
+        "completed": "Zakończone",
+        "cancelled": "Anulowane"
+      },
+      "table": {
+        "client": "Klient",
+        "service": "Usługa",
+        "dates": "Daty",
+        "type": "Typ",
+        "startDate": "Data rozpoczęcia",
+        "endDate": "Data zakończenia",
+        "status": "Status",
+        "total": "Razem",
+        "actions": "Działania"
+      }
+    },
+    "categories": {
+      "title": "Zarządzanie kategoriami",
+      "subtitle": "Zarządzaj wszystkimi kategoriami usług",
+      "new": "Nowa kategoria",
+      "edit": "Edytuj kategorię",
+      "addNew": "Nowa kategoria",
+      "listTitle": "Lista kategorii",
+      "stats": {
+        "total": "Łączna liczba kategorii",
+        "active": "Aktywne kategorie",
+        "totalServices": "Łączna liczba usług"
+      },
+      "table": {
+        "category": "Kategoria",
+        "services": "Usługi",
+        "order": "Kolejność",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "partners": {
+      "title": "Zarządzanie partnerami",
+      "subtitle": "Zarządzaj wszystkimi partnerami i partnerstwami",
+      "new": "Nowy partner",
+      "edit": "Edytuj partnera",
+      "addNew": "Nowy partner",
+      "listTitle": "Lista partnerów",
+      "stats": {
+        "total": "Łączna liczba partnerów",
+        "active": "Aktywni partnerzy",
+        "pending": "Oczekujące",
+        "revenue": "Łączny przychód"
+      },
+      "table": {
+        "partner": "Partner",
+        "services": "Usługi",
+        "revenue": "Przychód",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "doctors": {
+      "title": "Zarządzanie lekarzami",
+      "subtitle": "Zarządzaj wszystkimi lekarzami i specjalistami medycznymi",
+      "new": "Nowy lekarz",
+      "edit": "Edytuj lekarza",
+      "addNew": "Nowy lekarz",
+      "listTitle": "Lista lekarzy",
+      "stats": {
+        "total": "Łączna liczba lekarzy",
+        "active": "Aktywni lekarze",
+        "totalBookings": "Łączna liczba rezerwacji",
+        "avgRating": "Średnia ocena"
+      },
+      "table": {
+        "doctor": "Lekarz",
+        "location": "Lokalizacja",
+        "bookings": "Rezerwacje",
+        "reviews": "Opinie",
+        "rating": "Ocena",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "lawyers": {
+      "title": "Zarządzanie prawnikami",
+      "subtitle": "Zarządzaj wszystkimi prawnikami i specjalistami prawnymi",
+      "new": "Nowy prawnik",
+      "edit": "Edytuj prawnika",
+      "addNew": "Nowy prawnik",
+      "listTitle": "Lista prawników",
+      "stats": {
+        "total": "Łączna liczba prawników",
+        "active": "Aktywni prawnicy",
+        "totalBookings": "Łączna liczba rezerwacji",
+        "avgRating": "Średnia ocena"
+      },
+      "table": {
+        "lawyer": "Prawnik",
+        "location": "Lokalizacja",
+        "bookings": "Rezerwacje",
+        "reviews": "Opinie",
+        "rating": "Ocena",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "coaches": {
+      "title": "Zarządzanie trenerami",
+      "subtitle": "Zarządzaj wszystkimi trenerami i specjalistami fitness",
+      "new": "Nowy trener",
+      "edit": "Edytuj trenera",
+      "addNew": "Nowy trener",
+      "listTitle": "Lista trenerów",
+      "stats": {
+        "total": "Łączna liczba trenerów",
+        "active": "Aktywni trenerzy",
+        "totalBookings": "Łączna liczba rezerwacji",
+        "avgRating": "Średnia ocena"
+      },
+      "table": {
+        "coach": "Trener",
+        "location": "Lokalizacja",
+        "bookings": "Rezerwacje",
+        "reviews": "Opinie",
+        "rating": "Ocena",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "activities": {
+      "title": "Zarządzanie aktywnościami",
+      "subtitle": "Zarządzaj wszystkimi aktywnościami i doświadczeniami",
+      "new": "Nowa aktywność",
+      "edit": "Edytuj aktywność",
+      "addNew": "Nowa aktywność",
+      "listTitle": "Lista aktywności",
+      "stats": {
+        "total": "Łączna liczba aktywności",
+        "active": "Aktywne aktywności",
+        "totalBookings": "Łączna liczba rezerwacji",
+        "avgRating": "Średnia ocena"
+      },
+      "table": {
+        "activity": "Aktywność",
+        "location": "Lokalizacja",
+        "bookings": "Rezerwacje",
+        "reviews": "Opinie",
+        "rating": "Ocena",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "suppliers": {
+      "title": "Zarządzanie dostawcami",
+      "subtitle": "Zarządzaj wszystkimi dostawcami i sprzedawcami",
+      "new": "Nowy dostawca",
+      "edit": "Edytuj dostawcę",
+      "addNew": "Nowy dostawca",
+      "listTitle": "Lista dostawców",
+      "stats": {
+        "total": "Łączna liczba dostawców",
+        "active": "Aktywni dostawcy",
+        "pending": "Oczekujące",
+        "revenue": "Łączny przychód"
+      },
+      "table": {
+        "supplier": "Dostawca",
+        "services": "Usługi",
+        "revenue": "Przychód",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "transfers": {
+      "title": "Zarządzanie transferami",
+      "subtitle": "Zarządzaj wszystkimi transferami i usługami transportowymi",
+      "new": "Nowy transfer",
+      "edit": "Edytuj transfer",
+      "addNew": "Nowy transfer",
+      "listTitle": "Lista transferów",
+      "stats": {
+        "total": "Łączna liczba transferów",
+        "active": "Aktywne transfery",
+        "pending": "Oczekujące",
+        "revenue": "Łączny przychód"
+      },
+      "table": {
+        "transfer": "Transfer",
+        "services": "Usługi",
+        "revenue": "Przychód",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "blog": {
+      "title": "Zarządzanie blogiem",
+      "subtitle": "Zarządzaj wszystkimi wpisami i treściami bloga",
+      "new": "Nowy wpis",
+      "edit": "Edytuj wpis",
+      "addNew": "Nowy wpis",
+      "listTitle": "Wpisy bloga",
+      "stats": {
+        "total": "Łączna liczba wpisów",
+        "published": "Opublikowane",
+        "totalViews": "Łączna liczba wyświetleń",
+        "totalComments": "Łączna liczba komentarzy"
+      },
+      "table": {
+        "post": "Wpis",
+        "author": "Autor",
+        "views": "Wyświetlenia",
+        "comments": "Komentarze",
+        "likes": "Polubienia",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    },
+    "chatbots": {
+      "title": "Zarządzanie chatbotami",
+      "subtitle": "Zarządzaj wszystkimi chatbotami i asystentami AI",
+      "new": "Nowy chatbot",
+      "edit": "Edytuj chatbota",
+      "addNew": "Nowy chatbot",
+      "import": "Importuj chatbota",
+      "listTitle": "Lista chatbotów"
+    },
+    "notifications": {
+      "title": "Zarządzanie powiadomieniami",
+      "subtitle": "Zarządzaj wszystkimi powiadomieniami systemowymi",
+      "new": "Nowe powiadomienie",
+      "edit": "Edytuj powiadomienie",
+      "addNew": "Wyślij powiadomienie",
+      "listTitle": "Lista powiadomień"
+    },
+    "analytics": {
+      "title": "Analityka i raporty",
+      "subtitle": "Wyświetl analitykę i generuj raporty",
+      "new": "Nowy raport",
+      "edit": "Edytuj raport",
+      "listTitle": "Panel analityczny"
+    },
+    "promotions": {
+      "title": "Zarządzanie promocjami",
+      "subtitle": "Zarządzaj wszystkimi promocjami i ofertami",
+      "new": "Nowa promocja",
+      "edit": "Edytuj promocję",
+      "addNew": "Nowa promocja",
+      "listTitle": "Lista promocji"
+    },
+    "cmsPages": {
+      "title": "Strony CMS",
+      "subtitle": "Zarządzaj wszystkimi stronami CMS",
+      "listTitle": "Strony CMS"
+    },
+    "media": {
+      "title": "Biblioteka mediów",
+      "subtitle": "Zarządzaj wszystkimi plikami multimedialnymi",
+      "listTitle": "Pliki multimedialne"
+    },
+    "data": {
+      "title": "Zarządzanie danymi",
+      "subtitle": "Importuj i eksportuj dane",
+      "new": "Nowy import",
+      "import": "Importuj dane",
+      "export": "Eksportuj dane"
+    },
+    "simulators": {
+      "title": "Zarządzanie symulatorami",
+      "subtitle": "Zarządzaj wszystkimi symulatorami cen",
+      "new": "Nowy symulator",
+      "edit": "Edytuj symulator",
+      "addNew": "Nowy symulator",
+      "listTitle": "Lista symulatorów"
+    },
+    "cryptoPayments": {
+      "title": "Płatności kryptowalutowe",
+      "subtitle": "Zarządzaj transakcjami kryptowalutowymi",
+      "new": "Nowa transakcja",
+      "edit": "Edytuj transakcję",
+      "listTitle": "Transakcje kryptowalutowe"
+    },
+    "logs": {
+      "title": "Dzienniki systemowe",
+      "subtitle": "Wyświetl wszystkie dzienniki i aktywności systemowe",
+      "activityLogs": "Dzienniki aktywności",
+      "errorLogs": "Dzienniki błędów",
+      "viewAll": "Wyświetl wszystkie dzienniki",
+      "listTitle": "Dzienniki"
+    },
+    "currencies": {
+      "title": "Zarządzanie walutami",
+      "subtitle": "Zarządzaj wszystkimi walutami",
+      "new": "Nowa waluta",
+      "edit": "Edytuj walutę",
+      "addNew": "Nowa waluta",
+      "listTitle": "Lista walut"
+    },
+    "geography": {
+      "title": "Zarządzanie geografią",
+      "subtitle": "Zarządzaj krajami, miastami i lokalizacjami",
+      "listTitle": "Geografia"
+    },
+    "exchangeRates": {
+      "title": "Kursy walut",
+      "subtitle": "Zarządzaj kursami wymiany walut",
+      "listTitle": "Kursy walut"
+    },
+    "styles": {
+      "title": "Zarządzanie stylami",
+      "subtitle": "Dostosuj wygląd aplikacji",
+      "listTitle": "Style"
+    },
+    "routes": {
+      "title": "Zarządzanie trasami",
+      "subtitle": "Zarządzaj trasami aplikacji",
+      "new": "Nowa trasa",
+      "edit": "Edytuj trasę",
+      "listTitle": "Trasy"
+    },
+    "maids": {
+      "title": "Pomoc domowa",
+      "subtitle": "{count} pomocy domowych w sumie",
+      "new": "Nowa pomoc domowa",
+      "edit": "Edytuj pomoc domową",
+      "addNew": "Dodaj nową pomoc domową"
+    },
+    "motorbikes": {
+      "title": "Motocykle",
+      "subtitle": "{count} motocykli w sumie",
+      "new": "Nowy motocykl",
+      "edit": "Edytuj motocykl",
+      "addNew": "Dodaj nowy motocykl"
+    },
+    "rentalCars": {
+      "title": "Wynajem samochodów",
+      "subtitle": "{count} samochodów w sumie",
+      "new": "Nowy samochód",
+      "edit": "Edytuj samochód",
+      "addNew": "Dodaj nowy samochód do wynajęcia"
+    },
+    "yachts": {
+      "title": "Jachty",
+      "subtitle": "{count} jachtów w sumie",
+      "new": "Nowy jacht",
+      "edit": "Edytuj jacht",
+      "addNew": "Dodaj nowy jacht"
+    },
+    "properties": {
+      "title": "Zarządzanie nieruchomościami",
+      "subtitle": "{count} nieruchomość(ci) • {published} opublikowane",
+      "new": "Nowa nieruchomość",
+      "edit": "Edytuj nieruchomość",
+      "addNew": "Dodaj nieruchomość",
+      "noProperties": "Brak nieruchomości",
+      "addFirstProperty": "Zacznij od dodania swojej pierwszej nieruchomości",
+      "stats": {
+        "total": "Razem",
+        "draft": "Szkice",
+        "published": "Opublikowane",
+        "sold": "Sprzedane",
+        "rented": "Wynajęte"
+      },
+      "filters": {
+        "all": "Wszystkie",
+        "draft": "Szkice",
+        "published": "Opublikowane",
+        "sold": "Sprzedane",
+        "rented": "Wynajęte"
+      },
+      "form": {
+        "title": "Tytuł",
+        "description": "Opis",
+        "propertyType": "Typ nieruchomości",
+        "listingType": "Typ ogłoszenia",
+        "status": "Status",
+        "price": "Cena",
+        "area": "Powierzchnia (m²)",
+        "bedrooms": "Sypialnie",
+        "bathrooms": "Łazienki",
+        "featured": "Wyróżnione",
+        "images": "Zdjęcia"
+      },
+      "table": {
+        "property": "Nieruchomość",
+        "type": "Typ",
+        "price": "Cena",
+        "location": "Lokalizacja",
+        "status": "Status",
+        "actions": "Działania"
+      }
+    }
+  }
+}

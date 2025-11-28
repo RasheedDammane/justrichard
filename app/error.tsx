@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
-import { AlertTriangle, Home, RefreshCw } from 'lucide-react';
 
 export default function Error({
   error,
@@ -22,7 +21,7 @@ export default function Error({
         {/* Error Icon */}
         <div className="mb-8">
           <div className="w-32 h-32 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <AlertTriangle className="w-16 h-16 text-red-600" />
+            <span className="text-6xl">⚠️</span>
           </div>
           <h1 className="text-6xl font-bold text-red-600 mb-2">Oops!</h1>
           <p className="text-2xl text-gray-700 font-semibold">Something went wrong</p>
@@ -59,14 +58,14 @@ export default function Error({
               onClick={() => reset()}
               className="inline-flex items-center justify-center px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors font-semibold"
             >
-              <RefreshCw className="w-5 h-5 mr-2" />
+              <span className="mr-2">🔄</span>
               Try Again
             </button>
             <Link
               href="/en"
               className="inline-flex items-center justify-center px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-semibold"
             >
-              <Home className="w-5 h-5 mr-2" />
+              <span className="mr-2">🏠</span>
               Go to Homepage
             </Link>
           </div>

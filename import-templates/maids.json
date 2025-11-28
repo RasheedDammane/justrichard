@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "maid-philippines-001",
+    "name": "Maria Santos",
+    "nationality": "Philippines",
+    "age": 28,
+    "sex": "Female",
+    "maritalStatus": "Single",
+    "yearsOfExperience": 5,
+    "monthlyFee": 2500,
+    "currency": "AED",
+    "englishLevel": "Good",
+    "arabicLevel": "Basic",
+    "elderlyCare": true,
+    "babysittingOlderThan1Year": true,
+    "cookingSyrianLebanese": false,
+    "cookingGulf": true,
+    "cookingInternational": true,
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isAvailable": true,
+    "isFeatured": true
+  },
+  {
+    "slug": "maid-indonesia-002",
+    "name": "Siti Nurhaliza",
+    "nationality": "Indonesia",
+    "age": 32,
+    "sex": "Female",
+    "yearsOfExperience": 8,
+    "monthlyFee": 2200,
+    "currency": "AED",
+    "elderlyCare": true,
+    "babysittingYoungerThan1Year": true,
+    "cookingInternational": true,
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isAvailable": true
+  }
+]

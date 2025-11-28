@@ -1,0 +1,193 @@
+// ============================================
+// CMS SYSTEM - Blog & Content Management
+// ============================================
+
+// Locales supportées (déjà existant dans votre système)
+// model Language existe déjà, on l'utilise
+
+// Groupe logique d'un contenu multi-langue
+model Content {
+  uid           String   @id @default(cuid())
+  type          String   @default("post") // post, page, news
+  status        ContentStatus @default(DRAFT)
+  
+  // Relations
+  createdBy     String?
+  createdByUser User?    @relation("ContentCreatedBy", fields: [createdBy], references: [id])
+  updatedBy     String?
+  updatedByUser User?    @relation("ContentUpdatedBy", fields: [updatedBy], references: [id])
+  
+  // Dates
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  publishAt     DateTime? // Planification publication
+  unpublishAt   DateTime? // Dépublication automatique
+  
+  // Relations
+  translations  ContentTranslation[]
+  categories    ContentCategory[]
+  tags          ContentTag[]
+  
+  @@index([status])
+  @@index([publishAt, unpublishAt])
+  @@map("contents")
+}
+
+enum ContentStatus {
+  DRAFT
+  IN_REVIEW
+  PUBLISHED
+  ARCHIVED
+}
+
+// Entrées traduites d'un contenu
+model ContentTranslation {
+  id              String   @id @default(cuid())
+  contentUid      String
+  content         Content  @relation(fields: [contentUid], references: [uid], onDelete: Cascade)
+  
+  locale          String   // 'en', 'fr', 'ar', etc.
+  
+  // Contenu
+  title           String
+  slug            String
+  excerpt         String?  @db.Text
+  bodyJson        Json     @default("[]") // Blocs structurés
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?  @db.Text
+  ogTitle         String?
+  ogDescription   String?  @db.Text
+  ogImageId       String?
+  ogImage         Media?   @relation(fields: [ogImageId], references: [id])
+  canonicalUrl    String?
+  
+  // Publication
+  isPublished     Boolean  @default(false)
+  publishedAt     DateTime?
+  
+  // Relations
+  revisions       ContentRevision[]
+  
+  @@unique([contentUid, locale])
+  @@unique([locale, slug])
+  @@index([locale, slug])
+  @@map("content_translations")
+}
+
+// Révisions (snapshot par locale)
+model ContentRevision {
+  id              BigInt   @id @default(autoincrement())
+  translationId   String
+  translation     ContentTranslation @relation(fields: [translationId], references: [id], onDelete: Cascade)
+  
+  userId          String?
+  user            User?    @relation(fields: [userId], references: [id])
+  
+  createdAt       DateTime @default(now())
+  diffJson        Json?    // Diff patch (optional)
+  snapshotJson    Json?    // Snapshot complet
+  
+  @@index([translationId])
+  @@map("content_revisions")
+}
+
+// Catégories (hiérarchiques)
+model Category {
+  id              String   @id @default(cuid())
+  parentId        String?
+  parent          Category? @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children        Category[] @relation("CategoryHierarchy")
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  // Relations
+  translations    CategoryTranslation[]
+  contents        ContentCategory[]
+  
+  @@map("categories")
+}
+
+model CategoryTranslation {
+  id              String   @id @default(cuid())
+  categoryId      String
+  category        Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  
+  locale          String
+  name            String
+  slug            String
+  description     String?  @db.Text
+  
+  @@unique([categoryId, locale])
+  @@unique([locale, slug])
+  @@map("category_translations")
+}
+
+// Tags
+model Tag {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  
+  // Relations
+  translations    TagTranslation[]
+  contents        ContentTag[]
+  
+  @@map("tags")
+}
+
+model TagTranslation {
+  id              String   @id @default(cuid())
+  tagId           String
+  tag             Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  
+  locale          String
+  name            String
+  slug            String
+  
+  @@unique([tagId, locale])
+  @@unique([locale, slug])
+  @@map("tag_translations")
+}
+
+// Relations many-to-many
+model ContentCategory {
+  contentUid      String
+  content         Content  @relation(fields: [contentUid], references: [uid], onDelete: Cascade)
+  categoryId      String
+  category        Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  
+  @@id([contentUid, categoryId])
+  @@map("content_categories")
+}
+
+model ContentTag {
+  contentUid      String
+  content         Content  @relation(fields: [contentUid], references: [uid], onDelete: Cascade)
+  tagId           String
+  tag             Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  
+  @@id([contentUid, tagId])
+  @@map("content_tags")
+}
+
+// Médias (extension du modèle Media existant si nécessaire)
+// Ajouter ces champs au modèle Media existant:
+// altText       String?
+// focalX        Float?   // 0..1
+// focalY        Float?   // 0..1
+// variants      Json?    // {webp:{url,w,h}, thumb:{...}}
+
+// Redirections 301 (slug changé)
+model Redirect {
+  id              BigInt   @id @default(autoincrement())
+  locale          String
+  fromPath        String
+  toPath          String
+  createdAt       DateTime @default(now())
+  
+  @@unique([locale, fromPath])
+  @@index([locale, fromPath])
+  @@map("redirects")
+}

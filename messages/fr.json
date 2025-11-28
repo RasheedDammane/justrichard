@@ -412,9 +412,108 @@
     "types": "Types de cookies que nous utilisons"
   },
   "legalNotice": {
-    "title": "Mention Légale",
-    "intro": "Informations légales importantes concernant CommunityHub.",
-    "company": "Informations sur l'Entreprise",
-    "compliance": "Conformité Réglementaire"
+    "title": "Mentions Légales",
+    "intro": "Informations légales importantes sur CommunityHub.",
+    "company": "Informations sur l'entreprise",
+    "compliance": "Conformité réglementaire"
+  },
+  "auth": {
+    "signup": {
+      "title": "Créez Votre Compte",
+      "subtitle": "Rejoignez notre communauté et commencez dès aujourd'hui",
+      "name": "Nom Complet",
+      "email": "Adresse Email",
+      "phone": "Numéro de Téléphone",
+      "password": "Mot de Passe",
+      "confirmPassword": "Confirmer le Mot de Passe",
+      "signupButton": "S'inscrire",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "loginLink": "Se Connecter"
+    },
+    "login": {
+      "title": "Bienvenue",
+      "subtitle": "Connectez-vous à votre compte",
+      "email": "Adresse Email",
+      "password": "Mot de Passe",
+      "loginButton": "Se Connecter",
+      "forgotPassword": "Mot de passe oublié ?",
+      "noAccount": "Vous n'avez pas de compte ?",
+      "signupLink": "S'inscrire"
+    }
+  },
+  "admin": {
+    "common": {
+      "add": "Ajouter",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "back": "Retour",
+      "view": "Voir",
+      "search": "Rechercher",
+      "filter": "Filtrer",
+      "export": "Exporter",
+      "import": "Importer",
+      "refresh": "Actualiser",
+      "loading": "Chargement...",
+      "noData": "Aucune donnée disponible",
+      "confirm": "Confirmer",
+      "yes": "Oui",
+      "no": "Non",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "status": "Statut",
+      "actions": "Actions",
+      "details": "Détails",
+      "settings": "Paramètres"
+    },
+    "properties": {
+      "title": "Propriétés",
+      "subtitle": "Gérer vos annonces immobilières",
+      "addNew": "Ajouter une propriété",
+      "stats": {
+        "total": "Total des propriétés",
+        "published": "Publiées",
+        "draft": "Brouillons",
+        "sold": "Vendues",
+        "rented": "Louées"
+      },
+      "filters": {
+        "all": "Toutes",
+        "draft": "Brouillons",
+        "published": "Publiées",
+        "sold": "Vendues",
+        "rented": "Louées"
+      },
+      "form": {
+        "name": "Nom de la propriété",
+        "slug": "Slug",
+        "description": "Description",
+        "type": "Type de propriété",
+        "status": "Statut",
+        "listingType": "Type d'annonce",
+        "salePrice": "Prix de vente",
+        "rentPrice": "Prix de location",
+        "currency": "Devise",
+        "bedrooms": "Chambres",
+        "bathrooms": "Salles de bain",
+        "area": "Surface",
+        "city": "Ville",
+        "country": "Pays",
+        "address": "Adresse",
+        "featured": "En vedette",
+        "active": "Actif",
+        "tabs": {
+          "basic": "Informations de base",
+          "details": "Détails de la propriété",
+          "location": "Localisation",
+          "pricing": "Tarification",
+          "media": "Médias",
+          "seo": "SEO"
+        }
+      },
+      "noProperties": "Aucune propriété trouvée",
+      "createFirst": "Créez votre première propriété pour commencer"
+    }
   }
 }

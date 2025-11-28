@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Sunseeker",
+    "slug": "sunseeker",
+    "description": "British luxury yacht manufacturer",
+    "country": "United Kingdom",
+    "yearFounded": 1969,
+    "specialization": "Motor Yachts",
+    "website": "https://www.sunseeker.com",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Predator", "Manhattan", "Portofino"]
+  },
+  {
+    "name": "Azimut",
+    "slug": "azimut",
+    "description": "Italian yacht manufacturer",
+    "country": "Italy",
+    "yearFounded": 1969,
+    "specialization": "Luxury Yachts",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Flybridge", "S Collection", "Grande"]
+  },
+  {
+    "name": "Ferretti",
+    "slug": "ferretti",
+    "description": "Italian luxury yacht manufacturer",
+    "country": "Italy",
+    "specialization": "Motor Yachts",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["550", "670", "780", "920"]
+  },
+  {
+    "name": "Princess",
+    "slug": "princess",
+    "description": "British motor yacht manufacturer",
+    "country": "United Kingdom",
+    "specialization": "Flybridge Yachts",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["F45", "V60", "Y85"]
+  },
+  {
+    "name": "Gulf Craft",
+    "slug": "gulf-craft",
+    "description": "UAE yacht and boat manufacturer",
+    "country": "United Arab Emirates",
+    "yearFounded": 1982,
+    "specialization": "Luxury Yachts",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Majesty", "Nomad", "Silvercraft"]
+  },
+  {
+    "name": "Benetti",
+    "slug": "benetti",
+    "description": "Italian luxury yacht builder",
+    "country": "Italy",
+    "yearFounded": 1873,
+    "specialization": "Mega Yachts",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Oasis", "B.Yond", "Tradition"]
+  },
+  {
+    "name": "Pershing",
+    "slug": "pershing",
+    "description": "Italian luxury yacht manufacturer",
+    "country": "Italy",
+    "specialization": "Sport Yachts",
+    "isActive": true,
+    "popularModels": ["6X", "7X", "8X", "9X"]
+  },
+  {
+    "name": "Riva",
+    "slug": "riva",
+    "description": "Italian luxury yacht manufacturer",
+    "country": "Italy",
+    "yearFounded": 1842,
+    "specialization": "Classic Luxury Yachts",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["76 Bahamas", "88 Florida", "100 Corsaro"]
+  }
+]

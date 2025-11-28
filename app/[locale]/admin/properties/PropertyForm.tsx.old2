@@ -1,0 +1,315 @@
+'use client';
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { Save, X } from 'lucide-react';
+
+interface PropertyFormProps {
+  locale: string;
+  property?: any;
+}
+
+export default function PropertyForm({ locale, property }: PropertyFormProps) {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    title: property?.title || '',
+    description: property?.description || '',
+    propertyType: property?.propertyType || 'APARTMENT',
+    listingType: property?.listingType || 'FOR_SALE',
+    status: property?.status || 'DRAFT',
+    salePrice: property?.salePrice || '',
+    rentPrice: property?.rentPrice || '',
+    currency: property?.currency || 'AED',
+    area: property?.area || '',
+    bedrooms: property?.bedrooms || '',
+    bathrooms: property?.bathrooms || '',
+    address: property?.address || '',
+    cityId: property?.cityId || '',
+    countryId: property?.countryId || '',
+    featured: property?.featured || false,
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const url = property 
+        ? `/api/admin/properties/${property.id}`
+        : '/api/admin/properties';
+      
+      const method = property ? 'PUT' : 'POST';
+
+      const response = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        router.push(`/${locale}/admin/properties`);
+        router.refresh();
+      } else {
+        alert('Erreur lors de la sauvegarde');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Erreur lors de la sauvegarde');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value,
+    }));
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Title */}
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Titre *
+        </label>
+        <input
+          type="text"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+          required
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Ex: Appartement moderne avec vue sur mer"
+        />
+      </div>
+
+      {/* Description */}
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Description
+        </label>
+        <textarea
+          name="description"
+          value={formData.description}
+          onChange={handleChange}
+          rows={4}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Description détaillée de la propriété..."
+        />
+      </div>
+
+      {/* Type & Listing Type */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Type de propriété *
+          </label>
+          <select
+            name="propertyType"
+            value={formData.propertyType}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="APARTMENT">Appartement</option>
+            <option value="VILLA">Villa</option>
+            <option value="TOWNHOUSE">Maison de ville</option>
+            <option value="PENTHOUSE">Penthouse</option>
+            <option value="STUDIO">Studio</option>
+            <option value="LAND">Terrain</option>
+            <option value="COMMERCIAL">Commercial</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Type d'annonce *
+          </label>
+          <select
+            name="listingType"
+            value={formData.listingType}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="FOR_SALE">À vendre</option>
+            <option value="FOR_RENT">À louer</option>
+            <option value="BOTH">Vente et location</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Prices */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {(formData.listingType === 'FOR_SALE' || formData.listingType === 'BOTH') && (
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Prix de vente
+            </label>
+            <input
+              type="number"
+              name="salePrice"
+              value={formData.salePrice}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="0"
+            />
+          </div>
+        )}
+
+        {(formData.listingType === 'FOR_RENT' || formData.listingType === 'BOTH') && (
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Prix de location (mensuel)
+            </label>
+            <input
+              type="number"
+              name="rentPrice"
+              value={formData.rentPrice}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="0"
+            />
+          </div>
+        )}
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Devise
+          </label>
+          <select
+            name="currency"
+            value={formData.currency}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="AED">AED</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Details */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Surface (m²) *
+          </label>
+          <input
+            type="number"
+            name="area"
+            value={formData.area}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="0"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Chambres *
+          </label>
+          <input
+            type="number"
+            name="bedrooms"
+            value={formData.bedrooms}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="0"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Salles de bain *
+          </label>
+          <input
+            type="number"
+            name="bathrooms"
+            value={formData.bathrooms}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            placeholder="0"
+          />
+        </div>
+      </div>
+
+      {/* Address */}
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Adresse
+        </label>
+        <input
+          type="text"
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          placeholder="Adresse complète"
+        />
+      </div>
+
+      {/* Status & Featured */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Statut
+          </label>
+          <select
+            name="status"
+            value={formData.status}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+            <option value="DRAFT">Brouillon</option>
+            <option value="PENDING_REVIEW">En attente de validation</option>
+            <option value="PUBLISHED">Publié</option>
+            <option value="ARCHIVED">Archivé</option>
+          </select>
+        </div>
+
+        <div className="flex items-center pt-8">
+          <input
+            type="checkbox"
+            name="featured"
+            checked={formData.featured}
+            onChange={handleChange}
+            className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+          />
+          <label className="ml-2 text-sm font-medium text-gray-700">
+            Propriété mise en avant
+          </label>
+        </div>
+      </div>
+
+      {/* Actions */}
+      <div className="flex items-center gap-4 pt-6 border-t">
+        <button
+          type="submit"
+          disabled={loading}
+          className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+        >
+          <Save className="w-5 h-5" />
+          {loading ? 'Enregistrement...' : 'Enregistrer'}
+        </button>
+        <button
+          type="button"
+          onClick={() => router.back()}
+          className="flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 font-medium"
+        >
+          <X className="w-5 h-5" />
+          Annuler
+        </button>
+      </div>
+    </form>
+  );
+}

@@ -1,0 +1,64 @@
+{
+  "logo": {
+    "text": "JustRichard",
+    "href": "/en"
+  },
+  "links": [
+    {
+      "label": "Home",
+      "href": "/en"
+    },
+    {
+      "label": "Doctors",
+      "href": "/en/doctors"
+    },
+    {
+      "label": "Car Rental",
+      "href": "/en/car-rental"
+    },
+    {
+      "label": "Moto & Scooter Rental",
+      "href": "/en/motorbike-rental"
+    },
+    {
+      "label": "Yachts",
+      "href": "/en/yachts"
+    },
+    {
+      "label": "Activities",
+      "href": "/en/activities"
+    },
+    {
+      "label": "Properties",
+      "href": "/en/properties"
+    },
+    {
+      "label": "Legal",
+      "href": "/en/services/legal"
+    },
+    {
+      "label": "Suppliers",
+      "href": "/en/suppliers"
+    },
+    {
+      "label": "Business Setup",
+      "href": "/en/business-setup"
+    },
+    {
+      "label": "Insurance",
+      "href": "/en/insurance"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Login",
+      "href": "/en/auth/login",
+      "type": "secondary"
+    },
+    {
+      "label": "Sign Up",
+      "href": "/en/auth/signup",
+      "type": "primary"
+    }
+  ]
+}

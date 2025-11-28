@@ -1,0 +1,60 @@
+{
+  "logo": {
+    "text": "JustRichard",
+    "href": "/fr"
+  },
+  "links": [
+    {
+      "label": "Accueil",
+      "href": "/fr"
+    },
+    {
+      "label": "Docteurs",
+      "href": "/fr/doctors"
+    },
+    {
+      "label": "Location de Voitures",
+      "href": "/fr/car-rental"
+    },
+    {
+      "label": "Yachts",
+      "href": "/fr/yachts"
+    },
+    {
+      "label": "Activités",
+      "href": "/fr/activities"
+    },
+    {
+      "label": "Propriétés",
+      "href": "/fr/properties"
+    },
+    {
+      "label": "Juridique",
+      "href": "/fr/services/legal"
+    },
+    {
+      "label": "Fournisseurs",
+      "href": "/fr/suppliers"
+    },
+    {
+      "label": "Création d'Entreprise",
+      "href": "/fr/business-setup"
+    },
+    {
+      "label": "Assurance",
+      "href": "/fr/insurance"
+    }
+  ],
+  "actions": [
+    {
+      "label": "Connexion",
+      "href": "/fr/auth/login",
+      "type": "secondary"
+    },
+    {
+      "label": "S'inscrire",
+      "href": "/fr/auth/signup",
+      "type": "primary"
+    }
+  ]
+}

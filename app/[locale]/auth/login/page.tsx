@@ -20,21 +20,32 @@ export default function LoginPage({ params: { locale } }: { params: { locale: st
     setLoading(true);
 
     try {
-      const result = await signIn('credentials', {
-        email,
-        password,
-        redirect: false,
+      console.log('[LOGIN] Form submit for:', email);
+      
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
       });
 
-      if (result?.error) {
-        setError('Invalid email or password');
-      } else {
-        router.push(`/${locale}`);
-        router.refresh();
+      const data = await response.json();
+      console.log('[LOGIN] Response:', data);
+
+      if (!response.ok) {
+        setError(data.error || 'Invalid email or password');
+        setLoading(false);
+        return;
       }
-    } catch (err) {
+
+      console.log('[LOGIN] ✅ Login successful!');
+      console.log('[LOGIN] Server will redirect to /admin with cookie');
+      // L'API retourne une redirection 302, le navigateur suit automatiquement
+      // Le cookie est inclus dans la réponse HTTP
+    } catch (err: any) {
+      console.error('[LOGIN] Exception:', err);
       setError('An error occurred. Please try again.');
-    } finally {
       setLoading(false);
     }
   };
@@ -43,23 +54,17 @@ export default function LoginPage({ params: { locale } }: { params: { locale: st
     setError('');
     setLoading(true);
 
-    try {
-      const result = await signIn('credentials', {
-        email,
-        password,
-        redirect: false,
-      });
+    const result = await signIn('credentials', {
+      email,
+      password,
+      redirect: false,
+    });
 
-      if (result?.error) {
-        setError('Invalid email or password');
-      } else {
-        router.push(`/${locale}`);
-        router.refresh();
-      }
-    } catch (err) {
-      setError('An error occurred. Please try again.');
-    } finally {
+    if (result?.error) {
+      setError('Invalid email or password');
       setLoading(false);
+    } else if (result?.ok) {
+      router.push(`/${locale}/admin`);
     }
   };
 
@@ -172,7 +177,7 @@ export default function LoginPage({ params: { locale } }: { params: { locale: st
 
             <button
               type="button"
-              onClick={() => handleQuickLogin('customer@test.com', 'customer123')}
+              onClick={() => handleQuickLogin('customer@test.com', 'admin123')}
               disabled={loading}
               className="w-full inline-flex justify-center items-center px-4 py-2 border border-blue-300 shadow-sm text-sm font-medium rounded-md text-blue-700 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
@@ -184,7 +189,7 @@ export default function LoginPage({ params: { locale } }: { params: { locale: st
 
             <button
               type="button"
-              onClick={() => handleQuickLogin('provider@test.com', 'provider123')}
+              onClick={() => handleQuickLogin('provider@test.com', 'admin123')}
               disabled={loading}
               className="w-full inline-flex justify-center items-center px-4 py-2 border border-green-300 shadow-sm text-sm font-medium rounded-md text-green-700 bg-green-50 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
@@ -196,7 +201,7 @@ export default function LoginPage({ params: { locale } }: { params: { locale: st
 
             <button
               type="button"
-              onClick={() => handleQuickLogin('manager@test.com', 'manager123')}
+              onClick={() => handleQuickLogin('manager@test.com', 'admin123')}
               disabled={loading}
               className="w-full inline-flex justify-center items-center px-4 py-2 border border-orange-300 shadow-sm text-sm font-medium rounded-md text-orange-700 bg-orange-50 hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >

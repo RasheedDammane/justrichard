@@ -1,0 +1,396 @@
+{
+  "business_setup_data": {
+    "thailand": {
+      "country": "Thailand",
+      "slug": "thailand-business-setup-visa",
+      "hero_title": "Set up your company & business visa in Thailand",
+      "hero_subtitle": "Thai Limited Company, BOI structures, Non-B Visa & Work Permit.",
+      "company_structures": [
+        {
+          "code": "thai_limited_company",
+          "label": "Thai Limited Company",
+          "foreign_ownership": "49% standard (100% possible under BOI or Foreign Business License)",
+          "min_capital_hint": "Usually 2,000,000 THB per Work Permit",
+          "ideal_for": ["Retail", "Services", "Local business", "SMEs"],
+          "typical_setup_time_weeks": 4,
+          "base_cost_usd": 2500
+        },
+        {
+          "code": "boi_company",
+          "label": "BOI Promoted Company",
+          "foreign_ownership": "Up to 100% foreign ownership",
+          "min_capital_hint": "Variable depending on business activity",
+          "ideal_for": ["Tech", "Export", "Manufacturing", "R&D projects"],
+          "typical_setup_time_weeks": 8,
+          "base_cost_usd": 5000
+        },
+        {
+          "code": "representative_office",
+          "label": "Representative Office",
+          "foreign_ownership": "100% foreign ownership",
+          "min_capital_hint": "3,000,000 THB",
+          "ideal_for": ["Market research", "Support office", "Non-revenue activities"],
+          "typical_setup_time_weeks": 6,
+          "base_cost_usd": 3500
+        }
+      ],
+      "visa_packages": [
+        {
+          "code": "non_immigrant_b",
+          "label": "Non-Immigrant B + Work Permit",
+          "linked_structures": ["thai_limited_company", "boi_company"],
+          "duration": "90 days then extendable to 1 year",
+          "includes_work_permit": true,
+          "cost_usd": 800
+        },
+        {
+          "code": "ltr_visa",
+          "label": "Long Term Residence Visa (LTR)",
+          "duration": "10 years",
+          "includes_work_permit": true,
+          "ideal_for": ["Investors", "Wealthy individuals", "Professionals"],
+          "linked_structures": [],
+          "cost_usd": 1500
+        }
+      ],
+      "process_steps": [
+        { "order": 1, "label": "Company name reservation", "duration": "1 day" },
+        { "order": 2, "label": "Company registration", "duration": "1 week" },
+        { "order": 3, "label": "VAT & Social Fund setup", "duration": "1 week" },
+        { "order": 4, "label": "Work Permit & Visa", "duration": "2–4 weeks" }
+      ],
+      "documents_required": {
+        "company": [
+          "Passport copy of shareholders",
+          "Address proof",
+          "Company name choices",
+          "Business activity description"
+        ],
+        "visa": [
+          "CV",
+          "Bank statements",
+          "Education certificate",
+          "Police clearance (depending on case)"
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Can foreigners own 100% of a company in Thailand?",
+          "a": "Yes under BOI or with a Foreign Business License."
+        },
+        {
+          "q": "How long does it take to get a Non-B visa?",
+          "a": "Usually 3–4 weeks once the company is ready."
+        }
+      ]
+    },
+    "uae": {
+      "country": "United Arab Emirates",
+      "slug": "uae-business-setup-visa",
+      "hero_title": "Business Setup & Investor Visa in UAE",
+      "hero_subtitle": "Free Zone, Mainland LLC, Investor & Partner Visa, Golden Visa.",
+      "company_structures": [
+        {
+          "code": "uae_mainland_llc",
+          "label": "Mainland LLC",
+          "foreign_ownership": "Up to 100% foreign ownership",
+          "ideal_for": ["Local trade", "Physical offices", "Retail", "Services"],
+          "typical_setup_time_weeks": 3,
+          "base_cost_usd": 8000
+        },
+        {
+          "code": "uae_free_zone_company",
+          "label": "Free Zone Company",
+          "foreign_ownership": "100% foreign ownership",
+          "ideal_for": ["Consulting", "Tech", "E-commerce", "International trade"],
+          "typical_setup_time_weeks": 1,
+          "base_cost_usd": 5000
+        },
+        {
+          "code": "uae_offshore_company",
+          "label": "Offshore Company",
+          "foreign_ownership": "100% foreign",
+          "ideal_for": ["Holding", "Asset protection", "International business"],
+          "typical_setup_time_weeks": 1,
+          "base_cost_usd": 6000
+        }
+      ],
+      "visa_packages": [
+        {
+          "code": "uae_investor_visa",
+          "label": "Investor / Partner Visa",
+          "linked_structures": ["uae_mainland_llc", "uae_free_zone_company"],
+          "duration": "2 to 10 years",
+          "cost_usd": 1200
+        },
+        {
+          "code": "golden_visa",
+          "label": "UAE Golden Visa",
+          "duration": "10 years",
+          "ideal_for": ["Investors", "High net worth individuals", "Entrepreneurs"],
+          "cost_usd": 3000
+        }
+      ],
+      "process_steps": [
+        { "order": 1, "label": "Choose Free Zone or Mainland", "duration": "1 day" },
+        { "order": 2, "label": "Company registration", "duration": "1–7 days" },
+        { "order": 3, "label": "Immigration file & Medical", "duration": "1–3 days" },
+        { "order": 4, "label": "Visa stamping", "duration": "3–5 days" }
+      ],
+      "documents_required": {
+        "company": [
+          "Passport",
+          "Phone number & email",
+          "Business activity",
+          "Shareholder information"
+        ],
+        "visa": [
+          "Passport",
+          "Photo",
+          "Medical test",
+          "Emirates ID application"
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Free Zone or Mainland?",
+          "a": "Free Zones allow 100% ownership; Mainland allows full access to local market."
+        },
+        {
+          "q": "How fast can I get a visa?",
+          "a": "In most Free Zones, within 7–10 days."
+        }
+      ]
+    },
+    "saudi_arabia": {
+      "country": "Saudi Arabia",
+      "slug": "saudi-business-setup-visa",
+      "hero_title": "Business Setup & Investor Visa in Saudi Arabia",
+      "hero_subtitle": "MISA License, LLC, Branch Setup, Investor Visa, Premium Residency.",
+      "company_structures": [
+        {
+          "code": "ksa_llc",
+          "label": "Saudi LLC",
+          "foreign_ownership": "Up to 100% foreign ownership",
+          "min_capital_hint": "100k–500k SAR depending on sector",
+          "ideal_for": ["Foreign investors", "Industry", "Services"],
+          "typical_setup_time_weeks": 8,
+          "base_cost_usd": 10000
+        },
+        {
+          "code": "ksa_joint_stock",
+          "label": "Joint Stock Company",
+          "foreign_ownership": "Joint or full foreign ownership",
+          "min_capital_hint": "Higher capital required",
+          "ideal_for": ["Large enterprises"],
+          "typical_setup_time_weeks": 12,
+          "base_cost_usd": 15000
+        },
+        {
+          "code": "ksa_branch",
+          "label": "Branch of Foreign Company",
+          "foreign_ownership": "100% foreign",
+          "ideal_for": ["Multinational expansion"],
+          "typical_setup_time_weeks": 10,
+          "base_cost_usd": 12000
+        }
+      ],
+      "visa_packages": [
+        {
+          "code": "ksa_investor_visa",
+          "label": "Investor Visa + Iqama",
+          "linked_structures": ["ksa_llc", "ksa_branch"],
+          "duration": "1-year renewable then multi-year",
+          "cost_usd": 1500
+        },
+        {
+          "code": "premium_residency",
+          "label": "Saudi Premium Residency",
+          "duration": "Long-term",
+          "ideal_for": ["Wealthy individuals", "Entrepreneurs"],
+          "cost_usd": 5000
+        }
+      ],
+      "process_steps": [
+        { "order": 1, "label": "MISA investment license", "duration": "2–4 weeks" },
+        { "order": 2, "label": "Commercial Registration (CR)", "duration": "2 weeks" },
+        { "order": 3, "label": "Bank account setup", "duration": "2–4 weeks" },
+        { "order": 4, "label": "Visa & Iqama issuance", "duration": "3–6 weeks" }
+      ],
+      "documents_required": {
+        "company": [
+          "Articles of the parent company (if branch)",
+          "Passport copies",
+          "Business plan",
+          "Capital proof"
+        ],
+        "visa": [
+          "Passport",
+          "Medical test",
+          "Police clearance"
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Can foreigners own 100% in Saudi Arabia?",
+          "a": "Yes in many sectors under MISA license."
+        },
+        {
+          "q": "Is Saudi Arabia suitable for startups?",
+          "a": "Yes, but capital requirements are higher than UAE or Thailand."
+        }
+      ]
+    },
+    "qatar": {
+      "country": "Qatar",
+      "slug": "qatar-business-setup-visa",
+      "hero_title": "Company Formation & Residence Visa in Qatar",
+      "hero_subtitle": "Qatar LLC, Free Zone, Investor Visa & Residence Permit.",
+      "company_structures": [
+        {
+          "code": "qatar_llc",
+          "label": "Qatar LLC",
+          "foreign_ownership": "Up to 100% foreign ownership in many sectors",
+          "ideal_for": ["Services", "Trading", "Local business"],
+          "typical_setup_time_weeks": 6,
+          "base_cost_usd": 9000
+        },
+        {
+          "code": "qatar_free_zone",
+          "label": "Qatar Free Zone Company",
+          "foreign_ownership": "100% foreign",
+          "ideal_for": ["Logistics", "Industrial", "Regional HQ"],
+          "typical_setup_time_weeks": 6,
+          "base_cost_usd": 7000
+        },
+        {
+          "code": "qatar_branch",
+          "label": "Branch of Foreign Company",
+          "foreign_ownership": "100% foreign",
+          "ideal_for": ["Government projects"],
+          "typical_setup_time_weeks": 8,
+          "base_cost_usd": 11000
+        }
+      ],
+      "visa_packages": [
+        {
+          "code": "qatar_investor_visa",
+          "label": "Investor Visa",
+          "linked_structures": ["qatar_llc", "qatar_free_zone"],
+          "duration": "1–5 years",
+          "cost_usd": 1300
+        },
+        {
+          "code": "qatar_work_visa",
+          "label": "Work Visa & Residence Permit (RP)",
+          "duration": "1–3 years",
+          "cost_usd": 900
+        }
+      ],
+      "process_steps": [
+        { "order": 1, "label": "Commercial registration", "duration": "2–4 weeks" },
+        { "order": 2, "label": "Trade license", "duration": "1–2 weeks" },
+        { "order": 3, "label": "Office lease", "duration": "1 week" },
+        { "order": 4, "label": "Visa & RP process", "duration": "2–4 weeks" }
+      ],
+      "documents_required": {
+        "company": [
+          "Passport copies",
+          "Business activity description",
+          "Shareholder information"
+        ],
+        "visa": [
+          "Passport",
+          "Medical test",
+          "Biometrics"
+        ]
+      },
+      "faqs": [
+        {
+          "q": "Is Qatar good for business?",
+          "a": "Yes, especially logistics and industrial sectors."
+        }
+      ]
+    },
+    "vietnam": {
+      "country": "Vietnam",
+      "slug": "vietnam-business-setup-visa",
+      "hero_title": "Company Formation & TRC Visa in Vietnam",
+      "hero_subtitle": "100% Foreign-Owned LLC, Joint Venture, Representative Office, TRC & Work Permit.",
+      "company_structures": [
+        {
+          "code": "vn_llc_foreign",
+          "label": "100% Foreign-Owned LLC",
+          "foreign_ownership": "100% allowed in many sectors",
+          "ideal_for": ["IT", "Services", "Trading"],
+          "typical_setup_time_weeks": 12,
+          "base_cost_usd": 3000
+        },
+        {
+          "code": "vn_joint_venture",
+          "label": "Joint Venture Company",
+          "foreign_ownership": "Shared with local partner",
+          "ideal_for": ["Restricted sectors", "Local network"],
+          "typical_setup_time_weeks": 12,
+          "base_cost_usd": 3500
+        },
+        {
+          "code": "vn_rep_office",
+          "label": "Representative Office",
+          "foreign_ownership": "100% foreign",
+          "ideal_for": ["Market research", "Support activities"],
+          "typical_setup_time_weeks": 6,
+          "base_cost_usd": 2000
+        }
+      ],
+      "visa_packages": [
+        {
+          "code": "vn_business_visa",
+          "label": "Business Visa",
+          "duration": "1–12 months",
+          "linked_structures": [],
+          "cost_usd": 300
+        },
+        {
+          "code": "vn_trc",
+          "label": "Temporary Residence Card (TRC)",
+          "linked_structures": ["vn_llc_foreign", "vn_joint_venture"],
+          "duration": "1–2 years",
+          "cost_usd": 600
+        },
+        {
+          "code": "vn_work_permit",
+          "label": "Work Permit",
+          "duration": "2 years",
+          "cost_usd": 500
+        }
+      ],
+      "process_steps": [
+        { "order": 1, "label": "Investment registration certificate", "duration": "3–4 weeks" },
+        { "order": 2, "label": "Enterprise registration certificate", "duration": "2 weeks" },
+        { "order": 3, "label": "Bank & capital injection", "duration": "2–4 weeks" },
+        { "order": 4, "label": "Work Permit & TRC", "duration": "4–8 weeks" }
+      ],
+      "documents_required": {
+        "company": [
+          "Passport",
+          "Business plan",
+          "Office lease",
+          "Capital proof"
+        ],
+        "visa": [
+          "Passport",
+          "Photos",
+          "Police certificate",
+          "Work contract (for TRC/Work Permit)"
+        ]
+      },
+      "faqs": [
+        {
+          "q": "How long does it take to open a company in Vietnam?",
+          "a": "Usually 2–3 months."
+        }
+      ]
+    }
+  }
+}

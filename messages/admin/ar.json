@@ -1,0 +1,814 @@
+{
+  "admin": {
+    "common": {
+      "add": "إضافة",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "save": "حفظ",
+      "saving": "جاري الحفظ...",
+      "cancel": "إلغاء",
+      "select": "اختر",
+      "search": "بحث",
+      "filter": "تصفية",
+      "export": "تصدير",
+      "import": "استيراد",
+      "refresh": "تحديث",
+      "total": "المجموع",
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "featured": "مميز",
+      "available": "متاح",
+      "unavailable": "غير متاح",
+      "status": "الحالة",
+      "actions": "الإجراءات",
+      "inTotal": "{count} في المجموع",
+      "loading": "جاري التحميل...",
+      "noData": "لا توجد بيانات متاحة",
+      "confirm": "تأكيد",
+      "confirmDelete": "هل أنت متأكد من حذف هذا العنصر؟",
+      "success": "نجح",
+      "error": "خطأ",
+      "required": "مطلوب",
+      "view": "عرض"
+    },
+    "navigation": {
+      "dashboard": "لوحة التحكم",
+      "users": "المستخدمون",
+      "properties": "العقارات",
+      "services": "الخدمات",
+      "bookings": "الحجوزات",
+      "categories": "الفئات",
+      "partners": "الشركاء",
+      "doctors": "الأطباء",
+      "lawyers": "المحامون",
+      "coaches": "المدربون",
+      "maids": "عاملات المنازل",
+      "motorbikes": "الدراجات النارية",
+      "rentalCars": "سيارات الإيجار",
+      "yachts": "اليخوت",
+      "activities": "الأنشطة",
+      "suppliers": "الموردون",
+      "settings": "الإعدادات",
+      "logout": "تسجيل الخروج"
+    },
+    "maids": {
+      "title": "عاملات المنازل",
+      "subtitle": "{count} عاملة في المجموع",
+      "new": "عاملة جديدة",
+      "edit": "تعديل العاملة",
+      "addNew": "إضافة عاملة جديدة إلى النظام",
+      "stats": {
+        "total": "المجموع",
+        "active": "نشطة",
+        "featured": "مميزة",
+        "avgSalary": "متوسط الراتب"
+      },
+      "table": {
+        "name": "الاسم",
+        "nationality": "الجنسية",
+        "age": "العمر",
+        "experience": "الخبرة",
+        "salary": "الراتب",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "form": {
+        "name": "الاسم",
+        "slug": "الرابط",
+        "refNo": "رقم المرجع",
+        "nationality": "الجنسية",
+        "age": "العمر",
+        "gender": "الجنس",
+        "female": "أنثى",
+        "male": "ذكر",
+        "yearsOfExperience": "سنوات الخبرة",
+        "monthlyFee": "الراتب الشهري",
+        "country": "البلد",
+        "city": "المدينة",
+        "phone": "الهاتف",
+        "email": "البريد الإلكتروني",
+        "englishLevel": "مستوى الإنجليزية",
+        "arabicLevel": "مستوى العربية",
+        "none": "لا شيء",
+        "basic": "أساسي",
+        "good": "جيد",
+        "fluent": "ممتاز",
+        "active": "نشطة",
+        "featured": "مميزة"
+      },
+      "units": {
+        "years": "سنة",
+        "month": "شهر"
+      }
+    },
+    "motorbikes": {
+      "title": "الدراجات النارية",
+      "subtitle": "{count} دراجة في المجموع",
+      "new": "دراجة جديدة",
+      "edit": "تعديل الدراجة",
+      "addNew": "إضافة دراجة جديدة إلى النظام",
+      "stats": {
+        "total": "المجموع",
+        "available": "متاحة",
+        "avgPriceDay": "متوسط السعر/يوم"
+      },
+      "table": {
+        "motorbike": "الدراجة",
+        "category": "الفئة",
+        "engine": "المحرك",
+        "priceDay": "السعر/يوم",
+        "location": "الموقع",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "form": {
+        "brand": "الماركة",
+        "model": "الموديل",
+        "slug": "الرابط",
+        "year": "السنة",
+        "category": "الفئة",
+        "engineSize": "سعة المحرك (cc)",
+        "seats": "المقاعد",
+        "transmission": "ناقل الحركة",
+        "automatic": "أوتوماتيك",
+        "manual": "يدوي",
+        "fuelType": "نوع الوقود",
+        "petrol": "بنزين",
+        "electric": "كهربائي",
+        "priceDay": "السعر/يوم",
+        "priceWeek": "السعر/أسبوع",
+        "priceMonth": "السعر/شهر",
+        "currency": "العملة",
+        "country": "البلد",
+        "city": "المدينة",
+        "description": "الوصف",
+        "available": "متاحة"
+      }
+    },
+    "rentalCars": {
+      "title": "سيارات الإيجار",
+      "subtitle": "{count} سيارة في المجموع",
+      "new": "سيارة جديدة",
+      "edit": "تعديل السيارة",
+      "addNew": "إضافة سيارة جديدة إلى النظام",
+      "stats": {
+        "total": "المجموع",
+        "active": "نشطة",
+        "featured": "مميزة",
+        "avgPriceDay": "متوسط السعر/يوم"
+      },
+      "table": {
+        "car": "السيارة",
+        "category": "الفئة",
+        "priceDay": "السعر/يوم",
+        "location": "الموقع",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "form": {
+        "name": "الاسم",
+        "slug": "الرابط",
+        "brand": "الماركة",
+        "model": "الموديل",
+        "year": "السنة",
+        "category": "الفئة",
+        "economy": "اقتصادية",
+        "compact": "صغيرة",
+        "sedan": "سيدان",
+        "suv": "دفع رباعي",
+        "luxury": "فاخرة",
+        "sports": "رياضية",
+        "van": "فان",
+        "color": "اللون",
+        "doors": "الأبواب",
+        "seats": "المقاعد",
+        "fuelType": "نوع الوقود",
+        "petrol": "بنزين",
+        "diesel": "ديزل",
+        "electric": "كهربائي",
+        "hybrid": "هجين",
+        "transmission": "ناقل الحركة",
+        "automatic": "أوتوماتيك",
+        "manual": "يدوي",
+        "priceDay": "السعر/يوم",
+        "priceWeek": "السعر/أسبوع",
+        "priceMonth": "السعر/شهر",
+        "country": "البلد",
+        "city": "المدينة",
+        "shortDescription": "وصف مختصر",
+        "description": "الوصف",
+        "active": "نشطة",
+        "featured": "مميزة",
+        "available": "متاحة"
+      }
+    },
+    "yachts": {
+      "title": "اليخوت",
+      "subtitle": "{count} يخت في المجموع",
+      "new": "يخت جديد",
+      "edit": "تعديل اليخت",
+      "addNew": "إضافة يخت جديد إلى النظام",
+      "stats": {
+        "total": "المجموع",
+        "active": "نشطة",
+        "featured": "مميزة",
+        "avgPriceHour": "متوسط السعر/ساعة"
+      },
+      "table": {
+        "yacht": "اليخت",
+        "capacity": "السعة",
+        "length": "الطول",
+        "priceHour": "السعر/ساعة",
+        "location": "الموقع",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "form": {
+        "name": "الاسم",
+        "slug": "الرابط",
+        "brand": "الماركة",
+        "model": "الموديل",
+        "year": "السنة",
+        "length": "الطول (قدم)",
+        "capacity": "السعة",
+        "cabins": "الكبائن",
+        "bathrooms": "الحمامات",
+        "crew": "الطاقم",
+        "speed": "السرعة (عقدة)",
+        "fuelType": "نوع الوقود",
+        "engineType": "نوع المحرك",
+        "manufacturer": "الصانع",
+        "priceHour": "السعر/ساعة",
+        "price2Hours": "السعر/ساعتين",
+        "price3Hours": "السعر/3 ساعات",
+        "price4Hours": "السعر/4 ساعات",
+        "country": "البلد",
+        "city": "المدينة",
+        "description": "الوصف",
+        "shortDescription": "وصف مختصر",
+        "features": "المميزات",
+        "amenities": "المرافق",
+        "included": "مشمول",
+        "notIncluded": "غير مشمول",
+        "active": "نشط",
+        "featured": "مميز",
+        "available": "متاح"
+      }
+    },
+    "providers": {
+      "title": "مقدمو الخدمات",
+      "subtitle": "{count} مقدم خدمة في المجموع",
+      "new": "مقدم خدمة جديد",
+      "edit": "تعديل مقدم الخدمة",
+      "addNew": "إضافة مقدم خدمة جديد إلى النظام",
+      "types": {
+        "doctor": "طبيب",
+        "lawyer": "محامي",
+        "coach": "مدرب",
+        "activity": "نشاط",
+        "supplier": "مورد",
+        "transfer": "نقل"
+      },
+      "stats": {
+        "total": "المجموع",
+        "active": "نشط",
+        "verified": "موثق",
+        "avgRating": "متوسط التقييم"
+      },
+      "table": {
+        "name": "الاسم",
+        "type": "النوع",
+        "specialty": "التخصص",
+        "rating": "التقييم",
+        "location": "الموقع",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "form": {
+        "name": "الاسم",
+        "slug": "الرابط",
+        "type": "النوع",
+        "specialty": "التخصص",
+        "description": "الوصف",
+        "shortDescription": "وصف مختصر",
+        "phone": "الهاتف",
+        "email": "البريد الإلكتروني",
+        "website": "الموقع الإلكتروني",
+        "address": "العنوان",
+        "country": "البلد",
+        "city": "المدينة",
+        "languages": "اللغات",
+        "yearsOfExperience": "سنوات الخبرة",
+        "consultationFee": "رسوم الاستشارة",
+        "currency": "العملة",
+        "active": "نشط",
+        "verified": "موثق",
+        "featured": "مميز"
+      }
+    },
+    "properties": {
+      "title": "إدارة العقارات",
+      "subtitle": "{count} عقار • {published} منشور",
+      "new": "عقار جديد",
+      "edit": "تعديل العقار",
+      "addNew": "إضافة عقار",
+      "noProperties": "لا توجد عقارات",
+      "addFirstProperty": "ابدأ بإضافة عقارك الأول",
+      "stats": {
+        "total": "المجموع",
+        "draft": "مسودات",
+        "published": "منشور",
+        "sold": "مباع",
+        "rented": "مؤجر"
+      },
+      "filters": {
+        "all": "الكل",
+        "draft": "مسودات",
+        "published": "منشور",
+        "sold": "مباع",
+        "rented": "مؤجر"
+      },
+      "form": {
+        "title": "العنوان",
+        "description": "الوصف",
+        "propertyType": "نوع العقار",
+        "listingType": "نوع القائمة",
+        "status": "الحالة",
+        "price": "السعر",
+        "area": "المساحة (م²)",
+        "bedrooms": "غرف النوم",
+        "bathrooms": "الحمامات",
+        "featured": "مميز",
+        "images": "الصور"
+      },
+      "table": {
+        "property": "العقار",
+        "type": "النوع",
+        "price": "السعر",
+        "location": "الموقع",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "dashboard": {
+      "title": "لوحة التحكم",
+      "welcome": "مرحباً، {name}",
+      "overview": "نظرة عامة",
+      "recentActivity": "النشاط الأخير",
+      "quickStats": "إحصائيات سريعة",
+      "totalUsers": "إجمالي المستخدمين",
+      "totalBookings": "إجمالي الحجوزات",
+      "totalRevenue": "إجمالي الإيرادات",
+      "activeProviders": "مقدمو الخدمات النشطون"
+    },
+    "users": {
+      "title": "إدارة المستخدمين",
+      "subtitle": "إدارة جميع مستخدمي المنصة",
+      "new": "مستخدم جديد",
+      "edit": "تعديل المستخدم",
+      "addNew": "إضافة مستخدم جديد",
+      "listTitle": "قائمة المستخدمين",
+      "deactivate": "إلغاء التفعيل",
+      "stats": {
+        "totalUsers": "إجمالي المستخدمين",
+        "customers": "العملاء",
+        "providers": "مقدمو الخدمات",
+        "admins": "المسؤولون"
+      },
+      "table": {
+        "user": "المستخدم",
+        "contact": "جهة الاتصال",
+        "email": "البريد الإلكتروني",
+        "role": "الدور",
+        "bookings": "الحجوزات",
+        "reviews": "التقييمات",
+        "registration": "التسجيل",
+        "status": "الحالة",
+        "createdAt": "تاريخ الإنشاء",
+        "actions": "الإجراءات"
+      }
+    },
+    "services": {
+      "title": "إدارة الخدمات",
+      "subtitle": "إدارة جميع خدمات المنصة",
+      "new": "خدمة جديدة",
+      "edit": "تعديل الخدمة",
+      "addNew": "خدمة جديدة",
+      "listTitle": "قائمة الخدمات",
+      "stats": {
+        "total": "إجمالي الخدمات",
+        "active": "الخدمات النشطة",
+        "totalBookings": "إجمالي الحجوزات"
+      },
+      "table": {
+        "service": "الخدمة",
+        "category": "الفئة",
+        "bookings": "الحجوزات",
+        "reviews": "التقييمات",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "bookings": {
+      "title": "إدارة الحجوزات",
+      "subtitle": "إدارة جميع حجوزات المنصة",
+      "new": "حجز جديد",
+      "edit": "تعديل الحجز",
+      "addNew": "إضافة حجز جديد",
+      "listTitle": "قائمة الحجوزات",
+      "stats": {
+        "total": "الإجمالي",
+        "pending": "قيد الانتظار",
+        "confirmed": "مؤكدة",
+        "completed": "مكتملة",
+        "cancelled": "ملغاة",
+        "revenue": "الإيرادات"
+      },
+      "status": {
+        "pending": "قيد الانتظار",
+        "confirmed": "مؤكد",
+        "completed": "مكتمل",
+        "cancelled": "ملغى"
+      },
+      "table": {
+        "client": "العميل",
+        "service": "الخدمة",
+        "dates": "التواريخ",
+        "type": "النوع",
+        "startDate": "تاريخ البدء",
+        "endDate": "تاريخ الانتهاء",
+        "status": "الحالة",
+        "total": "المجموع",
+        "actions": "الإجراءات"
+      }
+    },
+    "categories": {
+      "title": "إدارة الفئات",
+      "subtitle": "إدارة جميع فئات الخدمات",
+      "new": "فئة جديدة",
+      "edit": "تعديل الفئة",
+      "addNew": "فئة جديدة",
+      "listTitle": "قائمة الفئات",
+      "stats": {
+        "total": "إجمالي الفئات",
+        "active": "الفئات النشطة",
+        "totalServices": "إجمالي الخدمات"
+      },
+      "table": {
+        "category": "الفئة",
+        "services": "الخدمات",
+        "order": "الترتيب",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "partners": {
+      "title": "إدارة الشركاء",
+      "subtitle": "إدارة جميع الشركاء والانضمام",
+      "new": "شريك جديد",
+      "edit": "تعديل الشريك",
+      "addNew": "شريك جديد",
+      "listTitle": "قائمة الشركاء",
+      "stats": {
+        "total": "إجمالي الشركاء",
+        "active": "الشركاء النشطون",
+        "pending": "قيد الانتظار",
+        "revenue": "إجمالي الإيرادات"
+      },
+      "table": {
+        "partner": "الشريك",
+        "services": "الخدمات",
+        "revenue": "الإيرادات",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "doctors": {
+      "title": "إدارة الأطباء",
+      "subtitle": "إدارة جميع الأطباء والمهنيين الصحيين",
+      "new": "طبيب جديد",
+      "edit": "تعديل الطبيب",
+      "addNew": "طبيب جديد",
+      "listTitle": "قائمة الأطباء",
+      "stats": {
+        "total": "إجمالي الأطباء",
+        "active": "الأطباء النشطون",
+        "totalReviews": "إجمالي المراجعات",
+        "avgRating": "متوسط التقييم"
+      },
+      "table": {
+        "doctor": "الطبيب",
+        "location": "الموقع",
+        "reviews": "التقييمات",
+        "rating": "التقييم",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "lawyers": {
+      "title": "إدارة المحامين",
+      "subtitle": "إدارة جميع المحامين والمهنيين القانونيين",
+      "new": "محامي جديد",
+      "edit": "تعديل المحامي",
+      "addNew": "محامي جديد",
+      "listTitle": "قائمة المحامين",
+      "stats": {
+        "total": "إجمالي المحامين",
+        "active": "المحامون النشطون",
+        "totalReviews": "إجمالي المراجعات",
+        "avgRating": "متوسط التقييم"
+      },
+      "table": {
+        "lawyer": "المحامي",
+        "location": "الموقع",
+        "reviews": "التقييمات",
+        "rating": "التقييم",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "coaches": {
+      "title": "إدارة المدربين",
+      "subtitle": "إدارة جميع المدربين ومهنيي اللياقة",
+      "new": "مدرب جديد",
+      "edit": "تعديل المدرب",
+      "addNew": "مدرب جديد",
+      "listTitle": "قائمة المدربين",
+      "stats": {
+        "total": "إجمالي المدربين",
+        "active": "المدربون النشطون",
+        "totalReviews": "إجمالي المراجعات",
+        "avgRating": "متوسط التقييم"
+      },
+      "table": {
+        "coach": "المدرب",
+        "location": "الموقع",
+        "reviews": "التقييمات",
+        "rating": "التقييم",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "activities": {
+      "title": "إدارة الأنشطة",
+      "subtitle": "إدارة جميع الأنشطة والتجارب",
+      "new": "نشاط جديد",
+      "edit": "تعديل النشاط",
+      "addNew": "نشاط جديد",
+      "listTitle": "قائمة الأنشطة",
+      "stats": {
+        "total": "إجمالي الأنشطة",
+        "active": "الأنشطة النشطة",
+        "totalReviews": "إجمالي المراجعات",
+        "avgRating": "متوسط التقييم"
+      },
+      "table": {
+        "activity": "النشاط",
+        "location": "الموقع",
+        "reviews": "التقييمات",
+        "rating": "التقييم",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "suppliers": {
+      "title": "إدارة الموردين",
+      "subtitle": "إدارة جميع الموردين والبائعين",
+      "new": "مورد جديد",
+      "edit": "تعديل المورد",
+      "addNew": "مورد جديد",
+      "listTitle": "قائمة الموردين",
+      "stats": {
+        "total": "إجمالي الموردين",
+        "active": "الموردون النشطون",
+        "pending": "قيد الانتظار",
+        "revenue": "إجمالي الإيرادات"
+      },
+      "table": {
+        "supplier": "المورد",
+        "services": "الخدمات",
+        "revenue": "الإيرادات",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "transfers": {
+      "title": "إدارة النقل",
+      "subtitle": "إدارة جميع خدمات النقل والمواصلات",
+      "new": "نقل جديد",
+      "edit": "تعديل النقل",
+      "addNew": "نقل جديد",
+      "listTitle": "قائمة النقل",
+      "stats": {
+        "total": "إجمالي النقل",
+        "active": "النقل النشط",
+        "pending": "قيد الانتظار",
+        "revenue": "إجمالي الإيرادات"
+      },
+      "table": {
+        "transfer": "النقل",
+        "services": "الخدمات",
+        "revenue": "الإيرادات",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "blog": {
+      "title": "إدارة المدونة",
+      "subtitle": "إدارة جميع مقالات المدونة",
+      "new": "مقال جديد",
+      "edit": "تعديل المقال",
+      "addNew": "مقال جديد",
+      "listTitle": "مقالات المدونة",
+      "stats": {
+        "total": "إجمالي المقالات",
+        "published": "المنشورة",
+        "totalViews": "إجمالي المشاهدات",
+        "totalComments": "إجمالي التعليقات"
+      },
+      "table": {
+        "post": "المقال",
+        "author": "الكاتب",
+        "views": "المشاهدات",
+        "comments": "التعليقات",
+        "likes": "الإعجابات",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "chatbots": {
+      "title": "إدارة الروبوتات الدردشة",
+      "subtitle": "إدارة جميع روبوتات الدردشة والمساعدين الذكيين",
+      "new": "روبوت جديد",
+      "edit": "تعديل الروبوت",
+      "addNew": "روبوت جديد",
+      "import": "استيراد روبوت",
+      "listTitle": "قائمة الروبوتات"
+    },
+    "notifications": {
+      "title": "إدارة الإشعارات",
+      "subtitle": "إدارة جميع إشعارات النظام",
+      "new": "إشعار جديد",
+      "edit": "تعديل الإشعار",
+      "addNew": "إرسال إشعار",
+      "listTitle": "قائمة الإشعارات"
+    },
+    "analytics": {
+      "title": "التحليلات والتقارير",
+      "subtitle": "عرض التحليلات وإنشاء التقارير",
+      "new": "تقرير جديد",
+      "edit": "تعديل التقرير",
+      "listTitle": "لوحة التحليلات"
+    },
+    "promotions": {
+      "title": "إدارة العروض الترويجية",
+      "subtitle": "إدارة جميع العروض الترويجية والخصومات",
+      "new": "عرض جديد",
+      "edit": "تعديل العرض",
+      "addNew": "عرض جديد",
+      "listTitle": "قائمة العروض"
+    },
+    "cmsPages": {
+      "title": "صفحات CMS",
+      "subtitle": "إدارة جميع صفحات CMS",
+      "listTitle": "صفحات CMS"
+    },
+    "media": {
+      "title": "مكتبة الوسائط",
+      "subtitle": "إدارة جميع ملفات الوسائط",
+      "listTitle": "ملفات الوسائط"
+    },
+    "data": {
+      "title": "إدارة البيانات",
+      "subtitle": "استيراد وتصدير البيانات",
+      "new": "استيراد جديد",
+      "import": "استيراد البيانات",
+      "export": "تصدير البيانات"
+    },
+    "simulators": {
+      "title": "إدارة المحاكيات",
+      "subtitle": "إدارة جميع محاكيات الأسعار",
+      "new": "محاكي جديد",
+      "edit": "تعديل المحاكي",
+      "addNew": "محاكي جديد",
+      "listTitle": "قائمة المحاكيات"
+    },
+    "cryptoPayments": {
+      "title": "المدفوعات الرقمية",
+      "subtitle": "إدارة معاملات العملات الرقمية",
+      "new": "معاملة جديدة",
+      "edit": "تعديل المعاملة",
+      "listTitle": "المعاملات الرقمية"
+    },
+    "logs": {
+      "title": "سجلات النظام",
+      "subtitle": "عرض جميع سجلات النظام والأنشطة",
+      "activityLogs": "سجلات النشاط",
+      "errorLogs": "سجلات الأخطاء",
+      "viewAll": "عرض جميع السجلات",
+      "listTitle": "السجلات"
+    },
+    "currencies": {
+      "title": "إدارة العملات",
+      "subtitle": "إدارة جميع العملات",
+      "new": "عملة جديدة",
+      "edit": "تعديل العملة",
+      "addNew": "عملة جديدة",
+      "listTitle": "قائمة العملات"
+    },
+    "geography": {
+      "title": "الإدارة الجغرافية",
+      "subtitle": "إدارة الدول والمدن والمواقع",
+      "listTitle": "الجغرافيا"
+    },
+    "exchangeRates": {
+      "title": "أسعار الصرف",
+      "subtitle": "إدارة أسعار صرف العملات",
+      "listTitle": "أسعار الصرف"
+    },
+    "styles": {
+      "title": "إدارة الأنماط",
+      "subtitle": "تخصيص مظهر التطبيق",
+      "listTitle": "الأنماط"
+    },
+    "routes": {
+      "title": "إدارة المسارات",
+      "subtitle": "إدارة مسارات التطبيق",
+      "new": "مسار جديد",
+      "edit": "تعديل المسار",
+      "listTitle": "المسارات"
+    },
+    "homeCleaning": {
+      "title": "خدمات تنظيف المنازل",
+      "subtitle": "إدارة خدمات تنظيف المنازل",
+      "new": "خدمة جديدة",
+      "edit": "تعديل الخدمة",
+      "addNew": "إضافة خدمة تنظيف منازل",
+      "listTitle": "خدمات تنظيف المنازل",
+      "stats": {
+        "total": "إجمالي الخدمات",
+        "active": "الخدمات النشطة",
+        "totalBookings": "إجمالي الحجوزات",
+        "avgRating": "متوسط التقييم"
+      },
+      "table": {
+        "service": "الخدمة",
+        "location": "الموقع",
+        "price": "السعر",
+        "bookings": "الحجوزات",
+        "reviews": "المراجعات",
+        "rating": "التقييم",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "furnitureCleaning": {
+      "title": "خدمات تنظيف الأثاث",
+      "subtitle": "إدارة خدمات تنظيف الأثاث",
+      "new": "خدمة جديدة",
+      "edit": "تعديل الخدمة",
+      "addNew": "إضافة خدمة تنظيف أثاث",
+      "listTitle": "خدمات تنظيف الأثاث",
+      "stats": {
+        "total": "إجمالي الخدمات",
+        "active": "الخدمات النشطة",
+        "totalBookings": "إجمالي الحجوزات",
+        "avgRating": "متوسط التقييم"
+      },
+      "table": {
+        "service": "الخدمة",
+        "location": "الموقع",
+        "price": "السعر",
+        "bookings": "الحجوزات",
+        "reviews": "المراجعات",
+        "rating": "التقييم",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    },
+    "laundry": {
+      "title": "خدمات الغسيل",
+      "subtitle": "إدارة خدمات الغسيل",
+      "new": "خدمة جديدة",
+      "edit": "تعديل الخدمة",
+      "addNew": "إضافة خدمة غسيل",
+      "listTitle": "خدمات الغسيل",
+      "stats": {
+        "total": "إجمالي الخدمات",
+        "active": "الخدمات النشطة",
+        "totalBookings": "إجمالي الحجوزات",
+        "avgRating": "متوسط التقييم"
+      },
+      "table": {
+        "service": "الخدمة",
+        "location": "الموقع",
+        "price": "السعر",
+        "bookings": "الحجوزات",
+        "reviews": "المراجعات",
+        "rating": "التقييم",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      }
+    }
+  }
+}

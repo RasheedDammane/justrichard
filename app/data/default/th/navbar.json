@@ -1,0 +1,44 @@
+{
+  "logo": {
+    "text": "JustRichard",
+    "href": "/th"
+  },
+  "links": [
+    {
+      "label": "หน้าแรก",
+      "href": "/th"
+    },
+    {
+      "label": "อสังหาริมทรัพย์",
+      "href": "/th/properties"
+    },
+    {
+      "label": "เช่ารถยนต์",
+      "href": "/th/rental"
+    },
+    {
+      "label": "เรือยอชท์",
+      "href": "/th/yachts"
+    },
+    {
+      "label": "รถรับส่ง",
+      "href": "/th/services/transfer"
+    },
+    {
+      "label": "กิจกรรม",
+      "href": "/th/activities"
+    }
+  ],
+  "actions": [
+    {
+      "label": "เข้าสู่ระบบ",
+      "href": "/th/auth/login",
+      "type": "secondary"
+    },
+    {
+      "label": "สมัครสมาชิก",
+      "href": "/th/auth/signup",
+      "type": "primary"
+    }
+  ]
+}

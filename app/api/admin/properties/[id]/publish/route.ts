@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
-import { Role } from '@prisma/client';
 
 export async function POST(
   request: Request,
@@ -11,12 +10,15 @@ export async function POST(
   try {
     const session = await getServerSession(authOptions);
     
-    if (!session || (session.user.role !== Role.ADMIN && session.user.role !== Role.MANAGER)) {
+    if (!session || (session.user.role !== 'ADMIN' && session.user.role !== 'MANAGER')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
     const property = await prisma.property.findUnique({
       where: { id: params.id },
+      include: {
+        media: true,
+      },
     });
 
     if (!property) {
@@ -26,23 +28,17 @@ export async function POST(
     // Validate property is ready for publication
     const validationErrors = [];
 
-    if (!property.title || property.title.length < 10) {
-      validationErrors.push('Title must be at least 10 characters');
+    if (!property.title || property.title.length < 5) {
+      validationErrors.push('Title is required (min 5 characters)');
     }
-    if (!property.description || property.description.length < 50) {
-      validationErrors.push('Description must be at least 50 characters');
+    if (!property.cityId) {
+      validationErrors.push('City is required');
     }
-    if (property.images.length === 0) {
+    if (!property.price) {
+      validationErrors.push('Price is required');
+    }
+    if (property.media.length === 0) {
       validationErrors.push('At least one image is required');
-    }
-    if (property.listingType === 'FOR_SALE' && !property.salePrice) {
-      validationErrors.push('Sale price is required');
-    }
-    if (property.listingType === 'FOR_RENT' && !property.rentPrice) {
-      validationErrors.push('Rent price is required');
-    }
-    if (property.listingType === 'BOTH' && (!property.salePrice || !property.rentPrice)) {
-      validationErrors.push('Both sale and rent prices are required');
     }
 
     if (validationErrors.length > 0) {
@@ -58,6 +54,11 @@ export async function POST(
       data: {
         status: 'PUBLISHED',
         publishedAt: new Date(),
+      },
+      include: {
+        city: true,
+        country: true,
+        priceCurrency: true,
       },
     });
 

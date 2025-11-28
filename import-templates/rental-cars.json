@@ -1,0 +1,51 @@
+[
+  {
+    "name": "BMW 7 Series 2024",
+    "slug": "bmw-7-series-2024",
+    "brand": "BMW",
+    "model": "7 Series",
+    "year": 2024,
+    "category": "LUXURY",
+    "description": "Premium luxury sedan",
+    "transmission": "AUTOMATIC",
+    "fuelType": "PETROL",
+    "color": "Black",
+    "seats": 5,
+    "pricePerDay": 800,
+    "pricePerWeek": 5000,
+    "pricePerMonth": 18000,
+    "currency": "AED",
+    "deposit": 3000,
+    "features": ["Leather Seats", "Sunroof", "Navigation"],
+    "images": [
+      "/images/cars/bmw-7-1.jpg",
+      "/images/cars/bmw-7-2.jpg"
+    ],
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isFeatured": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Toyota Corolla 2024",
+    "slug": "toyota-corolla-2024",
+    "brand": "Toyota",
+    "model": "Corolla",
+    "year": 2024,
+    "category": "ECONOMY",
+    "description": "Reliable economy car",
+    "transmission": "AUTOMATIC",
+    "fuelType": "PETROL",
+    "color": "White",
+    "seats": 5,
+    "pricePerDay": 150,
+    "pricePerWeek": 900,
+    "pricePerMonth": 3000,
+    "currency": "AED",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isAvailable": true
+  }
+]

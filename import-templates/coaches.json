@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "mike-johnson-fitness-coach",
+    "name": "Mike Johnson",
+    "title": "Certified Personal Trainer",
+    "mainCategory": "FITNESS",
+    "specializations": ["Weight Loss", "Muscle Building", "HIIT"],
+    "experience": 12,
+    "hourlyRate": 300,
+    "sessionFee": 250,
+    "currency": "AED",
+    "bio": "Transforming lives through fitness",
+    "certifications": [
+      {"name": "NASM CPT", "year": 2011},
+      {"name": "Precision Nutrition", "year": 2015}
+    ],
+    "languages": ["English"],
+    "email": "mike@fitnesscoach.com",
+    "phone": "+971502222222",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isAvailable": true,
+    "isFeatured": true
+  },
+  {
+    "slug": "lisa-brown-yoga-coach",
+    "name": "Lisa Brown",
+    "title": "Yoga Instructor",
+    "mainCategory": "YOGA",
+    "specializations": ["Hatha Yoga", "Vinyasa", "Meditation"],
+    "experience": 8,
+    "hourlyRate": 200,
+    "currency": "AED",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isAvailable": true
+  }
+]

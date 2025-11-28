@@ -5,49 +5,74 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const specialty = searchParams.get('specialty');
-    const countryId = searchParams.get('countryId');
-    const cityId = searchParams.get('cityId');
-    const acceptsEmergency = searchParams.get('acceptsEmergency') === 'true';
-    const acceptsTelemedicine = searchParams.get('acceptsTelemedicine') === 'true';
-    const acceptsHomeVisit = searchParams.get('acceptsHomeVisit') === 'true';
+    const search = searchParams.get('search');
     const acceptsInsurance = searchParams.get('acceptsInsurance') === 'true';
-    const verifiedOnly = searchParams.get('verifiedOnly') === 'true';
-    const availableOnly = searchParams.get('availableOnly') === 'true';
+    const acceptsVideoConsult = searchParams.get('acceptsVideoConsult') === 'true';
 
-    let whereClause: any = {};
-    if (specialty) whereClause.specialty = specialty;
-    if (countryId) whereClause.countryId = countryId;
-    if (cityId) whereClause.cityId = cityId;
-    if (acceptsEmergency) whereClause.acceptsEmergency = true;
-    if (acceptsTelemedicine) whereClause.acceptsTelemedicine = true;
-    if (acceptsHomeVisit) whereClause.acceptsHomeVisit = true;
-    if (acceptsInsurance) whereClause.acceptsInsurance = true;
-    if (verifiedOnly) whereClause.verified = true;
-    if (availableOnly) whereClause.isAvailable = true;
+    const where: any = {
+      isActive: true,
+    };
+
+    if (specialty && specialty !== 'all') {
+      where.specialty = specialty;
+    }
+
+    if (acceptsInsurance) {
+      where.acceptsInsurance = true;
+    }
+
+    if (acceptsVideoConsult) {
+      where.acceptsVideoConsult = true;
+    }
+
+    if (search) {
+      where.OR = [
+        { firstName: { contains: search, mode: 'insensitive' } },
+        { lastName: { contains: search, mode: 'insensitive' } },
+        { specialty: { contains: search, mode: 'insensitive' } },
+        { clinicName: { contains: search, mode: 'insensitive' } },
+      ];
+    }
 
     const doctors = await prisma.doctor.findMany({
-      where: whereClause,
+      where,
       include: {
-        city: true,
-        _count: {
+        City: {
           select: {
-            appointments: true,
+            name: true,
+          },
+        },
+        Country: {
+          select: {
+            name: true,
+            code: true,
           },
         },
       },
       orderBy: [
-        { verified: 'desc' },
+        { isPremium: 'desc' },
+        { isVerified: 'desc' },
         { rating: 'desc' },
-        { totalAppointments: 'desc' },
       ],
     });
 
-    return NextResponse.json({ doctors });
+    // Parse JSON fields
+    const doctorsWithParsedData = doctors.map((doctor: any) => ({
+      ...doctor,
+      subSpecialties: typeof doctor.subSpecialties === 'string' ? JSON.parse(doctor.subSpecialties) : doctor.subSpecialties,
+      education: typeof doctor.education === 'string' ? JSON.parse(doctor.education) : doctor.education,
+      certifications: typeof doctor.certifications === 'string' ? JSON.parse(doctor.certifications) : doctor.certifications,
+      languages: typeof doctor.languages === 'string' ? JSON.parse(doctor.languages) : doctor.languages,
+      workingDays: typeof doctor.workingDays === 'string' ? JSON.parse(doctor.workingDays) : doctor.workingDays,
+      workingHours: typeof doctor.workingHours === 'string' ? JSON.parse(doctor.workingHours) : doctor.workingHours,
+      services: typeof doctor.services === 'string' ? JSON.parse(doctor.services) : doctor.services,
+      treatmentAreas: typeof doctor.treatmentAreas === 'string' ? JSON.parse(doctor.treatmentAreas) : doctor.treatmentAreas,
+      insuranceProviders: doctor.insuranceProviders ? (typeof doctor.insuranceProviders === 'string' ? JSON.parse(doctor.insuranceProviders) : doctor.insuranceProviders) : [],
+    }));
+
+    return NextResponse.json(doctorsWithParsedData);
   } catch (error) {
     console.error('Error fetching doctors:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch doctors' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to fetch doctors' }, { status: 500 });
   }
 }

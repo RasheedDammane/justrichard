@@ -1,0 +1,90 @@
+{
+  "platformName": "JustRichard",
+  "tagline": "Your trusted platform connecting customers with verified professionals across 15+ categories in multiple countries.",
+  "copyright": "© 2025 JustRichard. All rights reserved.",
+  "sections": [
+    {
+      "title": "Company",
+      "links": [
+        { "label": "About Us", "href": "/en/about" },
+        { "label": "Careers", "href": "/en/careers" },
+        { "label": "Press", "href": "/en/press" },
+        { "label": "Blog", "href": "/en/blog" },
+        { "label": "Partners", "href": "/en/partnerships" }
+      ]
+    },
+    {
+      "title": "Professional Services",
+      "links": [
+        { "label": "Doctors & Dentists", "href": "/en/doctors" },
+        { "label": "Lawyers", "href": "/en/lawyers" },
+        { "label": "Coaches", "href": "/en/coaches" },
+        { "label": "Suppliers", "href": "/en/suppliers" },
+        { "label": "Business Setup", "href": "/en/business-setup" },
+        { "label": "Insurance", "href": "/en/insurance" }
+      ]
+    },
+    {
+      "title": "Lifestyle & Travel",
+      "links": [
+        { "label": "Car Rental", "href": "/en/car-rental" },
+        { "label": "Yachts", "href": "/en/yachts" },
+        { "label": "Properties", "href": "/en/properties" },
+        { "label": "Activities", "href": "/en/activities" }
+      ]
+    },
+    {
+      "title": "Home Services",
+      "links": [
+        { "label": "Home Cleaning", "href": "/en/home-cleaning/home" },
+        { "label": "Furniture Cleaning", "href": "/en/home-cleaning/furniture" },
+        { "label": "Laundry & Dry Cleaning", "href": "/en/home-cleaning/laundry" },
+        { "label": "Maids", "href": "/en/maids" }
+      ]
+    },
+    {
+      "title": "Handyman Services",
+      "links": [
+        { "label": "Plumbing", "href": "/en/handyman/plumbing" },
+        { "label": "Electrical", "href": "/en/handyman/electrical" },
+        { "label": "AC Repair", "href": "/en/handyman/ac-repair" },
+        { "label": "Carpentry", "href": "/en/handyman/carpentry" },
+        { "label": "Painting", "href": "/en/handyman/painting" },
+        { "label": "All Handyman Services", "href": "/en/handyman" }
+      ]
+    },
+    {
+      "title": "Support",
+      "links": [
+        { "label": "Help Center", "href": "/en/help" },
+        { "label": "Contact Us", "href": "/en/contact" },
+        { "label": "FAQ", "href": "/en/faq" },
+        { "label": "Safety Guidelines", "href": "/en/safety" },
+        { "label": "Terms of Service", "href": "/en/terms" },
+        { "label": "Privacy Policy", "href": "/en/privacy" },
+        { "label": "Cookie Policy", "href": "/en/cookies" },
+        { "label": "Legal Notice", "href": "/en/services/legal" },
+        { "label": "Sitemap", "href": "/sitemap.xml" }
+      ]
+    },
+    {
+      "title": "Connect",
+      "links": [
+        { "label": "Facebook", "href": "https://facebook.com", "external": true },
+        { "label": "Twitter", "href": "https://twitter.com", "external": true },
+        { "label": "Instagram", "href": "https://instagram.com", "external": true },
+        { "label": "LinkedIn", "href": "https://linkedin.com", "external": true }
+      ]
+    }
+  ],
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Get updates on new services and promotions",
+    "placeholder": "Your email address",
+    "buttonLabel": "Subscribe"
+  },
+  "legal": {
+    "registrationInfo": "Reg. No: 123456789 | Tax ID: AE123456789",
+    "disclaimer": "JustRichard acts as a marketplace platform connecting service providers with customers. We do not employ service providers and are not responsible for the services provided."
+  }
+}

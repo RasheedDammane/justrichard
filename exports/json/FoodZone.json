@@ -1,0 +1,36 @@
+[
+  {
+    "id": "cmihuqltq0018ym00ujnn5ocn",
+    "name": "Dubai Downtown",
+    "slug": "dubai-downtown",
+    "description": "Downtown Dubai and surrounding areas",
+    "cityId": null,
+    "countryId": null,
+    "deliveryFee": 15,
+    "minOrderAmount": 50,
+    "freeDeliveryThreshold": 200,
+    "estimatedDeliveryTime": "30-45 min",
+    "geojson": null,
+    "postalCodes": null,
+    "isActive": true,
+    "createdAt": "2025-11-27T19:54:06.974Z",
+    "updatedAt": "2025-11-27T19:54:06.974Z"
+  },
+  {
+    "id": "cmihuqltq0017ym0048bbxb57",
+    "name": "Dubai Marina",
+    "slug": "dubai-marina",
+    "description": "Dubai Marina and JBR area",
+    "cityId": null,
+    "countryId": null,
+    "deliveryFee": 20,
+    "minOrderAmount": 50,
+    "freeDeliveryThreshold": 250,
+    "estimatedDeliveryTime": "45-60 min",
+    "geojson": null,
+    "postalCodes": null,
+    "isActive": true,
+    "createdAt": "2025-11-27T19:54:06.974Z",
+    "updatedAt": "2025-11-27T19:54:06.974Z"
+  }
+]

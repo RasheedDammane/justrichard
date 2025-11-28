@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Sunseeker Predator 74",
+    "slug": "sunseeker-predator-74",
+    "brand": "Sunseeker",
+    "model": "Predator 74",
+    "year": 2023,
+    "length": 74,
+    "capacity": 12,
+    "cabins": 3,
+    "bathrooms": 2,
+    "crew": 2,
+    "pricePerHour": 3500,
+    "priceFor2Hours": 6500,
+    "priceFor4Hours": 12000,
+    "pricePerDay": 25000,
+    "currency": "AED",
+    "description": "Luxury yacht with modern amenities",
+    "features": ["WiFi", "Sound System", "Jet Ski"],
+    "amenities": ["Air Conditioning", "Kitchen", "Bathroom"],
+    "included": ["Captain", "Crew", "Fuel"],
+    "notIncluded": ["Food", "Drinks"],
+    "images": [
+      "/images/yachts/sunseeker-1.jpg",
+      "/images/yachts/sunseeker-2.jpg"
+    ],
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isFeatured": true,
+    "isAvailable": true
+  },
+  {
+    "name": "Azimut 55 Flybridge",
+    "slug": "azimut-55-flybridge",
+    "brand": "Azimut",
+    "model": "55 Flybridge",
+    "year": 2022,
+    "length": 55,
+    "capacity": 10,
+    "pricePerHour": 2500,
+    "pricePerDay": 18000,
+    "currency": "AED",
+    "description": "Perfect for family trips",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isFeatured": false,
+    "isAvailable": true
+  }
+]

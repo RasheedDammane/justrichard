@@ -32,7 +32,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const { category } = data;
   const translation = category.translations[0];
   const services = category.services || [];
-  const featuredServices = services.filter((s: any) => s.isFeatured).slice(0, 8);
+  const featuredServices = services.slice(0, 8); // Afficher les 8 premiers services
 
   return (
     <div className="min-h-screen bg-gray-50">

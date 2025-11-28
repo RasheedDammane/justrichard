@@ -1,0 +1,519 @@
+{
+  "admin": {
+    "common": {
+      "add": "Ekle",
+      "edit": "Düzenle",
+      "delete": "Sil",
+      "save": "Kaydet",
+      "saving": "Kaydediliyor...",
+      "cancel": "İptal",
+      "select": "Seç",
+      "search": "Ara",
+      "filter": "Filtrele",
+      "export": "Dışa Aktar",
+      "import": "İçe Aktar",
+      "refresh": "Yenile",
+      "total": "Toplam",
+      "active": "Aktif",
+      "inactive": "Pasif",
+      "featured": "Öne Çıkan",
+      "available": "Mevcut",
+      "unavailable": "Mevcut Değil",
+      "status": "Durum",
+      "actions": "İşlemler",
+      "inTotal": "Toplam {count}",
+      "loading": "Yükleniyor...",
+      "noData": "Veri yok",
+      "confirm": "Onayla",
+      "confirmDelete": "Bu öğeyi silmek istediğinizden emin misiniz?",
+      "success": "Başarılı",
+      "error": "Hata",
+      "required": "Gerekli",
+      "view": "Görüntüle"
+    },
+    "navigation": {
+      "dashboard": "Kontrol Paneli",
+      "users": "Kullanıcılar",
+      "properties": "Mülkler",
+      "services": "Hizmetler",
+      "bookings": "Rezervasyonlar",
+      "categories": "Kategoriler",
+      "partners": "Ortaklar",
+      "doctors": "Doktorlar",
+      "lawyers": "Avukatlar",
+      "coaches": "Koçlar",
+      "maids": "Ev Hizmetleri",
+      "motorbikes": "Motosikletler",
+      "rentalCars": "Kiralık Arabalar",
+      "yachts": "Yatlar",
+      "activities": "Aktiviteler",
+      "suppliers": "Tedarikçiler",
+      "settings": "Ayarlar",
+      "logout": "Çıkış"
+    },
+    "dashboard": {
+      "title": "Kontrol Paneli",
+      "welcome": "Hoş geldiniz, {name}",
+      "overview": "Genel Bakış",
+      "recentActivity": "Son Aktiviteler",
+      "quickStats": "Hızlı İstatistikler",
+      "totalUsers": "Toplam Kullanıcı",
+      "totalBookings": "Toplam Rezervasyon",
+      "totalRevenue": "Toplam Gelir",
+      "activeProviders": "Aktif Sağlayıcılar"
+    },
+    "users": {
+      "title": "Kullanıcı Yönetimi",
+      "subtitle": "Tüm platform kullanıcılarını yönetin",
+      "new": "Yeni Kullanıcı",
+      "edit": "Kullanıcıyı Düzenle",
+      "addNew": "Yeni Kullanıcı Ekle",
+      "listTitle": "Kullanıcı Listesi",
+      "deactivate": "Devre Dışı Bırak",
+      "stats": {
+        "totalUsers": "Toplam Kullanıcı",
+        "customers": "Müşteriler",
+        "providers": "Sağlayıcılar",
+        "admins": "Yöneticiler"
+      },
+      "table": {
+        "user": "Kullanıcı",
+        "contact": "İletişim",
+        "email": "E-posta",
+        "role": "Rol",
+        "bookings": "Rezervasyonlar",
+        "reviews": "Yorumlar",
+        "registration": "Kayıt",
+        "status": "Durum",
+        "createdAt": "Oluşturulma",
+        "actions": "İşlemler"
+      }
+    },
+    "services": {
+      "title": "Hizmet Yönetimi",
+      "subtitle": "Tüm platform hizmetlerini yönetin",
+      "new": "Yeni Hizmet",
+      "edit": "Hizmeti Düzenle",
+      "addNew": "Yeni Hizmet",
+      "listTitle": "Hizmet Listesi",
+      "stats": {
+        "total": "Toplam Hizmet",
+        "active": "Aktif Hizmetler",
+        "totalBookings": "Toplam Rezervasyon"
+      },
+      "table": {
+        "service": "Hizmet",
+        "category": "Kategori",
+        "bookings": "Rezervasyonlar",
+        "reviews": "Yorumlar",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "bookings": {
+      "title": "Rezervasyon Yönetimi",
+      "subtitle": "Tüm platform rezervasyonlarını yönetin",
+      "new": "Yeni Rezervasyon",
+      "edit": "Rezervasyonu Düzenle",
+      "addNew": "Yeni Rezervasyon Ekle",
+      "listTitle": "Rezervasyon Listesi",
+      "stats": {
+        "total": "Toplam",
+        "pending": "Beklemede",
+        "confirmed": "Onaylandı",
+        "completed": "Tamamlandı",
+        "cancelled": "İptal Edildi",
+        "revenue": "Gelir"
+      },
+      "status": {
+        "pending": "Beklemede",
+        "confirmed": "Onaylandı",
+        "completed": "Tamamlandı",
+        "cancelled": "İptal Edildi"
+      },
+      "table": {
+        "client": "Müşteri",
+        "service": "Hizmet",
+        "dates": "Tarihler",
+        "type": "Tür",
+        "startDate": "Başlangıç Tarihi",
+        "endDate": "Bitiş Tarihi",
+        "status": "Durum",
+        "total": "Toplam",
+        "actions": "İşlemler"
+      }
+    },
+    "categories": {
+      "title": "Kategori Yönetimi",
+      "subtitle": "Tüm hizmet kategorilerini yönetin",
+      "new": "Yeni Kategori",
+      "edit": "Kategoriyi Düzenle",
+      "addNew": "Yeni Kategori",
+      "listTitle": "Kategori Listesi",
+      "stats": {
+        "total": "Toplam Kategori",
+        "active": "Aktif Kategoriler",
+        "totalServices": "Toplam Hizmet"
+      },
+      "table": {
+        "category": "Kategori",
+        "services": "Hizmetler",
+        "order": "Sıra",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "partners": {
+      "title": "Ortak Yönetimi",
+      "subtitle": "Tüm ortakları ve ortaklıkları yönetin",
+      "new": "Yeni Ortak",
+      "edit": "Ortağı Düzenle",
+      "addNew": "Yeni Ortak",
+      "listTitle": "Ortak Listesi",
+      "stats": {
+        "total": "Toplam Ortak",
+        "active": "Aktif Ortaklar",
+        "pending": "Beklemede",
+        "revenue": "Toplam Gelir"
+      },
+      "table": {
+        "partner": "Ortak",
+        "services": "Hizmetler",
+        "revenue": "Gelir",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "doctors": {
+      "title": "Doktor Yönetimi",
+      "subtitle": "Tüm doktorları ve sağlık profesyonellerini yönetin",
+      "new": "Yeni Doktor",
+      "edit": "Doktoru Düzenle",
+      "addNew": "Yeni Doktor",
+      "listTitle": "Doktor Listesi",
+      "stats": {
+        "total": "Toplam Doktor",
+        "active": "Aktif Doktorlar",
+        "totalBookings": "Toplam Rezervasyon",
+        "avgRating": "Ortalama Puan"
+      },
+      "table": {
+        "doctor": "Doktor",
+        "location": "Konum",
+        "bookings": "Rezervasyonlar",
+        "reviews": "Yorumlar",
+        "rating": "Puan",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "lawyers": {
+      "title": "Avukat Yönetimi",
+      "subtitle": "Tüm avukatları ve hukuk profesyonellerini yönetin",
+      "new": "Yeni Avukat",
+      "edit": "Avukatı Düzenle",
+      "addNew": "Yeni Avukat",
+      "listTitle": "Avukat Listesi",
+      "stats": {
+        "total": "Toplam Avukat",
+        "active": "Aktif Avukatlar",
+        "totalBookings": "Toplam Rezervasyon",
+        "avgRating": "Ortalama Puan"
+      },
+      "table": {
+        "lawyer": "Avukat",
+        "location": "Konum",
+        "bookings": "Rezervasyonlar",
+        "reviews": "Yorumlar",
+        "rating": "Puan",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "coaches": {
+      "title": "Koç Yönetimi",
+      "subtitle": "Tüm koçları ve fitness profesyonellerini yönetin",
+      "new": "Yeni Koç",
+      "edit": "Koçu Düzenle",
+      "addNew": "Yeni Koç",
+      "listTitle": "Koç Listesi",
+      "stats": {
+        "total": "Toplam Koç",
+        "active": "Aktif Koçlar",
+        "totalBookings": "Toplam Rezervasyon",
+        "avgRating": "Ortalama Puan"
+      },
+      "table": {
+        "coach": "Koç",
+        "location": "Konum",
+        "bookings": "Rezervasyonlar",
+        "reviews": "Yorumlar",
+        "rating": "Puan",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "activities": {
+      "title": "Aktivite Yönetimi",
+      "subtitle": "Tüm aktiviteleri ve deneyimleri yönetin",
+      "new": "Yeni Aktivite",
+      "edit": "Aktiviteyi Düzenle",
+      "addNew": "Yeni Aktivite",
+      "listTitle": "Aktivite Listesi",
+      "stats": {
+        "total": "Toplam Aktivite",
+        "active": "Aktif Aktiviteler",
+        "totalBookings": "Toplam Rezervasyon",
+        "avgRating": "Ortalama Puan"
+      },
+      "table": {
+        "activity": "Aktivite",
+        "location": "Konum",
+        "bookings": "Rezervasyonlar",
+        "reviews": "Yorumlar",
+        "rating": "Puan",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "suppliers": {
+      "title": "Tedarikçi Yönetimi",
+      "subtitle": "Tüm tedarikçileri ve satıcıları yönetin",
+      "new": "Yeni Tedarikçi",
+      "edit": "Tedarikçiyi Düzenle",
+      "addNew": "Yeni Tedarikçi",
+      "listTitle": "Tedarikçi Listesi",
+      "stats": {
+        "total": "Toplam Tedarikçi",
+        "active": "Aktif Tedarikçiler",
+        "pending": "Beklemede",
+        "revenue": "Toplam Gelir"
+      },
+      "table": {
+        "supplier": "Tedarikçi",
+        "services": "Hizmetler",
+        "revenue": "Gelir",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "transfers": {
+      "title": "Transfer Yönetimi",
+      "subtitle": "Tüm transferleri ve ulaşım hizmetlerini yönetin",
+      "new": "Yeni Transfer",
+      "edit": "Transferi Düzenle",
+      "addNew": "Yeni Transfer",
+      "listTitle": "Transfer Listesi",
+      "stats": {
+        "total": "Toplam Transfer",
+        "active": "Aktif Transferler",
+        "pending": "Beklemede",
+        "revenue": "Toplam Gelir"
+      },
+      "table": {
+        "transfer": "Transfer",
+        "services": "Hizmetler",
+        "revenue": "Gelir",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "blog": {
+      "title": "Blog Yönetimi",
+      "subtitle": "Tüm blog yazılarını ve içerikleri yönetin",
+      "new": "Yeni Yazı",
+      "edit": "Yazıyı Düzenle",
+      "addNew": "Yeni Yazı",
+      "listTitle": "Blog Yazıları",
+      "stats": {
+        "total": "Toplam Yazı",
+        "published": "Yayınlanan",
+        "totalViews": "Toplam Görüntülenme",
+        "totalComments": "Toplam Yorum"
+      },
+      "table": {
+        "post": "Yazı",
+        "author": "Yazar",
+        "views": "Görüntülenme",
+        "comments": "Yorumlar",
+        "likes": "Beğeni",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    },
+    "chatbots": {
+      "title": "Chatbot Yönetimi",
+      "subtitle": "Tüm chatbotları ve AI asistanlarını yönetin",
+      "new": "Yeni Chatbot",
+      "edit": "Chatbotu Düzenle",
+      "addNew": "Yeni Chatbot",
+      "import": "Chatbot İçe Aktar",
+      "listTitle": "Chatbot Listesi"
+    },
+    "notifications": {
+      "title": "Bildirim Yönetimi",
+      "subtitle": "Tüm sistem bildirimlerini yönetin",
+      "new": "Yeni Bildirim",
+      "edit": "Bildirimi Düzenle",
+      "addNew": "Bildirim Gönder",
+      "listTitle": "Bildirim Listesi"
+    },
+    "analytics": {
+      "title": "Analitik ve Raporlar",
+      "subtitle": "Analitikleri görüntüleyin ve raporlar oluşturun",
+      "new": "Yeni Rapor",
+      "edit": "Raporu Düzenle",
+      "listTitle": "Analitik Paneli"
+    },
+    "promotions": {
+      "title": "Promosyon Yönetimi",
+      "subtitle": "Tüm promosyonları ve teklifleri yönetin",
+      "new": "Yeni Promosyon",
+      "edit": "Promosyonu Düzenle",
+      "addNew": "Yeni Promosyon",
+      "listTitle": "Promosyon Listesi"
+    },
+    "cmsPages": {
+      "title": "CMS Sayfaları",
+      "subtitle": "Tüm CMS sayfalarını yönetin",
+      "listTitle": "CMS Sayfaları"
+    },
+    "media": {
+      "title": "Medya Kütüphanesi",
+      "subtitle": "Tüm medya dosyalarını yönetin",
+      "listTitle": "Medya Dosyaları"
+    },
+    "data": {
+      "title": "Veri Yönetimi",
+      "subtitle": "Veri içe ve dışa aktarın",
+      "new": "Yeni İçe Aktarma",
+      "import": "Veri İçe Aktar",
+      "export": "Veri Dışa Aktar"
+    },
+    "simulators": {
+      "title": "Simülatör Yönetimi",
+      "subtitle": "Tüm fiyat simülatörlerini yönetin",
+      "new": "Yeni Simülatör",
+      "edit": "Simülatörü Düzenle",
+      "addNew": "Yeni Simülatör",
+      "listTitle": "Simülatör Listesi"
+    },
+    "cryptoPayments": {
+      "title": "Kripto Ödemeler",
+      "subtitle": "Kripto para işlemlerini yönetin",
+      "new": "Yeni İşlem",
+      "edit": "İşlemi Düzenle",
+      "listTitle": "Kripto İşlemler"
+    },
+    "logs": {
+      "title": "Sistem Günlükleri",
+      "subtitle": "Tüm sistem günlüklerini ve aktiviteleri görüntüleyin",
+      "activityLogs": "Aktivite Günlükleri",
+      "errorLogs": "Hata Günlükleri",
+      "viewAll": "Tüm Günlükleri Görüntüle",
+      "listTitle": "Günlükler"
+    },
+    "currencies": {
+      "title": "Para Birimi Yönetimi",
+      "subtitle": "Tüm para birimlerini yönetin",
+      "new": "Yeni Para Birimi",
+      "edit": "Para Birimini Düzenle",
+      "addNew": "Yeni Para Birimi",
+      "listTitle": "Para Birimi Listesi"
+    },
+    "geography": {
+      "title": "Coğrafya Yönetimi",
+      "subtitle": "Ülkeleri, şehirleri ve konumları yönetin",
+      "listTitle": "Coğrafya"
+    },
+    "exchangeRates": {
+      "title": "Döviz Kurları",
+      "subtitle": "Para birimi döviz kurlarını yönetin",
+      "listTitle": "Döviz Kurları"
+    },
+    "styles": {
+      "title": "Stil Yönetimi",
+      "subtitle": "Uygulama görünümünü özelleştirin",
+      "listTitle": "Stiller"
+    },
+    "routes": {
+      "title": "Rota Yönetimi",
+      "subtitle": "Uygulama rotalarını yönetin",
+      "new": "Yeni Rota",
+      "edit": "Rotayı Düzenle",
+      "listTitle": "Rotalar"
+    },
+    "maids": {
+      "title": "Ev Hizmetleri",
+      "subtitle": "Toplam {count} ev hizmeti",
+      "new": "Yeni Ev Hizmeti",
+      "edit": "Ev Hizmetini Düzenle",
+      "addNew": "Yeni Ev Hizmeti Ekle"
+    },
+    "motorbikes": {
+      "title": "Motosikletler",
+      "subtitle": "Toplam {count} motosiklet",
+      "new": "Yeni Motosiklet",
+      "edit": "Motosikleti Düzenle",
+      "addNew": "Yeni Motosiklet Ekle"
+    },
+    "rentalCars": {
+      "title": "Kiralık Arabalar",
+      "subtitle": "Toplam {count} kiralık araba",
+      "new": "Yeni Araba",
+      "edit": "Arabayı Düzenle",
+      "addNew": "Yeni Kiralık Araba Ekle"
+    },
+    "yachts": {
+      "title": "Yatlar",
+      "subtitle": "Toplam {count} yat",
+      "new": "Yeni Yat",
+      "edit": "Yatı Düzenle",
+      "addNew": "Yeni Yat Ekle"
+    },
+    "properties": {
+      "title": "Emlak Yönetimi",
+      "subtitle": "{count} mülk • {published} yayınlandı",
+      "new": "Yeni Mülk",
+      "edit": "Mülkü Düzenle",
+      "addNew": "Mülk Ekle",
+      "noProperties": "Mülk yok",
+      "addFirstProperty": "İlk mülkünüzü ekleyerek başlayın",
+      "stats": {
+        "total": "Toplam",
+        "draft": "Taslaklar",
+        "published": "Yayınlandı",
+        "sold": "Satıldı",
+        "rented": "Kiralandı"
+      },
+      "filters": {
+        "all": "Tümü",
+        "draft": "Taslaklar",
+        "published": "Yayınlandı",
+        "sold": "Satıldı",
+        "rented": "Kiralandı"
+      },
+      "form": {
+        "title": "Başlık",
+        "description": "Açıklama",
+        "propertyType": "Mülk Türü",
+        "listingType": "İlan Türü",
+        "status": "Durum",
+        "price": "Fiyat",
+        "area": "Alan (m²)",
+        "bedrooms": "Yatak Odaları",
+        "bathrooms": "Banyolar",
+        "featured": "Öne Çıkan",
+        "images": "Görseller"
+      },
+      "table": {
+        "property": "Mülk",
+        "type": "Tür",
+        "price": "Fiyat",
+        "location": "Konum",
+        "status": "Durum",
+        "actions": "İşlemler"
+      }
+    }
+  }
+}

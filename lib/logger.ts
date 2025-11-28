@@ -4,15 +4,32 @@ export enum LogLevel {
   INFO = 'INFO',
   WARN = 'WARN',
   ERROR = 'ERROR',
-  DEBUG = 'DEBUG',
+  FATAL = 'FATAL',
 }
 
+export type LogCategory =
+  | 'auth'
+  | 'user'
+  | 'booking'
+  | 'property'
+  | 'payment'
+  | 'system'
+  | 'admin'
+  | 'notification'
+  | 'other';
+
+export type LogSource = 'api' | 'cron' | 'worker' | 'webhook' | 'job';
+
 export interface LogContext {
+  category?: LogCategory;
+  source?: LogSource;
   userId?: string;
+  adminId?: string;
   sessionId?: string;
   requestId?: string;
   path?: string;
   method?: string;
+  statusCode?: number;
   ip?: string;
   userAgent?: string;
   [key: string]: any;
@@ -120,8 +137,8 @@ class Logger {
     this.log(LogLevel.ERROR, message, context, error);
   }
 
-  public debug(message: string, context?: LogContext): void {
-    this.log(LogLevel.DEBUG, message, context);
+  public fatal(message: string, error?: Error, context?: LogContext): void {
+    this.log(LogLevel.FATAL, message, context, error);
   }
 
   // Helper method to wrap async functions with error logging
@@ -165,6 +182,6 @@ export const logInfo = (message: string, context?: LogContext) => {
   logger.info(message, context);
 };
 
-export const logDebug = (message: string, context?: LogContext) => {
-  logger.debug(message, context);
+export const logFatal = (message: string, error?: Error, context?: LogContext) => {
+  logger.fatal(message, error, context);
 };

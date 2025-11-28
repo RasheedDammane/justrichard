@@ -1,0 +1,519 @@
+{
+  "admin": {
+    "common": {
+      "add": "Thêm",
+      "edit": "Chỉnh sửa",
+      "delete": "Xóa",
+      "save": "Lưu",
+      "saving": "Đang lưu...",
+      "cancel": "Hủy",
+      "select": "Chọn",
+      "search": "Tìm kiếm",
+      "filter": "Lọc",
+      "export": "Xuất",
+      "import": "Nhập",
+      "refresh": "Làm mới",
+      "total": "Tổng",
+      "active": "Hoạt động",
+      "inactive": "Không hoạt động",
+      "featured": "Nổi bật",
+      "available": "Có sẵn",
+      "unavailable": "Không có sẵn",
+      "status": "Trạng thái",
+      "actions": "Hành động",
+      "inTotal": "Tổng {count}",
+      "loading": "Đang tải...",
+      "noData": "Không có dữ liệu",
+      "confirm": "Xác nhận",
+      "confirmDelete": "Bạn có chắc chắn muốn xóa mục này không?",
+      "success": "Thành công",
+      "error": "Lỗi",
+      "required": "Bắt buộc",
+      "view": "Xem"
+    },
+    "navigation": {
+      "dashboard": "Bảng điều khiển",
+      "users": "Người dùng",
+      "properties": "Bất động sản",
+      "services": "Dịch vụ",
+      "bookings": "Đặt chỗ",
+      "categories": "Danh mục",
+      "partners": "Đối tác",
+      "doctors": "Bác sĩ",
+      "lawyers": "Luật sư",
+      "coaches": "Huấn luyện viên",
+      "maids": "Giúp việc",
+      "motorbikes": "Xe máy",
+      "rentalCars": "Thuê xe",
+      "yachts": "Du thuyền",
+      "activities": "Hoạt động",
+      "suppliers": "Nhà cung cấp",
+      "settings": "Cài đặt",
+      "logout": "Đăng xuất"
+    },
+    "dashboard": {
+      "title": "Bảng điều khiển",
+      "welcome": "Chào mừng, {name}",
+      "overview": "Tổng quan",
+      "recentActivity": "Hoạt động gần đây",
+      "quickStats": "Thống kê nhanh",
+      "totalUsers": "Tổng người dùng",
+      "totalBookings": "Tổng đặt chỗ",
+      "totalRevenue": "Tổng doanh thu",
+      "activeProviders": "Nhà cung cấp hoạt động"
+    },
+    "users": {
+      "title": "Quản lý người dùng",
+      "subtitle": "Quản lý tất cả người dùng nền tảng",
+      "new": "Người dùng mới",
+      "edit": "Chỉnh sửa người dùng",
+      "addNew": "Thêm người dùng mới",
+      "listTitle": "Danh sách người dùng",
+      "deactivate": "Vô hiệu hóa",
+      "stats": {
+        "totalUsers": "Tổng người dùng",
+        "customers": "Khách hàng",
+        "providers": "Nhà cung cấp",
+        "admins": "Quản trị viên"
+      },
+      "table": {
+        "user": "Người dùng",
+        "contact": "Liên hệ",
+        "email": "Email",
+        "role": "Vai trò",
+        "bookings": "Đặt chỗ",
+        "reviews": "Đánh giá",
+        "registration": "Đăng ký",
+        "status": "Trạng thái",
+        "createdAt": "Tạo lúc",
+        "actions": "Hành động"
+      }
+    },
+    "services": {
+      "title": "Quản lý dịch vụ",
+      "subtitle": "Quản lý tất cả dịch vụ nền tảng",
+      "new": "Dịch vụ mới",
+      "edit": "Chỉnh sửa dịch vụ",
+      "addNew": "Dịch vụ mới",
+      "listTitle": "Danh sách dịch vụ",
+      "stats": {
+        "total": "Tổng dịch vụ",
+        "active": "Dịch vụ hoạt động",
+        "totalBookings": "Tổng đặt chỗ"
+      },
+      "table": {
+        "service": "Dịch vụ",
+        "category": "Danh mục",
+        "bookings": "Đặt chỗ",
+        "reviews": "Đánh giá",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "bookings": {
+      "title": "Quản lý đặt chỗ",
+      "subtitle": "Quản lý tất cả đặt chỗ nền tảng",
+      "new": "Đặt chỗ mới",
+      "edit": "Chỉnh sửa đặt chỗ",
+      "addNew": "Thêm đặt chỗ mới",
+      "listTitle": "Danh sách đặt chỗ",
+      "stats": {
+        "total": "Tổng",
+        "pending": "Chờ xử lý",
+        "confirmed": "Đã xác nhận",
+        "completed": "Hoàn thành",
+        "cancelled": "Đã hủy",
+        "revenue": "Doanh thu"
+      },
+      "status": {
+        "pending": "Chờ xử lý",
+        "confirmed": "Đã xác nhận",
+        "completed": "Hoàn thành",
+        "cancelled": "Đã hủy"
+      },
+      "table": {
+        "client": "Khách hàng",
+        "service": "Dịch vụ",
+        "dates": "Ngày",
+        "type": "Loại",
+        "startDate": "Ngày bắt đầu",
+        "endDate": "Ngày kết thúc",
+        "status": "Trạng thái",
+        "total": "Tổng",
+        "actions": "Hành động"
+      }
+    },
+    "categories": {
+      "title": "Quản lý danh mục",
+      "subtitle": "Quản lý tất cả danh mục dịch vụ",
+      "new": "Danh mục mới",
+      "edit": "Chỉnh sửa danh mục",
+      "addNew": "Danh mục mới",
+      "listTitle": "Danh sách danh mục",
+      "stats": {
+        "total": "Tổng danh mục",
+        "active": "Danh mục hoạt động",
+        "totalServices": "Tổng dịch vụ"
+      },
+      "table": {
+        "category": "Danh mục",
+        "services": "Dịch vụ",
+        "order": "Thứ tự",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "partners": {
+      "title": "Quản lý đối tác",
+      "subtitle": "Quản lý tất cả đối tác và quan hệ đối tác",
+      "new": "Đối tác mới",
+      "edit": "Chỉnh sửa đối tác",
+      "addNew": "Đối tác mới",
+      "listTitle": "Danh sách đối tác",
+      "stats": {
+        "total": "Tổng đối tác",
+        "active": "Đối tác hoạt động",
+        "pending": "Chờ xử lý",
+        "revenue": "Tổng doanh thu"
+      },
+      "table": {
+        "partner": "Đối tác",
+        "services": "Dịch vụ",
+        "revenue": "Doanh thu",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "doctors": {
+      "title": "Quản lý bác sĩ",
+      "subtitle": "Quản lý tất cả bác sĩ và chuyên gia y tế",
+      "new": "Bác sĩ mới",
+      "edit": "Chỉnh sửa bác sĩ",
+      "addNew": "Bác sĩ mới",
+      "listTitle": "Danh sách bác sĩ",
+      "stats": {
+        "total": "Tổng bác sĩ",
+        "active": "Bác sĩ hoạt động",
+        "totalBookings": "Tổng đặt chỗ",
+        "avgRating": "Đánh giá trung bình"
+      },
+      "table": {
+        "doctor": "Bác sĩ",
+        "location": "Vị trí",
+        "bookings": "Đặt chỗ",
+        "reviews": "Đánh giá",
+        "rating": "Xếp hạng",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "lawyers": {
+      "title": "Quản lý luật sư",
+      "subtitle": "Quản lý tất cả luật sư và chuyên gia pháp lý",
+      "new": "Luật sư mới",
+      "edit": "Chỉnh sửa luật sư",
+      "addNew": "Luật sư mới",
+      "listTitle": "Danh sách luật sư",
+      "stats": {
+        "total": "Tổng luật sư",
+        "active": "Luật sư hoạt động",
+        "totalBookings": "Tổng đặt chỗ",
+        "avgRating": "Đánh giá trung bình"
+      },
+      "table": {
+        "lawyer": "Luật sư",
+        "location": "Vị trí",
+        "bookings": "Đặt chỗ",
+        "reviews": "Đánh giá",
+        "rating": "Xếp hạng",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "coaches": {
+      "title": "Quản lý huấn luyện viên",
+      "subtitle": "Quản lý tất cả huấn luyện viên và chuyên gia thể dục",
+      "new": "Huấn luyện viên mới",
+      "edit": "Chỉnh sửa huấn luyện viên",
+      "addNew": "Huấn luyện viên mới",
+      "listTitle": "Danh sách huấn luyện viên",
+      "stats": {
+        "total": "Tổng huấn luyện viên",
+        "active": "Huấn luyện viên hoạt động",
+        "totalBookings": "Tổng đặt chỗ",
+        "avgRating": "Đánh giá trung bình"
+      },
+      "table": {
+        "coach": "Huấn luyện viên",
+        "location": "Vị trí",
+        "bookings": "Đặt chỗ",
+        "reviews": "Đánh giá",
+        "rating": "Xếp hạng",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "activities": {
+      "title": "Quản lý hoạt động",
+      "subtitle": "Quản lý tất cả hoạt động và trải nghiệm",
+      "new": "Hoạt động mới",
+      "edit": "Chỉnh sửa hoạt động",
+      "addNew": "Hoạt động mới",
+      "listTitle": "Danh sách hoạt động",
+      "stats": {
+        "total": "Tổng hoạt động",
+        "active": "Hoạt động đang diễn ra",
+        "totalBookings": "Tổng đặt chỗ",
+        "avgRating": "Đánh giá trung bình"
+      },
+      "table": {
+        "activity": "Hoạt động",
+        "location": "Vị trí",
+        "bookings": "Đặt chỗ",
+        "reviews": "Đánh giá",
+        "rating": "Xếp hạng",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "suppliers": {
+      "title": "Quản lý nhà cung cấp",
+      "subtitle": "Quản lý tất cả nhà cung cấp và người bán",
+      "new": "Nhà cung cấp mới",
+      "edit": "Chỉnh sửa nhà cung cấp",
+      "addNew": "Nhà cung cấp mới",
+      "listTitle": "Danh sách nhà cung cấp",
+      "stats": {
+        "total": "Tổng nhà cung cấp",
+        "active": "Nhà cung cấp hoạt động",
+        "pending": "Chờ xử lý",
+        "revenue": "Tổng doanh thu"
+      },
+      "table": {
+        "supplier": "Nhà cung cấp",
+        "services": "Dịch vụ",
+        "revenue": "Doanh thu",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "transfers": {
+      "title": "Quản lý đưa đón",
+      "subtitle": "Quản lý tất cả dịch vụ đưa đón và vận chuyển",
+      "new": "Đưa đón mới",
+      "edit": "Chỉnh sửa đưa đón",
+      "addNew": "Đưa đón mới",
+      "listTitle": "Danh sách đưa đón",
+      "stats": {
+        "total": "Tổng đưa đón",
+        "active": "Đưa đón hoạt động",
+        "pending": "Chờ xử lý",
+        "revenue": "Tổng doanh thu"
+      },
+      "table": {
+        "transfer": "Đưa đón",
+        "services": "Dịch vụ",
+        "revenue": "Doanh thu",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "blog": {
+      "title": "Quản lý blog",
+      "subtitle": "Quản lý tất cả bài viết và nội dung blog",
+      "new": "Bài viết mới",
+      "edit": "Chỉnh sửa bài viết",
+      "addNew": "Bài viết mới",
+      "listTitle": "Bài viết blog",
+      "stats": {
+        "total": "Tổng bài viết",
+        "published": "Đã xuất bản",
+        "totalViews": "Tổng lượt xem",
+        "totalComments": "Tổng bình luận"
+      },
+      "table": {
+        "post": "Bài viết",
+        "author": "Tác giả",
+        "views": "Lượt xem",
+        "comments": "Bình luận",
+        "likes": "Thích",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    },
+    "chatbots": {
+      "title": "Quản lý chatbot",
+      "subtitle": "Quản lý tất cả chatbot và trợ lý AI",
+      "new": "Chatbot mới",
+      "edit": "Chỉnh sửa chatbot",
+      "addNew": "Chatbot mới",
+      "import": "Nhập chatbot",
+      "listTitle": "Danh sách chatbot"
+    },
+    "notifications": {
+      "title": "Quản lý thông báo",
+      "subtitle": "Quản lý tất cả thông báo hệ thống",
+      "new": "Thông báo mới",
+      "edit": "Chỉnh sửa thông báo",
+      "addNew": "Gửi thông báo",
+      "listTitle": "Danh sách thông báo"
+    },
+    "analytics": {
+      "title": "Phân tích và báo cáo",
+      "subtitle": "Xem phân tích và tạo báo cáo",
+      "new": "Báo cáo mới",
+      "edit": "Chỉnh sửa báo cáo",
+      "listTitle": "Bảng điều khiển phân tích"
+    },
+    "promotions": {
+      "title": "Quản lý khuyến mãi",
+      "subtitle": "Quản lý tất cả khuyến mãi và ưu đãi",
+      "new": "Khuyến mãi mới",
+      "edit": "Chỉnh sửa khuyến mãi",
+      "addNew": "Khuyến mãi mới",
+      "listTitle": "Danh sách khuyến mãi"
+    },
+    "cmsPages": {
+      "title": "Trang CMS",
+      "subtitle": "Quản lý tất cả trang CMS",
+      "listTitle": "Trang CMS"
+    },
+    "media": {
+      "title": "Thư viện phương tiện",
+      "subtitle": "Quản lý tất cả tệp phương tiện",
+      "listTitle": "Tệp phương tiện"
+    },
+    "data": {
+      "title": "Quản lý dữ liệu",
+      "subtitle": "Nhập và xuất dữ liệu",
+      "new": "Nhập mới",
+      "import": "Nhập dữ liệu",
+      "export": "Xuất dữ liệu"
+    },
+    "simulators": {
+      "title": "Quản lý mô phỏng",
+      "subtitle": "Quản lý tất cả mô phỏng giá",
+      "new": "Mô phỏng mới",
+      "edit": "Chỉnh sửa mô phỏng",
+      "addNew": "Mô phỏng mới",
+      "listTitle": "Danh sách mô phỏng"
+    },
+    "cryptoPayments": {
+      "title": "Thanh toán tiền điện tử",
+      "subtitle": "Quản lý giao dịch tiền điện tử",
+      "new": "Giao dịch mới",
+      "edit": "Chỉnh sửa giao dịch",
+      "listTitle": "Giao dịch tiền điện tử"
+    },
+    "logs": {
+      "title": "Nhật ký hệ thống",
+      "subtitle": "Xem tất cả nhật ký và hoạt động hệ thống",
+      "activityLogs": "Nhật ký hoạt động",
+      "errorLogs": "Nhật ký lỗi",
+      "viewAll": "Xem tất cả nhật ký",
+      "listTitle": "Nhật ký"
+    },
+    "currencies": {
+      "title": "Quản lý tiền tệ",
+      "subtitle": "Quản lý tất cả loại tiền tệ",
+      "new": "Tiền tệ mới",
+      "edit": "Chỉnh sửa tiền tệ",
+      "addNew": "Tiền tệ mới",
+      "listTitle": "Danh sách tiền tệ"
+    },
+    "geography": {
+      "title": "Quản lý địa lý",
+      "subtitle": "Quản lý quốc gia, thành phố và vị trí",
+      "listTitle": "Địa lý"
+    },
+    "exchangeRates": {
+      "title": "Tỷ giá hối đoái",
+      "subtitle": "Quản lý tỷ giá hối đoái tiền tệ",
+      "listTitle": "Tỷ giá hối đoái"
+    },
+    "styles": {
+      "title": "Quản lý kiểu dáng",
+      "subtitle": "Tùy chỉnh giao diện ứng dụng",
+      "listTitle": "Kiểu dáng"
+    },
+    "routes": {
+      "title": "Quản lý tuyến đường",
+      "subtitle": "Quản lý tuyến đường ứng dụng",
+      "new": "Tuyến đường mới",
+      "edit": "Chỉnh sửa tuyến đường",
+      "listTitle": "Tuyến đường"
+    },
+    "maids": {
+      "title": "Giúp việc",
+      "subtitle": "Tổng {count} giúp việc",
+      "new": "Giúp việc mới",
+      "edit": "Chỉnh sửa giúp việc",
+      "addNew": "Thêm giúp việc mới"
+    },
+    "motorbikes": {
+      "title": "Xe máy",
+      "subtitle": "Tổng {count} xe máy",
+      "new": "Xe máy mới",
+      "edit": "Chỉnh sửa xe máy",
+      "addNew": "Thêm xe máy mới"
+    },
+    "rentalCars": {
+      "title": "Thuê xe",
+      "subtitle": "Tổng {count} xe cho thuê",
+      "new": "Xe mới",
+      "edit": "Chỉnh sửa xe",
+      "addNew": "Thêm xe cho thuê mới"
+    },
+    "yachts": {
+      "title": "Du thuyền",
+      "subtitle": "Tổng {count} du thuyền",
+      "new": "Du thuyền mới",
+      "edit": "Chỉnh sửa du thuyền",
+      "addNew": "Thêm du thuyền mới"
+    },
+    "properties": {
+      "title": "Quản lý bất động sản",
+      "subtitle": "{count} bất động sản • {published} đã xuất bản",
+      "new": "Bất động sản mới",
+      "edit": "Chỉnh sửa bất động sản",
+      "addNew": "Thêm bất động sản",
+      "noProperties": "Không có bất động sản",
+      "addFirstProperty": "Bắt đầu bằng cách thêm bất động sản đầu tiên của bạn",
+      "stats": {
+        "total": "Tổng",
+        "draft": "Bản nháp",
+        "published": "Đã xuất bản",
+        "sold": "Đã bán",
+        "rented": "Đã cho thuê"
+      },
+      "filters": {
+        "all": "Tất cả",
+        "draft": "Bản nháp",
+        "published": "Đã xuất bản",
+        "sold": "Đã bán",
+        "rented": "Đã cho thuê"
+      },
+      "form": {
+        "title": "Tiêu đề",
+        "description": "Mô tả",
+        "propertyType": "Loại bất động sản",
+        "listingType": "Loại niêm yết",
+        "status": "Trạng thái",
+        "price": "Giá",
+        "area": "Diện tích (m²)",
+        "bedrooms": "Phòng ngủ",
+        "bathrooms": "Phòng tắm",
+        "featured": "Nổi bật",
+        "images": "Hình ảnh"
+      },
+      "table": {
+        "property": "Bất động sản",
+        "type": "Loại",
+        "price": "Giá",
+        "location": "Vị trí",
+        "status": "Trạng thái",
+        "actions": "Hành động"
+      }
+    }
+  }
+}

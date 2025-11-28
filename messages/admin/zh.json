@@ -1,0 +1,519 @@
+{
+  "admin": {
+    "common": {
+      "add": "添加",
+      "edit": "编辑",
+      "delete": "删除",
+      "save": "保存",
+      "saving": "保存中...",
+      "cancel": "取消",
+      "select": "选择",
+      "search": "搜索",
+      "filter": "筛选",
+      "export": "导出",
+      "import": "导入",
+      "refresh": "刷新",
+      "total": "总计",
+      "active": "活跃",
+      "inactive": "不活跃",
+      "featured": "精选",
+      "available": "可用",
+      "unavailable": "不可用",
+      "status": "状态",
+      "actions": "操作",
+      "inTotal": "共 {count} 个",
+      "loading": "加载中...",
+      "noData": "暂无数据",
+      "confirm": "确认",
+      "confirmDelete": "确定要删除此项吗？",
+      "success": "成功",
+      "error": "错误",
+      "required": "必填",
+      "view": "查看"
+    },
+    "navigation": {
+      "dashboard": "仪表板",
+      "users": "用户",
+      "properties": "房产",
+      "services": "服务",
+      "bookings": "预订",
+      "categories": "分类",
+      "partners": "合作伙伴",
+      "doctors": "医生",
+      "lawyers": "律师",
+      "coaches": "教练",
+      "maids": "家政服务",
+      "motorbikes": "摩托车",
+      "rentalCars": "租车",
+      "yachts": "游艇",
+      "activities": "活动",
+      "suppliers": "供应商",
+      "settings": "设置",
+      "logout": "退出"
+    },
+    "dashboard": {
+      "title": "仪表板",
+      "welcome": "欢迎，{name}",
+      "overview": "概览",
+      "recentActivity": "最近活动",
+      "quickStats": "快速统计",
+      "totalUsers": "总用户数",
+      "totalBookings": "总预订数",
+      "totalRevenue": "总收入",
+      "activeProviders": "活跃供应商"
+    },
+    "users": {
+      "title": "用户管理",
+      "subtitle": "管理所有平台用户",
+      "new": "新用户",
+      "edit": "编辑用户",
+      "addNew": "添加新用户",
+      "listTitle": "用户列表",
+      "deactivate": "停用",
+      "stats": {
+        "totalUsers": "总用户数",
+        "customers": "客户",
+        "providers": "供应商",
+        "admins": "管理员"
+      },
+      "table": {
+        "user": "用户",
+        "contact": "联系方式",
+        "email": "邮箱",
+        "role": "角色",
+        "bookings": "预订",
+        "reviews": "评价",
+        "registration": "注册",
+        "status": "状态",
+        "createdAt": "创建时间",
+        "actions": "操作"
+      }
+    },
+    "services": {
+      "title": "服务管理",
+      "subtitle": "管理所有平台服务",
+      "new": "新服务",
+      "edit": "编辑服务",
+      "addNew": "新服务",
+      "listTitle": "服务列表",
+      "stats": {
+        "total": "总服务数",
+        "active": "活跃服务",
+        "totalBookings": "总预订数"
+      },
+      "table": {
+        "service": "服务",
+        "category": "分类",
+        "bookings": "预订",
+        "reviews": "评价",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "bookings": {
+      "title": "预订管理",
+      "subtitle": "管理所有平台预订",
+      "new": "新预订",
+      "edit": "编辑预订",
+      "addNew": "添加新预订",
+      "listTitle": "预订列表",
+      "stats": {
+        "total": "总计",
+        "pending": "待处理",
+        "confirmed": "已确认",
+        "completed": "已完成",
+        "cancelled": "已取消",
+        "revenue": "收入"
+      },
+      "status": {
+        "pending": "待处理",
+        "confirmed": "已确认",
+        "completed": "已完成",
+        "cancelled": "已取消"
+      },
+      "table": {
+        "client": "客户",
+        "service": "服务",
+        "dates": "日期",
+        "type": "类型",
+        "startDate": "开始日期",
+        "endDate": "结束日期",
+        "status": "状态",
+        "total": "总计",
+        "actions": "操作"
+      }
+    },
+    "categories": {
+      "title": "分类管理",
+      "subtitle": "管理所有服务分类",
+      "new": "新分类",
+      "edit": "编辑分类",
+      "addNew": "新分类",
+      "listTitle": "分类列表",
+      "stats": {
+        "total": "总分类数",
+        "active": "活跃分类",
+        "totalServices": "总服务数"
+      },
+      "table": {
+        "category": "分类",
+        "services": "服务",
+        "order": "排序",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "partners": {
+      "title": "合作伙伴管理",
+      "subtitle": "管理所有合作伙伴和合作关系",
+      "new": "新合作伙伴",
+      "edit": "编辑合作伙伴",
+      "addNew": "新合作伙伴",
+      "listTitle": "合作伙伴列表",
+      "stats": {
+        "total": "总合作伙伴数",
+        "active": "活跃合作伙伴",
+        "pending": "待处理",
+        "revenue": "总收入"
+      },
+      "table": {
+        "partner": "合作伙伴",
+        "services": "服务",
+        "revenue": "收入",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "doctors": {
+      "title": "医生管理",
+      "subtitle": "管理所有医生和医疗专业人员",
+      "new": "新医生",
+      "edit": "编辑医生",
+      "addNew": "新医生",
+      "listTitle": "医生列表",
+      "stats": {
+        "total": "总医生数",
+        "active": "活跃医生",
+        "totalBookings": "总预订数",
+        "avgRating": "平均评分"
+      },
+      "table": {
+        "doctor": "医生",
+        "location": "位置",
+        "bookings": "预订",
+        "reviews": "评价",
+        "rating": "评分",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "lawyers": {
+      "title": "律师管理",
+      "subtitle": "管理所有律师和法律专业人员",
+      "new": "新律师",
+      "edit": "编辑律师",
+      "addNew": "新律师",
+      "listTitle": "律师列表",
+      "stats": {
+        "total": "总律师数",
+        "active": "活跃律师",
+        "totalBookings": "总预订数",
+        "avgRating": "平均评分"
+      },
+      "table": {
+        "lawyer": "律师",
+        "location": "位置",
+        "bookings": "预订",
+        "reviews": "评价",
+        "rating": "评分",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "coaches": {
+      "title": "教练管理",
+      "subtitle": "管理所有教练和健身专业人员",
+      "new": "新教练",
+      "edit": "编辑教练",
+      "addNew": "新教练",
+      "listTitle": "教练列表",
+      "stats": {
+        "total": "总教练数",
+        "active": "活跃教练",
+        "totalBookings": "总预订数",
+        "avgRating": "平均评分"
+      },
+      "table": {
+        "coach": "教练",
+        "location": "位置",
+        "bookings": "预订",
+        "reviews": "评价",
+        "rating": "评分",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "activities": {
+      "title": "活动管理",
+      "subtitle": "管理所有活动和体验",
+      "new": "新活动",
+      "edit": "编辑活动",
+      "addNew": "新活动",
+      "listTitle": "活动列表",
+      "stats": {
+        "total": "总活动数",
+        "active": "活跃活动",
+        "totalBookings": "总预订数",
+        "avgRating": "平均评分"
+      },
+      "table": {
+        "activity": "活动",
+        "location": "位置",
+        "bookings": "预订",
+        "reviews": "评价",
+        "rating": "评分",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "suppliers": {
+      "title": "供应商管理",
+      "subtitle": "管理所有供应商和卖家",
+      "new": "新供应商",
+      "edit": "编辑供应商",
+      "addNew": "新供应商",
+      "listTitle": "供应商列表",
+      "stats": {
+        "total": "总供应商数",
+        "active": "活跃供应商",
+        "pending": "待处理",
+        "revenue": "总收入"
+      },
+      "table": {
+        "supplier": "供应商",
+        "services": "服务",
+        "revenue": "收入",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "transfers": {
+      "title": "接送管理",
+      "subtitle": "管理所有接送和交通服务",
+      "new": "新接送",
+      "edit": "编辑接送",
+      "addNew": "新接送",
+      "listTitle": "接送列表",
+      "stats": {
+        "total": "总接送数",
+        "active": "活跃接送",
+        "pending": "待处理",
+        "revenue": "总收入"
+      },
+      "table": {
+        "transfer": "接送",
+        "services": "服务",
+        "revenue": "收入",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "blog": {
+      "title": "博客管理",
+      "subtitle": "管理所有博客文章和内容",
+      "new": "新文章",
+      "edit": "编辑文章",
+      "addNew": "新文章",
+      "listTitle": "博客文章",
+      "stats": {
+        "total": "总文章数",
+        "published": "已发布",
+        "totalViews": "总浏览量",
+        "totalComments": "总评论数"
+      },
+      "table": {
+        "post": "文章",
+        "author": "作者",
+        "views": "浏览量",
+        "comments": "评论",
+        "likes": "点赞",
+        "status": "状态",
+        "actions": "操作"
+      }
+    },
+    "chatbots": {
+      "title": "聊天机器人管理",
+      "subtitle": "管理所有聊天机器人和AI助手",
+      "new": "新聊天机器人",
+      "edit": "编辑聊天机器人",
+      "addNew": "新聊天机器人",
+      "import": "导入聊天机器人",
+      "listTitle": "聊天机器人列表"
+    },
+    "notifications": {
+      "title": "通知管理",
+      "subtitle": "管理所有系统通知",
+      "new": "新通知",
+      "edit": "编辑通知",
+      "addNew": "发送通知",
+      "listTitle": "通知列表"
+    },
+    "analytics": {
+      "title": "分析与报告",
+      "subtitle": "查看分析并生成报告",
+      "new": "新报告",
+      "edit": "编辑报告",
+      "listTitle": "分析仪表板"
+    },
+    "promotions": {
+      "title": "促销管理",
+      "subtitle": "管理所有促销和优惠",
+      "new": "新促销",
+      "edit": "编辑促销",
+      "addNew": "新促销",
+      "listTitle": "促销列表"
+    },
+    "cmsPages": {
+      "title": "CMS页面",
+      "subtitle": "管理所有CMS页面",
+      "listTitle": "CMS页面"
+    },
+    "media": {
+      "title": "媒体库",
+      "subtitle": "管理所有媒体文件",
+      "listTitle": "媒体文件"
+    },
+    "data": {
+      "title": "数据管理",
+      "subtitle": "导入和导出数据",
+      "new": "新导入",
+      "import": "导入数据",
+      "export": "导出数据"
+    },
+    "simulators": {
+      "title": "模拟器管理",
+      "subtitle": "管理所有价格模拟器",
+      "new": "新模拟器",
+      "edit": "编辑模拟器",
+      "addNew": "新模拟器",
+      "listTitle": "模拟器列表"
+    },
+    "cryptoPayments": {
+      "title": "加密货币支付",
+      "subtitle": "管理加密货币交易",
+      "new": "新交易",
+      "edit": "编辑交易",
+      "listTitle": "加密货币交易"
+    },
+    "logs": {
+      "title": "系统日志",
+      "subtitle": "查看所有系统日志和活动",
+      "activityLogs": "活动日志",
+      "errorLogs": "错误日志",
+      "viewAll": "查看所有日志",
+      "listTitle": "日志"
+    },
+    "currencies": {
+      "title": "货币管理",
+      "subtitle": "管理所有货币",
+      "new": "新货币",
+      "edit": "编辑货币",
+      "addNew": "新货币",
+      "listTitle": "货币列表"
+    },
+    "geography": {
+      "title": "地理管理",
+      "subtitle": "管理国家、城市和位置",
+      "listTitle": "地理"
+    },
+    "exchangeRates": {
+      "title": "汇率",
+      "subtitle": "管理货币汇率",
+      "listTitle": "汇率"
+    },
+    "styles": {
+      "title": "样式管理",
+      "subtitle": "自定义应用外观",
+      "listTitle": "样式"
+    },
+    "routes": {
+      "title": "路由管理",
+      "subtitle": "管理应用路由",
+      "new": "新路由",
+      "edit": "编辑路由",
+      "listTitle": "路由"
+    },
+    "maids": {
+      "title": "家政服务",
+      "subtitle": "共 {count} 个家政服务",
+      "new": "新家政",
+      "edit": "编辑家政",
+      "addNew": "添加新家政服务"
+    },
+    "motorbikes": {
+      "title": "摩托车",
+      "subtitle": "共 {count} 辆摩托车",
+      "new": "新摩托车",
+      "edit": "编辑摩托车",
+      "addNew": "添加新摩托车"
+    },
+    "rentalCars": {
+      "title": "租车",
+      "subtitle": "共 {count} 辆租车",
+      "new": "新租车",
+      "edit": "编辑租车",
+      "addNew": "添加新租车"
+    },
+    "yachts": {
+      "title": "游艇",
+      "subtitle": "共 {count} 艘游艇",
+      "new": "新游艇",
+      "edit": "编辑游艇",
+      "addNew": "添加新游艇"
+    },
+    "properties": {
+      "title": "房产管理",
+      "subtitle": "{count} 个房产 • {published} 已发布",
+      "new": "新房产",
+      "edit": "编辑房产",
+      "addNew": "添加房产",
+      "noProperties": "暂无房产",
+      "addFirstProperty": "开始添加您的第一个房产",
+      "stats": {
+        "total": "总计",
+        "draft": "草稿",
+        "published": "已发布",
+        "sold": "已售",
+        "rented": "已租"
+      },
+      "filters": {
+        "all": "全部",
+        "draft": "草稿",
+        "published": "已发布",
+        "sold": "已售",
+        "rented": "已租"
+      },
+      "form": {
+        "title": "标题",
+        "description": "描述",
+        "propertyType": "房产类型",
+        "listingType": "挂牌类型",
+        "status": "状态",
+        "price": "价格",
+        "area": "面积（平方米）",
+        "bedrooms": "卧室",
+        "bathrooms": "浴室",
+        "featured": "精选",
+        "images": "图片"
+      },
+      "table": {
+        "property": "房产",
+        "type": "类型",
+        "price": "价格",
+        "location": "位置",
+        "status": "状态",
+        "actions": "操作"
+      }
+    }
+  }
+}

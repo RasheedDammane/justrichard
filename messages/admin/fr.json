@@ -1,0 +1,957 @@
+{
+  "admin": {
+    "common": {
+      "add": "Ajouter",
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "view": "Voir",
+      "search": "Rechercher",
+      "filter": "Filtrer",
+      "export": "Exporter",
+      "import": "Importer",
+      "refresh": "Actualiser",
+      "loading": "Chargement...",
+      "error": "Erreur",
+      "success": "Succès",
+      "confirm": "Confirmer",
+      "back": "Retour",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Soumettre",
+      "reset": "Réinitialiser",
+      "clear": "Effacer",
+      "apply": "Appliquer",
+      "close": "Fermer",
+      "open": "Ouvrir",
+      "download": "Télécharger",
+      "upload": "Uploader",
+      "select": "Sélectionner",
+      "selectAll": "Tout sélectionner",
+      "deselectAll": "Tout désélectionner",
+      "actions": "Actions",
+      "status": "Statut",
+      "active": "Actif",
+      "inactive": "Inactif",
+      "enabled": "Activé",
+      "disabled": "Désactivé",
+      "yes": "Oui",
+      "no": "Non",
+      "all": "Tous",
+      "none": "Aucun",
+      "other": "Autre",
+      "name": "Nom",
+      "description": "Description",
+      "date": "Date",
+      "time": "Heure",
+      "createdAt": "Créé le",
+      "updatedAt": "Modifié le",
+      "featured": "En vedette",
+      "available": "Disponible",
+      "unavailable": "Indisponible"
+    },
+    "navigation": {
+      "dashboard": "Tableau de bord",
+      "users": "Utilisateurs",
+      "properties": "Propriétés",
+      "services": "Services",
+      "bookings": "Réservations",
+      "categories": "Catégories",
+      "partners": "Partenaires",
+      "doctors": "Médecins",
+      "lawyers": "Avocats",
+      "coaches": "Coachs",
+      "maids": "Employées de maison",
+      "motorbikes": "Motos",
+      "rentalCars": "Voitures de location",
+      "yachts": "Yachts",
+      "activities": "Activités",
+      "suppliers": "Fournisseurs",
+      "settings": "Paramètres",
+      "logout": "Déconnexion"
+    },
+    "maids": {
+      "title": "Employées de maison",
+      "subtitle": "{count} employées au total",
+      "new": "Nouvelle employée",
+      "edit": "Modifier l'employée",
+      "addNew": "Ajouter une nouvelle employée au système",
+      "stats": {
+        "total": "Total",
+        "active": "Actives",
+        "featured": "En vedette",
+        "avgSalary": "Salaire moyen"
+      },
+      "table": {
+        "name": "Nom",
+        "nationality": "Nationalité",
+        "age": "Âge",
+        "experience": "Expérience",
+        "salary": "Salaire",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Nom",
+        "slug": "Slug",
+        "refNo": "N° de référence",
+        "nationality": "Nationalité",
+        "age": "Âge",
+        "gender": "Sexe",
+        "female": "Femme",
+        "male": "Homme",
+        "yearsOfExperience": "Années d'expérience",
+        "monthlyFee": "Salaire mensuel",
+        "country": "Pays",
+        "city": "Ville",
+        "phone": "Téléphone",
+        "email": "Email",
+        "englishLevel": "Niveau d'anglais",
+        "arabicLevel": "Niveau d'arabe",
+        "none": "Aucun",
+        "basic": "Basique",
+        "good": "Bon",
+        "fluent": "Courant",
+        "active": "Active",
+        "featured": "En vedette"
+      },
+      "units": {
+        "years": "ans",
+        "month": "mois"
+      }
+    },
+    "motorbikes": {
+      "title": "Motos",
+      "subtitle": "{count} motos au total",
+      "new": "Nouvelle moto",
+      "edit": "Modifier la moto",
+      "addNew": "Ajouter une nouvelle moto au système",
+      "stats": {
+        "total": "Total",
+        "available": "Disponibles",
+        "avgPriceDay": "Prix moyen/jour"
+      },
+      "table": {
+        "motorbike": "Moto",
+        "category": "Catégorie",
+        "engine": "Cylindrée",
+        "priceDay": "Prix/jour",
+        "location": "Lieu",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "form": {
+        "brand": "Marque",
+        "model": "Modèle",
+        "slug": "Slug",
+        "year": "Année",
+        "category": "Catégorie",
+        "engineSize": "Cylindrée (cc)",
+        "seats": "Places",
+        "transmission": "Transmission",
+        "automatic": "Automatique",
+        "manual": "Manuelle",
+        "fuelType": "Type de carburant",
+        "petrol": "Essence",
+        "electric": "Électrique",
+        "priceDay": "Prix/jour",
+        "priceWeek": "Prix/semaine",
+        "priceMonth": "Prix/mois",
+        "currency": "Devise",
+        "country": "Pays",
+        "city": "Ville",
+        "description": "Description",
+        "available": "Disponible"
+      }
+    },
+    "rentalCars": {
+      "title": "Voitures de location",
+      "subtitle": "{count} voitures au total",
+      "new": "Nouvelle voiture",
+      "edit": "Modifier la voiture",
+      "addNew": "Ajouter une nouvelle voiture au système",
+      "stats": {
+        "total": "Total",
+        "active": "Actives",
+        "featured": "En vedette",
+        "avgPriceDay": "Prix moyen/jour"
+      },
+      "table": {
+        "car": "Voiture",
+        "category": "Catégorie",
+        "priceDay": "Prix/jour",
+        "location": "Lieu",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Nom",
+        "slug": "Slug",
+        "brand": "Marque",
+        "model": "Modèle",
+        "year": "Année",
+        "category": "Catégorie",
+        "economy": "Économique",
+        "compact": "Compacte",
+        "sedan": "Berline",
+        "suv": "SUV",
+        "luxury": "Luxe",
+        "sports": "Sport",
+        "van": "Van",
+        "color": "Couleur",
+        "doors": "Portes",
+        "seats": "Places",
+        "fuelType": "Type de carburant",
+        "petrol": "Essence",
+        "diesel": "Diesel",
+        "electric": "Électrique",
+        "hybrid": "Hybride",
+        "transmission": "Transmission",
+        "automatic": "Automatique",
+        "manual": "Manuelle",
+        "priceDay": "Prix/jour",
+        "priceWeek": "Prix/semaine",
+        "priceMonth": "Prix/mois",
+        "country": "Pays",
+        "city": "Ville",
+        "shortDescription": "Description courte",
+        "description": "Description",
+        "active": "Active",
+        "featured": "En vedette",
+        "available": "Disponible"
+      }
+    },
+    "yachts": {
+      "title": "Gestion des Yachts",
+      "subtitle": "Gérer les locations et réservations de yachts",
+      "new": "Nouveau yacht",
+      "edit": "Modifier le yacht",
+      "addNew": "Ajouter un yacht",
+      "noYachts": "Aucun yacht trouvé",
+      "addFirstYacht": "Commencez par ajouter votre premier yacht",
+      "listTitle": "Liste des Yachts",
+      "guests": "invités",
+      "stats": {
+        "total": "Total",
+        "totalYachts": "Total Yachts",
+        "featured": "En vedette",
+        "featuredYachts": "Yachts en vedette",
+        "avgPrice": "Prix moyen",
+        "aedPerHour": "AED par heure",
+        "views": "Vues",
+        "totalViews": "Total des vues"
+      },
+      "table": {
+        "yacht": "Yacht",
+        "capacity": "Capacité",
+        "length": "Longueur",
+        "pricePerHour": "Prix/Heure",
+        "location": "Lieu",
+        "views": "Vues",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Nom",
+        "slug": "Slug",
+        "brand": "Marque",
+        "model": "Modèle",
+        "year": "Année",
+        "length": "Longueur (ft)",
+        "capacity": "Capacité",
+        "cabins": "Cabines",
+        "bathrooms": "Salles de bain",
+        "crew": "Équipage",
+        "speed": "Vitesse (nœuds)",
+        "fuelType": "Type de carburant",
+        "engineType": "Type de moteur",
+        "manufacturer": "Fabricant",
+        "priceHour": "Prix/heure",
+        "price2Hours": "Prix/2 heures",
+        "price3Hours": "Prix/3 heures",
+        "price4Hours": "Prix/4 heures",
+        "country": "Pays",
+        "city": "Ville",
+        "description": "Description",
+        "shortDescription": "Description courte",
+        "features": "Caractéristiques",
+        "amenities": "Équipements",
+        "included": "Inclus",
+        "notIncluded": "Non inclus",
+        "active": "Actif",
+        "featured": "En vedette",
+        "available": "Disponible"
+      }
+    },
+    "providers": {
+      "title": "Prestataires",
+      "subtitle": "{count} prestataires au total",
+      "new": "Nouveau prestataire",
+      "edit": "Modifier le prestataire",
+      "addNew": "Ajouter un nouveau prestataire au système",
+      "types": {
+        "doctor": "Médecin",
+        "lawyer": "Avocat",
+        "coach": "Coach",
+        "activity": "Activité",
+        "supplier": "Fournisseur",
+        "transfer": "Transfert"
+      },
+      "stats": {
+        "total": "Total",
+        "active": "Actifs",
+        "verified": "Vérifiés",
+        "avgRating": "Note moyenne"
+      },
+      "table": {
+        "name": "Nom",
+        "type": "Type",
+        "specialty": "Spécialité",
+        "rating": "Note",
+        "location": "Lieu",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "form": {
+        "name": "Nom",
+        "slug": "Slug",
+        "type": "Type",
+        "specialty": "Spécialité",
+        "description": "Description",
+        "shortDescription": "Description courte",
+        "phone": "Téléphone",
+        "email": "Email",
+        "website": "Site web",
+        "address": "Adresse",
+        "country": "Pays",
+        "city": "Ville",
+        "languages": "Langues",
+        "yearsOfExperience": "Années d'expérience",
+        "consultationFee": "Frais de consultation",
+        "currency": "Devise",
+        "active": "Actif",
+        "verified": "Vérifié",
+        "featured": "En vedette"
+      }
+    },
+    "properties": {
+      "title": "Gestion Immobilière",
+      "subtitle": "{count} propriété(s) • {published} publiée(s)",
+      "new": "Nouvelle propriété",
+      "edit": "Modifier la propriété",
+      "addNew": "Ajouter une propriété",
+      "noProperties": "Aucune propriété",
+      "addFirstProperty": "Commencez par ajouter votre première propriété",
+      "stats": {
+        "total": "Total",
+        "draft": "Brouillons",
+        "published": "Publiées",
+        "sold": "Vendues",
+        "rented": "Louées"
+      },
+      "filters": {
+        "all": "Toutes",
+        "draft": "Brouillons",
+        "published": "Publiées",
+        "sold": "Vendues",
+        "rented": "Louées"
+      },
+      "form": {
+        "title": "Titre",
+        "description": "Description",
+        "propertyType": "Type de propriété",
+        "listingType": "Type d'annonce",
+        "status": "Statut",
+        "price": "Prix",
+        "salePrice": "Prix de vente",
+        "rentPrice": "Prix de location",
+        "secondPrice": "Prix secondaire (Optionnel)",
+        "currency": "Devise",
+        "pricePrefix": "Préfixe de prix",
+        "pricePrefixPlaceholder": "ex: À partir de",
+        "pricePostfix": "Après le prix",
+        "pricePostfixPlaceholder": "ex: Mensuel",
+        "pricePlaceholder": "Placeholder de prix",
+        "enablePricePlaceholder": "Activer le placeholder de prix",
+        "area": "Surface",
+        "areaPostfix": "Suffixe de surface",
+        "areaPostfixPlaceholder": "ex: m²",
+        "landArea": "Surface du terrain",
+        "landAreaPostfix": "Suffixe surface terrain",
+        "bedrooms": "Chambres",
+        "bathrooms": "Salles de bain",
+        "rooms": "Pièces",
+        "garages": "Garages",
+        "garageSize": "Taille du garage",
+        "garageSizePlaceholder": "ex: 200 m²",
+        "floor": "Étage",
+        "furnished": "Meublé",
+        "yearBuilt": "Année de construction",
+        "propertyId": "ID de la propriété",
+        "propertyIdPlaceholder": "ex: HZ-01",
+        "streetAddress": "Adresse de rue",
+        "streetAddressPlaceholder": "Entrez uniquement le nom de rue et le numéro",
+        "zipCode": "Code postal",
+        "videoUrl": "URL vidéo",
+        "videoUrlPlaceholder": "ex: https://www.youtube.com/watch?v=...",
+        "sliderImage": "Image slider",
+        "customSlider": "Afficher sur le slider personnalisé?",
+        "floorPlans": "Plans d'étage",
+        "documents": "Documents de propriété",
+        "authorType": "Quelles informations afficher?",
+        "authorInfo": "Info auteur",
+        "agentInfo": "Info agent",
+        "agencyInfo": "Info agence",
+        "noDisplay": "Ne pas afficher",
+        "loginRequired": "Connexion requise pour voir?",
+        "loginRequiredHelp": "Si Oui, seuls les utilisateurs connectés peuvent voir les détails",
+        "featured": "En vedette",
+        "featuredHelp": "Marquer cette propriété comme vedette?",
+        "images": "Images",
+        "imagesHelp": "Taille minimum 1440x900",
+        "labels": "Étiquettes"
+      },
+      "table": {
+        "property": "Propriété",
+        "type": "Type",
+        "price": "Prix",
+        "location": "Lieu",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "users": {
+      "title": "Gestion des Utilisateurs",
+      "subtitle": "Gérer tous les utilisateurs de la plateforme",
+      "new": "Nouvel utilisateur",
+      "edit": "Modifier l'utilisateur",
+      "addNew": "Ajouter un nouvel utilisateur",
+      "listTitle": "Liste des Utilisateurs",
+      "deactivate": "Désactiver",
+      "stats": {
+        "totalUsers": "Total Utilisateurs",
+        "customers": "Clients",
+        "providers": "Prestataires",
+        "admins": "Administrateurs"
+      },
+      "table": {
+        "user": "Utilisateur",
+        "contact": "Contact",
+        "email": "Email",
+        "role": "Rôle",
+        "bookings": "Réservations",
+        "reviews": "Avis",
+        "registration": "Inscription",
+        "status": "Statut",
+        "createdAt": "Créé le",
+        "actions": "Actions"
+      }
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "welcome": "Bienvenue, {name}",
+      "overview": "Vue d'ensemble",
+      "recentActivity": "Activité récente",
+      "quickStats": "Statistiques rapides",
+      "totalUsers": "Total utilisateurs",
+      "totalBookings": "Total réservations",
+      "totalRevenue": "Revenu total",
+      "activeServices": "Services actifs",
+      "activeProviders": "Prestataires actifs",
+      "bookingsByType": "Réservations par type",
+      "bookingsByStatus": "Réservations par statut",
+      "recentBookings": "Réservations récentes",
+      "viewAll": "Voir tout",
+      "noDataAvailable": "Aucune donnée disponible",
+      "noRecentBookings": "Aucune réservation récente",
+      "unresolvedErrors": "{count} Erreur{plural} non résolue{plural}",
+      "viewAllLogs": "Voir tous les logs",
+      "client": "Client",
+      "type": "Type",
+      "startDate": "Date début",
+      "status": "Statut",
+      "total": "Total"
+    },
+    "users": {
+      "title": "Utilisateurs",
+      "subtitle": "{count} utilisateurs au total",
+      "new": "Nouvel utilisateur",
+      "edit": "Modifier l'utilisateur",
+      "addNew": "Ajouter un nouvel utilisateur",
+      "table": {
+        "name": "Nom",
+        "email": "Email",
+        "role": "Rôle",
+        "status": "Statut",
+        "createdAt": "Créé le",
+        "actions": "Actions"
+      }
+    },
+    "services": {
+      "title": "Gestion des Services",
+      "subtitle": "Gérer tous les services de la plateforme",
+      "new": "Nouveau Service",
+      "edit": "Modifier le Service",
+      "addNew": "Nouveau Service",
+      "listTitle": "Liste des Services",
+      "stats": {
+        "total": "Total Services",
+        "active": "Services Actifs",
+        "totalBookings": "Total Réservations"
+      },
+      "table": {
+        "service": "Service",
+        "category": "Catégorie",
+        "bookings": "Réservations",
+        "reviews": "Avis",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "bookings": {
+      "title": "Gestion des Réservations",
+      "subtitle": "Gérer toutes les réservations de la plateforme",
+      "new": "Nouvelle réservation",
+      "edit": "Modifier la réservation",
+      "addNew": "Ajouter une nouvelle réservation",
+      "listTitle": "Liste des Réservations",
+      "stats": {
+        "total": "Total",
+        "pending": "En attente",
+        "confirmed": "Confirmées",
+        "completed": "Complétées",
+        "cancelled": "Annulées",
+        "revenue": "Revenu"
+      },
+      "status": {
+        "pending": "En attente",
+        "confirmed": "Confirmée",
+        "completed": "Complétée",
+        "cancelled": "Annulée"
+      },
+      "table": {
+        "client": "Client",
+        "service": "Service",
+        "dates": "Dates",
+        "type": "Type",
+        "startDate": "Date début",
+        "endDate": "Date fin",
+        "status": "Statut",
+        "total": "Total",
+        "actions": "Actions"
+      }
+    },
+    "categories": {
+      "title": "Gestion des Catégories",
+      "subtitle": "Gérer toutes les catégories de services",
+      "new": "Nouvelle catégorie",
+      "edit": "Modifier la catégorie",
+      "addNew": "Nouvelle Catégorie",
+      "listTitle": "Liste des Catégories",
+      "stats": {
+        "total": "Total Catégories",
+        "active": "Catégories Actives",
+        "totalServices": "Total Services"
+      },
+      "table": {
+        "category": "Catégorie",
+        "services": "Services",
+        "order": "Ordre",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "partners": {
+      "title": "Gestion des Partenaires",
+      "subtitle": "Gérer tous les partenaires et leur onboarding",
+      "new": "Nouveau partenaire",
+      "edit": "Modifier le partenaire",
+      "addNew": "Nouveau Partenaire",
+      "listTitle": "Liste des Partenaires",
+      "stats": {
+        "total": "Total Partenaires",
+        "active": "Partenaires Actifs",
+        "pending": "En attente",
+        "revenue": "Revenu Total"
+      },
+      "table": {
+        "partner": "Partenaire",
+        "services": "Services",
+        "revenue": "Revenu",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "doctors": {
+      "title": "Gestion des Médecins",
+      "subtitle": "Gérer tous les médecins et professionnels de santé",
+      "new": "Nouveau médecin",
+      "edit": "Modifier le médecin",
+      "addNew": "Nouveau Médecin",
+      "listTitle": "Liste des Médecins",
+      "stats": {
+        "total": "Total Médecins",
+        "active": "Médecins Actifs",
+        "totalReviews": "Total des Avis",
+        "avgRating": "Note Moyenne"
+      },
+      "table": {
+        "doctor": "Médecin",
+        "location": "Localisation",
+        "reviews": "Avis",
+        "rating": "Note",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "lawyers": {
+      "title": "Gestion des Avocats",
+      "subtitle": "Gérer tous les avocats et professionnels juridiques",
+      "new": "Nouvel avocat",
+      "edit": "Modifier l'avocat",
+      "addNew": "Nouvel Avocat",
+      "listTitle": "Liste des Avocats",
+      "stats": {
+        "total": "Total Avocats",
+        "active": "Avocats Actifs",
+        "totalReviews": "Total des Avis",
+        "avgRating": "Note Moyenne"
+      },
+      "table": {
+        "lawyer": "Avocat",
+        "location": "Localisation",
+        "reviews": "Avis",
+        "rating": "Note",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "coaches": {
+      "title": "Gestion des Coachs",
+      "subtitle": "Gérer tous les coachs et professionnels du fitness",
+      "new": "Nouveau coach",
+      "edit": "Modifier le coach",
+      "addNew": "Nouveau Coach",
+      "listTitle": "Liste des Coachs",
+      "stats": {
+        "total": "Total Coachs",
+        "active": "Coachs Actifs",
+        "totalReviews": "Total des Avis",
+        "avgRating": "Note Moyenne"
+      },
+      "table": {
+        "coach": "Coach",
+        "location": "Localisation",
+        "reviews": "Avis",
+        "rating": "Note",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "activities": {
+      "title": "Gestion des Activités",
+      "subtitle": "Gérer toutes les activités et expériences",
+      "new": "Nouvelle activité",
+      "edit": "Modifier l'activité",
+      "addNew": "Nouvelle Activité",
+      "listTitle": "Liste des Activités",
+      "stats": {
+        "total": "Total Activités",
+        "active": "Activités Actives",
+        "totalReviews": "Total des Avis",
+        "avgRating": "Note Moyenne"
+      },
+      "table": {
+        "activity": "Activité",
+        "location": "Localisation",
+        "reviews": "Avis",
+        "rating": "Note",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "homeCleaning": {
+      "title": "Services de Nettoyage à Domicile",
+      "subtitle": "Gérer les services de nettoyage à domicile",
+      "new": "Nouveau service",
+      "edit": "Modifier le service",
+      "addNew": "Ajouter un Service de Nettoyage",
+      "listTitle": "Services de Nettoyage à Domicile",
+      "stats": {
+        "total": "Total des Services",
+        "active": "Services Actifs",
+        "totalBookings": "Total des Réservations",
+        "avgRating": "Note Moyenne"
+      },
+      "table": {
+        "service": "Service",
+        "location": "Localisation",
+        "price": "Prix",
+        "bookings": "Réservations",
+        "reviews": "Avis",
+        "rating": "Note",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "furnitureCleaning": {
+      "title": "Nettoyage de Meubles",
+      "subtitle": "Gérer les services de nettoyage de meubles",
+      "new": "Nouveau service",
+      "edit": "Modifier le service",
+      "addNew": "Ajouter un Service de Nettoyage de Meubles",
+      "listTitle": "Services de Nettoyage de Meubles",
+      "stats": {
+        "total": "Total des Services",
+        "active": "Services Actifs",
+        "totalBookings": "Total des Réservations",
+        "avgRating": "Note Moyenne"
+      },
+      "table": {
+        "service": "Service",
+        "location": "Localisation",
+        "price": "Prix",
+        "bookings": "Réservations",
+        "reviews": "Avis",
+        "rating": "Note",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "laundry": {
+      "title": "Services de Blanchisserie",
+      "subtitle": "Gérer les services de blanchisserie",
+      "new": "Nouveau service",
+      "edit": "Modifier le service",
+      "addNew": "Ajouter un Service de Blanchisserie",
+      "listTitle": "Services de Blanchisserie",
+      "stats": {
+        "total": "Total des Services",
+        "active": "Services Actifs",
+        "totalBookings": "Total des Réservations",
+        "avgRating": "Note Moyenne"
+      },
+      "table": {
+        "service": "Service",
+        "location": "Localisation",
+        "price": "Prix",
+        "bookings": "Réservations",
+        "reviews": "Avis",
+        "rating": "Note",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "suppliers": {
+      "title": "Gestion des Fournisseurs",
+      "subtitle": "Gérer tous les fournisseurs et vendeurs",
+      "new": "Nouveau fournisseur",
+      "edit": "Modifier le fournisseur",
+      "addNew": "Nouveau Fournisseur",
+      "listTitle": "Liste des Fournisseurs",
+      "stats": {
+        "total": "Total Fournisseurs",
+        "active": "Fournisseurs Actifs",
+        "pending": "En attente",
+        "revenue": "Revenu Total"
+      },
+      "table": {
+        "supplier": "Fournisseur",
+        "services": "Services",
+        "revenue": "Revenu",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "transfers": {
+      "title": "Gestion des Transferts",
+      "subtitle": "Gérer tous les transferts et transports",
+      "new": "Nouveau transfert",
+      "edit": "Modifier le transfert",
+      "addNew": "Nouveau Transfert",
+      "listTitle": "Liste des Transferts",
+      "stats": {
+        "total": "Total Transferts",
+        "active": "Transferts Actifs",
+        "pending": "En attente",
+        "revenue": "Revenu Total"
+      },
+      "table": {
+        "transfer": "Transfert",
+        "services": "Services",
+        "revenue": "Revenu",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "blog": {
+      "title": "Gestion du Blog",
+      "subtitle": "Gérer tous les articles de blog",
+      "new": "Nouvel article",
+      "edit": "Modifier l'article",
+      "addNew": "Nouvel Article",
+      "listTitle": "Articles du Blog",
+      "stats": {
+        "total": "Total Articles",
+        "published": "Publiés",
+        "totalViews": "Total Vues",
+        "totalComments": "Total Commentaires"
+      },
+      "table": {
+        "post": "Article",
+        "author": "Auteur",
+        "views": "Vues",
+        "comments": "Commentaires",
+        "likes": "J'aime",
+        "status": "Statut",
+        "actions": "Actions"
+      }
+    },
+    "chatbots": {
+      "title": "Gestion des Chatbots",
+      "subtitle": "Gérer tous les chatbots et assistants IA",
+      "new": "Nouveau chatbot",
+      "edit": "Modifier le chatbot",
+      "addNew": "Nouveau Chatbot",
+      "import": "Importer un chatbot",
+      "listTitle": "Liste des Chatbots"
+    },
+    "notifications": {
+      "title": "Gestion des Notifications",
+      "subtitle": "Gérer toutes les notifications système",
+      "new": "Nouvelle notification",
+      "edit": "Modifier la notification",
+      "addNew": "Envoyer Notification",
+      "listTitle": "Liste des Notifications"
+    },
+    "analytics": {
+      "title": "Analytiques & Rapports",
+      "subtitle": "Voir les analytiques et générer des rapports",
+      "new": "Nouveau rapport",
+      "edit": "Modifier le rapport",
+      "listTitle": "Tableau de Bord Analytique"
+    },
+    "promotions": {
+      "title": "Gestion des Promotions",
+      "subtitle": "Gérer toutes les promotions et offres",
+      "new": "Nouvelle promotion",
+      "edit": "Modifier la promotion",
+      "addNew": "Nouvelle Promotion",
+      "listTitle": "Liste des Promotions"
+    },
+    "cmsPages": {
+      "title": "Pages CMS",
+      "subtitle": "Gérer toutes les pages CMS",
+      "new": "Nouvelle page",
+      "edit": "Modifier la page",
+      "addNew": "Nouvelle Page",
+      "listTitle": "Pages CMS"
+    },
+    "media": {
+      "title": "Bibliothèque Média",
+      "subtitle": "Gérer tous les fichiers média",
+      "new": "Télécharger un média",
+      "edit": "Modifier le média",
+      "addNew": "Télécharger Média",
+      "listTitle": "Fichiers Média"
+    },
+    "data": {
+      "title": "Gestion des données",
+      "subtitle": "Importer et exporter des données",
+      "new": "Nouvel import",
+      "import": "Importer des données",
+      "export": "Exporter des données"
+    },
+    "simulators": {
+      "title": "Gestion des Simulateurs",
+      "subtitle": "Gérer tous les simulateurs de prix",
+      "new": "Nouveau simulateur",
+      "edit": "Modifier le simulateur",
+      "addNew": "Nouveau Simulateur",
+      "listTitle": "Liste des Simulateurs"
+    },
+    "cryptoPayments": {
+      "title": "Paiements Crypto",
+      "subtitle": "Gérer les transactions cryptomonnaies",
+      "new": "Nouvelle transaction",
+      "edit": "Modifier la transaction",
+      "listTitle": "Transactions Crypto"
+    },
+    "logs": {
+      "title": "Logs Système",
+      "subtitle": "Voir tous les logs et activités système",
+      "activityLogs": "Logs d'activité",
+      "errorLogs": "Logs d'erreur",
+      "viewAll": "Voir tous les logs",
+      "listTitle": "Logs"
+    },
+    "currencies": {
+      "title": "Gestion des Devises",
+      "subtitle": "Gérer toutes les devises",
+      "new": "Nouvelle devise",
+      "edit": "Modifier la devise",
+      "addNew": "Nouvelle Devise",
+      "listTitle": "Liste des Devises"
+    },
+    "geography": {
+      "title": "Gestion Géographique",
+      "subtitle": "Gérer les pays, villes et localisations",
+      "countries": "Pays",
+      "cities": "Villes",
+      "listTitle": "Géographie"
+    },
+    "exchangeRates": {
+      "title": "Taux de Change",
+      "subtitle": "Gérer les taux de change des devises",
+      "new": "Nouveau taux",
+      "edit": "Modifier le taux",
+      "addNew": "Nouveau Taux",
+      "listTitle": "Taux de Change"
+    },
+    "styles": {
+      "title": "Gestion des Styles",
+      "subtitle": "Personnaliser l'apparence de l'application",
+      "edit": "Modifier les styles",
+      "listTitle": "Styles"
+    },
+    "routes": {
+      "title": "Gestion des Routes",
+      "subtitle": "Gérer les routes de l'application",
+      "new": "Nouvelle route",
+      "edit": "Modifier la route",
+      "listTitle": "Routes"
+    },
+    "legal": {
+      "title": "Professionnels Légaux",
+      "subtitle": "Gérer les avocats et services juridiques",
+      "addNew": "Ajouter un Professionnel",
+      "listTitle": "Liste des Professionnels Légaux",
+      "stats": {
+        "total": "Total",
+        "published": "Publiés",
+        "featured": "Mis en avant",
+        "draft": "Brouillons",
+        "countries": "Pays"
+      },
+      "table": {
+        "name": "Nom",
+        "type": "Type",
+        "location": "Localisation",
+        "practiceAreas": "Domaines",
+        "languages": "Langues"
+      },
+      "types": {
+        "lawyer": "Avocat",
+        "lawFirm": "Cabinet d'avocats",
+        "legalAdvisor": "Conseiller juridique",
+        "notary": "Notaire"
+      },
+      "status": {
+        "published": "Publié",
+        "draft": "Brouillon",
+        "archived": "Archivé"
+      }
+    }
+  }
+}

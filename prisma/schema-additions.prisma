@@ -1,0 +1,158 @@
+// Modèles manquants à ajouter au schema.prisma
+
+// Route (Alias ou référence pour RouteConfig)
+model Route {
+  id              String   @id @default(cuid())
+  name            String
+  slug            String   @unique
+  path            String
+  component       String?
+  isActive        Boolean  @default(true)
+  requiresAuth    Boolean  @default(false)
+  allowedRoles    String[] @default([])
+  metaTitle       String?
+  metaDescription String?
+  order           Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([isActive])
+  @@index([slug])
+}
+
+// Simulator
+model Simulator {
+  id              String   @id @default(cuid())
+  name            String
+  slug            String   @unique
+  description     String?
+  type            String   // mortgage, loan, investment, etc.
+  formula         Json?    // Formule de calcul
+  inputs          Json?    // Champs d'entrée requis
+  outputs         Json?    // Résultats calculés
+  icon            String?
+  isActive        Boolean  @default(true)
+  isFeatured      Boolean  @default(false)
+  viewCount       Int      @default(0)
+  usageCount      Int      @default(0)
+  metaTitle       String?
+  metaDescription String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([isActive])
+  @@index([type])
+  @@index([slug])
+}
+
+// HomeCleaning
+model HomeCleaning {
+  id                String   @id @default(cuid())
+  name              String
+  slug              String   @unique
+  description       String?
+  serviceType       String   // deep, regular, move-in, move-out
+  pricePerHour      Float?
+  pricePerService   Float?
+  currency          String   @default("AED")
+  duration          String?  // estimated duration
+  cityId            String?
+  countryId         String?
+  includedServices  Json?    // Liste des services inclus
+  excludedServices  Json?    // Services non inclus
+  requirements      Json?    // Prérequis
+  images            Json?
+  rating            Float    @default(0)
+  reviewCount       Int      @default(0)
+  bookingCount      Int      @default(0)
+  isActive          Boolean  @default(true)
+  isFeatured        Boolean  @default(false)
+  metaTitle         String?
+  metaDescription   String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  City              City?    @relation(fields: [cityId], references: [id])
+  Country           Country? @relation(fields: [countryId], references: [id])
+  
+  @@index([isActive])
+  @@index([serviceType])
+  @@index([cityId])
+  @@index([slug])
+}
+
+// FurnitureCleaning
+model FurnitureCleaning {
+  id                String   @id @default(cuid())
+  name              String
+  slug              String   @unique
+  description       String?
+  furnitureType     String   // sofa, carpet, mattress, curtains
+  pricePerItem      Float?
+  pricePerSqMeter   Float?
+  currency          String   @default("AED")
+  duration          String?
+  cityId            String?
+  countryId         String?
+  includedServices  Json?
+  excludedServices  Json?
+  cleaningMethod    String?  // steam, dry, chemical
+  requirements      Json?
+  images            Json?
+  rating            Float    @default(0)
+  reviewCount       Int      @default(0)
+  bookingCount      Int      @default(0)
+  isActive          Boolean  @default(true)
+  isFeatured        Boolean  @default(false)
+  metaTitle         String?
+  metaDescription   String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  City              City?    @relation(fields: [cityId], references: [id])
+  Country           Country? @relation(fields: [countryId], references: [id])
+  
+  @@index([isActive])
+  @@index([furnitureType])
+  @@index([cityId])
+  @@index([slug])
+}
+
+// Laundry
+model Laundry {
+  id                String   @id @default(cuid())
+  name              String
+  slug              String   @unique
+  description       String?
+  serviceType       String   // wash-fold, dry-clean, iron, express
+  pricePerKg        Float?
+  pricePerItem      Float?
+  minimumCharge     Float?
+  currency          String   @default("AED")
+  turnaroundTime    String?  // 24h, 48h, express
+  cityId            String?
+  countryId         String?
+  includedServices  Json?
+  excludedServices  Json?
+  pickupAvailable   Boolean  @default(false)
+  deliveryAvailable Boolean  @default(false)
+  requirements      Json?
+  images            Json?
+  rating            Float    @default(0)
+  reviewCount       Int      @default(0)
+  bookingCount      Int      @default(0)
+  isActive          Boolean  @default(true)
+  isFeatured        Boolean  @default(false)
+  metaTitle         String?
+  metaDescription   String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  City              City?    @relation(fields: [cityId], references: [id])
+  Country           Country? @relation(fields: [countryId], references: [id])
+  
+  @@index([isActive])
+  @@index([serviceType])
+  @@index([cityId])
+  @@index([slug])
+}

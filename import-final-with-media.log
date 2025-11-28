@@ -1,0 +1,1815 @@
+🚀 Starting property import from source...
+
+📖 Reading CSV file...
+✅ Found 215 properties in CSV
+
+📍 Using defaults:
+  Country: Thailand
+  City: Bangkok
+  Currency: USD
+
+🎯 Importing up to 250 properties...
+
+
+📦 Processing: Pinery Park Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763909011075-wxngst8b0
+  📁 Looking for images in: 1910469_Pinery_Park_Beach
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: Indigo Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763909011255-ehki1jpmk
+  📁 Looking for images in: 2012882_Indigo_Beach
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Newly built villa with private pool in Seaside Mae Phim
+  💾 Creating property record...
+  ✅ Property created: import-1763909011565-vh3qjz0uu
+  📁 Looking for images in: 5367199_Newly_built_villa_with_private_pool_in_Seaside_Mae_Phim
+  ⏭️  No images folder for 5367199_Newly_built_villa_with_private_pool_in_Seaside_Mae_Phim
+  🎉 Successfully imported!
+
+📦 Processing: Bella Housing 2
+  💾 Creating property record...
+  ✅ Property created: import-1763909011581-xp1s0ly9b
+  📁 Looking for images in: 5367547_Bella_Housing_2
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Newly built detached house for sale, ready to move in! In the heart of Ban Laeng, Rayong.
+  💾 Creating property record...
+  ✅ Property created: import-1763909011720-dgxibo8ht
+  📁 Looking for images in: 5869398_Newly_built_detached_house_for_sale__ready_to_move_in__In_the_heart_of_Ban_Laeng__Rayong_
+  ⏭️  No images folder for 5869398_Newly_built_detached_house_for_sale__ready_to_move_in__In_the_heart_of_Ban_Laeng__Rayong_
+  🎉 Successfully imported!
+
+📦 Processing: Now price reduced from 4,800,000 THB to 3,700,000 THB.
+  💾 Creating property record...
+  ✅ Property created: import-1763909011738-yvc4tfuax
+  📁 Looking for images in: 5868705_Now_price_reduced_from_4_800_000_THB_to_3_700_000_THB_
+  ⏭️  No images folder for 5868705_Now_price_reduced_from_4_800_000_THB_to_3_700_000_THB_
+  🎉 Successfully imported!
+
+📦 Processing: NOTE!Now price reduced from 3,600,000THB to 2,700,000 THB.
+  💾 Creating property record...
+  ✅ Property created: import-1763909011751-xe3selk1u
+  📁 Looking for images in: 5868452_NOTE_Now_price_reduced_from_3_600_000THB_to_2_700_000_THB_
+  ⏭️  No images folder for 5868452_NOTE_Now_price_reduced_from_3_600_000THB_to_2_700_000_THB_
+  🎉 Successfully imported!
+
+📦 Processing: The Oriental Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763909011767-4s88e8uyw
+  📁 Looking for images in: 5364893_The_Oriental_Beach
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: VIP Chain
+  💾 Creating property record...
+  ✅ Property created: import-1763909012150-hvfyodv1d
+  📁 Looking for images in: 2004179_VIP_Chain
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Rubber plantations can be tapped for another 20-30 years and now the price is good.
+  💾 Creating property record...
+  ✅ Property created: import-1763909012674-bmbla9w67
+  📁 Looking for images in: 2016833_Rubber_plantations_can_be_tapped_for_another_20_30_years_and_now_the_price_is_good_
+  ⏭️  No images folder for 2016833_Rubber_plantations_can_be_tapped_for_another_20_30_years_and_now_the_price_is_good_
+  🎉 Successfully imported!
+
+📦 Processing: Beautiful house in lush garden
+  💾 Creating property record...
+  ✅ Property created: import-1763909012691-fm4946jf4
+  📁 Looking for images in: 5827796_Beautiful_house_in_lush_garden
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Ban Phe Beach House Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909013109-uwgwwpfeu
+  📁 Looking for images in: 1370390_Ban_Phe_Beach_House_Rayong
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Thai style house
+  💾 Creating property record...
+  ✅ Property created: import-1763909013372-uekzo1n3c
+  📁 Looking for images in: 1951577_Thai_style_house
+  📸 Copied 9 images
+  🎨 Creating 9 media records...
+  ✅ Created 9 media records
+  🎉 Successfully imported!
+
+📦 Processing: Phu Saeng Tawan Village
+  💾 Creating property record...
+  ✅ Property created: import-1763909013495-yb5nnh4yy
+  📁 Looking for images in: 5807171_Phu_Saeng_Tawan_Village
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: House for sale in ThabMa Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909013650-ijvt71sms
+  📁 Looking for images in: 1998071_House_for_sale_in_ThabMa_Rayong
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: House in Rayong / Taphong, carport on 2 rai of land for sale
+  💾 Creating property record...
+  ✅ Property created: import-1763909013945-lmzb1h0x9
+  📁 Looking for images in: 5349549_House_in_Rayong___Taphong__carport_on_2_rai_of_land_for_sale
+  ⏭️  No images folder for 5349549_House_in_Rayong___Taphong__carport_on_2_rai_of_land_for_sale
+  🎉 Successfully imported!
+
+📦 Processing: 1 Storey House for Sale in Ban Chang
+  💾 Creating property record...
+  ✅ Property created: import-1763909013958-kgy3ixalf
+  📁 Looking for images in: 1726424_1_Storey_House_for_Sale_in_Ban_Chang
+  📸 Copied 12 images
+  🎨 Creating 12 media records...
+  ✅ Created 12 media records
+  🎉 Successfully imported!
+
+📦 Processing: Luxurious villa with swimming pool and roof terrace
+  💾 Creating property record...
+  ✅ Property created: import-1763909014128-l5pxya6jl
+  📁 Looking for images in: 1998304_Luxurious_villa_with_swimming_pool_and_roof_terrace
+  ⏭️  No images folder for 1998304_Luxurious_villa_with_swimming_pool_and_roof_terrace
+  🎉 Successfully imported!
+
+📦 Processing: 3 bedroom house on 448 sqm land
+  💾 Creating property record...
+  ✅ Property created: import-1763909014146-51ah0y4d6
+  📁 Looking for images in: 5811730_3_bedroom_house_on_448_sqm_land
+  📸 Copied 12 images
+  🎨 Creating 12 media records...
+  ✅ Created 12 media records
+  🎉 Successfully imported!
+
+📦 Processing: Townhouse for Sale in Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909014342-a695d1p05
+  📁 Looking for images in: 1635784_Townhouse_for_Sale_in_Rayong
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ✅ Created 7 media records
+  🎉 Successfully imported!
+
+📦 Processing: House foe Sale  in Thap Ma
+  💾 Creating property record...
+  ✅ Property created: import-1763909014449-u6wkpgw24
+  📁 Looking for images in: 1109898_House_foe_Sale__in_Thap_Ma
+  ⏭️  No images folder for 1109898_House_foe_Sale__in_Thap_Ma
+  🎉 Successfully imported!
+
+📦 Processing: House with Land for Sale in Klaeng District
+  💾 Creating property record...
+  ✅ Property created: import-1763909014464-02u49q34a
+  📁 Looking for images in: 1658082_House_with_Land_for_Sale_in_Klaeng_District
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: 5BR Luxury Home at Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909014637-m2w5ryx4j
+  📁 Looking for images in: 1626964_5BR_Luxury_Home_at_Rayong
+  📸 Copied 15 images
+  🎨 Creating 15 media records...
+  ✅ Created 15 media records
+  🎉 Successfully imported!
+
+📦 Processing: Bali Residence
+  💾 Creating property record...
+  ✅ Property created: import-1763909014843-rnl45a6ix
+  📁 Looking for images in: 1996344_Bali_Residence
+  ⏭️  No images folder for 1996344_Bali_Residence
+  🎉 Successfully imported!
+
+📦 Processing: Crystal Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763909014857-rea776zgz
+  📁 Looking for images in: 1996135_Crystal_Beach
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Nordic Nature Klaeng
+  💾 Creating property record...
+  ✅ Property created: import-1763909015123-3fj5ldoon
+  📁 Looking for images in: 5628031_Nordic_Nature_Klaeng
+  ⏭️  No images folder for 5628031_Nordic_Nature_Klaeng
+  🎉 Successfully imported!
+
+📦 Processing: Cape Mae Phim
+  💾 Creating property record...
+  ✅ Property created: import-1763909015141-nj8sqmhx6
+  📁 Looking for images in: 1996046_Cape_Mae_Phim
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Ban Lom Thale 1
+  💾 Creating property record...
+  ✅ Property created: import-1763909015434-zusefmprk
+  📁 Looking for images in: 5798076_Ban_Lom_Thale_1
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Detached house standing in 2088 sqm land with swimming pool
+  💾 Creating property record...
+  ✅ Property created: import-1763909015713-pvw6r33d0
+  📁 Looking for images in: 1870780_Detached_house_standing_in_2088_sqm_land_with_swimming_pool
+  ⏭️  No images folder for 1870780_Detached_house_standing_in_2088_sqm_land_with_swimming_pool
+  🎉 Successfully imported!
+
+📦 Processing: Barcelona Valley and Golf course
+  💾 Creating property record...
+  ✅ Property created: import-1763909015726-muqj72q9g
+  📁 Looking for images in: 5585024_Barcelona_Valley_and_Golf_course
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Preecha Private Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763909015870-ofkg8dmjq
+  📁 Looking for images in: 5779193_Preecha_Private_Beach
+  📸 Copied 3 images
+  🎨 Creating 3 media records...
+  ✅ Created 3 media records
+  🎉 Successfully imported!
+
+📦 Processing: Baan Sirisa 15
+  💾 Creating property record...
+  ✅ Property created: import-1763909015926-uhjkh97rv
+  📁 Looking for images in: 2664900_Baan_Sirisa_15
+  📸 Copied 12 images
+  🎨 Creating 12 media records...
+  ✅ Created 12 media records
+  🎉 Successfully imported!
+
+📦 Processing: Beautiful garden house for sale with organic fruit trees, large area 1,500 sq m.
+  💾 Creating property record...
+  ✅ Property created: import-1763909016106-hvmlm7qoz
+  📁 Looking for images in: 5767452_Beautiful_garden_house_for_sale_with_organic_fruit_trees__large_area_1_500_sq_m_
+  ⏭️  No images folder for 5767452_Beautiful_garden_house_for_sale_with_organic_fruit_trees__large_area_1_500_sq_m_
+  🎉 Successfully imported!
+
+📦 Processing: Spacious Home into a Unique Venture
+  💾 Creating property record...
+  ✅ Property created: import-1763909016120-06ou3xd5f
+  📁 Looking for images in: 5751728_Spacious_Home_into_a_Unique_Venture
+  📸 Copied 11 images
+  🎨 Creating 11 media records...
+  ✅ Created 11 media records
+  🎉 Successfully imported!
+
+📦 Processing: Safir Village 5
+  💾 Creating property record...
+  ✅ Property created: import-1763909016268-djmklnwz2
+  📁 Looking for images in: 5337198_Safir_Village_5
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Seabreeze Residence
+  💾 Creating property record...
+  ✅ Property created: import-1763909016572-fw93ag8wx
+  📁 Looking for images in: 5336852_Seabreeze_Residence
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Blue Mango Residence
+  💾 Creating property record...
+  ✅ Property created: import-1763909016898-xsjufymbu
+  📁 Looking for images in: 1983325_Blue_Mango_Residence
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Beautiful detached house, owner sells at appraised price, not tied to bank account.
+  💾 Creating property record...
+  ✅ Property created: import-1763909017219-t5caih0ih
+  📁 Looking for images in: 5742069_Beautiful_detached_house__owner_sells_at_appraised_price__not_tied_to_bank_account_
+  ⏭️  No images folder for 5742069_Beautiful_detached_house__owner_sells_at_appraised_price__not_tied_to_bank_account_
+  🎉 Successfully imported!
+
+📦 Processing: Personalise Home Awaits!
+  💾 Creating property record...
+  ✅ Property created: import-1763909017232-to7nmd2ll
+  📁 Looking for images in: 5548727_Personalise_Home_Awaits_
+  ⏭️  No images folder for 5548727_Personalise_Home_Awaits_
+  🎉 Successfully imported!
+
+📦 Processing: Sunflower Residence
+  💾 Creating property record...
+  ✅ Property created: import-1763909017243-vngcrqpwa
+  📁 Looking for images in: 1980615_Sunflower_Residence
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Located on Highway 36, Nikhom Phatthana District, Rayong Province
+  💾 Creating property record...
+  ✅ Property created: import-1763909017549-zt6xeq8ha
+  📁 Looking for images in: 5724849_Located_on_Highway_36__Nikhom_Phatthana_District__Rayong_Province
+  ⏭️  No images folder for 5724849_Located_on_Highway_36__Nikhom_Phatthana_District__Rayong_Province
+  🎉 Successfully imported!
+
+📦 Processing: Beautiful garden house for sale with various organic fruits, area 3 rai 3 ngan.
+  💾 Creating property record...
+  ✅ Property created: import-1763909017563-3mg9w24t2
+  📁 Looking for images in: 5724840_Beautiful_garden_house_for_sale_with_various_organic_fruits__area_3_rai_3_ngan_
+  ⏭️  No images folder for 5724840_Beautiful_garden_house_for_sale_with_various_organic_fruits__area_3_rai_3_ngan_
+  🎉 Successfully imported!
+
+📦 Processing: 1-unit building, next to the road [Ban Laeng, Highway 3139, back corner]
+  💾 Creating property record...
+  ✅ Property created: import-1763909017576-84ghv9ihv
+  📁 Looking for images in: 5563658_1_unit_building__next_to_the_road__Ban_Laeng__Highway_3139__back_corner_
+  ⏭️  No images folder for 5563658_1_unit_building__next_to_the_road__Ban_Laeng__Highway_3139__back_corner_
+  🎉 Successfully imported!
+
+📦 Processing: Saruta Home
+  💾 Creating property record...
+  ✅ Property created: import-1763909017589-xvzuv6hv4
+  📁 Looking for images in: 2044177_Saruta_Home
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: My Ozone
+  💾 Creating property record...
+  ✅ Property created: import-1763909017916-zws54z7jb
+  📁 Looking for images in: 1700726_My_Ozone
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Rock Garden Beach Resort
+  💾 Creating property record...
+  ✅ Property created: import-1763909018025-4626k8a7i
+  📁 Looking for images in: 1974529_Rock_Garden_Beach_Resort
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Large luxury pool villa near Phala Beach in Ban Chang.
+  💾 Creating property record...
+  ✅ Property created: import-1763909018133-fs2x3f2f9
+  📁 Looking for images in: 5704378_Large_luxury_pool_villa_near_Phala_Beach_in_Ban_Chang_
+  ⏭️  No images folder for 5704378_Large_luxury_pool_villa_near_Phala_Beach_in_Ban_Chang_
+  🎉 Successfully imported!
+
+📦 Processing: 🏡 Luxurious detached house in the heart of Krok Yai Cha ✨
+  💾 Creating property record...
+  ✅ Property created: import-1763909018144-mxgq5zsrw
+  📁 Looking for images in: 5702536____Luxurious_detached_house_in_the_heart_of_Krok_Yai_Cha__
+  ⏭️  No images folder for 5702536____Luxurious_detached_house_in_the_heart_of_Krok_Yai_Cha__
+  🎉 Successfully imported!
+
+📦 Processing: Beautiful house with spacious layout!
+  💾 Creating property record...
+  ✅ Property created: import-1763909018158-rjsgjhto5
+  📁 Looking for images in: 5698831_Beautiful_house_with_spacious_layout_
+  ⏭️  No images folder for 5698831_Beautiful_house_with_spacious_layout_
+  🎉 Successfully imported!
+
+📦 Processing: Near Saengchan Beach, Map Ta Phut Industrial Estate, Central, Lotus
+  💾 Creating property record...
+  ✅ Property created: import-1763909018173-jq7w4rra2
+  📁 Looking for images in: 5698512_Near_Saengchan_Beach__Map_Ta_Phut_Industrial_Estate__Central__Lotus
+  ⏭️  No images folder for 5698512_Near_Saengchan_Beach__Map_Ta_Phut_Industrial_Estate__Central__Lotus
+  🎉 Successfully imported!
+
+📦 Processing: House for Sale and Rent in Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909018189-59c48prrr
+  📁 Looking for images in: 5652589_House_for_Sale_and_Rent_in_Rayong
+  ⏭️  No images folder for 5652589_House_for_Sale_and_Rent_in_Rayong
+  🎉 Successfully imported!
+
+📦 Processing: The Prime Boulevard
+  💾 Creating property record...
+  ✅ Property created: import-1763909018204-rm7ejl36o
+  📁 Looking for images in: 5674587_The_Prime_Boulevard
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: House near Central Rayong, BigC Rayong บ้านใกล้เซ็นทรัลระยอง
+  💾 Creating property record...
+  ✅ Property created: import-1763909018385-pg0itxr64
+  📁 Looking for images in: 5661701_House_near_Central_Rayong__BigC_Rayong______________________
+  ⏭️  No images folder for 5661701_House_near_Central_Rayong__BigC_Rayong______________________
+  🎉 Successfully imported!
+
+📦 Processing: Pitta Village Ban Khai
+  💾 Creating property record...
+  ✅ Property created: import-1763909018396-l2l5879i0
+  📁 Looking for images in: 5648538_Pitta_Village_Ban_Khai
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: Baan Ua-Athorn Phla
+  💾 Creating property record...
+  ✅ Property created: import-1763909018641-m5cmuvw8c
+  📁 Looking for images in: 1871118_Baan_Ua_Athorn_Phla
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Phloenjai 2
+  💾 Creating property record...
+  ✅ Property created: import-1763909018738-63zpe8wxk
+  📁 Looking for images in: 5643810_Phloenjai_2
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Exclusive and rustic villa on 2 levels in Ban Phe, Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909018989-67cj716fc
+  📁 Looking for images in: 1949706_Exclusive_and_rustic_villa_on_2_levels_in_Ban_Phe__Rayong
+  ⏭️  No images folder for 1949706_Exclusive_and_rustic_villa_on_2_levels_in_Ban_Phe__Rayong
+  🎉 Successfully imported!
+
+📦 Processing: Krittaporn
+  💾 Creating property record...
+  ✅ Property created: import-1763909019000-wy8jcb1p3
+  📁 Looking for images in: 1892353_Krittaporn
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: House in Prime Location for Sale near the Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763909019210-2422xlc3s
+  📁 Looking for images in: 1365096_House_in_Prime_Location_for_Sale_near_the_Beach
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single Detached Villa for Sale in Ban Chang
+  💾 Creating property record...
+  ✅ Property created: import-1763909019521-fd4cthev6
+  📁 Looking for images in: 1391464_Single_Detached_Villa_for_Sale_in_Ban_Chang
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Luxury Villla for Sale in Mueang Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909019635-qaq382h9n
+  📁 Looking for images in: 1146962_Luxury_Villla_for_Sale_in_Mueang_Rayong
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single House in The Heart of Map Ta Phut Ban Chang
+  💾 Creating property record...
+  ✅ Property created: import-1763909020047-bg08qwt3i
+  📁 Looking for images in: 1686468_Single_House_in_The_Heart_of_Map_Ta_Phut_Ban_Chang
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: For sale: 2-storey detached house, 900 m from Phuyun Beach, Ban Chang District, Rayong Province
+  💾 Creating property record...
+  ✅ Property created: import-1763909020276-auyc76166
+  📁 Looking for images in: 5612379_For_sale__2_storey_detached_house__900_m_from_Phuyun_Beach__Ban_Chang_District__Rayong_Province
+  ⏭️  No images folder for 5612379_For_sale__2_storey_detached_house__900_m_from_Phuyun_Beach__Ban_Chang_District__Rayong_Province
+  🎉 Successfully imported!
+
+📦 Processing: The Home Banchang
+  💾 Creating property record...
+  ✅ Property created: import-1763909020298-n3028qvk3
+  📁 Looking for images in: 1992373_The_Home_Banchang
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single house, 3 bedrooms, 2 bathrooms, Nikhom Phatthana, Rayong, Soi 1
+  💾 Creating property record...
+  ✅ Property created: import-1763909020586-f07wqvzwg
+  📁 Looking for images in: 5610975_Single_house__3_bedrooms__2_bathrooms__Nikhom_Phatthana__Rayong__Soi_1
+  ⏭️  No images folder for 5610975_Single_house__3_bedrooms__2_bathrooms__Nikhom_Phatthana__Rayong__Soi_1
+  🎉 Successfully imported!
+
+📦 Processing: Vana Casa
+  💾 Creating property record...
+  ✅ Property created: import-1763909020599-rfdafwmwa
+  📁 Looking for images in: 5342893_Vana_Casa
+  📸 Copied 15 images
+  🎨 Creating 15 media records...
+  ✅ Created 15 media records
+  🎉 Successfully imported!
+
+📦 Processing: Stunning Home at an Unbeatable Price –With a Rooftop Retreat
+  💾 Creating property record...
+  ✅ Property created: import-1763909020810-ie7a6z8vy
+  📁 Looking for images in: 5342821_Stunning_Home_at_an_Unbeatable_Price__With_a_Rooftop_Retreat
+  ⏭️  No images folder for 5342821_Stunning_Home_at_an_Unbeatable_Price__With_a_Rooftop_Retreat
+  🎉 Successfully imported!
+
+📦 Processing: Charming Home with Expansive Land and Thriving Orchard
+  💾 Creating property record...
+  ✅ Property created: import-1763909020825-u9bj7i4mg
+  📁 Looking for images in: 5342792_Charming_Home_with_Expansive_Land_and_Thriving_Orchard
+  ⏭️  No images folder for 5342792_Charming_Home_with_Expansive_Land_and_Thriving_Orchard
+  🎉 Successfully imported!
+
+📦 Processing: Villa with large plot in Ban Phe
+  💾 Creating property record...
+  ✅ Property created: import-1763909020838-uw5q6oo1d
+  📁 Looking for images in: 5341236_Villa_with_large_plot_in_Ban_Phe
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: “A large single house near the motorway-U-Tapao-Hat Pla”
+  💾 Creating property record...
+  ✅ Property created: import-1763909021089-bv0aft888
+  📁 Looking for images in: 5576157__A_large_single_house_near_the_motorway_U_Tapao_Hat_Pla_
+  ⏭️  No images folder for 5576157__A_large_single_house_near_the_motorway_U_Tapao_Hat_Pla_
+  🎉 Successfully imported!
+
+📦 Processing: “Luxury single house near U-Tapao Airport, convenient travel, comfortable living
+  💾 Creating property record...
+  ✅ Property created: import-1763909021101-lrxvxbubl
+  📁 Looking for images in: 5576151__Luxury_single_house_near_U_Tapao_Airport__convenient_travel__comfortable_living
+  ⏭️  No images folder for 5576151__Luxury_single_house_near_U_Tapao_Airport__convenient_travel__comfortable_living
+  🎉 Successfully imported!
+
+📦 Processing: “Luxury home in a premium location, Khao Yai Da view, private vacation pool villa
+  💾 Creating property record...
+  ✅ Property created: import-1763909021117-q6dyltkng
+  📁 Looking for images in: 5570332__Luxury_home_in_a_premium_location__Khao_Yai_Da_view__private_vacation_pool_villa
+  ⏭️  No images folder for 5570332__Luxury_home_in_a_premium_location__Khao_Yai_Da_view__private_vacation_pool_villa
+  🎉 Successfully imported!
+
+📦 Processing: &quot;Luxury home in a prime location! Near U-Tapao Airport, Hat Pla, Motorway!
+  💾 Creating property record...
+  ✅ Property created: import-1763909021135-iy9sfc969
+  📁 Looking for images in: 5570269__quot_Luxury_home_in_a_prime_location__Near_U_Tapao_Airport__Hat_Pla__Motorway_
+  ⏭️  No images folder for 5570269__quot_Luxury_home_in_a_prime_location__Near_U_Tapao_Airport__Hat_Pla__Motorway_
+  🎉 Successfully imported!
+
+📦 Processing: 2 BEDROOM POOL VILLA CLOSE TO NARAI RD & THE BEACH
+  💾 Creating property record...
+  ✅ Property created: import-1763909021145-zsnj0hd8e
+  📁 Looking for images in: 5551438_2_BEDROOM_POOL_VILLA_CLOSE_TO_NARAI_RD___THE_BEACH
+  ⏭️  No images folder for 5551438_2_BEDROOM_POOL_VILLA_CLOSE_TO_NARAI_RD___THE_BEACH
+  🎉 Successfully imported!
+
+📦 Processing: Commercial building, Ban Chang, newly renovated, 3 and a half floors
+  💾 Creating property record...
+  ✅ Property created: import-1763909021161-n2sayewwd
+  📁 Looking for images in: 5550769_Commercial_building__Ban_Chang__newly_renovated__3_and_a_half_floors
+  ⏭️  No images folder for 5550769_Commercial_building__Ban_Chang__newly_renovated__3_and_a_half_floors
+  🎉 Successfully imported!
+
+📦 Processing: Cheerful Sea View Orange Townhouse near U-Tapao
+  💾 Creating property record...
+  ✅ Property created: import-1763909021177-gthupeobj
+  📁 Looking for images in: 5355725_Cheerful_Sea_View_Orange_Townhouse_near_U_Tapao
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Pool Haus/Villa with Hydroponic Farm set up
+  💾 Creating property record...
+  ✅ Property created: import-1763909021523-j921xkm7h
+  📁 Looking for images in: 1907144_Pool_Haus_Villa_with_Hydroponic_Farm_set_up
+  ⏭️  No images folder for 1907144_Pool_Haus_Villa_with_Hydroponic_Farm_set_up
+  🎉 Successfully imported!
+
+📦 Processing: Ban Rung Tawan
+  💾 Creating property record...
+  ✅ Property created: import-1763909021540-m46woy694
+  📁 Looking for images in: 5358727_Ban_Rung_Tawan
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Ban Ploenjai 2
+  💾 Creating property record...
+  ✅ Property created: import-1763909021773-9fjussmdj
+  📁 Looking for images in: 1712834_Ban_Ploenjai_2
+  📸 Copied 15 images
+  🎨 Creating 15 media records...
+  ✅ Created 15 media records
+  🎉 Successfully imported!
+
+📦 Processing: Commercial Building for Sale in Nong Lalok
+  💾 Creating property record...
+  ✅ Property created: import-1763909022105-gjfupfcqe
+  📁 Looking for images in: 1686366_Commercial_Building_for_Sale_in_Nong_Lalok
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Greenery Hill
+  💾 Creating property record...
+  ✅ Property created: import-1763909022222-y1wnhvsbd
+  📁 Looking for images in: 82492_Greenery_Hill
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: House for Sale in Nikhom Phatthana Soi 9
+  💾 Creating property record...
+  ✅ Property created: import-1763909022441-vorkkj3ah
+  📁 Looking for images in: 1679780_House_for_Sale_in_Nikhom_Phatthana_Soi_9
+  📸 Copied 14 images
+  🎨 Creating 14 media records...
+  ✅ Created 14 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Palm Phla Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763909022701-p09jvc4fy
+  📁 Looking for images in: 1862126_The_Palm_Phla_Beach
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Brighton Residence
+  💾 Creating property record...
+  ✅ Property created: import-1763909022949-cww7rbj4o
+  📁 Looking for images in: 1987707_The_Brighton_Residence
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: 3BR Prime Location in Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909023083-fzku9f4ba
+  📁 Looking for images in: 5332742_3BR_Prime_Location_in_Rayong
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Baan Warisara 2
+  💾 Creating property record...
+  ✅ Property created: import-1763909023287-loq256mzc
+  📁 Looking for images in: 2255027_Baan_Warisara_2
+  📸 Copied 11 images
+  🎨 Creating 11 media records...
+  ✅ Created 11 media records
+  🎉 Successfully imported!
+
+📦 Processing: Near all industrial estates
+  💾 Creating property record...
+  ✅ Property created: import-1763909023466-dk24bh8iz
+  📁 Looking for images in: 2044377_Near_all_industrial_estates
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Beautifully situated house in lush tropical garden
+  💾 Creating property record...
+  ✅ Property created: import-1763909023633-hl52sal27
+  📁 Looking for images in: 2044010_Beautifully_situated_house_in_lush_tropical_garden
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Villa and Durian Garden 21 Rai
+  💾 Creating property record...
+  ✅ Property created: import-1763909023853-odb5iy4i1
+  📁 Looking for images in: 2015545_Villa_and_Durian_Garden_21_Rai
+  📸 Copied 9 images
+  🎨 Creating 9 media records...
+  ✅ Created 9 media records
+  🎉 Successfully imported!
+
+📦 Processing: For sale: 2-storey townhouse, corner unit, new house, cheaper than the project price
+  💾 Creating property record...
+  ✅ Property created: import-1763909023972-cjcj97mbx
+  📁 Looking for images in: 2014064_For_sale__2_storey_townhouse__corner_unit__new_house__cheaper_than_the_project_price
+  ⏭️  No images folder for 2014064_For_sale__2_storey_townhouse__corner_unit__new_house__cheaper_than_the_project_price
+  🎉 Successfully imported!
+
+📦 Processing: The Mix
+  💾 Creating property record...
+  ✅ Property created: import-1763909023983-dry5gj0g1
+  📁 Looking for images in: 2012560_The_Mix
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: For sale: 2-storey townhouse, Rayong City Park Village, No. 300/492
+  💾 Creating property record...
+  ✅ Property created: import-1763909024222-g3hzxh382
+  📁 Looking for images in: 1965776_For_sale__2_storey_townhouse__Rayong_City_Park_Village__No__300_492
+  ⏭️  No images folder for 1965776_For_sale__2_storey_townhouse__Rayong_City_Park_Village__No__300_492
+  🎉 Successfully imported!
+
+📦 Processing: Shinwatra Village
+  💾 Creating property record...
+  ✅ Property created: import-1763909024233-u1jpom0kt
+  📁 Looking for images in: 1965786_Shinwatra_Village
+  📸 Copied 12 images
+  🎨 Creating 12 media records...
+  ✅ Created 12 media records
+  🎉 Successfully imported!
+
+📦 Processing: Casa Ville Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909024389-2xa5u0unp
+  📁 Looking for images in: 2002410_Casa_Ville_Rayong
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Oceanside Place
+  💾 Creating property record...
+  ✅ Property created: import-1763909024476-u1f8yp980
+  📁 Looking for images in: 1638416_Oceanside_Place
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: 2-storey twin house, attached only on the lower floor, decorated and ready to move in
+  💾 Creating property record...
+  ✅ Property created: import-1763909024615-ujv74i3fm
+  📁 Looking for images in: 1999747_2_storey_twin_house__attached_only_on_the_lower_floor__decorated_and_ready_to_move_in
+  ⏭️  No images folder for 1999747_2_storey_twin_house__attached_only_on_the_lower_floor__decorated_and_ready_to_move_in
+  🎉 Successfully imported!
+
+📦 Processing: Single house in the heart of Rayong city, decorated with quality materials, ready to move in.
+  💾 Creating property record...
+  ✅ Property created: import-1763909024627-zs2tt6k00
+  📁 Looking for images in: 1999720_Single_house_in_the_heart_of_Rayong_city__decorated_with_quality_materials__ready_to_move_in_
+  ⏭️  No images folder for 1999720_Single_house_in_the_heart_of_Rayong_city__decorated_with_quality_materials__ready_to_move_in_
+  🎉 Successfully imported!
+
+📦 Processing: Parco Land
+  💾 Creating property record...
+  ✅ Property created: import-1763909024642-cbbkax2uo
+  📁 Looking for images in: 1993153_Parco_Land
+  📸 Copied 15 images
+  🎨 Creating 15 media records...
+  ✅ Created 15 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Village 2
+  💾 Creating property record...
+  ✅ Property created: import-1763909024836-8nx727hzx
+  📁 Looking for images in: 1167122_The_Village_2
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Vanarom Village
+  💾 Creating property record...
+  ✅ Property created: import-1763909024948-rj7ztvsyx
+  📁 Looking for images in: 1764278_Vanarom_Village
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Romnalin Rock Hill
+  💾 Creating property record...
+  ✅ Property created: import-1763909025089-tmgiiajpi
+  📁 Looking for images in: 1146490_Romnalin_Rock_Hill
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Villa For Sale Mueang Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909025187-bx5iykj1o
+  📁 Looking for images in: 1637658_Villa_For_Sale_Mueang_Rayong
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single House for Sale in Nong Mapring-Takhan
+  💾 Creating property record...
+  ✅ Property created: import-1763909025336-0jzyqjugb
+  📁 Looking for images in: 1715202_Single_House_for_Sale_in_Nong_Mapring_Takhan
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Casa Seaside
+  💾 Creating property record...
+  ✅ Property created: import-1763909025591-56637w85l
+  📁 Looking for images in: 1993482_Casa_Seaside
+  📸 Copied 9 images
+  🎨 Creating 9 media records...
+  ✅ Created 9 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single house with land
+  💾 Creating property record...
+  ✅ Property created: import-1763909025955-4e7h3mikq
+  📁 Looking for images in: 1995158_Single_house_with_land
+  📸 Copied 11 images
+  🎨 Creating 11 media records...
+  ✅ Created 11 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single house near Rojana Industrial Estate, Ban Khai
+  💾 Creating property record...
+  ✅ Property created: import-1763909026863-7rsi6tq9j
+  📁 Looking for images in: 1989451_Single_house_near_Rojana_Industrial_Estate__Ban_Khai
+  ⏭️  No images folder for 1989451_Single_house_near_Rojana_Industrial_Estate__Ban_Khai
+  🎉 Successfully imported!
+
+📦 Processing: Single house near Central Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909027042-o1czfa7av
+  📁 Looking for images in: 1989448_Single_house_near_Central_Rayong
+  📸 Copied 15 images
+  🎨 Creating 15 media records...
+  ✅ Created 15 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single house near Central Rayong
+  ⏭️  Already exists, skipping
+
+📦 Processing: Modern style single house with large land plot, quiet and private.
+  💾 Creating property record...
+  ✅ Property created: import-1763909027654-i6mobahb1
+  📁 Looking for images in: 1984119_Modern_style_single_house_with_large_land_plot__quiet_and_private_
+  ⏭️  No images folder for 1984119_Modern_style_single_house_with_large_land_plot__quiet_and_private_
+  🎉 Successfully imported!
+
+📦 Processing: Eastern Star Country Club
+  💾 Creating property record...
+  ✅ Property created: import-1763909027675-q400c7kqk
+  📁 Looking for images in: 1981395_Eastern_Star_Country_Club
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Tharathip Village 4
+  💾 Creating property record...
+  ✅ Property created: import-1763909028109-ocy269nyk
+  📁 Looking for images in: 1965782_Tharathip_Village_4
+  📸 Copied 11 images
+  🎨 Creating 11 media records...
+  ✅ Created 11 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Village 9
+  💾 Creating property record...
+  ✅ Property created: import-1763909028303-0r56ho7av
+  📁 Looking for images in: 1371020_The_Village_9
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Village 7 Classy
+  💾 Creating property record...
+  ✅ Property created: import-1763909028434-kjlmjh8jj
+  📁 Looking for images in: 1371006_The_Village_7_Classy
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Village 5
+  💾 Creating property record...
+  ✅ Property created: import-1763909028635-5vndq0w54
+  📁 Looking for images in: 1370202_The_Village_5
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ✅ Created 7 media records
+  🎉 Successfully imported!
+
+📦 Processing: SC Hill Village Pluak Daeng-Wang Khayaeng
+  💾 Creating property record...
+  ✅ Property created: import-1763909028744-l1efy8hxa
+  📁 Looking for images in: 1649262_SC_Hill_Village_Pluak_Daeng_Wang_Khayaeng
+  📸 Copied 5 images
+  🎨 Creating 5 media records...
+  ✅ Created 5 media records
+  🎉 Successfully imported!
+
+📦 Processing: Living Sense 1
+  💾 Creating property record...
+  ✅ Property created: import-1763909028821-krr7nivxx
+  📁 Looking for images in: 1412386_Living_Sense_1
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: For sale or rent: two-storey detached house, Plearnjai Village 2, Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909029168-655oiams5
+  📁 Looking for images in: 1915609_For_sale_or_rent__two_storey_detached_house__Plearnjai_Village_2__Rayong
+  ⏭️  No images folder for 1915609_For_sale_or_rent__two_storey_detached_house__Plearnjai_Village_2__Rayong
+  🎉 Successfully imported!
+
+📦 Processing: Townhouse for sale, 24 sq m, Plaeng Daeng District, 6 m wide frontage
+  💾 Creating property record...
+  ✅ Property created: import-1763909029181-068l2aen1
+  📁 Looking for images in: 1928580_Townhouse_for_sale__24_sq_m__Plaeng_Daeng_District__6_m_wide_frontage
+  ⏭️  No images folder for 1928580_Townhouse_for_sale__24_sq_m__Plaeng_Daeng_District__6_m_wide_frontage
+  🎉 Successfully imported!
+
+📦 Processing: Baan Phrae Dao 4
+  💾 Creating property record...
+  ✅ Property created: import-1763909029193-06zfudfzn
+  📁 Looking for images in: 1906826_Baan_Phrae_Dao_4
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: For sale: large 2-storey detached house with land 423 sq.w. (1-0-23 rai) 10 million.
+  💾 Creating property record...
+  ✅ Property created: import-1763909029323-853xagzze
+  📁 Looking for images in: 1913525_For_sale__large_2_storey_detached_house_with_land_423_sq_w___1_0_23_rai__10_million_
+  ⏭️  No images folder for 1913525_For_sale__large_2_storey_detached_house_with_land_423_sq_w___1_0_23_rai__10_million_
+  🎉 Successfully imported!
+
+📦 Processing: ขายบ้านเดี่ยวและพูลวิลล่า
+  💾 Creating property record...
+  ✅ Property created: import-1763909029335-8ntk0223c
+  📁 Looking for images in: 1908159__________________________
+  ⏭️  No images folder for 1908159__________________________
+  🎉 Successfully imported!
+
+📦 Processing: ขายบ้านเดี่ยวและพูลวิลล่า
+  ⏭️  Already exists, skipping
+
+📦 Processing: Single houses and pool villas for sale
+  💾 Creating property record...
+  ✅ Property created: import-1763909029353-kwk4r0gav
+  📁 Looking for images in: 1908063_Single_houses_and_pool_villas_for_sale
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single house&pool villas for sale
+  💾 Creating property record...
+  ✅ Property created: import-1763909029576-ovfpi6esm
+  📁 Looking for images in: 1908082_Single_house_pool_villas_for_sale
+  ⏭️  No images folder for 1908082_Single_house_pool_villas_for_sale
+  🎉 Successfully imported!
+
+📦 Processing: Supalai Park Ville Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909029596-3t4dvu3ks
+  📁 Looking for images in: 1907439_Supalai_Park_Ville_Rayong
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: 5 Rai Resort for sale Banchang, Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909029692-bd9kfjc6k
+  📁 Looking for images in: 1891548_5_Rai_Resort_for_sale_Banchang__Rayong
+  ⏭️  No images folder for 1891548_5_Rai_Resort_for_sale_Banchang__Rayong
+  🎉 Successfully imported!
+
+📦 Processing: House for Sale 10 minutes from Central Rayong, 10 minutes from Lotus Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909029704-0na1hmcj1
+  📁 Looking for images in: 1716392_House_for_Sale_10_minutes_from_Central_Rayong__10_minutes_from_Lotus_Rayong
+  ⏭️  No images folder for 1716392_House_for_Sale_10_minutes_from_Central_Rayong__10_minutes_from_Lotus_Rayong
+  🎉 Successfully imported!
+
+📦 Processing: The Village 8
+  💾 Creating property record...
+  ✅ Property created: import-1763909029721-uja9ytkoa
+  📁 Looking for images in: 1378274_The_Village_8
+  📸 Copied 15 images
+  🎨 Creating 15 media records...
+  ✅ Created 15 media records
+  🎉 Successfully imported!
+
+📦 Processing: 4 Bedrooms House for Sale at Eastern Star Village, Ban Chang
+  💾 Creating property record...
+  ✅ Property created: import-1763909029931-cepra47d8
+  📁 Looking for images in: 1840582_4_Bedrooms_House_for_Sale_at_Eastern_Star_Village__Ban_Chang
+  ⏭️  No images folder for 1840582_4_Bedrooms_House_for_Sale_at_Eastern_Star_Village__Ban_Chang
+  🎉 Successfully imported!
+
+📦 Processing: not-set
+  💾 Creating property record...
+  ✅ Property created: import-1763909029942-sui4o40dh
+  📁 Looking for images in: 1833496_not_set
+  📸 Copied 14 images
+  🎨 Creating 14 media records...
+  ✅ Created 14 media records
+  🎉 Successfully imported!
+
+📦 Processing: Saksaithan Place
+  💾 Creating property record...
+  ✅ Property created: import-1763909030318-ah67i6h4x
+  📁 Looking for images in: 1826428_Saksaithan_Place
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Sea View Villa For Sale in Wangkaew Park
+  💾 Creating property record...
+  ✅ Property created: import-1763909030466-8tpb8qky2
+  📁 Looking for images in: 1392980_Sea_View_Villa_For_Sale_in_Wangkaew_Park
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Vana Ville
+  💾 Creating property record...
+  ✅ Property created: import-1763909030684-hfn1ngni1
+  📁 Looking for images in: 1816842_Vana_Ville
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: ‼️ New Single-story house, fully functions in Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909030788-0wvc3lw1u
+  📁 Looking for images in: 1816792____New_Single_story_house__fully_functions_in_Rayong
+  ⏭️  No images folder for 1816792____New_Single_story_house__fully_functions_in_Rayong
+  🎉 Successfully imported!
+
+📦 Processing: House for Sale in Pluak Daeng
+  💾 Creating property record...
+  ✅ Property created: import-1763909030802-xhbkrnf4o
+  📁 Looking for images in: 1811294_House_for_Sale_in_Pluak_Daeng
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Sin Arom Yen City
+  💾 Creating property record...
+  ✅ Property created: import-1763909030937-5zuovbg8q
+  📁 Looking for images in: 1807632_Sin_Arom_Yen_City
+  📸 Copied 5 images
+  🎨 Creating 5 media records...
+  ✅ Created 5 media records
+  🎉 Successfully imported!
+
+📦 Processing: Warangkun Village
+  💾 Creating property record...
+  ✅ Property created: import-1763909031018-2hl143zli
+  📁 Looking for images in: 1762368_Warangkun_Village
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Vacation Home for Sale near Laem Mae Phim
+  💾 Creating property record...
+  ✅ Property created: import-1763909031300-e6f4yyd0n
+  📁 Looking for images in: 1805270_Vacation_Home_for_Sale_near_Laem_Mae_Phim
+  📸 Copied 9 images
+  🎨 Creating 9 media records...
+  ✅ Created 9 media records
+  🎉 Successfully imported!
+
+📦 Processing: 3-story commercial building for sale with balcony, Rayong community area
+  💾 Creating property record...
+  ✅ Property created: import-1763909031435-cmttgxlis
+  📁 Looking for images in: 1803090_3_story_commercial_building_for_sale_with_balcony__Rayong_community_area
+  ⏭️  No images folder for 1803090_3_story_commercial_building_for_sale_with_balcony__Rayong_community_area
+  🎉 Successfully imported!
+
+📦 Processing: Good View house project (first hand house)
+  💾 Creating property record...
+  ✅ Property created: import-1763909031445-cpuf4j4kn
+  📁 Looking for images in: 1777968_Good_View_house_project__first_hand_house_
+  ⏭️  No images folder for 1777968_Good_View_house_project__first_hand_house_
+  🎉 Successfully imported!
+
+📦 Processing: Baan Warorose 15
+  💾 Creating property record...
+  ✅ Property created: import-1763909031460-gp69g0eup
+  📁 Looking for images in: 1667540_Baan_Warorose_15
+  📸 Copied 14 images
+  🎨 Creating 14 media records...
+  ✅ Created 14 media records
+  🎉 Successfully imported!
+
+📦 Processing: Pool Villa for Sale in Mueang Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909031639-0yx7habxh
+  📁 Looking for images in: 1743642_Pool_Villa_for_Sale_in_Mueang_Rayong
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Mitpracha (Ban Wanmai Phase2)
+  💾 Creating property record...
+  ✅ Property created: import-1763909031742-0iy2s9ha8
+  📁 Looking for images in: 1694410_Mitpracha__Ban_Wanmai_Phase2_
+  ⏭️  No images folder for 1694410_Mitpracha__Ban_Wanmai_Phase2_
+  🎉 Successfully imported!
+
+📦 Processing: Phongphet Villa
+  💾 Creating property record...
+  ✅ Property created: import-1763909031753-jmffpvb9y
+  📁 Looking for images in: 1737474_Phongphet_Villa
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Townhouse for Sale/Rent in Mueang Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909031894-hrh7qhrhg
+  📁 Looking for images in: 1737452_Townhouse_for_Sale_Rent_in_Mueang_Rayong
+  ⏭️  No images folder for 1737452_Townhouse_for_Sale_Rent_in_Mueang_Rayong
+  🎉 Successfully imported!
+
+📦 Processing: Vanarin Sukhumvit-Krok Yai Cha
+  💾 Creating property record...
+  ✅ Property created: import-1763909031909-40gojqvmp
+  📁 Looking for images in: 1730912_Vanarin_Sukhumvit_Krok_Yai_Cha
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Somphong Bay View
+  💾 Creating property record...
+  ✅ Property created: import-1763909032008-rb7gphbl3
+  📁 Looking for images in: 1728080_Somphong_Bay_View
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Bloom Nikompattana-Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909032090-yo6cbqg6f
+  📁 Looking for images in: 1725746_The_Bloom_Nikompattana_Rayong
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Saksiri Valent Amatacity
+  💾 Creating property record...
+  ✅ Property created: import-1763909032236-0v9dj7t33
+  📁 Looking for images in: 1724482_Saksiri_Valent_Amatacity
+  📸 Copied 11 images
+  🎨 Creating 11 media records...
+  ✅ Created 11 media records
+  🎉 Successfully imported!
+
+📦 Processing: House with 1-1-30 Rai Land for Sale
+  💾 Creating property record...
+  ✅ Property created: import-1763909032387-fxbpy40h3
+  📁 Looking for images in: 1671802_House_with_1_1_30_Rai_Land_for_Sale
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single House for Sale in Ban Phe, Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909032826-qtgmstur1
+  📁 Looking for images in: 1719442_Single_House_for_Sale_in_Ban_Phe__Rayong
+  ⏭️  No images folder for 1719442_Single_House_for_Sale_in_Ban_Phe__Rayong
+  🎉 Successfully imported!
+
+📦 Processing: Pool Villa Resort Style for Sale in Klaeng
+  💾 Creating property record...
+  ✅ Property created: import-1763909032843-48kjs41ka
+  📁 Looking for images in: 1712784_Pool_Villa_Resort_Style_for_Sale_in_Klaeng
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Beautiful Place near Sukhumvit near Factories for Sale
+  💾 Creating property record...
+  ✅ Property created: import-1763909033274-63uegn4xn
+  📁 Looking for images in: 1714526_Beautiful_Place_near_Sukhumvit_near_Factories_for_Sale
+  ⏭️  No images folder for 1714526_Beautiful_Place_near_Sukhumvit_near_Factories_for_Sale
+  🎉 Successfully imported!
+
+📦 Processing: Townhouse for Sale in Mueang Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909033291-zi3iseo1a
+  📁 Looking for images in: 1710006_Townhouse_for_Sale_in_Mueang_Rayong
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: Baan Haad Phayun Green Ville
+  💾 Creating property record...
+  ✅ Property created: import-1763909033545-ajl1kmf24
+  📁 Looking for images in: 1362452_Baan_Haad_Phayun_Green_Ville
+  📸 Copied 11 images
+  🎨 Creating 11 media records...
+  ✅ Created 11 media records
+  🎉 Successfully imported!
+
+📦 Processing: Saruta Ville
+  💾 Creating property record...
+  ✅ Property created: import-1763909033782-ltzt59yke
+  📁 Looking for images in: 1688848_Saruta_Ville
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Lertrasmee
+  💾 Creating property record...
+  ✅ Property created: import-1763909033987-7md0tmx88
+  📁 Looking for images in: 1683586_Lertrasmee
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: Sipun Ville
+  💾 Creating property record...
+  ✅ Property created: import-1763909034241-icxdj7b37
+  📁 Looking for images in: 1678598_Sipun_Ville
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ✅ Created 7 media records
+  🎉 Successfully imported!
+
+📦 Processing: Townhouse for Sale in Mae Nam Khu Soi 4
+  💾 Creating property record...
+  ✅ Property created: import-1763909034372-87vblctmk
+  📁 Looking for images in: 1398802_Townhouse_for_Sale_in_Mae_Nam_Khu_Soi_4
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Notting Hill Pluak Daeng-Wang Khayaeng
+  💾 Creating property record...
+  ✅ Property created: import-1763909034653-t7th5zuho
+  📁 Looking for images in: 1675370_Notting_Hill_Pluak_Daeng_Wang_Khayaeng
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Commercial Building for Sale in Map Ta Phut
+  💾 Creating property record...
+  ✅ Property created: import-1763909034788-z2dyvmjot
+  📁 Looking for images in: 1674706_Commercial_Building_for_Sale_in_Map_Ta_Phut
+  📸 Copied 9 images
+  🎨 Creating 9 media records...
+  ✅ Created 9 media records
+  🎉 Successfully imported!
+
+📦 Processing: Townhouse for Sale in Muang Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909034927-53k2q5481
+  📁 Looking for images in: 1667722_Townhouse_for_Sale_in_Muang_Rayong
+  📸 Copied 2 images
+  🎨 Creating 2 media records...
+  ✅ Created 2 media records
+  🎉 Successfully imported!
+
+📦 Processing: Pool Villa for Sale Near Suan Son Beach Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909034972-m23870fsc
+  📁 Looking for images in: 1398666_Pool_Villa_for_Sale_Near_Suan_Son_Beach_Rayong
+  📸 Copied 16 images
+  🎨 Creating 16 media records...
+  ✅ Created 16 media records
+  🎉 Successfully imported!
+
+📦 Processing: 3BR Single House For Sale at Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909035242-jlhra2uyh
+  📁 Looking for images in: 1660624_3BR_Single_House_For_Sale_at_Rayong
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: 3-Storey Commercial Building Near Bangkok Hospital Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909035524-0enb0zag8
+  📁 Looking for images in: 1644102_3_Storey_Commercial_Building_Near_Bangkok_Hospital_Rayong
+  ⏭️  No images folder for 1644102_3_Storey_Commercial_Building_Near_Bangkok_Hospital_Rayong
+  🎉 Successfully imported!
+
+📦 Processing: Pitta Home Ban Chang
+  💾 Creating property record...
+  ✅ Property created: import-1763909035543-9tmo9qiok
+  📁 Looking for images in: 1620268_Pitta_Home_Ban_Chang
+  📸 Copied 12 images
+  🎨 Creating 12 media records...
+  ✅ Created 12 media records
+  🎉 Successfully imported!
+
+📦 Processing: Houses for Sale in Samnak Thon-Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909035723-tg3ca9nd3
+  📁 Looking for images in: 1645302_Houses_for_Sale_in_Samnak_Thon_Rayong
+  📸 Copied 2 images
+  🎨 Creating 2 media records...
+  ✅ Created 2 media records
+  🎉 Successfully imported!
+
+📦 Processing: Townhouse for Sale in Ruammitr 3
+  💾 Creating property record...
+  ✅ Property created: import-1763909035770-jkno8qhu2
+  📁 Looking for images in: 1650430_Townhouse_for_Sale_in_Ruammitr_3
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Jindarom 4
+  💾 Creating property record...
+  ✅ Property created: import-1763909035885-3flfwxsvd
+  📁 Looking for images in: 1649900_Jindarom_4
+  📸 Copied 9 images
+  🎨 Creating 9 media records...
+  ✅ Created 9 media records
+  🎉 Successfully imported!
+
+📦 Processing: 2 Storey Townhouse Near Koh Kloi Intersection Rayong City Center
+  💾 Creating property record...
+  ✅ Property created: import-1763909036143-j5251emc1
+  📁 Looking for images in: 1646862_2_Storey_Townhouse_Near_Koh_Kloi_Intersection_Rayong_City_Center
+  ⏭️  No images folder for 1646862_2_Storey_Townhouse_Near_Koh_Kloi_Intersection_Rayong_City_Center
+  🎉 Successfully imported!
+
+📦 Processing: House for Sale with 105 SQW Land in Mueang Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909036166-zc4ssp5sk
+  📁 Looking for images in: 1394472_House_for_Sale_with_105_SQW_Land_in_Mueang_Rayong
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Supalai River Ville Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909036293-8blbs228m
+  📁 Looking for images in: 1638750_Supalai_River_Ville_Rayong
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Srithep Village
+  💾 Creating property record...
+  ✅ Property created: import-1763909036573-cxl02t3lz
+  📁 Looking for images in: 1634054_Srithep_Village
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ✅ Created 7 media records
+  🎉 Successfully imported!
+
+📦 Processing: 📣📣📣 Announcement for sale of 2 and a half storey townhomes
+  💾 Creating property record...
+  ✅ Property created: import-1763909036719-ey466r15e
+  📁 Looking for images in: 1406142________Announcement_for_sale_of_2_and_a_half_storey_townhomes
+  ⏭️  No images folder for 1406142________Announcement_for_sale_of_2_and_a_half_storey_townhomes
+  🎉 Successfully imported!
+
+📦 Processing: 1 storey townhouse for sale
+  💾 Creating property record...
+  ✅ Property created: import-1763909036740-46arxium7
+  📁 Looking for images in: 1629260_1_storey_townhouse_for_sale
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: House for sale. Presales price.
+  💾 Creating property record...
+  ✅ Property created: import-1763909036938-a5vj26w47
+  📁 Looking for images in: 1378882_House_for_sale__Presales_price_
+  ⏭️  No images folder for 1378882_House_for_sale__Presales_price_
+  🎉 Successfully imported!
+
+📦 Processing: 3BR House in The Top Golden Location in Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909036960-vcbclkhe1
+  📁 Looking for images in: 1621730_3BR_House_in_The_Top_Golden_Location_in_Rayong
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ✅ Created 7 media records
+  🎉 Successfully imported!
+
+📦 Processing: Ban Warisara 7 Burapaphat
+  💾 Creating property record...
+  ✅ Property created: import-1763909037085-i85u5d3i6
+  📁 Looking for images in: 1412874_Ban_Warisara_7_Burapaphat
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Townhouse for Sale near Bangkok Hospital Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909037301-tycfr8bja
+  📁 Looking for images in: 1409848_Townhouse_for_Sale_near_Bangkok_Hospital_Rayong
+  📸 Copied 4 images
+  🎨 Creating 4 media records...
+  ✅ Created 4 media records
+  🎉 Successfully imported!
+
+📦 Processing: Preecha Private Beach Housing
+  💾 Creating property record...
+  ✅ Property created: import-1763909037471-nm2052ckm
+  📁 Looking for images in: 1409896_Preecha_Private_Beach_Housing
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: One Story House for Sale in Soi Payoon 3/3
+  💾 Creating property record...
+  ✅ Property created: import-1763909037588-oetnkqqkm
+  📁 Looking for images in: 1407570_One_Story_House_for_Sale_in_Soi_Payoon_3_3
+  ⏭️  No images folder for 1407570_One_Story_House_for_Sale_in_Soi_Payoon_3_3
+  🎉 Successfully imported!
+
+📦 Processing: Koravit 7
+  💾 Creating property record...
+  ✅ Property created: import-1763909037616-vams745bg
+  📁 Looking for images in: 1388752_Koravit_7
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: Townhouse for Sales in Midtown Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909037856-mw9s0wjpi
+  📁 Looking for images in: 1388058_Townhouse_for_Sales_in_Midtown_Rayong
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single House for Sale near Sri Rayong Hospital
+  💾 Creating property record...
+  ✅ Property created: import-1763909038100-0fmyra6mj
+  📁 Looking for images in: 1364390_Single_House_for_Sale_near_Sri_Rayong_Hospital
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Kunsiri Boulevard
+  💾 Creating property record...
+  ✅ Property created: import-1763909038345-n3r4svtz9
+  📁 Looking for images in: 1172388_Kunsiri_Boulevard
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Mago
+  💾 Creating property record...
+  ✅ Property created: import-1763909038617-5jn6iwuxj
+  📁 Looking for images in: 1096830_Mago
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Big House for Sale in Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909038791-fywjqr9ze
+  📁 Looking for images in: 1100586_Big_House_for_Sale_in_Rayong
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: Pool Villa For Sale
+  💾 Creating property record...
+  ✅ Property created: import-1763909039333-59ny4nmsx
+  📁 Looking for images in: 1100494_Pool_Villa_For_Sale
+  ⏭️  No images folder for 1100494_Pool_Villa_For_Sale
+  🎉 Successfully imported!
+
+📦 Processing: King's House Pluak Daeng
+  💾 Creating property record...
+  ✅ Property created: import-1763909039347-m9jglchjh
+  📁 Looking for images in: 1084664_King_s_House_Pluak_Daeng
+  ⏭️  No images folder for 1084664_King_s_House_Pluak_Daeng
+  🎉 Successfully imported!
+
+📦 Processing: Muntana Garden Village 2
+  💾 Creating property record...
+  ✅ Property created: import-1763909039367-2t5ssvdc5
+  📁 Looking for images in: 1088490_Muntana_Garden_Village_2
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: Sinthawee Park
+  💾 Creating property record...
+  ✅ Property created: import-1763909039574-u0vu10got
+  📁 Looking for images in: 1074824_Sinthawee_Park
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single House for Sale in Pluak Daeng
+  💾 Creating property record...
+  ✅ Property created: import-1763909040157-xq1zngip6
+  📁 Looking for images in: 1071058_Single_House_for_Sale_in_Pluak_Daeng
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Saint Andrews Golf Course - The Village
+  💾 Creating property record...
+  ✅ Property created: import-1763909040501-bxwgaa81m
+  📁 Looking for images in: 1056990_Saint_Andrews_Golf_Course___The_Village
+  ⏭️  No images folder for 1056990_Saint_Andrews_Golf_Course___The_Village
+  🎉 Successfully imported!
+
+📦 Processing: Pmy City Park
+  💾 Creating property record...
+  ✅ Property created: import-1763909040542-a4x4lr31n
+  📁 Looking for images in: 1055626_Pmy_City_Park
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Moo Baan Siri Suk
+  💾 Creating property record...
+  ✅ Property created: import-1763909040773-62pky72m9
+  📁 Looking for images in: 1054312_Moo_Baan_Siri_Suk
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: 2 Bedroom House for Sale in Ban Khai
+  💾 Creating property record...
+  ✅ Property created: import-1763909040995-nk9qzb3rl
+  📁 Looking for images in: 1054230_2_Bedroom_House_for_Sale_in_Ban_Khai
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Baan Rom Yen 3
+  💾 Creating property record...
+  ✅ Property created: import-1763909041227-hmk7qua7u
+  📁 Looking for images in: 1049982_Baan_Rom_Yen_3
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ✅ Created 7 media records
+  🎉 Successfully imported!
+
+📦 Processing: Ponbhirom Mabkha
+  💾 Creating property record...
+  ✅ Property created: import-1763909041383-kuv985vsh
+  📁 Looking for images in: 1047728_Ponbhirom_Mabkha
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Deco Nong Lalok
+  💾 Creating property record...
+  ✅ Property created: import-1763909041700-4x4iva6d9
+  📁 Looking for images in: 1046138_The_Deco_Nong_Lalok
+  📸 Copied 16 images
+  🎨 Creating 16 media records...
+  ✅ Created 16 media records
+  🎉 Successfully imported!
+
+📦 Processing: 3 Storey Townhouse in Ban Laeng for Sale
+  💾 Creating property record...
+  ✅ Property created: import-1763909042095-wqz5m7vjm
+  📁 Looking for images in: 1045076_3_Storey_Townhouse_in_Ban_Laeng_for_Sale
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Moo Baan Rom Suk 8
+  💾 Creating property record...
+  ✅ Property created: import-1763909042385-q1xnw9v2l
+  📁 Looking for images in: 1039908_Moo_Baan_Rom_Suk_8
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ✅ Created 8 media records
+  🎉 Successfully imported!
+
+📦 Processing: Single Storey House for Sale in Soi Rangsuk 1
+  💾 Creating property record...
+  ✅ Property created: import-1763909042711-h8we0qcov
+  📁 Looking for images in: 1036820_Single_Storey_House_for_Sale_in_Soi_Rangsuk_1
+  📸 Copied 11 images
+  🎨 Creating 11 media records...
+  ✅ Created 11 media records
+  🎉 Successfully imported!
+
+📦 Processing: Modern Style House in Ban Chang for Sale
+  💾 Creating property record...
+  ✅ Property created: import-1763909043093-5jn4lnnn0
+  📁 Looking for images in: 1036004_Modern_Style_House_in_Ban_Chang_for_Sale
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ✅ Created 17 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Monox
+  💾 Creating property record...
+  ✅ Property created: import-1763909043523-deu56g4yp
+  📁 Looking for images in: 669484_The_Monox
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: Meephom Home
+  💾 Creating property record...
+  ✅ Property created: import-1763909043775-r91kkbksh
+  📁 Looking for images in: 1023916_Meephom_Home
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ✅ Created 13 media records
+  🎉 Successfully imported!
+
+📦 Processing: Vela Home
+  💾 Creating property record...
+  ✅ Property created: import-1763909044005-5ulbz01mc
+  📁 Looking for images in: 1018334_Vela_Home
+  📸 Copied 6 images
+  🎨 Creating 6 media records...
+  ✅ Created 6 media records
+  🎉 Successfully imported!
+
+📦 Processing: 6 Bedrooms House for Sale in Baan Phe
+  💾 Creating property record...
+  ✅ Property created: import-1763909044232-gvsi50ifp
+  📁 Looking for images in: 1012674_6_Bedrooms_House_for_Sale_in_Baan_Phe
+  📸 Copied 14 images
+  🎨 Creating 14 media records...
+  ✅ Created 14 media records
+  🎉 Successfully imported!
+
+📦 Processing: 2 Storey Townhouse in City of Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909044605-cky1w2kdn
+  📁 Looking for images in: 1011884_2_Storey_Townhouse_in_City_of_Rayong
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ✅ Created 7 media records
+  🎉 Successfully imported!
+
+📦 Processing: Goodwill Pluak Daeng
+  💾 Creating property record...
+  ✅ Property created: import-1763909044712-rw3qi9tyx
+  📁 Looking for images in: 628278_Goodwill_Pluak_Daeng
+  📸 Copied 4 images
+  🎨 Creating 4 media records...
+  ✅ Created 4 media records
+  🎉 Successfully imported!
+
+📦 Processing: Thaweesuk Garden Home
+  💾 Creating property record...
+  ✅ Property created: import-1763909044776-a7142frud
+  📁 Looking for images in: 625022_Thaweesuk_Garden_Home
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ✅ Created 7 media records
+  🎉 Successfully imported!
+
+📦 Processing: 3 Bedroom House For Sale Near Mae Ram Phueng Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763909044890-lcjcm2vye
+  📁 Looking for images in: 593266_3_Bedroom_House_For_Sale_Near_Mae_Ram_Phueng_Beach
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ✅ Created 10 media records
+  🎉 Successfully imported!
+
+📦 Processing: Kanlapaphruek Regent Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763909045071-y3709ecsu
+  📁 Looking for images in: 156111_Kanlapaphruek_Regent_Rayong
+  📸 Copied 14 images
+  🎨 Creating 14 media records...
+  ✅ Created 14 media records
+  🎉 Successfully imported!
+
+📦 Processing: The Beach House
+  💾 Creating property record...
+  ✅ Property created: import-1763909045358-yf29oqmhu
+  📁 Looking for images in: 160177_The_Beach_House
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ✅ Created 7 media records
+  🎉 Successfully imported!
+
+📦 Processing: Saruta Green Ville
+  💾 Creating property record...
+  ✅ Property created: import-1763909045648-v5hevj1p5
+  📁 Looking for images in: 161119_Saruta_Green_Ville
+  📸 Copied 9 images
+  🎨 Creating 9 media records...
+  ✅ Created 9 media records
+  🎉 Successfully imported!
+
+============================================================
+📊 IMPORT SUMMARY
+============================================================
+✅ Imported: 212
+⏭️  Skipped:  3
+❌ Errors:   0
+📁 Total:    215 properties in CSV
+============================================================
+
+🎊 Import completed successfully!
+
+📍 Next steps:
+  1. Check: http://localhost:3100/en/admin/properties
+  2. View:  http://localhost:3100/en/properties
+  3. Edit properties and add more details
+

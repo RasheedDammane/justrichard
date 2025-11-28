@@ -1,0 +1,7 @@
+id,name,slug,description,icon,image,parentId,order,isActive,isFeatured,createdAt,updatedAt
+cmihuqlqg0000ym007x3j8ihi,Frozen Desserts & Ice Cream,frozen-desserts,"Premium ice creams, gelatos and frozen treats",🍦,,,2,true,true,"2025-11-27T19:54:06.857Z","2025-11-27T19:54:06.857Z"
+cmihuqlqr0002ym00g43zh8i2,Party & Catering,party-catering,"Buffets, platters and catering options for events",🍱,,,6,true,true,"2025-11-27T19:54:06.857Z","2025-11-27T19:54:06.857Z"
+cmihuqlqr0001ym00i1rqt8rt,Cakes & Pastries,cakes-pastries,"Fresh cakes, pastries and celebration desserts",🎂,,,5,true,true,"2025-11-27T19:54:06.857Z","2025-11-27T19:54:06.857Z"
+cmihuqlqs0003ym00xytj8a1p,Dairy & Cheese,dairy-cheese,Fresh dairy products and artisanal cheeses from around the world,🧀,,,1,true,true,"2025-11-27T19:54:06.857Z","2025-11-27T19:54:06.857Z"
+cmihuqlqu0004ym00m8h7866b,Gourmet Delicacies,gourmet-delicacies,"Premium gourmet products including foie gras, truffles and more",🍽️,,,4,true,true,"2025-11-27T19:54:06.857Z","2025-11-27T19:54:06.857Z"
+cmihuqlqx0005ym00bxiqwfoy,Chocolates & Sweets,chocolates-sweets,Luxury chocolates and confectionery,🍫,,,3,true,true,"2025-11-27T19:54:06.857Z","2025-11-27T19:54:06.857Z"

@@ -54,12 +54,12 @@ export default function Footer() {
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300">
       {/* Main Footer */}
       <div className="container mx-auto max-w-7xl px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
           
           {/* About & Newsletter */}
-          <div className="lg:col-span-1">
-            <h2 className="text-2xl font-bold text-white mb-4">CommunityHub</h2>
-            <p className="text-sm mb-6 leading-relaxed">
+          <div className="col-span-2 lg:col-span-1">
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4">CommunityHub</h2>
+            <p className="text-xs md:text-sm mb-4 md:mb-6 leading-relaxed">
               {t('description')}
             </p>
             
@@ -118,15 +118,15 @@ export default function Footer() {
 
           {/* Popular Services */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4 flex items-center">
-              <span className="w-1 h-6 bg-blue-600 mr-3"></span>
+            <h3 className="text-white font-semibold text-sm md:text-lg mb-3 md:mb-4 flex items-center">
+              <span className="w-1 h-4 md:h-6 bg-blue-600 mr-2 md:mr-3"></span>
               {t('services.popularServices')}
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-1.5 md:space-y-2">
               {services.map((service) => (
                 <li key={service.slug}>
                   <Link href={`/${locale}/services/${service.slug}`} 
-                        className="text-sm hover:text-white hover:translate-x-1 transition-all inline-flex items-center">
+                        className="text-xs md:text-sm hover:text-white hover:translate-x-1 transition-all inline-flex items-center">
                     <span className="mr-2">{service.icon}</span>
                     {t(service.nameKey)}
                   </Link>
@@ -134,7 +134,7 @@ export default function Footer() {
               ))}
               <li>
                 <Link href={`/${locale}/services`} 
-                      className="text-sm text-blue-400 hover:text-blue-300 font-semibold">
+                      className="text-xs md:text-sm text-blue-400 hover:text-blue-300 font-semibold">
                   {t('services.viewAllServices')} →
                 </Link>
               </li>
@@ -143,14 +143,14 @@ export default function Footer() {
 
           {/* Company & Legal */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4 flex items-center">
-              <span className="w-1 h-6 bg-blue-600 mr-3"></span>
+            <h3 className="text-white font-semibold text-sm md:text-lg mb-3 md:mb-4 flex items-center">
+              <span className="w-1 h-4 md:h-6 bg-blue-600 mr-2 md:mr-3"></span>
               {t('legal.companyLegal')}
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               <div>
-                <h4 className="text-white text-sm font-semibold mb-2">{t('company.title')}</h4>
-                <ul className="space-y-2 text-sm">
+                <h4 className="text-white text-xs md:text-sm font-semibold mb-1.5 md:mb-2">{t('company.title')}</h4>
+                <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
                   <li><Link href={`/${locale}/about`} className="hover:text-white transition-colors">{t('company.about')}</Link></li>
                   <li><Link href={`/${locale}/careers`} className="hover:text-white transition-colors">{t('company.careers')}</Link></li>
                   <li><Link href={`/${locale}/blog`} className="hover:text-white transition-colors">{t('company.blog')}</Link></li>
@@ -158,8 +158,11 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-white text-sm font-semibold mb-2">{t('professionals.title')}</h4>
-                <ul className="space-y-2 text-sm">
+                <h4 className="text-white text-xs md:text-sm font-semibold mb-1.5 md:mb-2">{t('professionals.title')}</h4>
+                <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
+                  <li><Link href={`/${locale}/claim-business`} className="hover:text-white transition-colors flex items-center">
+                    <span className="mr-1">🏢</span> Claim Your Business
+                  </Link></li>
                   <li><Link href={`/${locale}/auth/signup-provider`} className="hover:text-white transition-colors">{t('professionals.becomeProvider')}</Link></li>
                   <li><Link href={`/${locale}/provider-benefits`} className="hover:text-white transition-colors">{t('professionals.providerBenefits')}</Link></li>
                   <li><Link href={`/${locale}/partnerships`} className="hover:text-white transition-colors">{t('professionals.partnerships')}</Link></li>
@@ -170,14 +173,14 @@ export default function Footer() {
 
           {/* Support & Legal */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4 flex items-center">
-              <span className="w-1 h-6 bg-blue-600 mr-3"></span>
+            <h3 className="text-white font-semibold text-sm md:text-lg mb-3 md:mb-4 flex items-center">
+              <span className="w-1 h-4 md:h-6 bg-blue-600 mr-2 md:mr-3"></span>
               {t('support.supportHelp')}
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               <div>
-                <h4 className="text-white text-sm font-semibold mb-2">{t('support.customerSupport')}</h4>
-                <ul className="space-y-2 text-sm">
+                <h4 className="text-white text-xs md:text-sm font-semibold mb-1.5 md:mb-2">{t('support.customerSupport')}</h4>
+                <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
                   <li><Link href={`/${locale}/help`} className="hover:text-white transition-colors">{t('support.helpCenter')}</Link></li>
                   <li><Link href={`/${locale}/faq`} className="hover:text-white transition-colors">{t('support.faq')}</Link></li>
                   <li><Link href={`/${locale}/contact`} className="hover:text-white transition-colors">{t('support.contactUs')}</Link></li>
@@ -185,8 +188,8 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <h4 className="text-white text-sm font-semibold mb-2">{t('legal.title')}</h4>
-                <ul className="space-y-2 text-sm">
+                <h4 className="text-white text-xs md:text-sm font-semibold mb-1.5 md:mb-2">{t('legal.title')}</h4>
+                <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
                   <li><Link href={`/${locale}/terms`} className="hover:text-white transition-colors">{t('support.terms')}</Link></li>
                   <li><Link href={`/${locale}/privacy`} className="hover:text-white transition-colors">{t('support.privacy')}</Link></li>
                   <li><Link href={`/${locale}/cookies`} className="hover:text-white transition-colors">{t('support.cookies')}</Link></li>
@@ -199,7 +202,7 @@ export default function Footer() {
 
         {/* Countries & Languages Section */}
         <div className="border-t border-gray-700 pt-8 mb-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             
             {/* Available Countries */}
             <div>

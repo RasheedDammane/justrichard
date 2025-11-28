@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "premium-furniture-supplier",
+    "name": "Premium Furniture Co.",
+    "category": "FURNITURE",
+    "description": "High-quality furniture supplier for homes and offices",
+    "contactPerson": "John Anderson",
+    "email": "contact@premiumfurniture.ae",
+    "phone": "+971501111111",
+    "whatsapp": "+971501111111",
+    "website": "https://premiumfurniture.ae",
+    "address": "Dubai Design District, Dubai",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "servicesOffered": ["Furniture Supply", "Interior Design", "Custom Made"],
+    "minimumOrder": 5000,
+    "currency": "AED",
+    "deliveryAvailable": true,
+    "installationService": true,
+    "isVerified": true,
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "slug": "ac-parts-supplier",
+    "name": "Cool Air Supplies",
+    "category": "AC_PARTS",
+    "description": "AC parts and equipment supplier",
+    "email": "sales@coolairsupplies.ae",
+    "phone": "+971502222222",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "servicesOffered": ["AC Parts", "Installation", "Maintenance"],
+    "isActive": true
+  }
+]

@@ -1,0 +1,6 @@
+id,countryId,regionId,name,slug,latitude,longitude,isActive,createdAt,updatedAt,description,districtId,icon,images,keywords,metaDescription,metaTitle,nameAf,nameAr,nameDe,nameEs,nameFr,nameIt,nameJa,nameKo,nameNo,namePt,nameRu,nameTh,nameTl,nameTr,nameVi,thumbnail
+city-bangkok,country-thailand,,Bangkok,bangkok,13.7563,100.5018,true,"2025-11-27T20:02:47.924Z","2025-11-27T20:02:47.924Z",,,,[],[],,,,,,,,,,,,,,,,,,
+city-pattaya,country-thailand,,Pattaya,pattaya,12.9236,100.8825,true,"2025-11-27T20:02:47.939Z","2025-11-27T20:02:47.939Z",,,,[],[],,,,,,,,,,,,,,,,,,
+city-dubai,country-uae,,Dubai,dubai,25.2048,55.2708,true,"2025-11-27T20:02:49.598Z","2025-11-27T20:02:49.597Z",,,,[],[],,,,,,,,,,,,,,,,,,
+phuket,country-thailand,,Phuket,phuket,,,true,"2025-11-27T20:03:13.384Z","2025-11-27T20:03:13.381Z",,,,[],[],,,,,,,,,,,,,,,,,,
+chiang-mai,country-thailand,,Chiang Mai,chiang-mai,,,true,"2025-11-27T20:03:13.394Z","2025-11-27T20:03:13.393Z",,,,[],[],,,,,,,,,,,,,,,,,,

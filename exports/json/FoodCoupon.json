@@ -1,0 +1,34 @@
+[
+  {
+    "id": "cmihuqluf0019ym00wxn65kp2",
+    "code": "FREESHIP",
+    "description": "Free delivery on orders above 150 AED",
+    "discountType": "free_delivery",
+    "discountValue": 0,
+    "minOrderAmount": 150,
+    "maxDiscountAmount": null,
+    "usageLimit": null,
+    "usageCount": 0,
+    "validFrom": "2025-11-27T19:54:06.989Z",
+    "validUntil": "2026-01-26T19:54:06.989Z",
+    "isActive": true,
+    "createdAt": "2025-11-27T19:54:06.999Z",
+    "updatedAt": "2025-11-27T19:54:06.999Z"
+  },
+  {
+    "id": "cmihuqluf001aym00t61494rb",
+    "code": "WELCOME10",
+    "description": "10% off your first order",
+    "discountType": "percentage",
+    "discountValue": 10,
+    "minOrderAmount": 100,
+    "maxDiscountAmount": 50,
+    "usageLimit": 1000,
+    "usageCount": 0,
+    "validFrom": "2025-11-27T19:54:06.989Z",
+    "validUntil": "2025-12-27T19:54:06.989Z",
+    "isActive": true,
+    "createdAt": "2025-11-27T19:54:06.999Z",
+    "updatedAt": "2025-11-27T19:54:06.999Z"
+  }
+]

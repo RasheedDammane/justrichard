@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
-import { Role } from '@prisma/client';
 
 export async function GET(
   request: Request,
@@ -52,12 +51,21 @@ export async function PUT(
   try {
     const session = await getServerSession(authOptions);
     
-    if (!session || session.user.role !== Role.ADMIN) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    console.log('Session:', session?.user);
+    console.log('User role:', session?.user?.role);
+    
+    if (!session) {
+      return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
+    }
+    
+    if (session.user.role !== 'ADMIN' && session.user.role !== 'MANAGER') {
+      return NextResponse.json({ error: 'Unauthorized - Admin or Manager role required' }, { status: 403 });
     }
 
     const body = await request.json();
     const { name, symbol, isActive, isDefault, decimalPlaces } = body;
+
+    console.log('Updating currency:', params.id, body);
 
     // If setting as default, unset other defaults
     if (isDefault) {
@@ -73,19 +81,21 @@ export async function PUT(
     const currency = await prisma.currency.update({
       where: { id: params.id },
       data: {
-        name: name || undefined,
-        symbol: symbol || undefined,
+        name: name !== undefined ? name : undefined,
+        symbol: symbol !== undefined ? symbol : undefined,
         isActive: isActive !== undefined ? isActive : undefined,
         isDefault: isDefault !== undefined ? isDefault : undefined,
         decimalPlaces: decimalPlaces !== undefined ? decimalPlaces : undefined,
       },
     });
 
+    console.log('Currency updated successfully:', currency.code);
+
     return NextResponse.json({ currency });
   } catch (error) {
     console.error('Error updating currency:', error);
     return NextResponse.json(
-      { error: 'Failed to update currency' },
+      { error: 'Failed to update currency: ' + (error instanceof Error ? error.message : 'Unknown error') },
       { status: 500 }
     );
   }
@@ -98,7 +108,7 @@ export async function DELETE(
   try {
     const session = await getServerSession(authOptions);
     
-    if (!session || session.user.role !== Role.ADMIN) {
+    if (!session || (session.user.role !== 'ADMIN' && session.user.role !== 'MANAGER')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 

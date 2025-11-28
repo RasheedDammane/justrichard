@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
+import AdminLayout from '@/components/admin/AdminLayout';
 import { Globe, MapPin, Map, Building } from 'lucide-react';
 
 interface Country {
@@ -62,32 +63,31 @@ export default function GeographyPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Chargement...</p>
+      <AdminLayout locale={locale}>
+        <div className="flex items-center justify-center py-12">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
+            <p className="mt-4 text-gray-600">Chargement...</p>
+          </div>
         </div>
-      </div>
+      </AdminLayout>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-primary-600 text-white py-8 px-4">
-        <div className="container mx-auto max-w-7xl">
-          <h1 className="text-3xl font-bold flex items-center gap-3">
-            <Globe className="w-8 h-8" />
-            Gestion Géographique
-          </h1>
-          <p className="text-primary-100 mt-1">
-            {countries.length} pays • {totalRegions} régions • {totalCities} villes
-          </p>
-        </div>
+    <AdminLayout locale={locale}>
+      {/* Header */}
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
+          <Globe className="w-8 h-8" />
+          Gestion Géographique
+        </h1>
+        <p className="text-gray-600 mt-1">
+          {countries.length} pays • {totalRegions} régions • {totalCities} villes
+        </p>
       </div>
-
-      <div className="container mx-auto max-w-7xl px-4 py-8">
-        {/* Statistics */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+      {/* Statistics */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow p-6">
             <div className="flex items-center justify-between">
               <div>
@@ -128,8 +128,8 @@ export default function GeographyPage() {
           </div>
         </div>
 
-        {/* Countries Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Countries Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {countries.map((country) => (
             <div
               key={country.id}
@@ -192,24 +192,23 @@ export default function GeographyPage() {
           ))}
         </div>
 
-        {countries.length === 0 && (
-          <div className="bg-white rounded-lg shadow p-12 text-center">
-            <Globe className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Aucun pays</h3>
-            <p className="text-gray-500 mb-4">
-              Exécutez le script de seed pour initialiser les données géographiques
-            </p>
-            <code className="bg-gray-100 px-4 py-2 rounded text-sm">
-              npx ts-node prisma/seed-geography.ts
-            </code>
-          </div>
-        )}
-      </div>
+      {countries.length === 0 && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-12 text-center">
+          <Globe className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">Aucun pays</h3>
+          <p className="text-gray-500 mb-4">
+            Exécutez le script de seed pour initialiser les données géographiques
+          </p>
+          <code className="bg-gray-100 px-4 py-2 rounded text-sm">
+            npx ts-node prisma/seed-geography.ts
+          </code>
+        </div>
+      )}
 
       {/* Country Details Modal */}
       {selectedCountry && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+          <div className="bg-white rounded-xl max-w-4xl w-full max-h-[80vh] overflow-y-auto shadow-2xl">
             <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
               <h2 className="text-2xl font-bold">{selectedCountry.name}</h2>
               <button
@@ -251,6 +250,6 @@ export default function GeographyPage() {
           </div>
         </div>
       )}
-    </div>
+    </AdminLayout>
   );
 }

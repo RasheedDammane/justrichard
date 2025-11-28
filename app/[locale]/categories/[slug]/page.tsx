@@ -8,10 +8,7 @@ import { generateMetaTags } from '@/lib/seo/meta-generator';
 import { generateServiceSchema, generateBreadcrumbSchema } from '@/lib/seo/schema-generator';
 
 interface CategoryPageProps {
-  params: {
-    locale: string;
-    slug: string;
-  };
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 // Generate metadata for SEO
@@ -46,7 +43,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { locale, slug } = params;
+  const { locale, slug } = await params;
 
   // Fetch category with services
   const category = await prisma.category.findUnique({

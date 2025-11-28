@@ -1,0 +1,250 @@
+[
+  {
+    "content": {
+      "type": "post",
+      "status": "PUBLISHED",
+      "publishAt": "2025-01-15T10:00:00Z",
+      "unpublishAt": null,
+      "categories": [],
+      "tags": []
+    },
+    "translations": [
+      {
+        "locale": "fr",
+        "title": "Découvrez Dubai: Guide Complet 2025",
+        "slug": "decouvrez-dubai-guide-complet-2025",
+        "excerpt": "Dubai est une destination incontournable. Découvrez nos meilleurs conseils pour profiter au maximum de votre séjour.",
+        "bodyJson": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Bienvenue à Dubai"
+          },
+          {
+            "type": "paragraph",
+            "text": "Dubai est l'une des villes les plus fascinantes au monde, alliant tradition et modernité de manière spectaculaire."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Les Incontournables"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Burj Khalifa - Le plus haut bâtiment du monde",
+              "Dubai Mall - Shopping et divertissement",
+              "Palm Jumeirah - Île artificielle emblématique",
+              "Dubai Marina - Quartier moderne et animé"
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Chaque lieu offre une expérience unique et mémorable."
+          }
+        ],
+        "metaTitle": "Guide Complet Dubai 2025 | JustRichard",
+        "metaDescription": "Découvrez Dubai avec notre guide complet 2025. Attractions, conseils pratiques, et bons plans pour un séjour inoubliable.",
+        "ogTitle": "Découvrez Dubai: Guide Complet 2025",
+        "ogDescription": "Votre guide ultime pour visiter Dubai en 2025",
+        "canonicalUrl": "https://justrichard.com/fr/blog/decouvrez-dubai-guide-complet-2025",
+        "isPublished": true
+      },
+      {
+        "locale": "en",
+        "title": "Discover Dubai: Complete Guide 2025",
+        "slug": "discover-dubai-complete-guide-2025",
+        "excerpt": "Dubai is a must-visit destination. Discover our best tips to make the most of your stay.",
+        "bodyJson": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Welcome to Dubai"
+          },
+          {
+            "type": "paragraph",
+            "text": "Dubai is one of the most fascinating cities in the world, blending tradition and modernity in a spectacular way."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Must-See Attractions"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Burj Khalifa - The world's tallest building",
+              "Dubai Mall - Shopping and entertainment",
+              "Palm Jumeirah - Iconic artificial island",
+              "Dubai Marina - Modern and vibrant district"
+            ]
+          }
+        ],
+        "metaTitle": "Complete Dubai Guide 2025 | JustRichard",
+        "metaDescription": "Discover Dubai with our complete 2025 guide. Attractions, practical tips, and deals for an unforgettable stay.",
+        "isPublished": true
+      }
+    ]
+  },
+  {
+    "content": {
+      "type": "post",
+      "status": "PUBLISHED",
+      "publishAt": "2025-01-20T08:00:00Z",
+      "categories": [],
+      "tags": []
+    },
+    "translations": [
+      {
+        "locale": "fr",
+        "title": "Top 10 des Restaurants à Dubai",
+        "slug": "top-10-restaurants-dubai",
+        "excerpt": "Découvrez les meilleurs restaurants de Dubai, de la cuisine locale aux tables étoilées.",
+        "bodyJson": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Les Meilleurs Restaurants de Dubai"
+          },
+          {
+            "type": "paragraph",
+            "text": "Dubai est un paradis culinaire avec des restaurants du monde entier."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Notre Top 10"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Pierchic - Cuisine de fruits de mer avec vue sur le Golfe",
+              "At.mosphere - Restaurant le plus haut du monde",
+              "Zuma - Cuisine japonaise contemporaine",
+              "La Petite Maison - Cuisine française méditerranéenne",
+              "Nobu - Fusion japonaise-péruvienne"
+            ]
+          },
+          {
+            "type": "quote",
+            "text": "Dubai offre une expérience gastronomique incomparable",
+            "author": "Chef Michelin"
+          }
+        ],
+        "metaTitle": "Top 10 Restaurants Dubai 2025 | Guide Gastronomique",
+        "metaDescription": "Découvrez les 10 meilleurs restaurants de Dubai. Cuisine locale, étoilés Michelin, et tables d'exception.",
+        "isPublished": true
+      },
+      {
+        "locale": "en",
+        "title": "Top 10 Restaurants in Dubai",
+        "slug": "top-10-restaurants-dubai",
+        "excerpt": "Discover the best restaurants in Dubai, from local cuisine to Michelin-starred tables.",
+        "bodyJson": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Dubai's Best Restaurants"
+          },
+          {
+            "type": "paragraph",
+            "text": "Dubai is a culinary paradise with restaurants from around the world."
+          }
+        ],
+        "metaTitle": "Top 10 Dubai Restaurants 2025 | Food Guide",
+        "metaDescription": "Discover the 10 best restaurants in Dubai. Local cuisine, Michelin stars, and exceptional dining.",
+        "isPublished": true
+      }
+    ]
+  },
+  {
+    "content": {
+      "type": "post",
+      "status": "PUBLISHED",
+      "publishAt": "2025-02-01T12:00:00Z"
+    },
+    "translations": [
+      {
+        "locale": "fr",
+        "title": "Location de Yacht à Dubai: Guide Pratique",
+        "slug": "location-yacht-dubai-guide-pratique",
+        "excerpt": "Tout ce que vous devez savoir pour louer un yacht à Dubai. Prix, conseils, et meilleures options.",
+        "bodyJson": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Louer un Yacht à Dubai"
+          },
+          {
+            "type": "paragraph",
+            "text": "Dubai est l'endroit idéal pour une expérience yacht de luxe. Voici notre guide complet."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Types de Yachts Disponibles"
+          },
+          {
+            "type": "list",
+            "ordered": false,
+            "items": [
+              "Yachts de 40-60 pieds (petits groupes)",
+              "Yachts de 60-80 pieds (groupes moyens)",
+              "Mega yachts 80+ pieds (grands événements)"
+            ]
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Prix Moyens"
+          },
+          {
+            "type": "paragraph",
+            "text": "Les prix varient de 1500 AED/heure pour un petit yacht à 5000+ AED/heure pour un mega yacht."
+          },
+          {
+            "type": "heading",
+            "level": 2,
+            "text": "Conseils Pratiques"
+          },
+          {
+            "type": "list",
+            "ordered": true,
+            "items": [
+              "Réservez à l'avance, surtout en haute saison",
+              "Vérifiez ce qui est inclus (équipage, carburant, etc.)",
+              "Demandez les options de restauration",
+              "Prévoyez de la crème solaire et des vêtements légers"
+            ]
+          }
+        ],
+        "metaTitle": "Location Yacht Dubai 2025 | Guide & Prix",
+        "metaDescription": "Guide complet pour louer un yacht à Dubai. Prix, conseils, types de yachts, et meilleures options pour votre sortie en mer.",
+        "isPublished": true
+      },
+      {
+        "locale": "en",
+        "title": "Yacht Rental in Dubai: Practical Guide",
+        "slug": "yacht-rental-dubai-practical-guide",
+        "excerpt": "Everything you need to know to rent a yacht in Dubai. Prices, tips, and best options.",
+        "bodyJson": [
+          {
+            "type": "heading",
+            "level": 1,
+            "text": "Renting a Yacht in Dubai"
+          },
+          {
+            "type": "paragraph",
+            "text": "Dubai is the perfect place for a luxury yacht experience. Here's our complete guide."
+          }
+        ],
+        "metaTitle": "Dubai Yacht Rental 2025 | Guide & Prices",
+        "metaDescription": "Complete guide to rent a yacht in Dubai. Prices, tips, yacht types, and best options for your sea trip.",
+        "isPublished": true
+      }
+    ]
+  }
+]

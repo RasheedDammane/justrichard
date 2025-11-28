@@ -1,0 +1,145 @@
+{
+  "seo": {
+    "title": "JustRichard - Your Trusted Service Platform",
+    "description": "Discover verified professionals for all your needs. Real estate, legal services, transfers, and more."
+  },
+  "hero": {
+    "headline": "Find Trusted Professionals",
+    "subheadline": "Connect with verified service providers across multiple categories",
+    "ctaLabel": "Explore Services",
+    "ctaHref": "/en/services"
+  },
+  "features": {
+    "title": "Why Choose Us",
+    "items": [
+      {
+        "id": "verified",
+        "icon": "✓",
+        "title": "Verified Professionals",
+        "description": "All partners are verified and trusted"
+      },
+      {
+        "id": "available",
+        "icon": "🕐",
+        "title": "24/7 Availability",
+        "description": "Book services anytime, anywhere"
+      },
+      {
+        "id": "quality",
+        "icon": "⭐",
+        "title": "Quality Service",
+        "description": "Top-rated professionals only"
+      },
+      {
+        "id": "support",
+        "icon": "💬",
+        "title": "24/7 Support",
+        "description": "We're here to help anytime"
+      }
+    ]
+  },
+  "specialServices": {
+    "title": "Special Services",
+    "subtitle": "Premium services for all your needs",
+    "items": [
+      {
+        "id": "rental",
+        "icon": "🚗",
+        "title": "Vehicle Rental",
+        "subtitle": "Cars, SUVs & More",
+        "href": "/en/services/rental"
+      },
+      {
+        "id": "real-estate",
+        "icon": "🏢",
+        "title": "Real Estate",
+        "subtitle": "Buy, Rent & Invest",
+        "href": "/en/services/real-estate"
+      },
+      {
+        "id": "legal",
+        "icon": "⚖️",
+        "title": "Legal Services",
+        "subtitle": "Expert Lawyers",
+        "href": "/en/services/legal"
+      },
+      {
+        "id": "handyman",
+        "icon": "🔧",
+        "title": "Handyman",
+        "subtitle": "Repairs & Fixes",
+        "href": "/en/services/handyman"
+      },
+      {
+        "id": "transfer",
+        "icon": "🚕",
+        "title": "Transfers",
+        "subtitle": "Airport & City",
+        "href": "/en/services/transfer"
+      }
+    ]
+  },
+  "processSteps": {
+    "title": "How It Works",
+    "subtitle": "Book professional services in 4 simple steps",
+    "steps": [
+      {
+        "number": 1,
+        "icon": "🔍",
+        "title": "Choose Service",
+        "description": "Browse and select from our wide range of professional services."
+      },
+      {
+        "number": 2,
+        "icon": "📅",
+        "title": "Book Instantly",
+        "description": "Pick your preferred date, time, and professional with ease."
+      },
+      {
+        "number": 3,
+        "icon": "✅",
+        "title": "Get Confirmed",
+        "description": "Receive instant confirmation with all service details."
+      },
+      {
+        "number": 4,
+        "icon": "⭐",
+        "title": "Enjoy & Rate",
+        "description": "Experience quality service and share your feedback."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Platform Statistics",
+    "items": [
+      {
+        "value": "15",
+        "label": "Partner Types"
+      },
+      {
+        "value": "150+",
+        "label": "Specialties"
+      },
+      {
+        "value": "9",
+        "label": "Languages"
+      },
+      {
+        "value": "10",
+        "label": "Countries"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Explore our services and find the perfect professional for your needs",
+    "primaryButton": {
+      "label": "Browse Services",
+      "href": "/en/services"
+    },
+    "secondaryButton": {
+      "label": "API Documentation",
+      "href": "/api-docs"
+    }
+  }
+}

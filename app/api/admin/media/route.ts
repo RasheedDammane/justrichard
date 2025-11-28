@@ -13,28 +13,79 @@ export async function GET(request: Request) {
     }
 
     const { searchParams } = new URL(request.url);
-    const mimeType = searchParams.get('mimeType');
+    const search = searchParams.get('search') || '';
+    const categoryId = searchParams.get('category');
+    const type = searchParams.get('type'); // image, video, document
+    const tag = searchParams.get('tag');
+    const visibility = searchParams.get('visibility');
+    const page = parseInt(searchParams.get('page') || '1');
     const limit = parseInt(searchParams.get('limit') || '50');
+    const skip = (page - 1) * limit;
 
+    // Build where clause
     let whereClause: any = {};
-    if (mimeType) {
-      whereClause.mimeType = { startsWith: mimeType };
+    
+    if (search) {
+      whereClause.OR = [
+        { fileName: { contains: search, mode: 'insensitive' } },
+        { altText: { contains: search, mode: 'insensitive' } },
+        { description: { contains: search, mode: 'insensitive' } },
+      ];
     }
 
-    const media = await prisma.media.findMany({
-      where: whereClause,
-      orderBy: { createdAt: 'desc' },
-      take: limit,
-    });
+    if (categoryId) {
+      whereClause.categoryId = categoryId;
+    }
 
-    const stats = {
-      total: await prisma.media.count(),
-      totalSize: await prisma.media.aggregate({
-        _sum: { size: true },
+    if (visibility) {
+      whereClause.visibility = visibility;
+    }
+
+    if (type) {
+      if (type === 'image') {
+        whereClause.mimeType = { startsWith: 'image/' };
+      } else if (type === 'video') {
+        whereClause.mimeType = { startsWith: 'video/' };
+      } else if (type === 'document') {
+        whereClause.mimeType = { startsWith: 'application/' };
+      }
+    }
+
+    // Get media files with relations
+    const [items, total] = await Promise.all([
+      prisma.mediaFile.findMany({
+        where: whereClause,
+        include: {
+          category: true,
+          uploadedBy: {
+            select: {
+              id: true,
+              firstName: true,
+              lastName: true,
+              email: true,
+            },
+          },
+        },
+        orderBy: { createdAt: 'desc' },
+        skip,
+        take: limit,
       }),
-    };
+      prisma.mediaFile.count({ where: whereClause }),
+    ]);
 
-    return NextResponse.json({ media, stats });
+    // Convert BigInt to Number for JSON
+    const itemsWithNumbers = items.map(item => ({
+      ...item,
+      size: Number(item.size),
+    }));
+
+    return NextResponse.json({ 
+      items: itemsWithNumbers,
+      total,
+      page,
+      limit,
+      totalPages: Math.ceil(total / limit),
+    });
   } catch (error) {
     console.error('Error fetching media:', error);
     return NextResponse.json(

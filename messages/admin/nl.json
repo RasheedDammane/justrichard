@@ -1,0 +1,519 @@
+{
+  "admin": {
+    "common": {
+      "add": "Toevoegen",
+      "edit": "Bewerken",
+      "delete": "Verwijderen",
+      "save": "Opslaan",
+      "saving": "Opslaan...",
+      "cancel": "Annuleren",
+      "select": "Selecteren",
+      "search": "Zoeken",
+      "filter": "Filteren",
+      "export": "Exporteren",
+      "import": "Importeren",
+      "refresh": "Vernieuwen",
+      "total": "Totaal",
+      "active": "Actief",
+      "inactive": "Inactief",
+      "featured": "Uitgelicht",
+      "available": "Beschikbaar",
+      "unavailable": "Niet beschikbaar",
+      "status": "Status",
+      "actions": "Acties",
+      "inTotal": "{count} in totaal",
+      "loading": "Laden...",
+      "noData": "Geen gegevens beschikbaar",
+      "confirm": "Bevestigen",
+      "confirmDelete": "Weet u zeker dat u dit item wilt verwijderen?",
+      "success": "Succes",
+      "error": "Fout",
+      "required": "Verplicht",
+      "view": "Bekijken"
+    },
+    "navigation": {
+      "dashboard": "Dashboard",
+      "users": "Gebruikers",
+      "properties": "Eigendommen",
+      "services": "Diensten",
+      "bookings": "Boekingen",
+      "categories": "Categorieën",
+      "partners": "Partners",
+      "doctors": "Artsen",
+      "lawyers": "Advocaten",
+      "coaches": "Coaches",
+      "maids": "Huishoudelijke hulp",
+      "motorbikes": "Motorfietsen",
+      "rentalCars": "Huurauto's",
+      "yachts": "Jachten",
+      "activities": "Activiteiten",
+      "suppliers": "Leveranciers",
+      "settings": "Instellingen",
+      "logout": "Uitloggen"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Welkom, {name}",
+      "overview": "Overzicht",
+      "recentActivity": "Recente activiteit",
+      "quickStats": "Snelle statistieken",
+      "totalUsers": "Totaal aantal gebruikers",
+      "totalBookings": "Totaal aantal boekingen",
+      "totalRevenue": "Totale omzet",
+      "activeProviders": "Actieve aanbieders"
+    },
+    "users": {
+      "title": "Gebruikersbeheer",
+      "subtitle": "Beheer alle platformgebruikers",
+      "new": "Nieuwe gebruiker",
+      "edit": "Gebruiker bewerken",
+      "addNew": "Nieuwe gebruiker toevoegen",
+      "listTitle": "Gebruikerslijst",
+      "deactivate": "Deactiveren",
+      "stats": {
+        "totalUsers": "Totaal aantal gebruikers",
+        "customers": "Klanten",
+        "providers": "Aanbieders",
+        "admins": "Beheerders"
+      },
+      "table": {
+        "user": "Gebruiker",
+        "contact": "Contact",
+        "email": "E-mail",
+        "role": "Rol",
+        "bookings": "Boekingen",
+        "reviews": "Reviews",
+        "registration": "Registratie",
+        "status": "Status",
+        "createdAt": "Aangemaakt op",
+        "actions": "Acties"
+      }
+    },
+    "services": {
+      "title": "Dienstenbeheer",
+      "subtitle": "Beheer alle platformdiensten",
+      "new": "Nieuwe dienst",
+      "edit": "Dienst bewerken",
+      "addNew": "Nieuwe dienst",
+      "listTitle": "Dienstenlijst",
+      "stats": {
+        "total": "Totaal aantal diensten",
+        "active": "Actieve diensten",
+        "totalBookings": "Totaal aantal boekingen"
+      },
+      "table": {
+        "service": "Dienst",
+        "category": "Categorie",
+        "bookings": "Boekingen",
+        "reviews": "Reviews",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "bookings": {
+      "title": "Boekingenbeheer",
+      "subtitle": "Beheer alle platformboekingen",
+      "new": "Nieuwe boeking",
+      "edit": "Boeking bewerken",
+      "addNew": "Nieuwe boeking toevoegen",
+      "listTitle": "Boekingenlijst",
+      "stats": {
+        "total": "Totaal",
+        "pending": "In behandeling",
+        "confirmed": "Bevestigd",
+        "completed": "Voltooid",
+        "cancelled": "Geannuleerd",
+        "revenue": "Omzet"
+      },
+      "status": {
+        "pending": "In behandeling",
+        "confirmed": "Bevestigd",
+        "completed": "Voltooid",
+        "cancelled": "Geannuleerd"
+      },
+      "table": {
+        "client": "Klant",
+        "service": "Dienst",
+        "dates": "Data",
+        "type": "Type",
+        "startDate": "Startdatum",
+        "endDate": "Einddatum",
+        "status": "Status",
+        "total": "Totaal",
+        "actions": "Acties"
+      }
+    },
+    "categories": {
+      "title": "Categoriebeheer",
+      "subtitle": "Beheer alle dienstcategorieën",
+      "new": "Nieuwe categorie",
+      "edit": "Categorie bewerken",
+      "addNew": "Nieuwe categorie",
+      "listTitle": "Categorielijst",
+      "stats": {
+        "total": "Totaal aantal categorieën",
+        "active": "Actieve categorieën",
+        "totalServices": "Totaal aantal diensten"
+      },
+      "table": {
+        "category": "Categorie",
+        "services": "Diensten",
+        "order": "Volgorde",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "partners": {
+      "title": "Partnerbeheer",
+      "subtitle": "Beheer alle partners en partnerschappen",
+      "new": "Nieuwe partner",
+      "edit": "Partner bewerken",
+      "addNew": "Nieuwe partner",
+      "listTitle": "Partnerlijst",
+      "stats": {
+        "total": "Totaal aantal partners",
+        "active": "Actieve partners",
+        "pending": "In behandeling",
+        "revenue": "Totale omzet"
+      },
+      "table": {
+        "partner": "Partner",
+        "services": "Diensten",
+        "revenue": "Omzet",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "doctors": {
+      "title": "Artsenbeheer",
+      "subtitle": "Beheer alle artsen en zorgprofessionals",
+      "new": "Nieuwe arts",
+      "edit": "Arts bewerken",
+      "addNew": "Nieuwe arts",
+      "listTitle": "Artsenlijst",
+      "stats": {
+        "total": "Totaal aantal artsen",
+        "active": "Actieve artsen",
+        "totalBookings": "Totaal aantal boekingen",
+        "avgRating": "Gemiddelde beoordeling"
+      },
+      "table": {
+        "doctor": "Arts",
+        "location": "Locatie",
+        "bookings": "Boekingen",
+        "reviews": "Reviews",
+        "rating": "Beoordeling",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "lawyers": {
+      "title": "Advocatenbeheer",
+      "subtitle": "Beheer alle advocaten en juridische professionals",
+      "new": "Nieuwe advocaat",
+      "edit": "Advocaat bewerken",
+      "addNew": "Nieuwe advocaat",
+      "listTitle": "Advocatenlijst",
+      "stats": {
+        "total": "Totaal aantal advocaten",
+        "active": "Actieve advocaten",
+        "totalBookings": "Totaal aantal boekingen",
+        "avgRating": "Gemiddelde beoordeling"
+      },
+      "table": {
+        "lawyer": "Advocaat",
+        "location": "Locatie",
+        "bookings": "Boekingen",
+        "reviews": "Reviews",
+        "rating": "Beoordeling",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "coaches": {
+      "title": "Coachesbeheer",
+      "subtitle": "Beheer alle coaches en fitnessprofessionals",
+      "new": "Nieuwe coach",
+      "edit": "Coach bewerken",
+      "addNew": "Nieuwe coach",
+      "listTitle": "Coacheslijst",
+      "stats": {
+        "total": "Totaal aantal coaches",
+        "active": "Actieve coaches",
+        "totalBookings": "Totaal aantal boekingen",
+        "avgRating": "Gemiddelde beoordeling"
+      },
+      "table": {
+        "coach": "Coach",
+        "location": "Locatie",
+        "bookings": "Boekingen",
+        "reviews": "Reviews",
+        "rating": "Beoordeling",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "activities": {
+      "title": "Activiteitenbeheer",
+      "subtitle": "Beheer alle activiteiten en ervaringen",
+      "new": "Nieuwe activiteit",
+      "edit": "Activiteit bewerken",
+      "addNew": "Nieuwe activiteit",
+      "listTitle": "Activiteitenlijst",
+      "stats": {
+        "total": "Totaal aantal activiteiten",
+        "active": "Actieve activiteiten",
+        "totalBookings": "Totaal aantal boekingen",
+        "avgRating": "Gemiddelde beoordeling"
+      },
+      "table": {
+        "activity": "Activiteit",
+        "location": "Locatie",
+        "bookings": "Boekingen",
+        "reviews": "Reviews",
+        "rating": "Beoordeling",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "suppliers": {
+      "title": "Leveranciersbeheer",
+      "subtitle": "Beheer alle leveranciers en verkopers",
+      "new": "Nieuwe leverancier",
+      "edit": "Leverancier bewerken",
+      "addNew": "Nieuwe leverancier",
+      "listTitle": "Leverancierslijst",
+      "stats": {
+        "total": "Totaal aantal leveranciers",
+        "active": "Actieve leveranciers",
+        "pending": "In behandeling",
+        "revenue": "Totale omzet"
+      },
+      "table": {
+        "supplier": "Leverancier",
+        "services": "Diensten",
+        "revenue": "Omzet",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "transfers": {
+      "title": "Transferbeheer",
+      "subtitle": "Beheer alle transfers en vervoersdiensten",
+      "new": "Nieuwe transfer",
+      "edit": "Transfer bewerken",
+      "addNew": "Nieuwe transfer",
+      "listTitle": "Transferlijst",
+      "stats": {
+        "total": "Totaal aantal transfers",
+        "active": "Actieve transfers",
+        "pending": "In behandeling",
+        "revenue": "Totale omzet"
+      },
+      "table": {
+        "transfer": "Transfer",
+        "services": "Diensten",
+        "revenue": "Omzet",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "blog": {
+      "title": "Blogbeheer",
+      "subtitle": "Beheer alle blogposts en content",
+      "new": "Nieuwe post",
+      "edit": "Post bewerken",
+      "addNew": "Nieuwe post",
+      "listTitle": "Blogposts",
+      "stats": {
+        "total": "Totaal aantal posts",
+        "published": "Gepubliceerd",
+        "totalViews": "Totaal aantal weergaven",
+        "totalComments": "Totaal aantal reacties"
+      },
+      "table": {
+        "post": "Post",
+        "author": "Auteur",
+        "views": "Weergaven",
+        "comments": "Reacties",
+        "likes": "Likes",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    },
+    "chatbots": {
+      "title": "Chatbotbeheer",
+      "subtitle": "Beheer alle chatbots en AI-assistenten",
+      "new": "Nieuwe chatbot",
+      "edit": "Chatbot bewerken",
+      "addNew": "Nieuwe chatbot",
+      "import": "Chatbot importeren",
+      "listTitle": "Chatbotlijst"
+    },
+    "notifications": {
+      "title": "Meldingenbeheer",
+      "subtitle": "Beheer alle systeemmeldingen",
+      "new": "Nieuwe melding",
+      "edit": "Melding bewerken",
+      "addNew": "Melding verzenden",
+      "listTitle": "Meldingenlijst"
+    },
+    "analytics": {
+      "title": "Analyses en rapporten",
+      "subtitle": "Bekijk analyses en genereer rapporten",
+      "new": "Nieuw rapport",
+      "edit": "Rapport bewerken",
+      "listTitle": "Analysedashboard"
+    },
+    "promotions": {
+      "title": "Promotiebeheer",
+      "subtitle": "Beheer alle promoties en aanbiedingen",
+      "new": "Nieuwe promotie",
+      "edit": "Promotie bewerken",
+      "addNew": "Nieuwe promotie",
+      "listTitle": "Promotielijst"
+    },
+    "cmsPages": {
+      "title": "CMS-pagina's",
+      "subtitle": "Beheer alle CMS-pagina's",
+      "listTitle": "CMS-pagina's"
+    },
+    "media": {
+      "title": "Mediabibliotheek",
+      "subtitle": "Beheer alle mediabestanden",
+      "listTitle": "Mediabestanden"
+    },
+    "data": {
+      "title": "Gegevensbeheer",
+      "subtitle": "Importeer en exporteer gegevens",
+      "new": "Nieuwe import",
+      "import": "Gegevens importeren",
+      "export": "Gegevens exporteren"
+    },
+    "simulators": {
+      "title": "Simulatorbeheer",
+      "subtitle": "Beheer alle prijssimulatoren",
+      "new": "Nieuwe simulator",
+      "edit": "Simulator bewerken",
+      "addNew": "Nieuwe simulator",
+      "listTitle": "Simulatorlijst"
+    },
+    "cryptoPayments": {
+      "title": "Cryptobetalingen",
+      "subtitle": "Beheer cryptocurrency-transacties",
+      "new": "Nieuwe transactie",
+      "edit": "Transactie bewerken",
+      "listTitle": "Cryptotransacties"
+    },
+    "logs": {
+      "title": "Systeemlogboeken",
+      "subtitle": "Bekijk alle systeemlogboeken en activiteiten",
+      "activityLogs": "Activiteitenlogboeken",
+      "errorLogs": "Foutlogboeken",
+      "viewAll": "Alle logboeken bekijken",
+      "listTitle": "Logboeken"
+    },
+    "currencies": {
+      "title": "Valutabeheer",
+      "subtitle": "Beheer alle valuta's",
+      "new": "Nieuwe valuta",
+      "edit": "Valuta bewerken",
+      "addNew": "Nieuwe valuta",
+      "listTitle": "Valutalijst"
+    },
+    "geography": {
+      "title": "Geografiebeheer",
+      "subtitle": "Beheer landen, steden en locaties",
+      "listTitle": "Geografie"
+    },
+    "exchangeRates": {
+      "title": "Wisselkoersen",
+      "subtitle": "Beheer valutawisselkoersen",
+      "listTitle": "Wisselkoersen"
+    },
+    "styles": {
+      "title": "Stijlbeheer",
+      "subtitle": "Pas het uiterlijk van de applicatie aan",
+      "listTitle": "Stijlen"
+    },
+    "routes": {
+      "title": "Routebeheer",
+      "subtitle": "Beheer applicatieroutes",
+      "new": "Nieuwe route",
+      "edit": "Route bewerken",
+      "listTitle": "Routes"
+    },
+    "maids": {
+      "title": "Huishoudelijke hulp",
+      "subtitle": "{count} huishoudelijke hulpen in totaal",
+      "new": "Nieuwe huishoudelijke hulp",
+      "edit": "Huishoudelijke hulp bewerken",
+      "addNew": "Nieuwe huishoudelijke hulp toevoegen"
+    },
+    "motorbikes": {
+      "title": "Motorfietsen",
+      "subtitle": "{count} motorfietsen in totaal",
+      "new": "Nieuwe motorfiets",
+      "edit": "Motorfiets bewerken",
+      "addNew": "Nieuwe motorfiets toevoegen"
+    },
+    "rentalCars": {
+      "title": "Huurauto's",
+      "subtitle": "{count} huurauto's in totaal",
+      "new": "Nieuwe auto",
+      "edit": "Auto bewerken",
+      "addNew": "Nieuwe huurauto toevoegen"
+    },
+    "yachts": {
+      "title": "Jachten",
+      "subtitle": "{count} jachten in totaal",
+      "new": "Nieuw jacht",
+      "edit": "Jacht bewerken",
+      "addNew": "Nieuw jacht toevoegen"
+    },
+    "properties": {
+      "title": "Eigendommenbeheer",
+      "subtitle": "{count} eigendom(men) • {published} gepubliceerd",
+      "new": "Nieuwe eigendom",
+      "edit": "Eigendom bewerken",
+      "addNew": "Eigendom toevoegen",
+      "noProperties": "Geen eigendommen",
+      "addFirstProperty": "Begin met het toevoegen van uw eerste eigendom",
+      "stats": {
+        "total": "Totaal",
+        "draft": "Concepten",
+        "published": "Gepubliceerd",
+        "sold": "Verkocht",
+        "rented": "Verhuurd"
+      },
+      "filters": {
+        "all": "Alle",
+        "draft": "Concepten",
+        "published": "Gepubliceerd",
+        "sold": "Verkocht",
+        "rented": "Verhuurd"
+      },
+      "form": {
+        "title": "Titel",
+        "description": "Beschrijving",
+        "propertyType": "Type eigendom",
+        "listingType": "Type aanbieding",
+        "status": "Status",
+        "price": "Prijs",
+        "area": "Oppervlakte (m²)",
+        "bedrooms": "Slaapkamers",
+        "bathrooms": "Badkamers",
+        "featured": "Uitgelicht",
+        "images": "Afbeeldingen"
+      },
+      "table": {
+        "property": "Eigendom",
+        "type": "Type",
+        "price": "Prijs",
+        "location": "Locatie",
+        "status": "Status",
+        "actions": "Acties"
+      }
+    }
+  }
+}

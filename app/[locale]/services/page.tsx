@@ -1,6 +1,5 @@
 import { prisma } from '@/lib/prisma';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 
 export default async function ServicesPage({
   params: { locale },
@@ -20,7 +19,7 @@ export default async function ServicesPage({
       translations: { where: { locale } },
       category: { include: { translations: { where: { locale } } } },
     },
-    orderBy: { isFeatured: 'desc' },
+    orderBy: { createdAt: 'desc' },
   });
 
   const categories = await prisma.category.findMany({
@@ -110,14 +109,9 @@ export default async function ServicesPage({
                             {service.duration} min
                           </span>
                         </div>
-                        {service.rating && (
-                          <div className="flex items-center">
-                            <span className="text-yellow-500">★</span>
-                            <span className="ml-1 text-sm font-semibold">
-                              {service.rating}
-                            </span>
-                          </div>
-                        )}
+                        <div className="text-sm text-gray-500">
+                          {service.currency}
+                        </div>
                       </div>
                     </div>
                   </Link>

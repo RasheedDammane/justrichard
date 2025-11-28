@@ -1,0 +1,214 @@
+// CLEANING SERVICES MODELS
+// À ajouter dans schema.prisma
+
+model CleaningService {
+  id                String   @id
+  type              String   // home, furniture, laundry
+  name              String
+  slug              String   @unique
+  description       String?  @db.Text
+  shortDescription  String?
+  
+  // Pricing
+  basePrice         Float
+  currency          String   @default("AED")
+  pricePerSqm       Float?   // Pour home cleaning
+  pricePerItem      Float?   // Pour furniture/laundry
+  minimumCharge     Float?
+  
+  // Service Details
+  duration          String?  // "2-3 hours", "1 day", etc.
+  serviceArea       Json?    // Areas covered
+  includedServices  Json?    // What's included
+  excludedServices  Json?    // What's not included
+  equipment         Json?    // Equipment used
+  products          Json?    // Cleaning products used
+  
+  // Options & Add-ons
+  options           Json?    // [{name, price, description}]
+  addons            Json?    // Additional services
+  packages          Json?    // Service packages
+  
+  // Availability
+  availableDays     Json?    // Days of week
+  availableHours    Json?    // Time slots
+  advanceBooking    Int?     // Days in advance
+  
+  // Location
+  cityId            String
+  countryId         String
+  serviceAreas      Json?    // Specific areas/zones
+  latitude          Float?
+  longitude         Float?
+  
+  // Media
+  image             String?
+  images            Json?
+  video             String?
+  
+  // Tags & Categories
+  tags              Json?
+  category          String?
+  subCategory       String?
+  
+  // Requirements
+  requirements      Json?    // Customer requirements
+  restrictions      Json?    // Service restrictions
+  
+  // Policies
+  cancellationPolicy String? @db.Text
+  refundPolicy       String? @db.Text
+  termsConditions    String? @db.Text
+  
+  // Contact
+  phone             String?
+  email             String?
+  whatsapp          String?
+  
+  // SEO
+  metaTitle         String?
+  metaDescription   String?
+  keywords          Json?
+  
+  // Status
+  isActive          Boolean  @default(true)
+  isFeatured        Boolean  @default(false)
+  isVerified        Boolean  @default(true)
+  isAvailable       Boolean  @default(true)
+  
+  // Stats
+  views             Int      @default(0)
+  bookings          Int      @default(0)
+  rating            Float    @default(0)
+  reviewCount       Int      @default(0)
+  
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime
+  
+  // Relations
+  City              City     @relation(fields: [cityId], references: [id])
+  Country           Country  @relation(fields: [countryId], references: [id])
+  CleaningBooking   CleaningBooking[]
+  CleaningReview    CleaningReview[]
+  
+  @@index([type])
+  @@index([slug])
+  @@index([cityId])
+  @@index([countryId])
+  @@index([isActive])
+  @@index([isFeatured])
+  @@index([category])
+}
+
+model CleaningBooking {
+  id                String          @id
+  bookingNumber     String          @unique
+  serviceId         String
+  userId            String?
+  
+  // Customer Info
+  customerName      String
+  customerEmail     String
+  customerPhone     String
+  customerAddress   String
+  
+  // Service Details
+  serviceType       String          // home, furniture, laundry
+  serviceDate       DateTime
+  serviceTime       String
+  duration          String?
+  
+  // Pricing
+  basePrice         Float
+  optionsPrice      Float           @default(0)
+  addonsPrice       Float           @default(0)
+  subtotal          Float
+  discount          Float           @default(0)
+  tax               Float           @default(0)
+  totalPrice        Float
+  currency          String          @default("AED")
+  
+  // Selected Options
+  selectedOptions   Json?           // Options chosen
+  selectedAddons    Json?           // Add-ons chosen
+  selectedPackage   String?         // Package if any
+  
+  // Property Details (for home cleaning)
+  propertyType      String?         // villa, apartment, office
+  bedrooms          Int?
+  bathrooms         Int?
+  squareMeters      Float?
+  floors            Int?
+  
+  // Items (for furniture/laundry)
+  items             Json?           // List of items
+  itemCount         Int?
+  
+  // Special Instructions
+  specialRequests   String?         @db.Text
+  accessInstructions String?        @db.Text
+  parkingInfo       String?
+  
+  // Status
+  status            String          @default("pending") // pending, confirmed, in_progress, completed, cancelled
+  paymentStatus     String          @default("unpaid")  // unpaid, paid, refunded
+  paymentMethod     String?
+  
+  // Ratings
+  rating            Float?
+  review            String?         @db.Text
+  reviewDate        DateTime?
+  
+  // Timestamps
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime
+  completedAt       DateTime?
+  cancelledAt       DateTime?
+  
+  // Relations
+  CleaningService   CleaningService @relation(fields: [serviceId], references: [id])
+  User              User?           @relation(fields: [userId], references: [id])
+  
+  @@index([serviceId])
+  @@index([userId])
+  @@index([status])
+  @@index([serviceDate])
+  @@index([bookingNumber])
+}
+
+model CleaningReview {
+  id                String          @id
+  serviceId         String
+  userId            String?
+  bookingId         String?
+  
+  // Review Details
+  rating            Float
+  title             String?
+  comment           String          @db.Text
+  pros              Json?
+  cons              Json?
+  
+  // Reviewer Info
+  reviewerName      String
+  reviewerEmail     String?
+  isVerified        Boolean         @default(false)
+  
+  // Status
+  isApproved        Boolean         @default(false)
+  isPublished       Boolean         @default(false)
+  
+  // Timestamps
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime
+  
+  // Relations
+  CleaningService   CleaningService @relation(fields: [serviceId], references: [id])
+  User              User?           @relation(fields: [userId], references: [id])
+  
+  @@index([serviceId])
+  @@index([userId])
+  @@index([isApproved])
+  @@index([isPublished])
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Fresh Red Apples",
+    "slug": "fresh-red-apples",
+    "sku": "FRUIT-001",
+    "categoryId": "fresh-fruits",
+    "description": "Crispy and sweet red apples",
+    "buyingPrice": 5,
+    "sellingPrice": 8,
+    "compareAtPrice": 10,
+    "currency": "AED",
+    "unit": "kg",
+    "stock": 500,
+    "lowStockThreshold": 50,
+    "weight": 1000,
+    "images": ["/images/products/apple.jpg"],
+    "isActive": true,
+    "isFeatured": true,
+    "canPurchase": true
+  },
+  {
+    "name": "Fresh Tomatoes",
+    "slug": "fresh-tomatoes",
+    "sku": "VEG-001",
+    "categoryId": "fresh-vegetables",
+    "description": "Organic vine tomatoes",
+    "sellingPrice": 6,
+    "currency": "AED",
+    "unit": "kg",
+    "stock": 300,
+    "isActive": true
+  },
+  {
+    "name": "Fresh Milk 1L",
+    "slug": "fresh-milk-1l",
+    "sku": "DAIRY-001",
+    "categoryId": "dairy-products",
+    "description": "Full cream fresh milk",
+    "sellingPrice": 7,
+    "currency": "AED",
+    "unit": "piece",
+    "stock": 200,
+    "volume": 1000,
+    "isActive": true
+  }
+]

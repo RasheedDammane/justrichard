@@ -441,6 +441,10 @@ model City {
   Yacht            Yacht[]
   CleaningService  CleaningService[]
   scooters         Scooter[]
+  FoodProduct      FoodProduct[]
+  HomeCleanings    HomeCleaning[]     @relation("HomeCleaningCity")
+  FurnitureCleanings FurnitureCleaning[] @relation("FurnitureCleaningCity")
+  Laundries        Laundry[]          @relation("LaundryCity")
 
   @@unique([countryId, slug])
   @@index([countryId])
@@ -604,6 +608,10 @@ model Country {
   Yacht           Yacht[]
   CleaningService CleaningService[]
   scooters        Scooter[]
+  FoodProduct     FoodProduct[]
+  HomeCleanings    HomeCleaning[]     @relation("HomeCleaningCountry")
+  FurnitureCleanings FurnitureCleaning[] @relation("FurnitureCleaningCountry")
+  Laundries        Laundry[]          @relation("LaundryCountry")
 
   @@index([code])
   @@index([currencyId])
@@ -1193,6 +1201,9 @@ model Media {
   PropertyMedia    PropertyMedia[]
   PropertyDocument PropertyDocument[]
   FloorPlan        FloorPlan[]
+  
+  // CMS Relations
+  ContentTranslations ContentTranslation[]
 
   @@index([folderId])
   @@index([mimeType])
@@ -2352,6 +2363,7 @@ model User {
   locale             String               @default("en")
   timezone           String               @default("UTC")
   isActive           Boolean              @default(true)
+  role               String?              @default("viewer") // CMS: admin, editor, author, contributor, viewer
   createdAt          DateTime             @default(now())
   updatedAt          DateTime
   Account            Account[]
@@ -2385,6 +2397,13 @@ model User {
   MaidBooking        MaidBooking[]        @relation("MaidBookings")
   ScooterBooking     ScooterBooking[]     @relation("ScooterBookings")
   BusinessClaim      BusinessClaim[]
+  FoodCart           FoodCart[]
+  FoodOrder          FoodOrder[]
+  
+  // CMS Relations
+  contentsCreated    Content[]            @relation("ContentCreatedBy")
+  contentsUpdated    Content[]            @relation("ContentUpdatedBy")
+  contentRevisions   ContentRevision[]
 
   @@index([email])
   @@index([isActive])
@@ -4273,4 +4292,722 @@ model FooterBranding {
   
   @@index([locale])
   @@index([isActive])
+}
+
+// ============================================
+// FOOD & GROCERY SYSTEM
+// ============================================
+
+model FoodCategory {
+  id              String             @id @default(cuid())
+  name            String
+  slug            String             @unique
+  description     String?            @db.Text
+  icon            String?
+  image           String?
+  parentId        String?
+  order           Int                @default(0)
+  isActive        Boolean            @default(true)
+  isFeatured      Boolean            @default(false)
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+  
+  // Relations
+  parent          FoodCategory?      @relation("CategoryHierarchy", fields: [parentId], references: [id], onDelete: SetNull)
+  children        FoodCategory[]     @relation("CategoryHierarchy")
+  products        FoodProduct[]
+  
+  @@index([slug])
+  @@index([parentId])
+  @@index([isActive])
+  @@index([isFeatured])
+  @@index([order])
+}
+
+model FoodBrand {
+  id          String        @id @default(cuid())
+  name        String        @unique
+  slug        String        @unique
+  description String?       @db.Text
+  logo        String?
+  website     String?
+  isActive    Boolean       @default(true)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  
+  // Relations
+  products    FoodProduct[]
+  
+  @@index([slug])
+  @@index([isActive])
+}
+
+model FoodProduct {
+  id                      String             @id @default(cuid())
+  name                    String
+  slug                    String             @unique
+  sku                     String?            @unique
+  barcode                 String?            @unique
+  description             String?            @db.Text
+  shortDescription        String?
+  
+  // Category & Brand
+  categoryId              String
+  brandId                 String?
+  
+  // Pricing (multi-currency support)
+  buyingPrice             Float?
+  sellingPrice            Float
+  compareAtPrice          Float?             // Prix barré
+  costPerUnit             Float?
+  currency                String             @default("AED")
+  
+  // Tax
+  taxRate                 Float?             @default(0)
+  taxInclusive            Boolean            @default(false)
+  
+  // Location
+  cityId                  String?
+  countryId               String?
+  
+  // Inventory
+  stock                   Int                @default(0)
+  lowStockThreshold       Int                @default(10)
+  maxPurchaseQuantity     Int?
+  unit                    String             @default("piece") // piece, kg, g, l, ml
+  weight                  Float?             // in grams
+  volume                  Float?             // in ml
+  
+  // Product Options
+  canPurchase             Boolean            @default(true)
+  showStockOut            Boolean            @default(true)
+  isRefundable            Boolean            @default(true)
+  hasFileAttachment       Boolean            @default(false)
+  sellByFraction          Boolean            @default(false) // vente au poids
+  
+  // Media
+  image                   String?
+  images                  Json?              // Array of image URLs
+  video                   String?
+  
+  // SEO
+  metaTitle               String?
+  metaDescription         String?
+  tags                    Json?              // Array of tags
+  
+  // Stats
+  views                   Int                @default(0)
+  sales                   Int                @default(0)
+  rating                  Float?
+  reviewCount             Int                @default(0)
+  
+  // Status
+  isActive                Boolean            @default(true)
+  isFeatured              Boolean            @default(false)
+  isOnSale                Boolean            @default(false)
+  isNewArrival            Boolean            @default(false)
+  isBestSeller            Boolean            @default(false)
+  isOrganic               Boolean            @default(false)
+  isVegan                 Boolean            @default(false)
+  isGlutenFree            Boolean            @default(false)
+  
+  // Dates
+  expiryDate              DateTime?
+  manufactureDate         DateTime?
+  createdAt               DateTime           @default(now())
+  updatedAt               DateTime           @updatedAt
+  
+  // Relations
+  category                FoodCategory       @relation(fields: [categoryId], references: [id])
+  brand                   FoodBrand?         @relation(fields: [brandId], references: [id])
+  city                    City?              @relation(fields: [cityId], references: [id])
+  country                 Country?           @relation(fields: [countryId], references: [id])
+  cartItems               FoodCartItem[]
+  orderItems              FoodOrderItem[]
+  inventoryLogs           FoodInventoryLog[]
+  
+  @@index([slug])
+  @@index([sku])
+  @@index([barcode])
+  @@index([categoryId])
+  @@index([brandId])
+  @@index([cityId])
+  @@index([countryId])
+  @@index([isActive])
+  @@index([isFeatured])
+  @@index([isOnSale])
+  @@index([stock])
+}
+
+model FoodCart {
+  id          String         @id @default(cuid())
+  userId      String?
+  sessionId   String?
+  status      String         @default("active") // active, abandoned, converted
+  expiresAt   DateTime?
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+  
+  // Relations
+  user        User?          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items       FoodCartItem[]
+  
+  @@index([userId])
+  @@index([sessionId])
+  @@index([status])
+}
+
+model FoodCartItem {
+  id          String      @id @default(cuid())
+  cartId      String
+  productId   String
+  quantity    Int         @default(1)
+  price       Float       // Prix au moment de l'ajout au panier
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  
+  // Relations
+  cart        FoodCart    @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  product     FoodProduct @relation(fields: [productId], references: [id])
+  
+  @@index([cartId])
+  @@index([productId])
+}
+
+model FoodOrder {
+  id                  String            @id @default(cuid())
+  orderNumber         String            @unique
+  userId              String?
+  
+  // Customer Info
+  customerName        String
+  customerEmail       String
+  customerPhone       String
+  
+  // Delivery Address
+  deliveryAddress     String
+  deliveryCity        String
+  deliveryState       String?
+  deliveryPostalCode  String?
+  deliveryCountry     String
+  deliveryLatitude    Float?
+  deliveryLongitude   Float?
+  deliveryNotes       String?           @db.Text
+  
+  // Zone & Delivery
+  zoneId              String?
+  deliveryFee         Float             @default(0)
+  estimatedDelivery   DateTime?
+  deliveryStartTime   DateTime?
+  deliveryEndTime     DateTime?
+  
+  // Pricing
+  subtotal            Float
+  taxAmount           Float             @default(0)
+  discountAmount      Float             @default(0)
+  total               Float
+  currency            String            @default("AED")
+  
+  // Coupon
+  couponCode          String?
+  couponDiscount      Float?
+  
+  // Payment
+  paymentMethod       String            @default("cash") // cash, card, wallet
+  paymentStatus       String            @default("pending") // pending, paid, failed, refunded
+  transactionId       String?
+  paidAt              DateTime?
+  
+  // Order Status
+  status              String            @default("pending") // pending, confirmed, preparing, out_for_delivery, delivered, cancelled
+  cancelReason        String?
+  cancelledAt         DateTime?
+  
+  // Delivery Tracking
+  driverId            String?
+  driverLocation      Json?             // {lat, lng, timestamp}
+  trackingUrl         String?
+  qrCode              String?
+  
+  // Timestamps
+  confirmedAt         DateTime?
+  preparingAt         DateTime?
+  outForDeliveryAt    DateTime?
+  deliveredAt         DateTime?
+  
+  // Notes
+  notes               String?           @db.Text
+  adminNotes          String?           @db.Text
+  
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+  
+  // Relations
+  user                User?             @relation(fields: [userId], references: [id])
+  items               FoodOrderItem[]
+  statusHistory       FoodOrderStatusHistory[]
+  
+  @@index([orderNumber])
+  @@index([userId])
+  @@index([customerEmail])
+  @@index([status])
+  @@index([paymentStatus])
+  @@index([createdAt])
+}
+
+model FoodOrderItem {
+  id          String      @id @default(cuid())
+  orderId     String
+  productId   String
+  productName String      // Snapshot du nom
+  quantity    Int
+  price       Float       // Prix unitaire au moment de la commande
+  taxRate     Float       @default(0)
+  subtotal    Float
+  total       Float
+  createdAt   DateTime    @default(now())
+  
+  // Relations
+  order       FoodOrder   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product     FoodProduct @relation(fields: [productId], references: [id])
+  
+  @@index([orderId])
+  @@index([productId])
+}
+
+model FoodOrderStatusHistory {
+  id          String    @id @default(cuid())
+  orderId     String
+  status      String
+  note        String?   @db.Text
+  createdBy   String?
+  createdAt   DateTime  @default(now())
+  
+  // Relations
+  order       FoodOrder @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  
+  @@index([orderId])
+  @@index([createdAt])
+}
+
+model FoodInventoryLog {
+  id          String      @id @default(cuid())
+  productId   String
+  type        String      // purchase, sale, adjustment, return, damage
+  quantity    Int         // Positive or negative
+  stockBefore Int
+  stockAfter  Int
+  reference   String?     // Order ID, PO ID, etc.
+  notes       String?     @db.Text
+  createdBy   String?
+  createdAt   DateTime    @default(now())
+  
+  // Relations
+  product     FoodProduct @relation(fields: [productId], references: [id])
+  
+  @@index([productId])
+  @@index([type])
+  @@index([createdAt])
+}
+
+model FoodZone {
+  id            String   @id @default(cuid())
+  name          String
+  slug          String   @unique
+  description   String?  @db.Text
+  cityId        String?
+  countryId     String?
+  
+  // Delivery Settings
+  deliveryFee   Float    @default(0)
+  minOrderAmount Float?
+  freeDeliveryThreshold Float?
+  estimatedDeliveryTime String? // "30-45 min"
+  
+  // Geographic Data
+  geojson       Json?    // Polygon coordinates
+  postalCodes   Json?    // Array of postal codes
+  
+  // Status
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  @@index([slug])
+  @@index([cityId])
+  @@index([countryId])
+  @@index([isActive])
+}
+
+model FoodCoupon {
+  id                String    @id @default(cuid())
+  code              String    @unique
+  description       String?   @db.Text
+  discountType      String    // percentage, fixed, free_delivery
+  discountValue     Float
+  minOrderAmount    Float?
+  maxDiscountAmount Float?
+  usageLimit        Int?
+  usageCount        Int       @default(0)
+  validFrom         DateTime
+  validUntil        DateTime
+  isActive          Boolean   @default(true)
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  
+  @@index([code])
+  @@index([isActive])
+  @@index([validFrom])
+  @@index([validUntil])
+}
+// ============================================
+// CMS SYSTEM - Blog & Content Management
+// ============================================
+
+// Locales supportées (déjà existant dans votre système)
+// model Language existe déjà, on l'utilise
+
+// Groupe logique d'un contenu multi-langue
+model Content {
+  uid           String   @id @default(cuid())
+  type          String   @default("post") // post, page, news
+  status        ContentStatus @default(DRAFT)
+  
+  // Relations
+  createdBy     String?
+  createdByUser User?    @relation("ContentCreatedBy", fields: [createdBy], references: [id])
+  updatedBy     String?
+  updatedByUser User?    @relation("ContentUpdatedBy", fields: [updatedBy], references: [id])
+  
+  // Dates
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  publishAt     DateTime? // Planification publication
+  unpublishAt   DateTime? // Dépublication automatique
+  
+  // Relations
+  translations  ContentTranslation[]
+  categories    ContentPostCategory[]
+  tags          ContentTag[]
+  
+  @@index([status])
+  @@index([publishAt, unpublishAt])
+  @@map("contents")
+}
+
+enum ContentStatus {
+  DRAFT
+  IN_REVIEW
+  PUBLISHED
+  ARCHIVED
+}
+
+// Entrées traduites d'un contenu
+model ContentTranslation {
+  id              String   @id @default(cuid())
+  contentUid      String
+  content         Content  @relation(fields: [contentUid], references: [uid], onDelete: Cascade)
+  
+  locale          String   // 'en', 'fr', 'ar', etc.
+  
+  // Contenu
+  title           String
+  slug            String
+  excerpt         String?  @db.Text
+  bodyJson        Json     @default("[]") // Blocs structurés
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?  @db.Text
+  ogTitle         String?
+  ogDescription   String?  @db.Text
+  ogImageId       String?
+  ogImage         Media?   @relation(fields: [ogImageId], references: [id])
+  canonicalUrl    String?
+  
+  // Publication
+  isPublished     Boolean  @default(false)
+  publishedAt     DateTime?
+  
+  // Relations
+  revisions       ContentRevision[]
+  
+  @@unique([contentUid, locale])
+  @@unique([locale, slug])
+  @@index([locale, slug])
+  @@map("content_translations")
+}
+
+// Révisions (snapshot par locale)
+model ContentRevision {
+  id              BigInt   @id @default(autoincrement())
+  translationId   String
+  translation     ContentTranslation @relation(fields: [translationId], references: [id], onDelete: Cascade)
+  
+  userId          String?
+  user            User?    @relation(fields: [userId], references: [id])
+  
+  createdAt       DateTime @default(now())
+  diffJson        Json?    // Diff patch (optional)
+  snapshotJson    Json?    // Snapshot complet
+  
+  @@index([translationId])
+  @@map("content_revisions")
+}
+
+// Catégories de posts CMS (hiérarchiques)
+model PostCategory {
+  id              String   @id @default(cuid())
+  parentId        String?
+  parent          PostCategory? @relation("PostCategoryHierarchy", fields: [parentId], references: [id])
+  children        PostCategory[] @relation("PostCategoryHierarchy")
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  // Relations
+  translations    PostCategoryTranslation[]
+  contents        ContentPostCategory[]
+  
+  @@map("post_categories")
+}
+
+model PostCategoryTranslation {
+  id              String   @id @default(cuid())
+  categoryId      String
+  category        PostCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  
+  locale          String
+  name            String
+  slug            String
+  description     String?  @db.Text
+  
+  @@unique([categoryId, locale])
+  @@unique([locale, slug])
+  @@map("post_category_translations")
+}
+
+// Tags
+model Tag {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  
+  // Relations
+  translations    TagTranslation[]
+  contents        ContentTag[]
+  
+  @@map("tags")
+}
+
+model TagTranslation {
+  id              String   @id @default(cuid())
+  tagId           String
+  tag             Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  
+  locale          String
+  name            String
+  slug            String
+  
+  @@unique([tagId, locale])
+  @@unique([locale, slug])
+  @@map("tag_translations")
+}
+
+// Relations many-to-many
+model ContentPostCategory {
+  contentUid      String
+  content         Content  @relation(fields: [contentUid], references: [uid], onDelete: Cascade)
+  categoryId      String
+  category        PostCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  
+  @@id([contentUid, categoryId])
+  @@map("content_post_categories")
+}
+
+model ContentTag {
+  contentUid      String
+  content         Content  @relation(fields: [contentUid], references: [uid], onDelete: Cascade)
+  tagId           String
+  tag             Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  
+  @@id([contentUid, tagId])
+  @@map("content_tags")
+}
+
+// Médias (extension du modèle Media existant si nécessaire)
+// Ajouter ces champs au modèle Media existant:
+// altText       String?
+// focalX        Float?   // 0..1
+// focalY        Float?   // 0..1
+// variants      Json?    // {webp:{url,w,h}, thumb:{...}}
+
+// Redirections 301 (slug changé)
+model Redirect {
+  id              BigInt   @id @default(autoincrement())
+  locale          String
+  fromPath        String
+  toPath          String
+  createdAt       DateTime @default(now())
+  
+  @@unique([locale, fromPath])
+  @@index([locale, fromPath])
+  @@map("redirects")
+}
+// Modèles manquants à ajouter au schema.prisma
+
+// Route (Alias ou référence pour RouteConfig)
+model Route {
+  id              String   @id @default(cuid())
+  name            String
+  slug            String   @unique
+  path            String
+  component       String?
+  isActive        Boolean  @default(true)
+  requiresAuth    Boolean  @default(false)
+  allowedRoles    String[] @default([])
+  metaTitle       String?
+  metaDescription String?
+  order           Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([isActive])
+  @@index([slug])
+}
+
+// Simulator
+model Simulator {
+  id              String   @id @default(cuid())
+  name            String
+  slug            String   @unique
+  description     String?
+  type            String   // mortgage, loan, investment, etc.
+  formula         Json?    // Formule de calcul
+  inputs          Json?    // Champs d'entrée requis
+  outputs         Json?    // Résultats calculés
+  icon            String?
+  isActive        Boolean  @default(true)
+  isFeatured      Boolean  @default(false)
+  viewCount       Int      @default(0)
+  usageCount      Int      @default(0)
+  metaTitle       String?
+  metaDescription String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([isActive])
+  @@index([type])
+  @@index([slug])
+}
+
+// HomeCleaning
+model HomeCleaning {
+  id                String   @id @default(cuid())
+  name              String
+  slug              String   @unique
+  description       String?
+  serviceType       String   // deep, regular, move-in, move-out
+  pricePerHour      Float?
+  pricePerService   Float?
+  currency          String   @default("AED")
+  duration          String?  // estimated duration
+  cityId            String?
+  countryId         String?
+  includedServices  Json?    // Liste des services inclus
+  excludedServices  Json?    // Services non inclus
+  requirements      Json?    // Prérequis
+  images            Json?
+  rating            Float    @default(0)
+  reviewCount       Int      @default(0)
+  bookingCount      Int      @default(0)
+  isActive          Boolean  @default(true)
+  isFeatured        Boolean  @default(false)
+  metaTitle         String?
+  metaDescription   String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  City              City?    @relation("HomeCleaningCity", fields: [cityId], references: [id])
+  Country           Country? @relation("HomeCleaningCountry", fields: [countryId], references: [id])
+  
+  @@index([isActive])
+  @@index([serviceType])
+  @@index([cityId])
+  @@index([slug])
+}
+
+// FurnitureCleaning
+model FurnitureCleaning {
+  id                String   @id @default(cuid())
+  name              String
+  slug              String   @unique
+  description       String?
+  furnitureType     String   // sofa, carpet, mattress, curtains
+  pricePerItem      Float?
+  pricePerSqMeter   Float?
+  currency          String   @default("AED")
+  duration          String?
+  cityId            String?
+  countryId         String?
+  includedServices  Json?
+  excludedServices  Json?
+  cleaningMethod    String?  // steam, dry, chemical
+  requirements      Json?
+  images            Json?
+  rating            Float    @default(0)
+  reviewCount       Int      @default(0)
+  bookingCount      Int      @default(0)
+  isActive          Boolean  @default(true)
+  isFeatured        Boolean  @default(false)
+  metaTitle         String?
+  metaDescription   String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  City              City?    @relation("FurnitureCleaningCity", fields: [cityId], references: [id])
+  Country           Country? @relation("FurnitureCleaningCountry", fields: [countryId], references: [id])
+  
+  @@index([isActive])
+  @@index([furnitureType])
+  @@index([cityId])
+  @@index([slug])
+}
+
+// Laundry
+model Laundry {
+  id                String   @id @default(cuid())
+  name              String
+  slug              String   @unique
+  description       String?
+  serviceType       String   // wash-fold, dry-clean, iron, express
+  pricePerKg        Float?
+  pricePerItem      Float?
+  minimumCharge     Float?
+  currency          String   @default("AED")
+  turnaroundTime    String?  // 24h, 48h, express
+  cityId            String?
+  countryId         String?
+  includedServices  Json?
+  excludedServices  Json?
+  pickupAvailable   Boolean  @default(false)
+  deliveryAvailable Boolean  @default(false)
+  requirements      Json?
+  images            Json?
+  rating            Float    @default(0)
+  reviewCount       Int      @default(0)
+  bookingCount      Int      @default(0)
+  isActive          Boolean  @default(true)
+  isFeatured        Boolean  @default(false)
+  metaTitle         String?
+  metaDescription   String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  City              City?    @relation("LaundryCity", fields: [cityId], references: [id])
+  Country           Country? @relation("LaundryCountry", fields: [countryId], references: [id])
+  
+  @@index([isActive])
+  @@index([serviceType])
+  @@index([cityId])
+  @@index([slug])
 }

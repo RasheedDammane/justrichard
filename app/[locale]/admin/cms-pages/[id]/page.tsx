@@ -1,8 +1,5 @@
-import { getServerSession } from 'next-auth';
 import { redirect, notFound } from 'next/navigation';
-import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
-import { Role } from '@prisma/client';
 import {
   FileText,
   Globe,
@@ -19,11 +16,10 @@ export default async function CMSPageDetailPage({
 }: {
   params: { locale: string; id: string };
 }) {
-  const session = await getServerSession(authOptions);
+  const { locale } = await params;
+  
+  // La protection est gérée par le layout admin
 
-  if (!session || (session.user.role !== Role.ADMIN && session.user.role !== Role.MANAGER)) {
-    redirect(`/${locale}/auth/login`);
-  }
 
   const page = await prisma.cMSPage.findUnique({
     where: { id },

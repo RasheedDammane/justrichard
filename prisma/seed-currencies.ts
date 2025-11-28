@@ -4,14 +4,16 @@ const prisma = new PrismaClient();
 
 const currencies = [
   {
+    id: 'curr-mad',
     code: 'MAD',
     name: 'Moroccan Dirham',
     symbol: 'DH',
-    isDefault: true,
-    isActive: true,
+    isDefault: false,
+    isActive: false,
     decimalPlaces: 2,
   },
   {
+    id: 'curr-usd',
     code: 'USD',
     name: 'US Dollar',
     symbol: '$',
@@ -20,6 +22,7 @@ const currencies = [
     decimalPlaces: 2,
   },
   {
+    id: 'curr-eur',
     code: 'EUR',
     name: 'Euro',
     symbol: '€',
@@ -28,30 +31,34 @@ const currencies = [
     decimalPlaces: 2,
   },
   {
+    id: 'curr-gbp',
     code: 'GBP',
     name: 'British Pound',
     symbol: '£',
     isDefault: false,
-    isActive: true,
+    isActive: false,
     decimalPlaces: 2,
   },
   {
+    id: 'curr-sar',
     code: 'SAR',
     name: 'Saudi Riyal',
     symbol: 'ر.س',
     isDefault: false,
-    isActive: true,
+    isActive: false,
     decimalPlaces: 2,
   },
   {
+    id: 'curr-aed',
     code: 'AED',
     name: 'UAE Dirham',
     symbol: 'د.إ',
-    isDefault: false,
+    isDefault: true,
     isActive: true,
     decimalPlaces: 2,
   },
   {
+    id: 'curr-thb',
     code: 'THB',
     name: 'Thai Baht',
     symbol: '฿',
@@ -60,19 +67,21 @@ const currencies = [
     decimalPlaces: 2,
   },
   {
+    id: 'curr-php',
     code: 'PHP',
     name: 'Philippine Peso',
     symbol: '₱',
     isDefault: false,
-    isActive: true,
+    isActive: false,
     decimalPlaces: 2,
   },
   {
+    id: 'curr-qar',
     code: 'QAR',
     name: 'Qatari Riyal',
     symbol: 'ر.ق',
     isDefault: false,
-    isActive: true,
+    isActive: false,
     decimalPlaces: 2,
   },
 ];
@@ -115,46 +124,51 @@ async function seedCurrencies() {
     }
   }
 
-  // Get all created currencies
-  const allCurrencies = await prisma.currency.findMany();
-  const currencyMap = new Map(allCurrencies.map(c => [c.code, c.id]));
-
-  // Create exchange rates
   console.log('\n💱 Seeding exchange rates...');
+  
+  // Create exchange rates
+  let createdRates = 0;
   for (const rate of exchangeRates) {
-    const fromId = currencyMap.get(rate.from);
-    const toId = currencyMap.get(rate.to);
-
-    if (!fromId || !toId) {
-      console.log(`⚠️  Skipping rate ${rate.from} -> ${rate.to}: Currency not found`);
-      continue;
-    }
-
-    const existing = await prisma.exchangeRate.findUnique({
-      where: {
-        fromCurrencyId_toCurrencyId: {
-          fromCurrencyId: fromId,
-          toCurrencyId: toId,
-        },
-      },
+    const fromCurrency = await prisma.currency.findUnique({
+      where: { code: rate.from },
+    });
+    const toCurrency = await prisma.currency.findUnique({
+      where: { code: rate.to },
     });
 
-    if (!existing) {
-      await prisma.exchangeRate.create({
-        data: {
-          fromCurrencyId: fromId,
-          toCurrencyId: toId,
-          rate: rate.rate,
-          source: 'seed',
+    if (fromCurrency && toCurrency) {
+      const existing = await prisma.exchangeRate.findUnique({
+        where: {
+          fromCurrencyId_toCurrencyId: {
+            fromCurrencyId: fromCurrency.id,
+            toCurrencyId: toCurrency.id,
+          },
         },
       });
-      console.log(`✅ Created exchange rate: ${rate.from} -> ${rate.to} (${rate.rate})`);
-    } else {
-      console.log(`⏭️  Exchange rate already exists: ${rate.from} -> ${rate.to}`);
+
+      if (!existing) {
+        await prisma.exchangeRate.create({
+          data: {
+            fromCurrencyId: fromCurrency.id,
+            toCurrencyId: toCurrency.id,
+            rate: rate.rate,
+            source: 'seed',
+          },
+        });
+        console.log(`✅ Created rate: ${rate.from} → ${rate.to} = ${rate.rate}`);
+        createdRates++;
+      }
     }
   }
 
   console.log('\n✨ Currency seeding completed!');
+  
+  // Display statistics
+  const stats = await prisma.currency.count();
+  const activeStats = await prisma.currency.count({ where: { isActive: true } });
+  const rateStats = await prisma.exchangeRate.count();
+  console.log(`📊 Total currencies: ${stats} (${activeStats} active)`);
+  console.log(`📊 Total exchange rates: ${rateStats}`);
 }
 
 seedCurrencies()

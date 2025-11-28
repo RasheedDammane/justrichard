@@ -1,0 +1,73 @@
+// Add this to your schema.prisma file
+
+model Lawyer {
+  id                String   @id
+  name              String
+  slug              String   @unique
+  title             String
+  bio               String?
+  specialization    String
+  experience        Int      // years of experience
+  education         Json?    // array of education entries
+  certifications    Json?    // array of certifications
+  languages         Json?    // array of languages
+  practiceAreas     Json?    // array of practice areas
+  
+  // Pricing
+  consultationFee   Float?
+  hourlyRate        Float?
+  currency          String   @default("THB")
+  
+  // Location
+  cityId            String
+  countryId         String
+  officeAddress     String?
+  latitude          Float?
+  longitude         Float?
+  
+  // Contact
+  email             String?
+  phone             String?
+  website           String?
+  
+  // Availability
+  availableDays     Json?    // array of days
+  workingHours      Json?    // {start: "09:00", end: "18:00"}
+  
+  // Media
+  image             String?
+  images            Json?    // array of image URLs
+  video             String?
+  
+  // Stats
+  casesHandled      Int      @default(0)
+  successRate       Float?
+  rating            Float?
+  reviewCount       Int      @default(0)
+  views             Int      @default(0)
+  
+  // SEO
+  metaTitle         String?
+  metaDescription   String?
+  
+  // Status
+  isActive          Boolean  @default(true)
+  isFeatured        Boolean  @default(false)
+  isVerified        Boolean  @default(true)
+  isAvailable       Boolean  @default(true)
+  
+  // Timestamps
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime
+  
+  // Relations
+  City              City     @relation(fields: [cityId], references: [id])
+  Country           Country  @relation(fields: [countryId], references: [id])
+  
+  @@index([slug])
+  @@index([cityId])
+  @@index([countryId])
+  @@index([specialization])
+  @@index([isActive])
+  @@index([isFeatured])
+}

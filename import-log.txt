@@ -1,0 +1,1242 @@
+🚀 Starting property import from source...
+
+📖 Reading CSV file...
+✅ Found 215 properties in CSV
+
+📍 Using defaults:
+  Country: Thailand
+  City: Bangkok
+  Currency: USD
+
+🎯 Importing 50 properties...
+
+
+📦 Processing: Pinery Park Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763901690543-s2p0o7m90
+  📁 Looking for images in: 1910469_Pinery_Park_Beach
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901690543-s2p0o7m90-0",
+          url: "/uploads/properties/import-1763901690543-s2p0o7m90/image_04.webp",
+          type: "IMAGE",
+          title: "Pinery Park Beach - Image 1",
+          alt: "Pinery Park Beach",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:30.736Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Indigo Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763901690856-4ju1mdk6w
+  📁 Looking for images in: 2012882_Indigo_Beach
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901690856-4ju1mdk6w-0",
+          url: "/uploads/properties/import-1763901690856-4ju1mdk6w/image_04.webp",
+          type: "IMAGE",
+          title: "Indigo Beach - Image 1",
+          alt: "Indigo Beach",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:30.981Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Newly built villa with private pool in Seaside Mae Phim
+  💾 Creating property record...
+  ✅ Property created: import-1763901691034-4799oxshe
+  📁 Looking for images in: 5367199_Newly_built_villa_with_private_pool_in_Seaside_Mae_Phim
+  ⏭️  No images folder for 5367199_Newly_built_villa_with_private_pool_in_Seaside_Mae_Phim
+  🎉 Successfully imported!
+
+📦 Processing: Bella Housing 2
+  💾 Creating property record...
+  ✅ Property created: import-1763901691049-o4f6wx4ox
+  📁 Looking for images in: 5367547_Bella_Housing_2
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901691049-o4f6wx4ox-0",
+          url: "/uploads/properties/import-1763901691049-o4f6wx4ox/image_04.webp",
+          type: "IMAGE",
+          title: "Bella Housing 2 - Image 1",
+          alt: "Bella Housing 2",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:31.124Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Newly built detached house for sale, ready to move in! In the heart of Ban Laeng, Rayong.
+  💾 Creating property record...
+  ✅ Property created: import-1763901691179-broq3elo2
+  📁 Looking for images in: 5869398_Newly_built_detached_house_for_sale__ready_to_move_in__In_the_heart_of_Ban_Laeng__Rayong_
+  ⏭️  No images folder for 5869398_Newly_built_detached_house_for_sale__ready_to_move_in__In_the_heart_of_Ban_Laeng__Rayong_
+  🎉 Successfully imported!
+
+📦 Processing: Now price reduced from 4,800,000 THB to 3,700,000 THB.
+  💾 Creating property record...
+  ✅ Property created: import-1763901691196-sp1rh790c
+  📁 Looking for images in: 5868705_Now_price_reduced_from_4_800_000_THB_to_3_700_000_THB_
+  ⏭️  No images folder for 5868705_Now_price_reduced_from_4_800_000_THB_to_3_700_000_THB_
+  🎉 Successfully imported!
+
+📦 Processing: NOTE!Now price reduced from 3,600,000THB to 2,700,000 THB.
+  💾 Creating property record...
+  ✅ Property created: import-1763901691209-z6mkxzx9t
+  📁 Looking for images in: 5868452_NOTE_Now_price_reduced_from_3_600_000THB_to_2_700_000_THB_
+  ⏭️  No images folder for 5868452_NOTE_Now_price_reduced_from_3_600_000THB_to_2_700_000_THB_
+  🎉 Successfully imported!
+
+📦 Processing: The Oriental Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763901691220-hvd2h8zfh
+  📁 Looking for images in: 5364893_The_Oriental_Beach
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901691220-hvd2h8zfh-0",
+          url: "/uploads/properties/import-1763901691220-hvd2h8zfh/image_04.webp",
+          type: "IMAGE",
+          title: "The Oriental Beach - Image 1",
+          alt: "The Oriental Beach",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:31.288Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: VIP Chain
+  💾 Creating property record...
+  ✅ Property created: import-1763901691322-skzf5mii9
+  📁 Looking for images in: 2004179_VIP_Chain
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901691322-skzf5mii9-0",
+          url: "/uploads/properties/import-1763901691322-skzf5mii9/image_04.webp",
+          type: "IMAGE",
+          title: "VIP Chain - Image 1",
+          alt: "VIP Chain",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:31.463Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Rubber plantations can be tapped for another 20-30 years and now the price is good.
+  💾 Creating property record...
+  ✅ Property created: import-1763901691508-7n002rrh3
+  📁 Looking for images in: 2016833_Rubber_plantations_can_be_tapped_for_another_20_30_years_and_now_the_price_is_good_
+  ⏭️  No images folder for 2016833_Rubber_plantations_can_be_tapped_for_another_20_30_years_and_now_the_price_is_good_
+  🎉 Successfully imported!
+
+📦 Processing: Beautiful house in lush garden
+  💾 Creating property record...
+  ✅ Property created: import-1763901691533-llv5i8i48
+  📁 Looking for images in: 5827796_Beautiful_house_in_lush_garden
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901691533-llv5i8i48-0",
+          url: "/uploads/properties/import-1763901691533-llv5i8i48/image_04.webp",
+          type: "IMAGE",
+          title: "Beautiful house in lush garden - Image 1",
+          alt: "Beautiful house in lush garden",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:32.099Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Ban Phe Beach House Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763901692232-qqckwo4wd
+  📁 Looking for images in: 1370390_Ban_Phe_Beach_House_Rayong
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901692232-qqckwo4wd-0",
+          url: "/uploads/properties/import-1763901692232-qqckwo4wd/image_04.webp",
+          type: "IMAGE",
+          title: "Ban Phe Beach House Rayong - Image 1",
+          alt: "Ban Phe Beach House Rayong",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:32.350Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Thai style house
+  💾 Creating property record...
+  ✅ Property created: import-1763901692417-2pm14g5ym
+  📁 Looking for images in: 1951577_Thai_style_house
+  📸 Copied 9 images
+  🎨 Creating 9 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901692417-2pm14g5ym-0",
+          url: "/uploads/properties/import-1763901692417-2pm14g5ym/image_04.webp",
+          type: "IMAGE",
+          title: "Thai style house - Image 1",
+          alt: "Thai style house",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:32.648Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Phu Saeng Tawan Village
+  💾 Creating property record...
+  ✅ Property created: import-1763901692703-vcbhdwngp
+  📁 Looking for images in: 5807171_Phu_Saeng_Tawan_Village
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901692703-vcbhdwngp-0",
+          url: "/uploads/properties/import-1763901692703-vcbhdwngp/image_04.webp",
+          type: "IMAGE",
+          title: "Phu Saeng Tawan Village - Image 1",
+          alt: "Phu Saeng Tawan Village",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:32.823Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: House for sale in ThabMa Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763901692868-ekkib7jvi
+  📁 Looking for images in: 1998071_House_for_sale_in_ThabMa_Rayong
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901692868-ekkib7jvi-0",
+          url: "/uploads/properties/import-1763901692868-ekkib7jvi/image_04.webp",
+          type: "IMAGE",
+          title: "House for sale in ThabMa Rayong - Image 1",
+          alt: "House for sale in ThabMa Rayong",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:33.218Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: House in Rayong / Taphong, carport on 2 rai of land for sale
+  💾 Creating property record...
+  ✅ Property created: import-1763901693257-6pjle1cw0
+  📁 Looking for images in: 5349549_House_in_Rayong___Taphong__carport_on_2_rai_of_land_for_sale
+  ⏭️  No images folder for 5349549_House_in_Rayong___Taphong__carport_on_2_rai_of_land_for_sale
+  🎉 Successfully imported!
+
+📦 Processing: 1 Storey House for Sale in Ban Chang
+  💾 Creating property record...
+  ✅ Property created: import-1763901693271-1a2ultlc3
+  📁 Looking for images in: 1726424_1_Storey_House_for_Sale_in_Ban_Chang
+  📸 Copied 12 images
+  🎨 Creating 12 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901693271-1a2ultlc3-0",
+          url: "/uploads/properties/import-1763901693271-1a2ultlc3/image_04.webp",
+          type: "IMAGE",
+          title: "1 Storey House for Sale in Ban Chang - Image 1",
+          alt: "1 Storey House for Sale in Ban Chang",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:33.430Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Luxurious villa with swimming pool and roof terrace
+  💾 Creating property record...
+  ✅ Property created: import-1763901693464-aywrxlxg1
+  📁 Looking for images in: 1998304_Luxurious_villa_with_swimming_pool_and_roof_terrace
+  ⏭️  No images folder for 1998304_Luxurious_villa_with_swimming_pool_and_roof_terrace
+  🎉 Successfully imported!
+
+📦 Processing: 3 bedroom house on 448 sqm land
+  💾 Creating property record...
+  ✅ Property created: import-1763901693476-r2mrjxoi6
+  📁 Looking for images in: 5811730_3_bedroom_house_on_448_sqm_land
+  📸 Copied 12 images
+  🎨 Creating 12 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901693476-r2mrjxoi6-0",
+          url: "/uploads/properties/import-1763901693476-r2mrjxoi6/image_04.webp",
+          type: "IMAGE",
+          title: "3 bedroom house on 448 sqm land - Image 1",
+          alt: "3 bedroom house on 448 sqm land",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:33.583Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Townhouse for Sale in Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763901693618-zoytd2gez
+  📁 Looking for images in: 1635784_Townhouse_for_Sale_in_Rayong
+  📸 Copied 7 images
+  🎨 Creating 7 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901693618-zoytd2gez-0",
+          url: "/uploads/properties/import-1763901693618-zoytd2gez/image_04.webp",
+          type: "IMAGE",
+          title: "Townhouse for Sale in Rayong - Image 1",
+          alt: "Townhouse for Sale in Rayong",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:33.713Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: House foe Sale  in Thap Ma
+  💾 Creating property record...
+  ✅ Property created: import-1763901693754-0lf2r4apy
+  📁 Looking for images in: 1109898_House_foe_Sale__in_Thap_Ma
+  ⏭️  No images folder for 1109898_House_foe_Sale__in_Thap_Ma
+  🎉 Successfully imported!
+
+📦 Processing: House with Land for Sale in Klaeng District
+  💾 Creating property record...
+  ✅ Property created: import-1763901693766-yffkq2mec
+  📁 Looking for images in: 1658082_House_with_Land_for_Sale_in_Klaeng_District
+  📸 Copied 13 images
+  🎨 Creating 13 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901693766-yffkq2mec-0",
+          url: "/uploads/properties/import-1763901693766-yffkq2mec/image_04.webp",
+          type: "IMAGE",
+          title: "House with Land for Sale in Klaeng District - Image 1",
+          alt: "House with Land for Sale in Klaeng District",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:33.832Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: 5BR Luxury Home at Rayong
+  💾 Creating property record...
+  ✅ Property created: import-1763901693874-9xf8ljfi5
+  📁 Looking for images in: 1626964_5BR_Luxury_Home_at_Rayong
+  📸 Copied 15 images
+  🎨 Creating 15 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901693874-9xf8ljfi5-0",
+          url: "/uploads/properties/import-1763901693874-9xf8ljfi5/image_04.webp",
+          type: "IMAGE",
+          title: "5BR Luxury Home at Rayong - Image 1",
+          alt: "5BR Luxury Home at Rayong",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:33.951Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Bali Residence
+  💾 Creating property record...
+  ✅ Property created: import-1763901693987-5hkmwxwyj
+  📁 Looking for images in: 1996344_Bali_Residence
+  ⏭️  No images folder for 1996344_Bali_Residence
+  🎉 Successfully imported!
+
+📦 Processing: Crystal Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763901694005-uol9k3gfj
+  📁 Looking for images in: 1996135_Crystal_Beach
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901694005-uol9k3gfj-0",
+          url: "/uploads/properties/import-1763901694005-uol9k3gfj/image_04.webp",
+          type: "IMAGE",
+          title: "Crystal Beach - Image 1",
+          alt: "Crystal Beach",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:34.157Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Nordic Nature Klaeng
+  💾 Creating property record...
+  ✅ Property created: import-1763901694193-krs3c674q
+  📁 Looking for images in: 5628031_Nordic_Nature_Klaeng
+  ⏭️  No images folder for 5628031_Nordic_Nature_Klaeng
+  🎉 Successfully imported!
+
+📦 Processing: Cape Mae Phim
+  💾 Creating property record...
+  ✅ Property created: import-1763901694206-f6yzycjb4
+  📁 Looking for images in: 1996046_Cape_Mae_Phim
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901694206-f6yzycjb4-0",
+          url: "/uploads/properties/import-1763901694206-f6yzycjb4/image_04.webp",
+          type: "IMAGE",
+          title: "Cape Mae Phim - Image 1",
+          alt: "Cape Mae Phim",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:34.333Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Ban Lom Thale 1
+  💾 Creating property record...
+  ✅ Property created: import-1763901694382-aj2s8zs21
+  📁 Looking for images in: 5798076_Ban_Lom_Thale_1
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901694382-aj2s8zs21-0",
+          url: "/uploads/properties/import-1763901694382-aj2s8zs21/image_04.webp",
+          type: "IMAGE",
+          title: "Ban Lom Thale 1 - Image 1",
+          alt: "Ban Lom Thale 1",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:34.520Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Detached house standing in 2088 sqm land with swimming pool
+  💾 Creating property record...
+  ✅ Property created: import-1763901694559-25ve9dedi
+  📁 Looking for images in: 1870780_Detached_house_standing_in_2088_sqm_land_with_swimming_pool
+  ⏭️  No images folder for 1870780_Detached_house_standing_in_2088_sqm_land_with_swimming_pool
+  🎉 Successfully imported!
+
+📦 Processing: Barcelona Valley and Golf course
+  💾 Creating property record...
+  ✅ Property created: import-1763901694574-noi3427xv
+  📁 Looking for images in: 5585024_Barcelona_Valley_and_Golf_course
+  📸 Copied 10 images
+  🎨 Creating 10 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901694574-noi3427xv-0",
+          url: "/uploads/properties/import-1763901694574-noi3427xv/image_04.webp",
+          type: "IMAGE",
+          title: "Barcelona Valley and Golf course - Image 1",
+          alt: "Barcelona Valley and Golf course",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:34.646Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Preecha Private Beach
+  💾 Creating property record...
+  ✅ Property created: import-1763901694687-n43oid323
+  📁 Looking for images in: 5779193_Preecha_Private_Beach
+  📸 Copied 3 images
+  🎨 Creating 3 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901694687-n43oid323-0",
+          url: "/uploads/properties/import-1763901694687-n43oid323/image_04.webp",
+          type: "IMAGE",
+          title: "Preecha Private Beach - Image 1",
+          alt: "Preecha Private Beach",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:34.719Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Baan Sirisa 15
+  💾 Creating property record...
+  ✅ Property created: import-1763901694762-cgzws0vo0
+  📁 Looking for images in: 2664900_Baan_Sirisa_15
+  📸 Copied 12 images
+  🎨 Creating 12 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901694762-cgzws0vo0-0",
+          url: "/uploads/properties/import-1763901694762-cgzws0vo0/image_04.webp",
+          type: "IMAGE",
+          title: "Baan Sirisa 15 - Image 1",
+          alt: "Baan Sirisa 15",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:34.900Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Beautiful garden house for sale with organic fruit trees, large area 1,500 sq m.
+  💾 Creating property record...
+  ✅ Property created: import-1763901694973-0g0tmco8b
+  📁 Looking for images in: 5767452_Beautiful_garden_house_for_sale_with_organic_fruit_trees__large_area_1_500_sq_m_
+  ⏭️  No images folder for 5767452_Beautiful_garden_house_for_sale_with_organic_fruit_trees__large_area_1_500_sq_m_
+  🎉 Successfully imported!
+
+📦 Processing: Spacious Home into a Unique Venture
+  💾 Creating property record...
+  ✅ Property created: import-1763901694993-laf8gnns6
+  📁 Looking for images in: 5751728_Spacious_Home_into_a_Unique_Venture
+  📸 Copied 11 images
+  🎨 Creating 11 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901694993-laf8gnns6-0",
+          url: "/uploads/properties/import-1763901694993-laf8gnns6/image_04.webp",
+          type: "IMAGE",
+          title: "Spacious Home into a Unique Venture - Image 1",
+          alt: "Spacious Home into a Unique Venture",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:35.397Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Safir Village 5
+  💾 Creating property record...
+  ✅ Property created: import-1763901695437-p1a398y6s
+  📁 Looking for images in: 5337198_Safir_Village_5
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901695437-p1a398y6s-0",
+          url: "/uploads/properties/import-1763901695437-p1a398y6s/image_04.webp",
+          type: "IMAGE",
+          title: "Safir Village 5 - Image 1",
+          alt: "Safir Village 5",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:35.799Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Seabreeze Residence
+  💾 Creating property record...
+  ✅ Property created: import-1763901695925-prmeg26gg
+  📁 Looking for images in: 5336852_Seabreeze_Residence
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901695925-prmeg26gg-0",
+          url: "/uploads/properties/import-1763901695925-prmeg26gg/image_04.webp",
+          type: "IMAGE",
+          title: "Seabreeze Residence - Image 1",
+          alt: "Seabreeze Residence",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:36.625Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Blue Mango Residence
+  💾 Creating property record...
+  ✅ Property created: import-1763901696675-5elqoom3s
+  📁 Looking for images in: 1983325_Blue_Mango_Residence
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901696675-5elqoom3s-0",
+          url: "/uploads/properties/import-1763901696675-5elqoom3s/image_04.webp",
+          type: "IMAGE",
+          title: "Blue Mango Residence - Image 1",
+          alt: "Blue Mango Residence",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:37.010Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Beautiful detached house, owner sells at appraised price, not tied to bank account.
+  💾 Creating property record...
+  ✅ Property created: import-1763901697058-6by1qpk4f
+  📁 Looking for images in: 5742069_Beautiful_detached_house__owner_sells_at_appraised_price__not_tied_to_bank_account_
+  ⏭️  No images folder for 5742069_Beautiful_detached_house__owner_sells_at_appraised_price__not_tied_to_bank_account_
+  🎉 Successfully imported!
+
+📦 Processing: Personalise Home Awaits!
+  💾 Creating property record...
+  ✅ Property created: import-1763901697071-rxu5f70hd
+  📁 Looking for images in: 5548727_Personalise_Home_Awaits_
+  ⏭️  No images folder for 5548727_Personalise_Home_Awaits_
+  🎉 Successfully imported!
+
+📦 Processing: Sunflower Residence
+  💾 Creating property record...
+  ✅ Property created: import-1763901697105-1umu6j6sa
+  📁 Looking for images in: 1980615_Sunflower_Residence
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901697105-1umu6j6sa-0",
+          url: "/uploads/properties/import-1763901697105-1umu6j6sa/image_04.webp",
+          type: "IMAGE",
+          title: "Sunflower Residence - Image 1",
+          alt: "Sunflower Residence",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:37.314Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Located on Highway 36, Nikhom Phatthana District, Rayong Province
+  💾 Creating property record...
+  ✅ Property created: import-1763901697364-ric17f15b
+  📁 Looking for images in: 5724849_Located_on_Highway_36__Nikhom_Phatthana_District__Rayong_Province
+  ⏭️  No images folder for 5724849_Located_on_Highway_36__Nikhom_Phatthana_District__Rayong_Province
+  🎉 Successfully imported!
+
+📦 Processing: Beautiful garden house for sale with various organic fruits, area 3 rai 3 ngan.
+  💾 Creating property record...
+  ✅ Property created: import-1763901697413-w2ks40pve
+  📁 Looking for images in: 5724840_Beautiful_garden_house_for_sale_with_various_organic_fruits__area_3_rai_3_ngan_
+  ⏭️  No images folder for 5724840_Beautiful_garden_house_for_sale_with_various_organic_fruits__area_3_rai_3_ngan_
+  🎉 Successfully imported!
+
+📦 Processing: 1-unit building, next to the road [Ban Laeng, Highway 3139, back corner]
+  💾 Creating property record...
+  ✅ Property created: import-1763901697447-z1lioqp7v
+  📁 Looking for images in: 5563658_1_unit_building__next_to_the_road__Ban_Laeng__Highway_3139__back_corner_
+  ⏭️  No images folder for 5563658_1_unit_building__next_to_the_road__Ban_Laeng__Highway_3139__back_corner_
+  🎉 Successfully imported!
+
+📦 Processing: Saruta Home
+  💾 Creating property record...
+  ✅ Property created: import-1763901697472-tys98w1hk
+  📁 Looking for images in: 2044177_Saruta_Home
+  📸 Copied 17 images
+  🎨 Creating 17 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901697472-tys98w1hk-0",
+          url: "/uploads/properties/import-1763901697472-tys98w1hk/image_04.webp",
+          type: "IMAGE",
+          title: "Saruta Home - Image 1",
+          alt: "Saruta Home",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:37.750Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: My Ozone
+  💾 Creating property record...
+  ✅ Property created: import-1763901697794-a9h2y7e7s
+  📁 Looking for images in: 1700726_My_Ozone
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901697794-a9h2y7e7s-0",
+          url: "/uploads/properties/import-1763901697794-a9h2y7e7s/image_04.webp",
+          type: "IMAGE",
+          title: "My Ozone - Image 1",
+          alt: "My Ozone",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:37.849Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Rock Garden Beach Resort
+  💾 Creating property record...
+  ✅ Property created: import-1763901697901-891y55h4p
+  📁 Looking for images in: 1974529_Rock_Garden_Beach_Resort
+  📸 Copied 8 images
+  🎨 Creating 8 media records...
+  ❌ Error: PrismaClientValidationError: 
+Invalid `prisma.media.create()` invocation in
+/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:46
+
+  204 const imagePath = imagePaths[i];
+  205 
+  206 // Create Media record
+→ 207 const media = await prisma.media.create({
+        data: {
+          id: "media-import-1763901697901-891y55h4p-0",
+          url: "/uploads/properties/import-1763901697901-891y55h4p/image_04.webp",
+          type: "IMAGE",
+          title: "Rock Garden Beach Resort - Image 1",
+          alt: "Rock Garden Beach Resort",
+          mimeType: "image/webp",
+          size: 0,
+          updatedAt: new Date("2025-11-23T12:41:37.974Z"),
+      +   filename: String
+        }
+      })
+
+Argument `filename` is missing.
+    at throwValidationException (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/core/errorRendering/throwValidationException.ts:45:9)
+    at ei.handleRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:202:7)
+    at ei.handleAndLogRequestError (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:174:12)
+    at ei.request (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/RequestHandler.ts:143:12)
+    at a (/Users/richard/preprod/justrichard/node_modules/@prisma/client/src/runtime/getPrismaClient.ts:833:24)
+    at main (/Users/richard/preprod/justrichard/scripts/import-properties-from-source.ts:207:27) {
+  clientVersion: '6.19.0'
+}
+
+📦 Processing: Large luxury pool villa near Phala Beach in Ban Chang.
+  💾 Creating property record...
+  ✅ Property created: import-1763901698060-2bf60kq8a
+  📁 Looking for images in: 5704378_Large_luxury_pool_villa_near_Phala_Beach_in_Ban_Chang_
+  ⏭️  No images folder for 5704378_Large_luxury_pool_villa_near_Phala_Beach_in_Ban_Chang_
+  🎉 Successfully imported!
+
+📦 Processing: 🏡 Luxurious detached house in the heart of Krok Yai Cha ✨
+  💾 Creating property record...
+  ✅ Property created: import-1763901698087-pn8afmq8k
+  📁 Looking for images in: 5702536____Luxurious_detached_house_in_the_heart_of_Krok_Yai_Cha__
+  ⏭️  No images folder for 5702536____Luxurious_detached_house_in_the_heart_of_Krok_Yai_Cha__
+  🎉 Successfully imported!
+
+📦 Processing: Beautiful house with spacious layout!
+  💾 Creating property record...
+  ✅ Property created: import-1763901698104-fbwu3r6vx
+  📁 Looking for images in: 5698831_Beautiful_house_with_spacious_layout_
+  ⏭️  No images folder for 5698831_Beautiful_house_with_spacious_layout_
+  🎉 Successfully imported!
+
+============================================================
+📊 IMPORT SUMMARY
+============================================================
+✅ Imported: 20
+⏭️  Skipped:  1
+❌ Errors:   29
+📁 Total:    215 properties in CSV
+============================================================
+
+🎊 Import completed successfully!
+
+📍 Next steps:
+  1. Check: http://localhost:3100/en/admin/properties
+  2. View:  http://localhost:3100/en/properties
+  3. Edit properties and add more details
+

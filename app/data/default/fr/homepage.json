@@ -1,0 +1,145 @@
+{
+  "seo": {
+    "title": "JustRichard - Votre Plateforme de Services de Confiance",
+    "description": "Découvrez des professionnels vérifiés pour tous vos besoins. Immobilier, services juridiques, transferts et plus encore."
+  },
+  "hero": {
+    "headline": "Trouvez des Professionnels de Confiance",
+    "subheadline": "Connectez-vous avec des prestataires de services vérifiés dans plusieurs catégories",
+    "ctaLabel": "Explorer les Services",
+    "ctaHref": "/fr/services"
+  },
+  "features": {
+    "title": "Pourquoi Nous Choisir",
+    "items": [
+      {
+        "id": "verified",
+        "icon": "✓",
+        "title": "Professionnels Vérifiés",
+        "description": "Tous les partenaires sont vérifiés et de confiance"
+      },
+      {
+        "id": "available",
+        "icon": "🕐",
+        "title": "Disponibilité 24/7",
+        "description": "Réservez des services à tout moment, n'importe où"
+      },
+      {
+        "id": "quality",
+        "icon": "⭐",
+        "title": "Service de Qualité",
+        "description": "Uniquement des professionnels les mieux notés"
+      },
+      {
+        "id": "support",
+        "icon": "💬",
+        "title": "Support 24/7",
+        "description": "Nous sommes là pour vous aider à tout moment"
+      }
+    ]
+  },
+  "specialServices": {
+    "title": "Services Spéciaux",
+    "subtitle": "Services premium pour tous vos besoins",
+    "items": [
+      {
+        "id": "rental",
+        "icon": "🚗",
+        "title": "Location de Véhicules",
+        "subtitle": "Voitures, SUV et Plus",
+        "href": "/fr/services/rental"
+      },
+      {
+        "id": "real-estate",
+        "icon": "🏢",
+        "title": "Immobilier",
+        "subtitle": "Acheter, Louer et Investir",
+        "href": "/fr/services/real-estate"
+      },
+      {
+        "id": "legal",
+        "icon": "⚖️",
+        "title": "Services Juridiques",
+        "subtitle": "Avocats Experts",
+        "href": "/fr/services/legal"
+      },
+      {
+        "id": "handyman",
+        "icon": "🔧",
+        "title": "Bricoleur",
+        "subtitle": "Réparations et Dépannages",
+        "href": "/fr/services/handyman"
+      },
+      {
+        "id": "transfer",
+        "icon": "🚕",
+        "title": "Transferts",
+        "subtitle": "Aéroport et Ville",
+        "href": "/fr/services/transfer"
+      }
+    ]
+  },
+  "processSteps": {
+    "title": "Comment Ça Marche",
+    "subtitle": "Réservez des services professionnels en 4 étapes simples",
+    "steps": [
+      {
+        "number": 1,
+        "icon": "🔍",
+        "title": "Choisir un Service",
+        "description": "Parcourez et sélectionnez parmi notre large gamme de services professionnels."
+      },
+      {
+        "number": 2,
+        "icon": "📅",
+        "title": "Réserver Instantanément",
+        "description": "Choisissez votre date, heure et professionnel préféré facilement."
+      },
+      {
+        "number": 3,
+        "icon": "✅",
+        "title": "Obtenir une Confirmation",
+        "description": "Recevez une confirmation instantanée avec tous les détails du service."
+      },
+      {
+        "number": 4,
+        "icon": "⭐",
+        "title": "Profiter et Évaluer",
+        "description": "Profitez d'un service de qualité et partagez vos commentaires."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Statistiques de la Plateforme",
+    "items": [
+      {
+        "value": "15",
+        "label": "Types de Partenaires"
+      },
+      {
+        "value": "150+",
+        "label": "Spécialités"
+      },
+      {
+        "value": "9",
+        "label": "Langues"
+      },
+      {
+        "value": "10",
+        "label": "Pays"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à Commencer?",
+    "subtitle": "Explorez nos services et trouvez le professionnel parfait pour vos besoins",
+    "primaryButton": {
+      "label": "Parcourir les Services",
+      "href": "/fr/services"
+    },
+    "secondaryButton": {
+      "label": "Documentation API",
+      "href": "/api-docs"
+    }
+  }
+}

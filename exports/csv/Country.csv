@@ -1,0 +1,4 @@
+id,code,name,flag,isActive,createdAt,updatedAt,currency,description,dialCode,icon,images,keywords,latitude,longitude,metaDescription,metaTitle,nameAf,nameAr,nameDe,nameEs,nameFr,nameIt,nameJa,nameKo,nameNo,namePt,nameRu,nameTh,nameTl,nameTr,nameVi,slug,thumbnail,currencyId
+country-thailand,TH,Thailand,🇹🇭,true,"2025-11-27T20:02:47.853Z","2025-11-27T20:02:47.853Z",,,,,[],[],,,,,,,,,,,,,,,,,,,,,,
+country-uae,AE,United Arab Emirates,🇦🇪,true,"2025-11-27T20:02:49.582Z","2025-11-27T20:02:49.518Z",,,,,[],[],,,,,,,,,,,,,,,,,,,,,,
+country-for-city-1764275572802,TC,Test Country for City,,true,"2025-11-27T20:32:53.021Z","2025-11-27T20:32:53.019Z",USD,,+888,,[],[],,,,,,,,,,,,,,,,,,,,test-country-city-1764275572802,,

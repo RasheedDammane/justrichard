@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Emaar Properties",
+    "slug": "emaar-properties",
+    "description": "Leading real estate developer in UAE",
+    "country": "United Arab Emirates",
+    "yearFounded": 1997,
+    "headquarters": "Dubai, UAE",
+    "website": "https://www.emaar.com",
+    "logo": "/images/developers/emaar.svg",
+    "specialization": "Residential & Commercial",
+    "majorProjects": [
+      "Burj Khalifa",
+      "Dubai Mall",
+      "Downtown Dubai",
+      "Emirates Hills",
+      "Arabian Ranches"
+    ],
+    "totalProjects": 100,
+    "isActive": true,
+    "isFeatured": true,
+    "isVerified": true
+  },
+  {
+    "name": "Dubai Properties",
+    "slug": "dubai-properties",
+    "description": "Master real estate developer",
+    "country": "United Arab Emirates",
+    "yearFounded": 2002,
+    "headquarters": "Dubai, UAE",
+    "specialization": "Residential Communities",
+    "majorProjects": [
+      "Jumeirah Beach Residence",
+      "Business Bay",
+      "Dubai Wharf"
+    ],
+    "isActive": true,
+    "isFeatured": true,
+    "isVerified": true
+  },
+  {
+    "name": "Nakheel",
+    "slug": "nakheel",
+    "description": "Developer of iconic Dubai landmarks",
+    "country": "United Arab Emirates",
+    "yearFounded": 2000,
+    "headquarters": "Dubai, UAE",
+    "specialization": "Master Developments",
+    "majorProjects": [
+      "Palm Jumeirah",
+      "The World Islands",
+      "Deira Islands",
+      "Dragon City"
+    ],
+    "isActive": true,
+    "isFeatured": true,
+    "isVerified": true
+  },
+  {
+    "name": "DAMAC Properties",
+    "slug": "damac-properties",
+    "description": "Luxury real estate developer",
+    "country": "United Arab Emirates",
+    "yearFounded": 2002,
+    "specialization": "Luxury Residential",
+    "majorProjects": [
+      "DAMAC Hills",
+      "DAMAC Lagoons",
+      "Paramount Tower",
+      "Versace-branded residences"
+    ],
+    "isActive": true,
+    "isFeatured": true,
+    "isVerified": true
+  },
+  {
+    "name": "Meraas",
+    "slug": "meraas",
+    "description": "Dubai-based holding company",
+    "country": "United Arab Emirates",
+    "yearFounded": 2007,
+    "specialization": "Mixed-Use Developments",
+    "majorProjects": [
+      "Bluewaters Island",
+      "La Mer",
+      "City Walk",
+      "The Beach"
+    ],
+    "isActive": true,
+    "isFeatured": true,
+    "isVerified": true
+  },
+  {
+    "name": "Sobha Realty",
+    "slug": "sobha-realty",
+    "description": "International property developer",
+    "country": "India/UAE",
+    "specialization": "Premium Residential",
+    "majorProjects": [
+      "Sobha Hartland",
+      "District One"
+    ],
+    "isActive": true,
+    "isVerified": true
+  },
+  {
+    "name": "Azizi Developments",
+    "slug": "azizi-developments",
+    "description": "Leading UAE developer",
+    "country": "United Arab Emirates",
+    "specialization": "Residential & Commercial",
+    "majorProjects": [
+      "Azizi Riviera",
+      "Azizi Venice"
+    ],
+    "isActive": true,
+    "isVerified": true
+  }
+]

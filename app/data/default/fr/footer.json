@@ -1,0 +1,90 @@
+{
+  "platformName": "JustRichard",
+  "tagline": "Votre plateforme de confiance connectant les clients avec des professionnels vérifiés dans plus de 15 catégories dans plusieurs pays.",
+  "copyright": "© 2025 JustRichard. Tous droits réservés.",
+  "sections": [
+    {
+      "title": "Entreprise",
+      "links": [
+        { "label": "À Propos", "href": "/fr/about" },
+        { "label": "Carrières", "href": "/fr/careers" },
+        { "label": "Presse", "href": "/fr/press" },
+        { "label": "Blog", "href": "/fr/blog" },
+        { "label": "Partenaires", "href": "/fr/partnerships" }
+      ]
+    },
+    {
+      "title": "Services Professionnels",
+      "links": [
+        { "label": "Docteurs & Dentistes", "href": "/fr/doctors" },
+        { "label": "Avocats", "href": "/fr/lawyers" },
+        { "label": "Coaches", "href": "/fr/coaches" },
+        { "label": "Fournisseurs", "href": "/fr/suppliers" },
+        { "label": "Création d'Entreprise", "href": "/fr/business-setup" },
+        { "label": "Assurance", "href": "/fr/insurance" }
+      ]
+    },
+    {
+      "title": "Lifestyle & Voyage",
+      "links": [
+        { "label": "Location de Voitures", "href": "/fr/car-rental" },
+        { "label": "Yachts", "href": "/fr/yachts" },
+        { "label": "Propriétés", "href": "/fr/properties" },
+        { "label": "Activités", "href": "/fr/activities" }
+      ]
+    },
+    {
+      "title": "Services Maison",
+      "links": [
+        { "label": "Nettoyage Maison", "href": "/fr/home-cleaning/home" },
+        { "label": "Nettoyage Meubles", "href": "/fr/home-cleaning/furniture" },
+        { "label": "Blanchisserie", "href": "/fr/home-cleaning/laundry" },
+        { "label": "Femmes de Ménage", "href": "/fr/maids" }
+      ]
+    },
+    {
+      "title": "Services Bricolage",
+      "links": [
+        { "label": "Plomberie", "href": "/fr/handyman/plumbing" },
+        { "label": "Électricité", "href": "/fr/handyman/electrical" },
+        { "label": "Réparation AC", "href": "/fr/handyman/ac-repair" },
+        { "label": "Menuiserie", "href": "/fr/handyman/carpentry" },
+        { "label": "Peinture", "href": "/fr/handyman/painting" },
+        { "label": "Tous les Services", "href": "/fr/handyman" }
+      ]
+    },
+    {
+      "title": "Support",
+      "links": [
+        { "label": "Centre d'Aide", "href": "/fr/help" },
+        { "label": "Nous Contacter", "href": "/fr/contact" },
+        { "label": "FAQ", "href": "/fr/faq" },
+        { "label": "Consignes de Sécurité", "href": "/fr/safety" },
+        { "label": "Conditions d'Utilisation", "href": "/fr/terms" },
+        { "label": "Politique de Confidentialité", "href": "/fr/privacy" },
+        { "label": "Politique des Cookies", "href": "/fr/cookies" },
+        { "label": "Mentions Légales", "href": "/fr/services/legal" },
+        { "label": "Plan du Site", "href": "/sitemap.xml" }
+      ]
+    },
+    {
+      "title": "Suivez-nous",
+      "links": [
+        { "label": "Facebook", "href": "https://facebook.com", "external": true },
+        { "label": "Twitter", "href": "https://twitter.com", "external": true },
+        { "label": "Instagram", "href": "https://instagram.com", "external": true },
+        { "label": "LinkedIn", "href": "https://linkedin.com", "external": true }
+      ]
+    }
+  ],
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Recevez des mises à jour sur les nouveaux services et promotions",
+    "placeholder": "Votre adresse e-mail",
+    "buttonLabel": "S'abonner"
+  },
+  "legal": {
+    "registrationInfo": "N° d'enregistrement: 123456789 | ID fiscal: AE123456789",
+    "disclaimer": "JustRichard agit en tant que plateforme de marché connectant les prestataires de services avec les clients. Nous n'employons pas de prestataires de services et ne sommes pas responsables des services fournis."
+  }
+}

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import AdminLayout from '@/components/admin/AdminLayout';
 import { 
   DollarSign, 
   Plus, 
@@ -22,7 +23,12 @@ interface Currency {
   isActive: boolean;
   isDefault: boolean;
   decimalPlaces: number;
-  exchangeRatesFrom: any[];
+  displayOrder: number;
+  exchangeRatesCount?: number;
+  _count?: {
+    exchangeRatesFrom: number;
+    exchangeRatesTo: number;
+  };
   createdAt: string;
 }
 
@@ -35,6 +41,8 @@ export default function CurrenciesPage() {
   const [currencies, setCurrencies] = useState<Currency[]>([]);
   const [defaultCurrency, setDefaultCurrency] = useState<Currency | null>(null);
   const [showAddModal, setShowAddModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [editingCurrency, setEditingCurrency] = useState<Currency | null>(null);
   const [updating, setUpdating] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -55,9 +63,13 @@ export default function CurrenciesPage() {
     try {
       const response = await fetch('/api/admin/currencies');
       const data = await response.json();
-      if (response.ok) {
+      console.log('API Response:', data);
+      if (response.ok && data.currencies) {
         setCurrencies(data.currencies || []);
-        setDefaultCurrency(data.defaultCurrency || null);
+        const defaultCurr = data.currencies.find((c: Currency) => c.isDefault);
+        setDefaultCurrency(defaultCurr || null);
+      } else {
+        console.error('API Error:', data);
       }
     } catch (error) {
       console.error('Error fetching currencies:', error);
@@ -121,10 +133,61 @@ export default function CurrenciesPage() {
       });
 
       if (response.ok) {
+        alert('Devise définie par défaut!');
         fetchCurrencies();
+      } else {
+        const data = await response.json();
+        alert(data.error || 'Erreur lors de la mise à jour');
       }
     } catch (error) {
       console.error('Error setting default currency:', error);
+      alert('Erreur lors de la mise à jour');
+    }
+  };
+
+  const openEditModal = (currency: Currency) => {
+    setEditingCurrency(currency);
+    setFormData({
+      code: currency.code,
+      name: currency.name,
+      symbol: currency.symbol,
+      isActive: currency.isActive,
+      isDefault: currency.isDefault,
+      decimalPlaces: currency.decimalPlaces,
+    });
+    setShowEditModal(true);
+  };
+
+  const handleEdit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingCurrency) return;
+
+    try {
+      const response = await fetch(`/api/admin/currencies/${editingCurrency.id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setShowEditModal(false);
+        setEditingCurrency(null);
+        setFormData({
+          code: '',
+          name: '',
+          symbol: '',
+          isActive: true,
+          isDefault: false,
+          decimalPlaces: 2,
+        });
+        fetchCurrencies();
+      } else {
+        const data = await response.json();
+        alert(data.error || 'Erreur lors de la modification');
+      }
+    } catch (error) {
+      console.error('Error updating currency:', error);
+      alert('Erreur lors de la modification');
     }
   };
 
@@ -178,53 +241,52 @@ export default function CurrenciesPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Chargement...</p>
+      <AdminLayout locale={locale}>
+        <div className="flex items-center justify-center py-12">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
+            <p className="mt-4 text-gray-600">Chargement...</p>
+          </div>
         </div>
-      </div>
+      </AdminLayout>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="bg-primary-600 text-white py-8 px-4">
-        <div className="container mx-auto max-w-7xl">
-          <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-3xl font-bold flex items-center gap-3">
-                <DollarSign className="w-8 h-8" />
-                Gestion des Devises
-              </h1>
-              <p className="text-primary-100 mt-1">
-                {currencies.length} devise(s) • Défaut: {defaultCurrency?.code || 'Aucune'}
-              </p>
-            </div>
-            <div className="flex gap-3">
-              <button
-                onClick={updateExchangeRates}
-                disabled={updating || !defaultCurrency}
-                className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 flex items-center gap-2 disabled:opacity-50"
-              >
-                <RefreshCw className={`w-5 h-5 ${updating ? 'animate-spin' : ''}`} />
-                Mettre à jour les taux
-              </button>
-              <button
-                onClick={() => setShowAddModal(true)}
-                className="bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 flex items-center gap-2"
-              >
-                <Plus className="w-5 h-5" />
-                Ajouter une devise
-              </button>
-            </div>
+    <AdminLayout locale={locale}>
+      {/* Header */}
+      <div className="mb-8">
+        <div className="flex justify-between items-center">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
+              <DollarSign className="w-8 h-8" />
+              Gestion des Devises
+            </h1>
+            <p className="text-gray-600 mt-1">
+              {currencies.length} devise(s) • Défaut: {defaultCurrency?.code || 'Aucune'}
+            </p>
+          </div>
+          <div className="flex gap-3">
+            <button
+              onClick={updateExchangeRates}
+              disabled={updating || !defaultCurrency}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 flex items-center gap-2 disabled:opacity-50 shadow-lg"
+            >
+              <RefreshCw className={`w-5 h-5 ${updating ? 'animate-spin' : ''}`} />
+              Mettre à jour les taux
+            </button>
+            <button
+              onClick={() => setShowAddModal(true)}
+              className="bg-white text-gray-900 border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 flex items-center gap-2 shadow-sm"
+            >
+              <Plus className="w-5 h-5" />
+              Ajouter une devise
+            </button>
           </div>
         </div>
       </div>
-
-      <div className="container mx-auto max-w-7xl px-4 py-8">
-        {/* Statistics */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+      {/* Statistics */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow p-6">
             <div className="flex items-center justify-between">
               <div>
@@ -261,7 +323,7 @@ export default function CurrenciesPage() {
               <div>
                 <p className="text-sm text-gray-600">Taux de Change</p>
                 <p className="text-2xl font-bold text-gray-900">
-                  {currencies.reduce((sum, c) => sum + c.exchangeRatesFrom.length, 0)}
+                  {currencies.reduce((sum, c) => sum + (c.exchangeRatesCount || 0), 0)}
                 </p>
               </div>
               <RefreshCw className="w-12 h-12 text-gray-600 opacity-20" />
@@ -269,8 +331,8 @@ export default function CurrenciesPage() {
           </div>
         </div>
 
-        {/* Currencies Table */}
-        <div className="bg-white rounded-lg shadow overflow-hidden">
+      {/* Currencies Table */}
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-200">
             <h2 className="text-xl font-bold">Liste des Devises</h2>
           </div>
@@ -322,7 +384,7 @@ export default function CurrenciesPage() {
                       {currency.decimalPlaces}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                      {currency.exchangeRatesFrom.length} taux
+                      {currency.exchangeRatesCount || 0} taux
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <button
@@ -347,13 +409,13 @@ export default function CurrenciesPage() {
                             <Star className="w-5 h-5" />
                           </button>
                         )}
-                        <Link
-                          href={`/${locale}/admin/currencies/${currency.id}/edit`}
+                        <button
+                          onClick={() => openEditModal(currency)}
                           className="p-1 text-blue-600 hover:bg-blue-50 rounded"
                           title="Modifier"
                         >
                           <Edit className="w-5 h-5" />
-                        </Link>
+                        </button>
                         {!currency.isDefault && (
                           <button
                             onClick={() => deleteCurrency(currency.id)}
@@ -372,25 +434,132 @@ export default function CurrenciesPage() {
           </div>
         </div>
 
-        {currencies.length === 0 && (
-          <div className="bg-white rounded-lg shadow p-12 text-center">
-            <DollarSign className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Aucune devise</h3>
-            <p className="text-gray-500 mb-4">Commencez par ajouter votre première devise</p>
-            <button
-              onClick={() => setShowAddModal(true)}
-              className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700"
-            >
-              Ajouter une devise
-            </button>
+      {currencies.length === 0 && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-12 text-center">
+          <DollarSign className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">Aucune devise</h3>
+          <p className="text-gray-500 mb-4">Commencez par ajouter votre première devise</p>
+          <button
+            onClick={() => setShowAddModal(true)}
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 shadow-lg"
+          >
+            Ajouter une devise
+          </button>
+        </div>
+      )}
+
+      {/* Edit Currency Modal */}
+      {showEditModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl max-w-md w-full p-6 shadow-2xl">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold">Modifier la Devise</h2>
+              <button
+                onClick={() => {
+                  setShowEditModal(false);
+                  setEditingCurrency(null);
+                }}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <form onSubmit={handleEdit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Code ISO 4217
+                </label>
+                <input
+                  type="text"
+                  value={formData.code}
+                  disabled
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-gray-100 cursor-not-allowed"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Nom *
+                </label>
+                <input
+                  type="text"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Symbole *
+                </label>
+                <input
+                  type="text"
+                  value={formData.symbol}
+                  onChange={(e) => setFormData({ ...formData, symbol: e.target.value })}
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Décimales
+                </label>
+                <input
+                  type="number"
+                  value={formData.decimalPlaces}
+                  onChange={(e) => setFormData({ ...formData, decimalPlaces: parseInt(e.target.value) })}
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2"
+                  min="0"
+                  max="4"
+                />
+              </div>
+              <div className="flex items-center gap-4">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={formData.isActive}
+                    onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
+                    className="rounded"
+                  />
+                  <span className="text-sm text-gray-700">Active</span>
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={formData.isDefault}
+                    onChange={(e) => setFormData({ ...formData, isDefault: e.target.checked })}
+                    className="rounded"
+                  />
+                  <span className="text-sm text-gray-700">Par défaut</span>
+                </label>
+              </div>
+              <div className="flex gap-3 pt-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowEditModal(false);
+                    setEditingCurrency(null);
+                  }}
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+                >
+                  Annuler
+                </button>
+                <button
+                  type="submit"
+                  className="flex-1 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
+                >
+                  Enregistrer
+                </button>
+              </div>
+            </form>
           </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Add Currency Modal */}
       {showAddModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg max-w-md w-full p-6">
+          <div className="bg-white rounded-xl max-w-md w-full p-6 shadow-2xl">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold">Ajouter une Devise</h2>
               <button
@@ -493,6 +662,6 @@ export default function CurrenciesPage() {
           </div>
         </div>
       )}
-    </div>
+    </AdminLayout>
   );
 }

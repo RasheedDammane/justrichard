@@ -1,0 +1,2 @@
+This file is just to verify the directory structure exists.
+The edit page should be working at: /[locale]/admin/properties/[id]/edit

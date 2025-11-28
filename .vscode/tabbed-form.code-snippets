@@ -1,0 +1,231 @@
+{
+  "Tabbed Form Template": {
+    "prefix": "tabform",
+    "body": [
+      "'use client';",
+      "",
+      "import { useState } from 'react';",
+      "import { useRouter } from 'next/navigation';",
+      "import TabbedForm from '@/components/admin/TabbedForm';",
+      "import { FormSection, TextInput, TextArea, Select, Checkbox, FormGrid } from '@/components/admin/form-sections/FormSection';",
+      "",
+      "interface ${1:MyData} {",
+      "  id: string;",
+      "  name: string;",
+      "  $2",
+      "}",
+      "",
+      "export default function ${3:MyEditClient}({ data, locale }: { data: ${1:MyData}; locale: string }) {",
+      "  const router = useRouter();",
+      "  const [formData, setFormData] = useState(data);",
+      "  const [loading, setLoading] = useState(false);",
+      "",
+      "  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {",
+      "    const { name, value, type } = e.target;",
+      "    if (type === 'checkbox') {",
+      "      const checked = (e.target as HTMLInputElement).checked;",
+      "      setFormData(prev => ({ ...prev, [name]: checked }));",
+      "    } else {",
+      "      setFormData(prev => ({ ...prev, [name]: value }));",
+      "    }",
+      "  };",
+      "",
+      "  const handleSubmit = async (e: React.FormEvent) => {",
+      "    e.preventDefault();",
+      "    setLoading(true);",
+      "    try {",
+      "      const response = await fetch(`/api/${4:resource}/\\${data.id}`, {",
+      "        method: 'PUT',",
+      "        headers: { 'Content-Type': 'application/json' },",
+      "        body: JSON.stringify(formData),",
+      "      });",
+      "      if (response.ok) {",
+      "        router.push(`/\\${locale}/admin/${4:resource}`);",
+      "        router.refresh();",
+      "      }",
+      "    } catch (error) {",
+      "      console.error(error);",
+      "    } finally {",
+      "      setLoading(false);",
+      "    }",
+      "  };",
+      "",
+      "  const tabs = [",
+      "    {",
+      "      id: 'basic',",
+      "      label: 'Basic',",
+      "      icon: '📝',",
+      "      content: (",
+      "        <FormSection title=\"Basic Information\">",
+      "          $5",
+      "        </FormSection>",
+      "      ),",
+      "    },",
+      "  ];",
+      "",
+      "  return (",
+      "    <div className=\"max-w-5xl mx-auto\">",
+      "      <div className=\"mb-6\">",
+      "        <h1 className=\"text-3xl font-bold text-gray-900\">Edit ${6:Item}</h1>",
+      "        <p className=\"text-gray-600 mt-1\">{data.name}</p>",
+      "      </div>",
+      "      <TabbedForm",
+      "        tabs={tabs}",
+      "        onSubmit={handleSubmit}",
+      "        onCancel={`/\\${locale}/admin/${4:resource}`}",
+      "        loading={loading}",
+      "      />",
+      "    </div>",
+      "  );",
+      "}"
+    ],
+    "description": "Create a complete tabbed form component"
+  },
+
+  "Form Tab": {
+    "prefix": "tab",
+    "body": [
+      "{",
+      "  id: '${1:tabId}',",
+      "  label: '${2:Tab Label}',",
+      "  icon: '${3:📝}',",
+      "  content: (",
+      "    <FormSection title=\"${4:Section Title}\">",
+      "      $5",
+      "    </FormSection>",
+      "  ),",
+      "},"
+    ],
+    "description": "Add a new tab"
+  },
+
+  "Form Section": {
+    "prefix": "section",
+    "body": [
+      "<FormSection ",
+      "  title=\"${1:Section Title}\"",
+      "  description=\"${2:Optional description}\"",
+      ">",
+      "  $3",
+      "</FormSection>"
+    ],
+    "description": "Add a form section"
+  },
+
+  "Text Input": {
+    "prefix": "input",
+    "body": [
+      "<TextInput",
+      "  label=\"${1:Label}\"",
+      "  name=\"${2:fieldName}\"",
+      "  value={formData.${2:fieldName}}",
+      "  onChange={handleChange}",
+      "  ${3:required}",
+      "  placeholder=\"${4:Enter value}\"",
+      "/>"
+    ],
+    "description": "Add a text input"
+  },
+
+  "Text Area": {
+    "prefix": "textarea",
+    "body": [
+      "<TextArea",
+      "  label=\"${1:Label}\"",
+      "  name=\"${2:fieldName}\"",
+      "  value={formData.${2:fieldName}}",
+      "  onChange={handleChange}",
+      "  rows={${3:4}}",
+      "  placeholder=\"${4:Enter value}\"",
+      "/>"
+    ],
+    "description": "Add a textarea"
+  },
+
+  "Select": {
+    "prefix": "select",
+    "body": [
+      "<Select",
+      "  label=\"${1:Label}\"",
+      "  name=\"${2:fieldName}\"",
+      "  value={formData.${2:fieldName}}",
+      "  onChange={handleChange}",
+      "  options={[",
+      "    { value: '${3:value1}', label: '${4:Label 1}' },",
+      "    { value: '${5:value2}', label: '${6:Label 2}' },",
+      "  ]}",
+      "  ${7:required}",
+      "/>"
+    ],
+    "description": "Add a select dropdown"
+  },
+
+  "Checkbox": {
+    "prefix": "checkbox",
+    "body": [
+      "<Checkbox",
+      "  label=\"${1:Label}\"",
+      "  name=\"${2:fieldName}\"",
+      "  checked={formData.${2:fieldName}}",
+      "  onChange={handleChange}",
+      "  help=\"${3:Helper text}\"",
+      "/>"
+    ],
+    "description": "Add a checkbox"
+  },
+
+  "Form Grid": {
+    "prefix": "grid",
+    "body": [
+      "<FormGrid cols={${1:2}}>",
+      "  $2",
+      "</FormGrid>"
+    ],
+    "description": "Add a form grid"
+  },
+
+  "Grid with 2 Inputs": {
+    "prefix": "grid2",
+    "body": [
+      "<FormGrid cols={2}>",
+      "  <TextInput",
+      "    label=\"${1:Label 1}\"",
+      "    name=\"${2:field1}\"",
+      "    value={formData.${2:field1}}",
+      "    onChange={handleChange}",
+      "  />",
+      "  <TextInput",
+      "    label=\"${3:Label 2}\"",
+      "    name=\"${4:field2}\"",
+      "    value={formData.${4:field2}}",
+      "    onChange={handleChange}",
+      "  />",
+      "</FormGrid>"
+    ],
+    "description": "Add a grid with 2 text inputs"
+  },
+
+  "Grid with 3 Inputs": {
+    "prefix": "grid3",
+    "body": [
+      "<FormGrid cols={3}>",
+      "  <TextInput label=\"${1:Field 1}\" name=\"${2:field1}\" value={formData.${2:field1}} onChange={handleChange} />",
+      "  <TextInput label=\"${3:Field 2}\" name=\"${4:field2}\" value={formData.${4:field2}} onChange={handleChange} />",
+      "  <TextInput label=\"${5:Field 3}\" name=\"${6:field3}\" value={formData.${6:field3}} onChange={handleChange} />",
+      "</FormGrid>"
+    ],
+    "description": "Add a grid with 3 text inputs"
+  },
+
+  "Checkbox Group": {
+    "prefix": "checkboxgroup",
+    "body": [
+      "<div className=\"space-y-3\">",
+      "  <Checkbox label=\"${1:Option 1}\" name=\"${2:option1}\" checked={formData.${2:option1}} onChange={handleChange} />",
+      "  <Checkbox label=\"${3:Option 2}\" name=\"${4:option2}\" checked={formData.${4:option2}} onChange={handleChange} />",
+      "  <Checkbox label=\"${5:Option 3}\" name=\"${6:option3}\" checked={formData.${6:option3}} onChange={handleChange} />",
+      "</div>"
+    ],
+    "description": "Add a group of checkboxes"
+  }
+}

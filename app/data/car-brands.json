@@ -1,0 +1,263 @@
+{
+  "car_brands": [
+    {
+      "brand": "Toyota",
+      "models": [
+        "Camry", "Corolla", "RAV4", "Highlander", "Land Cruiser", "Prado",
+        "Fortuner", "Hilux", "Yaris", "Avalon", "Prius", "C-HR", "Venza"
+      ]
+    },
+    {
+      "brand": "Honda",
+      "models": [
+        "Accord", "Civic", "CR-V", "HR-V", "Pilot", "Odyssey",
+        "City", "Jazz", "BR-V", "Ridgeline"
+      ]
+    },
+    {
+      "brand": "Nissan",
+      "models": [
+        "Altima", "Maxima", "Sentra", "Patrol", "X-Trail", "Kicks",
+        "Pathfinder", "Armada", "Murano", "Rogue", "Sunny"
+      ]
+    },
+    {
+      "brand": "Ford",
+      "models": [
+        "F-150", "Mustang", "Explorer", "Escape", "Edge", "Expedition",
+        "Ranger", "Bronco", "EcoSport", "Fusion"
+      ]
+    },
+    {
+      "brand": "Chevrolet",
+      "models": [
+        "Silverado", "Tahoe", "Suburban", "Traverse", "Equinox", "Malibu",
+        "Camaro", "Corvette", "Blazer", "Trailblazer"
+      ]
+    },
+    {
+      "brand": "BMW",
+      "models": [
+        "3 Series", "5 Series", "7 Series", "X1", "X3", "X5", "X6", "X7",
+        "M3", "M5", "Z4", "i4", "iX"
+      ]
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "models": [
+        "C-Class", "E-Class", "S-Class", "GLA", "GLC", "GLE", "GLS",
+        "A-Class", "CLA", "G-Class", "EQC", "EQS"
+      ]
+    },
+    {
+      "brand": "Audi",
+      "models": [
+        "A3", "A4", "A5", "A6", "A7", "A8", "Q3", "Q5", "Q7", "Q8",
+        "e-tron", "RS5", "RS6"
+      ]
+    },
+    {
+      "brand": "Lexus",
+      "models": [
+        "ES", "IS", "LS", "GS", "RX", "NX", "UX", "GX", "LX",
+        "RC", "LC"
+      ]
+    },
+    {
+      "brand": "Hyundai",
+      "models": [
+        "Elantra", "Sonata", "Tucson", "Santa Fe", "Palisade", "Kona",
+        "Venue", "Accent", "Ioniq", "Genesis"
+      ]
+    },
+    {
+      "brand": "Kia",
+      "models": [
+        "Optima", "Forte", "Sportage", "Sorento", "Telluride", "Seltos",
+        "Soul", "Rio", "Stinger", "Carnival", "EV6"
+      ]
+    },
+    {
+      "brand": "Mazda",
+      "models": [
+        "Mazda3", "Mazda6", "CX-3", "CX-5", "CX-9", "CX-30", "CX-50",
+        "MX-5 Miata"
+      ]
+    },
+    {
+      "brand": "Volkswagen",
+      "models": [
+        "Golf", "Jetta", "Passat", "Tiguan", "Atlas", "Arteon",
+        "ID.4", "Taos", "Polo"
+      ]
+    },
+    {
+      "brand": "Subaru",
+      "models": [
+        "Outback", "Forester", "Crosstrek", "Impreza", "Legacy",
+        "Ascent", "WRX", "BRZ"
+      ]
+    },
+    {
+      "brand": "Mitsubishi",
+      "models": [
+        "Outlander", "Eclipse Cross", "Pajero", "Montero Sport",
+        "Mirage", "Lancer", "ASX"
+      ]
+    },
+    {
+      "brand": "Jeep",
+      "models": [
+        "Wrangler", "Grand Cherokee", "Cherokee", "Compass", "Renegade",
+        "Gladiator", "Wagoneer"
+      ]
+    },
+    {
+      "brand": "Land Rover",
+      "models": [
+        "Range Rover", "Range Rover Sport", "Range Rover Evoque",
+        "Range Rover Velar", "Discovery", "Defender"
+      ]
+    },
+    {
+      "brand": "Porsche",
+      "models": [
+        "911", "Cayenne", "Macan", "Panamera", "Taycan", "718 Boxster",
+        "718 Cayman"
+      ]
+    },
+    {
+      "brand": "Volvo",
+      "models": [
+        "S60", "S90", "V60", "V90", "XC40", "XC60", "XC90",
+        "C40 Recharge"
+      ]
+    },
+    {
+      "brand": "Tesla",
+      "models": [
+        "Model S", "Model 3", "Model X", "Model Y", "Cybertruck"
+      ]
+    },
+    {
+      "brand": "GMC",
+      "models": [
+        "Sierra", "Yukon", "Acadia", "Terrain", "Canyon", "Hummer EV"
+      ]
+    },
+    {
+      "brand": "Dodge",
+      "models": [
+        "Charger", "Challenger", "Durango", "Journey", "Ram 1500"
+      ]
+    },
+    {
+      "brand": "Chrysler",
+      "models": [
+        "300", "Pacifica", "Voyager"
+      ]
+    },
+    {
+      "brand": "Infiniti",
+      "models": [
+        "Q50", "Q60", "QX50", "QX55", "QX60", "QX80"
+      ]
+    },
+    {
+      "brand": "Acura",
+      "models": [
+        "ILX", "TLX", "RDX", "MDX", "NSX"
+      ]
+    },
+    {
+      "brand": "Cadillac",
+      "models": [
+        "CT4", "CT5", "XT4", "XT5", "XT6", "Escalade", "Lyriq"
+      ]
+    },
+    {
+      "brand": "Genesis",
+      "models": [
+        "G70", "G80", "G90", "GV60", "GV70", "GV80"
+      ]
+    },
+    {
+      "brand": "Jaguar",
+      "models": [
+        "XE", "XF", "XJ", "F-Type", "E-Pace", "F-Pace", "I-Pace"
+      ]
+    },
+    {
+      "brand": "Maserati",
+      "models": [
+        "Ghibli", "Quattroporte", "Levante", "MC20", "GranTurismo"
+      ]
+    },
+    {
+      "brand": "Alfa Romeo",
+      "models": [
+        "Giulia", "Stelvio", "Tonale"
+      ]
+    },
+    {
+      "brand": "Peugeot",
+      "models": [
+        "208", "308", "508", "2008", "3008", "5008"
+      ]
+    },
+    {
+      "brand": "Renault",
+      "models": [
+        "Clio", "Megane", "Captur", "Kadjar", "Koleos", "Duster"
+      ]
+    },
+    {
+      "brand": "Citroën",
+      "models": [
+        "C3", "C4", "C5 Aircross", "Berlingo"
+      ]
+    },
+    {
+      "brand": "Fiat",
+      "models": [
+        "500", "500X", "Panda", "Tipo", "Ducato"
+      ]
+    },
+    {
+      "brand": "Suzuki",
+      "models": [
+        "Swift", "Vitara", "S-Cross", "Jimny", "Baleno", "Ertiga"
+      ]
+    },
+    {
+      "brand": "Isuzu",
+      "models": [
+        "D-Max", "MU-X"
+      ]
+    },
+    {
+      "brand": "MG",
+      "models": [
+        "MG3", "MG5", "MG6", "HS", "ZS", "RX5"
+      ]
+    },
+    {
+      "brand": "Geely",
+      "models": [
+        "Coolray", "Emgrand", "Azkarra", "Okavango"
+      ]
+    },
+    {
+      "brand": "BYD",
+      "models": [
+        "Atto 3", "Seal", "Han", "Tang", "Song Plus"
+      ]
+    },
+    {
+      "brand": "Chery",
+      "models": [
+        "Tiggo 7", "Tiggo 8", "Arrizo 5", "Arrizo 6"
+      ]
+    }
+  ]
+}

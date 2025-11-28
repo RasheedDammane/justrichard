@@ -1,0 +1,98 @@
+[
+  {
+    "name": "BMW",
+    "slug": "bmw",
+    "description": "Bayerische Motoren Werke - German luxury vehicles",
+    "country": "Germany",
+    "logo": "/images/brands/bmw.svg",
+    "website": "https://www.bmw.com",
+    "isLuxury": true,
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["3 Series", "5 Series", "7 Series", "X5", "X7"]
+  },
+  {
+    "name": "Mercedes-Benz",
+    "slug": "mercedes-benz",
+    "description": "German luxury automobile manufacturer",
+    "country": "Germany",
+    "isLuxury": true,
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["C-Class", "E-Class", "S-Class", "GLE", "GLS"]
+  },
+  {
+    "name": "Toyota",
+    "slug": "toyota",
+    "description": "Japanese automotive manufacturer",
+    "country": "Japan",
+    "isLuxury": false,
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Camry", "Corolla", "Land Cruiser", "Prado", "Hilux"]
+  },
+  {
+    "name": "Lamborghini",
+    "slug": "lamborghini",
+    "description": "Italian luxury sports car manufacturer",
+    "country": "Italy",
+    "isLuxury": true,
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Huracan", "Aventador", "Urus"]
+  },
+  {
+    "name": "Ferrari",
+    "slug": "ferrari",
+    "description": "Italian luxury sports car manufacturer",
+    "country": "Italy",
+    "isLuxury": true,
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["F8 Tributo", "SF90", "Roma", "Portofino"]
+  },
+  {
+    "name": "Porsche",
+    "slug": "porsche",
+    "description": "German sports car manufacturer",
+    "country": "Germany",
+    "isLuxury": true,
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["911", "Cayenne", "Macan", "Panamera"]
+  },
+  {
+    "name": "Audi",
+    "slug": "audi",
+    "description": "German luxury automobile manufacturer",
+    "country": "Germany",
+    "isLuxury": true,
+    "isActive": true,
+    "popularModels": ["A3", "A4", "A6", "Q5", "Q7"]
+  },
+  {
+    "name": "Nissan",
+    "slug": "nissan",
+    "description": "Japanese automobile manufacturer",
+    "country": "Japan",
+    "isActive": true,
+    "popularModels": ["Patrol", "Altima", "Maxima", "X-Trail"]
+  },
+  {
+    "name": "Honda",
+    "slug": "honda",
+    "description": "Japanese automobile manufacturer",
+    "country": "Japan",
+    "isActive": true,
+    "popularModels": ["Accord", "Civic", "CR-V", "Pilot"]
+  },
+  {
+    "name": "Lexus",
+    "slug": "lexus",
+    "description": "Toyota's luxury vehicle division",
+    "country": "Japan",
+    "isLuxury": true,
+    "isActive": true,
+    "popularModels": ["ES", "LS", "RX", "LX"]
+  }
+]

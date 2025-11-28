@@ -1,0 +1,519 @@
+{
+  "admin": {
+    "common": {
+      "add": "Añadir",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "save": "Guardar",
+      "saving": "Guardando...",
+      "cancel": "Cancelar",
+      "select": "Seleccionar",
+      "search": "Buscar",
+      "filter": "Filtrar",
+      "export": "Exportar",
+      "import": "Importar",
+      "refresh": "Actualizar",
+      "total": "Total",
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "featured": "Destacado",
+      "available": "Disponible",
+      "unavailable": "No disponible",
+      "status": "Estado",
+      "actions": "Acciones",
+      "inTotal": "{count} en total",
+      "loading": "Cargando...",
+      "noData": "No hay datos disponibles",
+      "confirm": "Confirmar",
+      "confirmDelete": "¿Está seguro de que desea eliminar este elemento?",
+      "success": "Éxito",
+      "error": "Error",
+      "required": "Requerido",
+      "view": "Ver"
+    },
+    "navigation": {
+      "dashboard": "Panel de Control",
+      "users": "Usuarios",
+      "properties": "Propiedades",
+      "services": "Servicios",
+      "bookings": "Reservas",
+      "categories": "Categorías",
+      "partners": "Socios",
+      "doctors": "Médicos",
+      "lawyers": "Abogados",
+      "coaches": "Entrenadores",
+      "maids": "Personal Doméstico",
+      "motorbikes": "Motocicletas",
+      "rentalCars": "Coches de Alquiler",
+      "yachts": "Yates",
+      "activities": "Actividades",
+      "suppliers": "Proveedores",
+      "settings": "Configuración",
+      "logout": "Cerrar Sesión"
+    },
+    "dashboard": {
+      "title": "Panel de Control",
+      "welcome": "Bienvenido, {name}",
+      "overview": "Resumen",
+      "recentActivity": "Actividad Reciente",
+      "quickStats": "Estadísticas Rápidas",
+      "totalUsers": "Total de Usuarios",
+      "totalBookings": "Total de Reservas",
+      "totalRevenue": "Ingresos Totales",
+      "activeProviders": "Proveedores Activos"
+    },
+    "users": {
+      "title": "Gestión de Usuarios",
+      "subtitle": "Gestionar todos los usuarios de la plataforma",
+      "new": "Nuevo Usuario",
+      "edit": "Editar Usuario",
+      "addNew": "Añadir Nuevo Usuario",
+      "listTitle": "Lista de Usuarios",
+      "deactivate": "Desactivar",
+      "stats": {
+        "totalUsers": "Total de Usuarios",
+        "customers": "Clientes",
+        "providers": "Proveedores",
+        "admins": "Administradores"
+      },
+      "table": {
+        "user": "Usuario",
+        "contact": "Contacto",
+        "email": "Correo Electrónico",
+        "role": "Rol",
+        "bookings": "Reservas",
+        "reviews": "Reseñas",
+        "registration": "Registro",
+        "status": "Estado",
+        "createdAt": "Creado el",
+        "actions": "Acciones"
+      }
+    },
+    "services": {
+      "title": "Gestión de Servicios",
+      "subtitle": "Gestionar todos los servicios de la plataforma",
+      "new": "Nuevo Servicio",
+      "edit": "Editar Servicio",
+      "addNew": "Nuevo Servicio",
+      "listTitle": "Lista de Servicios",
+      "stats": {
+        "total": "Total de Servicios",
+        "active": "Servicios Activos",
+        "totalBookings": "Total de Reservas"
+      },
+      "table": {
+        "service": "Servicio",
+        "category": "Categoría",
+        "bookings": "Reservas",
+        "reviews": "Reseñas",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "bookings": {
+      "title": "Gestión de Reservas",
+      "subtitle": "Gestionar todas las reservas de la plataforma",
+      "new": "Nueva Reserva",
+      "edit": "Editar Reserva",
+      "addNew": "Añadir Nueva Reserva",
+      "listTitle": "Lista de Reservas",
+      "stats": {
+        "total": "Total",
+        "pending": "Pendiente",
+        "confirmed": "Confirmadas",
+        "completed": "Completadas",
+        "cancelled": "Canceladas",
+        "revenue": "Ingresos"
+      },
+      "status": {
+        "pending": "Pendiente",
+        "confirmed": "Confirmado",
+        "completed": "Completado",
+        "cancelled": "Cancelado"
+      },
+      "table": {
+        "client": "Cliente",
+        "service": "Servicio",
+        "dates": "Fechas",
+        "type": "Tipo",
+        "startDate": "Fecha de Inicio",
+        "endDate": "Fecha de Fin",
+        "status": "Estado",
+        "total": "Total",
+        "actions": "Acciones"
+      }
+    },
+    "categories": {
+      "title": "Gestión de Categorías",
+      "subtitle": "Gestionar todas las categorías de servicios",
+      "new": "Nueva Categoría",
+      "edit": "Editar Categoría",
+      "addNew": "Nueva Categoría",
+      "listTitle": "Lista de Categorías",
+      "stats": {
+        "total": "Total de Categorías",
+        "active": "Categorías Activas",
+        "totalServices": "Total de Servicios"
+      },
+      "table": {
+        "category": "Categoría",
+        "services": "Servicios",
+        "order": "Orden",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "partners": {
+      "title": "Gestión de Socios",
+      "subtitle": "Gestionar todos los socios y membresías",
+      "new": "Nuevo Socio",
+      "edit": "Editar Socio",
+      "addNew": "Nuevo Socio",
+      "listTitle": "Lista de Socios",
+      "stats": {
+        "total": "Total de Socios",
+        "active": "Socios Activos",
+        "pending": "Pendiente",
+        "revenue": "Ingresos Totales"
+      },
+      "table": {
+        "partner": "Socio",
+        "services": "Servicios",
+        "revenue": "Ingresos",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "doctors": {
+      "title": "Gestión de Médicos",
+      "subtitle": "Gestionar todos los médicos y profesionales de la salud",
+      "new": "Nuevo Médico",
+      "edit": "Editar Médico",
+      "addNew": "Nuevo Médico",
+      "listTitle": "Lista de Médicos",
+      "stats": {
+        "total": "Total de Médicos",
+        "active": "Médicos Activos",
+        "totalBookings": "Total de Reservas",
+        "avgRating": "Calificación Promedio"
+      },
+      "table": {
+        "doctor": "Médico",
+        "location": "Ubicación",
+        "bookings": "Reservas",
+        "reviews": "Reseñas",
+        "rating": "Calificación",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "lawyers": {
+      "title": "Gestión de Abogados",
+      "subtitle": "Gestionar todos los abogados y profesionales legales",
+      "new": "Nuevo Abogado",
+      "edit": "Editar Abogado",
+      "addNew": "Nuevo Abogado",
+      "listTitle": "Lista de Abogados",
+      "stats": {
+        "total": "Total de Abogados",
+        "active": "Abogados Activos",
+        "totalBookings": "Total de Reservas",
+        "avgRating": "Calificación Promedio"
+      },
+      "table": {
+        "lawyer": "Abogado",
+        "location": "Ubicación",
+        "bookings": "Reservas",
+        "reviews": "Reseñas",
+        "rating": "Calificación",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "coaches": {
+      "title": "Gestión de Entrenadores",
+      "subtitle": "Gestionar todos los entrenadores y profesionales del fitness",
+      "new": "Nuevo Entrenador",
+      "edit": "Editar Entrenador",
+      "addNew": "Nuevo Entrenador",
+      "listTitle": "Lista de Entrenadores",
+      "stats": {
+        "total": "Total de Entrenadores",
+        "active": "Entrenadores Activos",
+        "totalBookings": "Total de Reservas",
+        "avgRating": "Calificación Promedio"
+      },
+      "table": {
+        "coach": "Entrenador",
+        "location": "Ubicación",
+        "bookings": "Reservas",
+        "reviews": "Reseñas",
+        "rating": "Calificación",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "activities": {
+      "title": "Gestión de Actividades",
+      "subtitle": "Gestionar todas las actividades y experiencias",
+      "new": "Nueva Actividad",
+      "edit": "Editar Actividad",
+      "addNew": "Nueva Actividad",
+      "listTitle": "Lista de Actividades",
+      "stats": {
+        "total": "Total de Actividades",
+        "active": "Actividades Activas",
+        "totalBookings": "Total de Reservas",
+        "avgRating": "Calificación Promedio"
+      },
+      "table": {
+        "activity": "Actividad",
+        "location": "Ubicación",
+        "bookings": "Reservas",
+        "reviews": "Reseñas",
+        "rating": "Calificación",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "suppliers": {
+      "title": "Gestión de Proveedores",
+      "subtitle": "Gestionar todos los proveedores y vendedores",
+      "new": "Nuevo Proveedor",
+      "edit": "Editar Proveedor",
+      "addNew": "Nuevo Proveedor",
+      "listTitle": "Lista de Proveedores",
+      "stats": {
+        "total": "Total de Proveedores",
+        "active": "Proveedores Activos",
+        "pending": "Pendiente",
+        "revenue": "Ingresos Totales"
+      },
+      "table": {
+        "supplier": "Proveedor",
+        "services": "Servicios",
+        "revenue": "Ingresos",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "transfers": {
+      "title": "Gestión de Traslados",
+      "subtitle": "Gestionar todos los traslados y servicios de transporte",
+      "new": "Nuevo Traslado",
+      "edit": "Editar Traslado",
+      "addNew": "Nuevo Traslado",
+      "listTitle": "Lista de Traslados",
+      "stats": {
+        "total": "Total de Traslados",
+        "active": "Traslados Activos",
+        "pending": "Pendiente",
+        "revenue": "Ingresos Totales"
+      },
+      "table": {
+        "transfer": "Traslado",
+        "services": "Servicios",
+        "revenue": "Ingresos",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "blog": {
+      "title": "Gestión del Blog",
+      "subtitle": "Gestionar todas las publicaciones y artículos del blog",
+      "new": "Nueva Publicación",
+      "edit": "Editar Publicación",
+      "addNew": "Nueva Publicación",
+      "listTitle": "Publicaciones del Blog",
+      "stats": {
+        "total": "Total de Publicaciones",
+        "published": "Publicadas",
+        "totalViews": "Total de Vistas",
+        "totalComments": "Total de Comentarios"
+      },
+      "table": {
+        "post": "Publicación",
+        "author": "Autor",
+        "views": "Vistas",
+        "comments": "Comentarios",
+        "likes": "Me Gusta",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    },
+    "chatbots": {
+      "title": "Gestión de Chatbots",
+      "subtitle": "Gestionar todos los chatbots y asistentes de IA",
+      "new": "Nuevo Chatbot",
+      "edit": "Editar Chatbot",
+      "addNew": "Nuevo Chatbot",
+      "import": "Importar Chatbot",
+      "listTitle": "Lista de Chatbots"
+    },
+    "notifications": {
+      "title": "Gestión de Notificaciones",
+      "subtitle": "Gestionar todas las notificaciones del sistema",
+      "new": "Nueva Notificación",
+      "edit": "Editar Notificación",
+      "addNew": "Enviar Notificación",
+      "listTitle": "Lista de Notificaciones"
+    },
+    "analytics": {
+      "title": "Análisis e Informes",
+      "subtitle": "Ver análisis y generar informes",
+      "new": "Nuevo Informe",
+      "edit": "Editar Informe",
+      "listTitle": "Panel de Análisis"
+    },
+    "promotions": {
+      "title": "Gestión de Promociones",
+      "subtitle": "Gestionar todas las promociones y ofertas",
+      "new": "Nueva Promoción",
+      "edit": "Editar Promoción",
+      "addNew": "Nueva Promoción",
+      "listTitle": "Lista de Promociones"
+    },
+    "cmsPages": {
+      "title": "Páginas CMS",
+      "subtitle": "Gestionar todas las páginas CMS",
+      "listTitle": "Páginas CMS"
+    },
+    "media": {
+      "title": "Biblioteca de Medios",
+      "subtitle": "Gestionar todos los archivos multimedia",
+      "listTitle": "Archivos Multimedia"
+    },
+    "data": {
+      "title": "Gestión de Datos",
+      "subtitle": "Importar y exportar datos",
+      "new": "Nueva Importación",
+      "import": "Importar Datos",
+      "export": "Exportar Datos"
+    },
+    "simulators": {
+      "title": "Gestión de Simuladores",
+      "subtitle": "Gestionar todos los simuladores de precios",
+      "new": "Nuevo Simulador",
+      "edit": "Editar Simulador",
+      "addNew": "Nuevo Simulador",
+      "listTitle": "Lista de Simuladores"
+    },
+    "cryptoPayments": {
+      "title": "Pagos con Criptomonedas",
+      "subtitle": "Gestionar transacciones de criptomonedas",
+      "new": "Nueva Transacción",
+      "edit": "Editar Transacción",
+      "listTitle": "Transacciones Cripto"
+    },
+    "logs": {
+      "title": "Registros del Sistema",
+      "subtitle": "Ver todos los registros y actividades del sistema",
+      "activityLogs": "Registros de Actividad",
+      "errorLogs": "Registros de Errores",
+      "viewAll": "Ver Todos los Registros",
+      "listTitle": "Registros"
+    },
+    "currencies": {
+      "title": "Gestión de Monedas",
+      "subtitle": "Gestionar todas las monedas",
+      "new": "Nueva Moneda",
+      "edit": "Editar Moneda",
+      "addNew": "Nueva Moneda",
+      "listTitle": "Lista de Monedas"
+    },
+    "geography": {
+      "title": "Gestión Geográfica",
+      "subtitle": "Gestionar países, ciudades y ubicaciones",
+      "listTitle": "Geografía"
+    },
+    "exchangeRates": {
+      "title": "Tasas de Cambio",
+      "subtitle": "Gestionar tasas de cambio de monedas",
+      "listTitle": "Tasas de Cambio"
+    },
+    "styles": {
+      "title": "Gestión de Estilos",
+      "subtitle": "Personalizar la apariencia de la aplicación",
+      "listTitle": "Estilos"
+    },
+    "routes": {
+      "title": "Gestión de Rutas",
+      "subtitle": "Gestionar rutas de la aplicación",
+      "new": "Nueva Ruta",
+      "edit": "Editar Ruta",
+      "listTitle": "Rutas"
+    },
+    "maids": {
+      "title": "Personal Doméstico",
+      "subtitle": "{count} personal doméstico en total",
+      "new": "Nuevo Personal",
+      "edit": "Editar Personal",
+      "addNew": "Añadir Nuevo Personal Doméstico"
+    },
+    "motorbikes": {
+      "title": "Motocicletas",
+      "subtitle": "{count} motocicletas en total",
+      "new": "Nueva Motocicleta",
+      "edit": "Editar Motocicleta",
+      "addNew": "Añadir Nueva Motocicleta"
+    },
+    "rentalCars": {
+      "title": "Coches de Alquiler",
+      "subtitle": "{count} coches de alquiler en total",
+      "new": "Nuevo Coche",
+      "edit": "Editar Coche",
+      "addNew": "Añadir Nuevo Coche de Alquiler"
+    },
+    "yachts": {
+      "title": "Yates",
+      "subtitle": "{count} yates en total",
+      "new": "Nuevo Yate",
+      "edit": "Editar Yate",
+      "addNew": "Añadir Nuevo Yate"
+    },
+    "properties": {
+      "title": "Gestión Inmobiliaria",
+      "subtitle": "{count} propiedad(es) • {published} publicadas",
+      "new": "Nueva Propiedad",
+      "edit": "Editar Propiedad",
+      "addNew": "Añadir Propiedad",
+      "noProperties": "Sin propiedades",
+      "addFirstProperty": "Comience agregando su primera propiedad",
+      "stats": {
+        "total": "Total",
+        "draft": "Borradores",
+        "published": "Publicadas",
+        "sold": "Vendidas",
+        "rented": "Alquiladas"
+      },
+      "filters": {
+        "all": "Todas",
+        "draft": "Borradores",
+        "published": "Publicadas",
+        "sold": "Vendidas",
+        "rented": "Alquiladas"
+      },
+      "form": {
+        "title": "Título",
+        "description": "Descripción",
+        "propertyType": "Tipo de Propiedad",
+        "listingType": "Tipo de Anuncio",
+        "status": "Estado",
+        "price": "Precio",
+        "area": "Área (m²)",
+        "bedrooms": "Dormitorios",
+        "bathrooms": "Baños",
+        "featured": "Destacada",
+        "images": "Imágenes"
+      },
+      "table": {
+        "property": "Propiedad",
+        "type": "Tipo",
+        "price": "Precio",
+        "location": "Ubicación",
+        "status": "Estado",
+        "actions": "Acciones"
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Harley-Davidson",
+    "slug": "harley-davidson",
+    "description": "American motorcycle manufacturer",
+    "country": "United States",
+    "yearFounded": 1903,
+    "specialization": "Cruiser Motorcycles",
+    "website": "https://www.harley-davidson.com",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Street", "Sportster", "Softail", "Touring"]
+  },
+  {
+    "name": "Ducati",
+    "slug": "ducati",
+    "description": "Italian motorcycle manufacturer",
+    "country": "Italy",
+    "yearFounded": 1926,
+    "specialization": "Sport Bikes",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Panigale", "Monster", "Multistrada", "Scrambler"]
+  },
+  {
+    "name": "BMW Motorrad",
+    "slug": "bmw-motorrad",
+    "description": "German motorcycle manufacturer",
+    "country": "Germany",
+    "specialization": "Adventure & Touring",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["R 1250 GS", "S 1000 RR", "F 900 R"]
+  },
+  {
+    "name": "Yamaha",
+    "slug": "yamaha",
+    "description": "Japanese motorcycle manufacturer",
+    "country": "Japan",
+    "specialization": "All Types",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["YZF-R1", "MT-09", "TMAX", "Tracer"]
+  },
+  {
+    "name": "Honda Motorcycles",
+    "slug": "honda-motorcycles",
+    "description": "Japanese motorcycle manufacturer",
+    "country": "Japan",
+    "specialization": "All Types",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["CBR1000RR", "Africa Twin", "Gold Wing", "PCX"]
+  },
+  {
+    "name": "Kawasaki",
+    "slug": "kawasaki",
+    "description": "Japanese motorcycle manufacturer",
+    "country": "Japan",
+    "specialization": "Sport & Touring",
+    "isActive": true,
+    "popularModels": ["Ninja", "Z series", "Versys"]
+  },
+  {
+    "name": "Suzuki",
+    "slug": "suzuki",
+    "description": "Japanese motorcycle manufacturer",
+    "country": "Japan",
+    "specialization": "Sport Bikes",
+    "isActive": true,
+    "popularModels": ["GSX-R", "Hayabusa", "V-Strom"]
+  },
+  {
+    "name": "KTM",
+    "slug": "ktm",
+    "description": "Austrian motorcycle manufacturer",
+    "country": "Austria",
+    "specialization": "Off-Road & Adventure",
+    "isActive": true,
+    "isFeatured": true,
+    "popularModels": ["Duke", "RC", "Adventure"]
+  }
+]

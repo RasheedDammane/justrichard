@@ -1,0 +1,58 @@
+{
+  "platformName": "JustRichard",
+  "tagline": "แพลตฟอร์มที่เชื่อถือได้ของคุณที่เชื่อมต่อลูกค้ากับผู้เชี่ยวชาญที่ได้รับการตรวจสอบในกว่า 15 หมวดหมู่ในหลายประเทศ",
+  "copyright": "© 2025 JustRichard สงวนลิขสิทธิ์",
+  "sections": [
+    {
+      "title": "บริษัท",
+      "links": [
+        { "label": "เกี่ยวกับเรา", "href": "/th/about" },
+        { "label": "อาชีพ", "href": "/th/careers" },
+        { "label": "สื่อมวลชน", "href": "/th/press" },
+        { "label": "บล็อก", "href": "/th/blog" },
+        { "label": "พันธมิตร", "href": "/th/partnerships" }
+      ]
+    },
+    {
+      "title": "บริการ",
+      "links": [
+        { "label": "บริการทั้งหมด", "href": "/th/services" },
+        { "label": "หมวดหมู่", "href": "/th/categories" },
+        { "label": "อสังหาริมทรัพย์", "href": "/th/services/real-estate" },
+        { "label": "บริการทางกฎหมาย", "href": "/th/services/legal" },
+        { "label": "เช่ารถ", "href": "/th/services/rental" },
+        { "label": "บริการรับส่ง", "href": "/th/services/transfer" }
+      ]
+    },
+    {
+      "title": "สนับสนุน",
+      "links": [
+        { "label": "ศูนย์ช่วยเหลือ", "href": "/th/help" },
+        { "label": "ติดต่อเรา", "href": "/th/contact" },
+        { "label": "คำถามที่พบบ่อย", "href": "/th/faq" },
+        { "label": "แนวทางความปลอดภัย", "href": "/th/safety" },
+        { "label": "เงื่อนไขการให้บริการ", "href": "/th/terms" },
+        { "label": "นโยบายความเป็นส่วนตัว", "href": "/th/privacy" }
+      ]
+    },
+    {
+      "title": "ติดตาม",
+      "links": [
+        { "label": "Facebook", "href": "https://facebook.com", "external": true },
+        { "label": "Twitter", "href": "https://twitter.com", "external": true },
+        { "label": "Instagram", "href": "https://instagram.com", "external": true },
+        { "label": "LinkedIn", "href": "https://linkedin.com", "external": true }
+      ]
+    }
+  ],
+  "newsletter": {
+    "title": "จดหมายข่าว",
+    "description": "รับข้อมูลอัปเดตเกี่ยวกับบริการและโปรโมชันใหม่",
+    "placeholder": "ที่อยู่อีเมลของคุณ",
+    "buttonLabel": "สมัครรับข้อมูล"
+  },
+  "legal": {
+    "registrationInfo": "เลขทะเบียน: 123456789 | เลขประจำตัวผู้เสียภาษี: AE123456789",
+    "disclaimer": "JustRichard ทำหน้าที่เป็นแพลตฟอร์มตลาดที่เชื่อมต่อผู้ให้บริการกับลูกค้า เราไม่ได้จ้างผู้ให้บริการและไม่รับผิดชอบต่อบริการที่ให้"
+  }
+}

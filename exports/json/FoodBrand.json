@@ -1,0 +1,57 @@
+[
+  {
+    "id": "cmihuqlrc0008ym00cuxxrwm5",
+    "name": "Maison Deluxe",
+    "slug": "maison-deluxe",
+    "description": "Luxury gourmet products",
+    "logo": "/images/brands/maison-deluxe.svg",
+    "website": null,
+    "isActive": true,
+    "createdAt": "2025-11-27T19:54:06.889Z",
+    "updatedAt": "2025-11-27T19:54:06.889Z"
+  },
+  {
+    "id": "cmihuqlrc0007ym008iaszu05",
+    "name": "La Fromagerie",
+    "slug": "la-fromagerie",
+    "description": "Artisan French cheese makers",
+    "logo": "/images/brands/la-fromagerie.svg",
+    "website": null,
+    "isActive": true,
+    "createdAt": "2025-11-27T19:54:06.889Z",
+    "updatedAt": "2025-11-27T19:54:06.889Z"
+  },
+  {
+    "id": "cmihuqlrc0009ym00yhl9am0n",
+    "name": "Häagen-Dazs",
+    "slug": "haagen-dazs",
+    "description": "Premium ice cream brand",
+    "logo": "/images/brands/haagen-dazs.svg",
+    "website": null,
+    "isActive": true,
+    "createdAt": "2025-11-27T19:54:06.889Z",
+    "updatedAt": "2025-11-27T19:54:06.889Z"
+  },
+  {
+    "id": "cmihuqlrc0006ym0078r8ad8w",
+    "name": "Lindt",
+    "slug": "lindt",
+    "description": "Swiss chocolate excellence",
+    "logo": "/images/brands/lindt.svg",
+    "website": null,
+    "isActive": true,
+    "createdAt": "2025-11-27T19:54:06.889Z",
+    "updatedAt": "2025-11-27T19:54:06.889Z"
+  },
+  {
+    "id": "cmihuqlrd000aym00471m5xbk",
+    "name": "Pâtisserie Royale",
+    "slug": "patisserie-royale",
+    "description": "Fine French pastries and cakes",
+    "logo": "/images/brands/patisserie-royale.svg",
+    "website": null,
+    "isActive": true,
+    "createdAt": "2025-11-27T19:54:06.889Z",
+    "updatedAt": "2025-11-27T19:54:06.889Z"
+  }
+]

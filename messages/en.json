@@ -1,4 +1,17 @@
 {
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "categories": "Categories",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "profile": "Profile",
+    "admin": "Admin",
+    "logout": "Logout"
+  },
   "common": {
     "home": "Home",
     "services": "Services",
@@ -416,5 +429,104 @@
     "intro": "Important legal information about CommunityHub.",
     "company": "Company Information",
     "compliance": "Regulatory Compliance"
+  },
+  "auth": {
+    "signup": {
+      "title": "Create Your Account",
+      "subtitle": "Join our community and get started today",
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "signupButton": "Sign Up",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Log In"
+    },
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Log in to your account",
+      "email": "Email Address",
+      "password": "Password",
+      "loginButton": "Log In",
+      "forgotPassword": "Forgot Password?",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Sign Up"
+    }
+  },
+  "admin": {
+    "common": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "back": "Back",
+      "view": "View",
+      "search": "Search",
+      "filter": "Filter",
+      "export": "Export",
+      "import": "Import",
+      "refresh": "Refresh",
+      "loading": "Loading...",
+      "noData": "No data available",
+      "confirm": "Confirm",
+      "yes": "Yes",
+      "no": "No",
+      "active": "Active",
+      "inactive": "Inactive",
+      "status": "Status",
+      "actions": "Actions",
+      "details": "Details",
+      "settings": "Settings"
+    },
+    "properties": {
+      "title": "Properties",
+      "subtitle": "Manage your property listings",
+      "addNew": "Add New Property",
+      "stats": {
+        "total": "Total Properties",
+        "published": "Published",
+        "draft": "Draft",
+        "sold": "Sold",
+        "rented": "Rented"
+      },
+      "filters": {
+        "all": "All",
+        "draft": "Draft",
+        "published": "Published",
+        "sold": "Sold",
+        "rented": "Rented"
+      },
+      "form": {
+        "name": "Property Name",
+        "slug": "Slug",
+        "description": "Description",
+        "type": "Property Type",
+        "status": "Status",
+        "listingType": "Listing Type",
+        "salePrice": "Sale Price",
+        "rentPrice": "Rent Price",
+        "currency": "Currency",
+        "bedrooms": "Bedrooms",
+        "bathrooms": "Bathrooms",
+        "area": "Area",
+        "city": "City",
+        "country": "Country",
+        "address": "Address",
+        "featured": "Featured",
+        "active": "Active",
+        "tabs": {
+          "basic": "Basic Information",
+          "details": "Property Details",
+          "location": "Location",
+          "pricing": "Pricing",
+          "media": "Media",
+          "seo": "SEO"
+        }
+      },
+      "noProperties": "No properties found",
+      "createFirst": "Create your first property to get started"
+    }
   }
 }

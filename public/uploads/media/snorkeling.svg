@@ -1,0 +1,18 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#DBEAFE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563EB;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#grad)"/>
+  <text x="400" y="280" font-size="180" text-anchor="middle" fill="#2563EB" opacity="0.3">
+    🤿
+  </text>
+  <text x="400" y="400" font-size="32" font-weight="bold" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif">
+    Snorkeling
+  </text>
+  <text x="400" y="440" font-size="18" text-anchor="middle" fill="#2563EB" opacity="0.7" font-family="Arial, sans-serif">
+    JustRichard Activities
+  </text>
+</svg>

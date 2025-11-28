@@ -1,0 +1,519 @@
+{
+  "admin": {
+    "common": {
+      "add": "追加",
+      "edit": "編集",
+      "delete": "削除",
+      "save": "保存",
+      "saving": "保存中...",
+      "cancel": "キャンセル",
+      "select": "選択",
+      "search": "検索",
+      "filter": "フィルター",
+      "export": "エクスポート",
+      "import": "インポート",
+      "refresh": "更新",
+      "total": "合計",
+      "active": "アクティブ",
+      "inactive": "非アクティブ",
+      "featured": "おすすめ",
+      "available": "利用可能",
+      "unavailable": "利用不可",
+      "status": "ステータス",
+      "actions": "アクション",
+      "inTotal": "合計 {count} 件",
+      "loading": "読み込み中...",
+      "noData": "データがありません",
+      "confirm": "確認",
+      "confirmDelete": "この項目を削除してもよろしいですか？",
+      "success": "成功",
+      "error": "エラー",
+      "required": "必須",
+      "view": "表示"
+    },
+    "navigation": {
+      "dashboard": "ダッシュボード",
+      "users": "ユーザー",
+      "properties": "物件",
+      "services": "サービス",
+      "bookings": "予約",
+      "categories": "カテゴリー",
+      "partners": "パートナー",
+      "doctors": "医師",
+      "lawyers": "弁護士",
+      "coaches": "コーチ",
+      "maids": "家事代行",
+      "motorbikes": "バイク",
+      "rentalCars": "レンタカー",
+      "yachts": "ヨット",
+      "activities": "アクティビティ",
+      "suppliers": "サプライヤー",
+      "settings": "設定",
+      "logout": "ログアウト"
+    },
+    "dashboard": {
+      "title": "ダッシュボード",
+      "welcome": "ようこそ、{name}さん",
+      "overview": "概要",
+      "recentActivity": "最近のアクティビティ",
+      "quickStats": "クイック統計",
+      "totalUsers": "総ユーザー数",
+      "totalBookings": "総予約数",
+      "totalRevenue": "総収益",
+      "activeProviders": "アクティブなプロバイダー"
+    },
+    "users": {
+      "title": "ユーザー管理",
+      "subtitle": "すべてのプラットフォームユーザーを管理",
+      "new": "新規ユーザー",
+      "edit": "ユーザー編集",
+      "addNew": "新規ユーザーを追加",
+      "listTitle": "ユーザー一覧",
+      "deactivate": "無効化",
+      "stats": {
+        "totalUsers": "総ユーザー数",
+        "customers": "顧客",
+        "providers": "プロバイダー",
+        "admins": "管理者"
+      },
+      "table": {
+        "user": "ユーザー",
+        "contact": "連絡先",
+        "email": "メール",
+        "role": "役割",
+        "bookings": "予約",
+        "reviews": "レビュー",
+        "registration": "登録",
+        "status": "ステータス",
+        "createdAt": "作成日",
+        "actions": "アクション"
+      }
+    },
+    "services": {
+      "title": "サービス管理",
+      "subtitle": "すべてのプラットフォームサービスを管理",
+      "new": "新規サービス",
+      "edit": "サービス編集",
+      "addNew": "新規サービス",
+      "listTitle": "サービス一覧",
+      "stats": {
+        "total": "総サービス数",
+        "active": "アクティブなサービス",
+        "totalBookings": "総予約数"
+      },
+      "table": {
+        "service": "サービス",
+        "category": "カテゴリー",
+        "bookings": "予約",
+        "reviews": "レビュー",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "bookings": {
+      "title": "予約管理",
+      "subtitle": "すべてのプラットフォーム予約を管理",
+      "new": "新規予約",
+      "edit": "予約編集",
+      "addNew": "新規予約を追加",
+      "listTitle": "予約一覧",
+      "stats": {
+        "total": "合計",
+        "pending": "保留中",
+        "confirmed": "確認済み",
+        "completed": "完了",
+        "cancelled": "キャンセル",
+        "revenue": "収益"
+      },
+      "status": {
+        "pending": "保留中",
+        "confirmed": "確認済み",
+        "completed": "完了",
+        "cancelled": "キャンセル"
+      },
+      "table": {
+        "client": "顧客",
+        "service": "サービス",
+        "dates": "日付",
+        "type": "タイプ",
+        "startDate": "開始日",
+        "endDate": "終了日",
+        "status": "ステータス",
+        "total": "合計",
+        "actions": "アクション"
+      }
+    },
+    "categories": {
+      "title": "カテゴリー管理",
+      "subtitle": "すべてのサービスカテゴリーを管理",
+      "new": "新規カテゴリー",
+      "edit": "カテゴリー編集",
+      "addNew": "新規カテゴリー",
+      "listTitle": "カテゴリー一覧",
+      "stats": {
+        "total": "総カテゴリー数",
+        "active": "アクティブなカテゴリー",
+        "totalServices": "総サービス数"
+      },
+      "table": {
+        "category": "カテゴリー",
+        "services": "サービス",
+        "order": "順序",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "partners": {
+      "title": "パートナー管理",
+      "subtitle": "すべてのパートナーとパートナーシップを管理",
+      "new": "新規パートナー",
+      "edit": "パートナー編集",
+      "addNew": "新規パートナー",
+      "listTitle": "パートナー一覧",
+      "stats": {
+        "total": "総パートナー数",
+        "active": "アクティブなパートナー",
+        "pending": "保留中",
+        "revenue": "総収益"
+      },
+      "table": {
+        "partner": "パートナー",
+        "services": "サービス",
+        "revenue": "収益",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "doctors": {
+      "title": "医師管理",
+      "subtitle": "すべての医師と医療専門家を管理",
+      "new": "新規医師",
+      "edit": "医師編集",
+      "addNew": "新規医師",
+      "listTitle": "医師一覧",
+      "stats": {
+        "total": "総医師数",
+        "active": "アクティブな医師",
+        "totalBookings": "総予約数",
+        "avgRating": "平均評価"
+      },
+      "table": {
+        "doctor": "医師",
+        "location": "場所",
+        "bookings": "予約",
+        "reviews": "レビュー",
+        "rating": "評価",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "lawyers": {
+      "title": "弁護士管理",
+      "subtitle": "すべての弁護士と法律専門家を管理",
+      "new": "新規弁護士",
+      "edit": "弁護士編集",
+      "addNew": "新規弁護士",
+      "listTitle": "弁護士一覧",
+      "stats": {
+        "total": "総弁護士数",
+        "active": "アクティブな弁護士",
+        "totalBookings": "総予約数",
+        "avgRating": "平均評価"
+      },
+      "table": {
+        "lawyer": "弁護士",
+        "location": "場所",
+        "bookings": "予約",
+        "reviews": "レビュー",
+        "rating": "評価",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "coaches": {
+      "title": "コーチ管理",
+      "subtitle": "すべてのコーチとフィットネス専門家を管理",
+      "new": "新規コーチ",
+      "edit": "コーチ編集",
+      "addNew": "新規コーチ",
+      "listTitle": "コーチ一覧",
+      "stats": {
+        "total": "総コーチ数",
+        "active": "アクティブなコーチ",
+        "totalBookings": "総予約数",
+        "avgRating": "平均評価"
+      },
+      "table": {
+        "coach": "コーチ",
+        "location": "場所",
+        "bookings": "予約",
+        "reviews": "レビュー",
+        "rating": "評価",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "activities": {
+      "title": "アクティビティ管理",
+      "subtitle": "すべてのアクティビティと体験を管理",
+      "new": "新規アクティビティ",
+      "edit": "アクティビティ編集",
+      "addNew": "新規アクティビティ",
+      "listTitle": "アクティビティ一覧",
+      "stats": {
+        "total": "総アクティビティ数",
+        "active": "アクティブなアクティビティ",
+        "totalBookings": "総予約数",
+        "avgRating": "平均評価"
+      },
+      "table": {
+        "activity": "アクティビティ",
+        "location": "場所",
+        "bookings": "予約",
+        "reviews": "レビュー",
+        "rating": "評価",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "suppliers": {
+      "title": "サプライヤー管理",
+      "subtitle": "すべてのサプライヤーとベンダーを管理",
+      "new": "新規サプライヤー",
+      "edit": "サプライヤー編集",
+      "addNew": "新規サプライヤー",
+      "listTitle": "サプライヤー一覧",
+      "stats": {
+        "total": "総サプライヤー数",
+        "active": "アクティブなサプライヤー",
+        "pending": "保留中",
+        "revenue": "総収益"
+      },
+      "table": {
+        "supplier": "サプライヤー",
+        "services": "サービス",
+        "revenue": "収益",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "transfers": {
+      "title": "送迎管理",
+      "subtitle": "すべての送迎と交通サービスを管理",
+      "new": "新規送迎",
+      "edit": "送迎編集",
+      "addNew": "新規送迎",
+      "listTitle": "送迎一覧",
+      "stats": {
+        "total": "総送迎数",
+        "active": "アクティブな送迎",
+        "pending": "保留中",
+        "revenue": "総収益"
+      },
+      "table": {
+        "transfer": "送迎",
+        "services": "サービス",
+        "revenue": "収益",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "blog": {
+      "title": "ブログ管理",
+      "subtitle": "すべてのブログ記事とコンテンツを管理",
+      "new": "新規記事",
+      "edit": "記事編集",
+      "addNew": "新規記事",
+      "listTitle": "ブログ記事",
+      "stats": {
+        "total": "総記事数",
+        "published": "公開済み",
+        "totalViews": "総閲覧数",
+        "totalComments": "総コメント数"
+      },
+      "table": {
+        "post": "記事",
+        "author": "著者",
+        "views": "閲覧数",
+        "comments": "コメント",
+        "likes": "いいね",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    },
+    "chatbots": {
+      "title": "チャットボット管理",
+      "subtitle": "すべてのチャットボットとAIアシスタントを管理",
+      "new": "新規チャットボット",
+      "edit": "チャットボット編集",
+      "addNew": "新規チャットボット",
+      "import": "チャットボットをインポート",
+      "listTitle": "チャットボット一覧"
+    },
+    "notifications": {
+      "title": "通知管理",
+      "subtitle": "すべてのシステム通知を管理",
+      "new": "新規通知",
+      "edit": "通知編集",
+      "addNew": "通知を送信",
+      "listTitle": "通知一覧"
+    },
+    "analytics": {
+      "title": "分析とレポート",
+      "subtitle": "分析を表示してレポートを生成",
+      "new": "新規レポート",
+      "edit": "レポート編集",
+      "listTitle": "分析ダッシュボード"
+    },
+    "promotions": {
+      "title": "プロモーション管理",
+      "subtitle": "すべてのプロモーションとオファーを管理",
+      "new": "新規プロモーション",
+      "edit": "プロモーション編集",
+      "addNew": "新規プロモーション",
+      "listTitle": "プロモーション一覧"
+    },
+    "cmsPages": {
+      "title": "CMSページ",
+      "subtitle": "すべてのCMSページを管理",
+      "listTitle": "CMSページ"
+    },
+    "media": {
+      "title": "メディアライブラリ",
+      "subtitle": "すべてのメディアファイルを管理",
+      "listTitle": "メディアファイル"
+    },
+    "data": {
+      "title": "データ管理",
+      "subtitle": "データのインポートとエクスポート",
+      "new": "新規インポート",
+      "import": "データをインポート",
+      "export": "データをエクスポート"
+    },
+    "simulators": {
+      "title": "シミュレーター管理",
+      "subtitle": "すべての価格シミュレーターを管理",
+      "new": "新規シミュレーター",
+      "edit": "シミュレーター編集",
+      "addNew": "新規シミュレーター",
+      "listTitle": "シミュレーター一覧"
+    },
+    "cryptoPayments": {
+      "title": "暗号通貨決済",
+      "subtitle": "暗号通貨取引を管理",
+      "new": "新規取引",
+      "edit": "取引編集",
+      "listTitle": "暗号通貨取引"
+    },
+    "logs": {
+      "title": "システムログ",
+      "subtitle": "すべてのシステムログとアクティビティを表示",
+      "activityLogs": "アクティビティログ",
+      "errorLogs": "エラーログ",
+      "viewAll": "すべてのログを表示",
+      "listTitle": "ログ"
+    },
+    "currencies": {
+      "title": "通貨管理",
+      "subtitle": "すべての通貨を管理",
+      "new": "新規通貨",
+      "edit": "通貨編集",
+      "addNew": "新規通貨",
+      "listTitle": "通貨一覧"
+    },
+    "geography": {
+      "title": "地理管理",
+      "subtitle": "国、都市、場所を管理",
+      "listTitle": "地理"
+    },
+    "exchangeRates": {
+      "title": "為替レート",
+      "subtitle": "通貨の為替レートを管理",
+      "listTitle": "為替レート"
+    },
+    "styles": {
+      "title": "スタイル管理",
+      "subtitle": "アプリケーションの外観をカスタマイズ",
+      "listTitle": "スタイル"
+    },
+    "routes": {
+      "title": "ルート管理",
+      "subtitle": "アプリケーションルートを管理",
+      "new": "新規ルート",
+      "edit": "ルート編集",
+      "listTitle": "ルート"
+    },
+    "maids": {
+      "title": "家事代行",
+      "subtitle": "合計 {count} 件の家事代行",
+      "new": "新規家事代行",
+      "edit": "家事代行編集",
+      "addNew": "新規家事代行を追加"
+    },
+    "motorbikes": {
+      "title": "バイク",
+      "subtitle": "合計 {count} 台のバイク",
+      "new": "新規バイク",
+      "edit": "バイク編集",
+      "addNew": "新規バイクを追加"
+    },
+    "rentalCars": {
+      "title": "レンタカー",
+      "subtitle": "合計 {count} 台のレンタカー",
+      "new": "新規レンタカー",
+      "edit": "レンタカー編集",
+      "addNew": "新規レンタカーを追加"
+    },
+    "yachts": {
+      "title": "ヨット",
+      "subtitle": "合計 {count} 隻のヨット",
+      "new": "新規ヨット",
+      "edit": "ヨット編集",
+      "addNew": "新規ヨットを追加"
+    },
+    "properties": {
+      "title": "不動産管理",
+      "subtitle": "{count}件の物件 • {published}件公開済み",
+      "new": "新規物件",
+      "edit": "物件編集",
+      "addNew": "物件を追加",
+      "noProperties": "物件がありません",
+      "addFirstProperty": "最初の物件を追加してください",
+      "stats": {
+        "total": "合計",
+        "draft": "下書き",
+        "published": "公開済み",
+        "sold": "売却済み",
+        "rented": "賃貸済み"
+      },
+      "filters": {
+        "all": "すべて",
+        "draft": "下書き",
+        "published": "公開済み",
+        "sold": "売却済み",
+        "rented": "賃貸済み"
+      },
+      "form": {
+        "title": "タイトル",
+        "description": "説明",
+        "propertyType": "物件タイプ",
+        "listingType": "掲載タイプ",
+        "status": "ステータス",
+        "price": "価格",
+        "area": "面積（m²）",
+        "bedrooms": "寝室",
+        "bathrooms": "浴室",
+        "featured": "おすすめ",
+        "images": "画像"
+      },
+      "table": {
+        "property": "物件",
+        "type": "タイプ",
+        "price": "価格",
+        "location": "場所",
+        "status": "ステータス",
+        "actions": "アクション"
+      }
+    }
+  }
+}

@@ -11,7 +11,7 @@ import {
   Building, Gavel, Stethoscope, Dumbbell, ShoppingBag, Package, Bell,
   MessageSquare, BarChart3, Shield, Wrench, Database, Image, Palette,
   Calculator, CreditCard, Map, Navigation, Bike, CarFront, UserCog, Truck, PackageCheck,
-  Layout
+  Layout, UtensilsCrossed
 } from 'lucide-react';
 
 interface AdminLayoutProps {
@@ -31,51 +31,161 @@ interface NavItem {
 export default function AdminLayout({ children, locale, userName, userRole }: AdminLayoutProps) {
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [settingsOpen, setSettingsOpen] = useState(
-    pathname.includes('/admin/currencies') || 
-    pathname.includes('/admin/geography') ||
-    pathname.includes('/admin/exchange-rates') ||
-    pathname.includes('/admin/styles') ||
-    pathname.includes('/admin/routes')
-  );
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({
+    'Gestion': false,
+    'Professionnels': false,
+    'Nettoyage': false,
+    'Transport': false,
+    'Commerce': false,
+    'Logistique': false,
+    'Marketing': false,
+    'Contenu': false,
+    'Import/Export': false,
+    'Système': false,
+    'Settings': false,
+  });
+
+  const toggleSection = (sectionName: string) => {
+    setOpenSections(prev => ({
+      ...prev,
+      [sectionName]: !prev[sectionName]
+    }));
+  };
 
   const navigation: NavItem[] = [
     { name: 'Dashboard', href: `/${locale}/admin`, icon: LayoutDashboard },
-    { name: 'Users', href: `/${locale}/admin/users`, icon: Users },
-    { name: 'Properties', href: `/${locale}/admin/properties`, icon: Home },
-    { name: 'Services', href: `/${locale}/admin/services`, icon: Briefcase },
-    { name: 'Bookings', href: `/${locale}/admin/bookings`, icon: Calendar },
-    { name: 'Categories', href: `/${locale}/admin/categories`, icon: FolderTree },
-    { name: 'Partners', href: `/${locale}/admin/partners`, icon: Handshake },
-    { name: 'Doctors', href: `/${locale}/admin/doctors`, icon: Stethoscope },
-    { name: 'Lawyers', href: `/${locale}/admin/lawyers`, icon: Gavel },
-    { name: 'Coaches', href: `/${locale}/admin/coaches`, icon: Dumbbell },
-    { name: 'Maids', href: `/${locale}/admin/maids`, icon: UserCog },
-    { name: 'Home Cleaning', href: `/${locale}/admin/home-cleaning`, icon: Home },
-    { name: 'Furniture Cleaning', href: `/${locale}/admin/furniture-cleaning`, icon: Home },
-    { name: 'Laundry', href: `/${locale}/admin/laundry`, icon: Home },
-    { name: 'Rental Cars', href: `/${locale}/admin/rental-cars`, icon: CarFront },
-    { name: 'Motorbikes', href: `/${locale}/admin/motorbikes`, icon: Bike },
-    { name: 'Yachts', href: `/${locale}/admin/yachts`, icon: Ship },
-    { name: 'Moving Services', href: `/${locale}/admin/moving`, icon: Truck },
-    { name: 'Parcel Delivery', href: `/${locale}/admin/parcel`, icon: PackageCheck },
-    { name: 'Events', href: `/${locale}/admin/events`, icon: Calendar },
-    { name: 'Transfers', href: `/${locale}/admin/transfers`, icon: Car },
-    { name: 'Activities', href: `/${locale}/admin/activities`, icon: Plane },
-    { name: 'Suppliers', href: `/${locale}/admin/suppliers`, icon: Package },
-    { name: 'Blog', href: `/${locale}/admin/blog`, icon: FileText },
-    { name: 'Chatbots', href: `/${locale}/admin/chatbots`, icon: MessageSquare },
-    { name: 'Notifications', href: `/${locale}/admin/notifications`, icon: Bell },
-    { name: 'Analytics', href: `/${locale}/admin/analytics`, icon: BarChart3 },
-    { name: 'Promotions', href: `/${locale}/admin/promotions`, icon: ShoppingBag },
-    { name: 'CMS (Header/Footer)', href: `/${locale}/admin/cms`, icon: Layout },
-    { name: 'CMS Pages', href: `/${locale}/admin/cms-pages`, icon: FileText },
-    { name: 'Media Library', href: `/${locale}/admin/media`, icon: Image },
-    { name: 'Database', href: `/${locale}/admin/data`, icon: Database },
-    { name: 'Simulators', href: `/${locale}/admin/simulators`, icon: Calculator },
-    { name: 'Crypto Payments', href: `/${locale}/admin/crypto-payments`, icon: CreditCard },
-    { name: 'Tools', href: `/${locale}/tools`, icon: Wrench },
-    { name: 'Logs', href: `/${locale}/admin/logs`, icon: FileWarning },
+    
+    // 🏢 Gestion Principale
+    { 
+      name: 'Gestion', 
+      href: '#', 
+      icon: Settings,
+      children: [
+        { name: 'Users', href: `/${locale}/admin/users`, icon: Users },
+        { name: 'Properties', href: `/${locale}/admin/properties`, icon: Home },
+        { name: 'Services', href: `/${locale}/admin/services`, icon: Briefcase },
+        { name: 'Bookings', href: `/${locale}/admin/bookings`, icon: Calendar },
+        { name: 'Categories', href: `/${locale}/admin/categories`, icon: FolderTree },
+        { name: 'Partners', href: `/${locale}/admin/partners`, icon: Handshake },
+      ]
+    },
+    
+    // 👨‍⚕️ Professionnels
+    { 
+      name: 'Professionnels', 
+      href: '#', 
+      icon: Stethoscope,
+      children: [
+        { name: 'Doctors', href: `/${locale}/admin/doctors`, icon: Stethoscope },
+        { name: 'Lawyers', href: `/${locale}/admin/lawyers`, icon: Gavel },
+        { name: 'Coaches', href: `/${locale}/admin/coaches`, icon: Dumbbell },
+        { name: 'Maids', href: `/${locale}/admin/maids`, icon: UserCog },
+      ]
+    },
+    
+    // 🧹 Services Nettoyage
+    { 
+      name: 'Nettoyage', 
+      href: '#', 
+      icon: Home,
+      children: [
+        { name: 'Home Cleaning', href: `/${locale}/admin/home-cleaning`, icon: Home },
+        { name: 'Furniture Cleaning', href: `/${locale}/admin/furniture-cleaning`, icon: Home },
+        { name: 'Laundry', href: `/${locale}/admin/laundry`, icon: Home },
+      ]
+    },
+    
+    // 🚗 Véhicules & Transport
+    { 
+      name: 'Transport', 
+      href: '#', 
+      icon: Car,
+      children: [
+        { name: 'Rental Cars', href: `/${locale}/admin/rental-cars`, icon: CarFront },
+        { name: 'Motorbikes', href: `/${locale}/admin/motorbikes`, icon: Bike },
+        { name: 'Yachts', href: `/${locale}/admin/yachts`, icon: Ship },
+        { name: 'Transfers', href: `/${locale}/admin/transfers`, icon: Car },
+      ]
+    },
+    
+    // 🛒 Commerce & Événements
+    { 
+      name: 'Commerce', 
+      href: '#', 
+      icon: ShoppingBag,
+      children: [
+        { name: 'Food & Grocery', href: `/${locale}/admin/food/products`, icon: UtensilsCrossed },
+        { name: 'Suppliers', href: `/${locale}/admin/suppliers`, icon: Package },
+        { name: 'Activities', href: `/${locale}/admin/activities`, icon: Plane },
+        { name: 'Events', href: `/${locale}/admin/events`, icon: Calendar },
+      ]
+    },
+    
+    // 📦 Déménagement & Livraison
+    { 
+      name: 'Logistique', 
+      href: '#', 
+      icon: Truck,
+      children: [
+        { name: 'Moving Services', href: `/${locale}/admin/moving`, icon: Truck },
+        { name: 'Parcel Delivery', href: `/${locale}/admin/parcel`, icon: PackageCheck },
+      ]
+    },
+    
+    // 📢 Marketing & Communication
+    { 
+      name: 'Marketing', 
+      href: '#', 
+      icon: TrendingUp,
+      children: [
+        { name: 'Blog', href: `/${locale}/admin/blog`, icon: FileText },
+        { name: 'Promotions', href: `/${locale}/admin/promotions`, icon: ShoppingBag },
+        { name: 'Chatbots', href: `/${locale}/admin/chatbots`, icon: MessageSquare },
+        { name: 'Notifications', href: `/${locale}/admin/notifications`, icon: Bell },
+      ]
+    },
+    
+    // 🎨 Contenu & Médias
+    { 
+      name: 'Contenu', 
+      href: '#', 
+      icon: Layout,
+      children: [
+        { name: 'CMS Header/Footer', href: `/${locale}/admin/cms`, icon: Layout },
+        { name: 'CMS Pages', href: `/${locale}/admin/cms-pages`, icon: FileText },
+        { name: 'Media Library', href: `/${locale}/admin/media`, icon: Image },
+      ]
+    },
+    
+    // 📊 Import/Export
+    { 
+      name: 'Import/Export', 
+      href: '#', 
+      icon: Database,
+      children: [
+        { name: 'Import Bulk Data', href: `/${locale}/admin/import`, icon: Database },
+        { name: 'Import Properties', href: `/${locale}/admin/properties/import`, icon: Home },
+        { name: 'Import Rentals', href: `/${locale}/admin/import/rentals`, icon: Car },
+        { name: 'Import Events', href: `/${locale}/admin/import/events`, icon: Calendar },
+        { name: 'Import Providers', href: `/${locale}/admin/import/providers`, icon: Users },
+      ]
+    },
+    
+    // 🔧 Système
+    { 
+      name: 'Système', 
+      href: '#', 
+      icon: Wrench,
+      children: [
+        { name: 'Analytics', href: `/${locale}/admin/analytics`, icon: BarChart3 },
+        { name: 'Database', href: `/${locale}/admin/data`, icon: Database },
+        { name: 'Logs', href: `/${locale}/admin/logs`, icon: FileWarning },
+        { name: 'Simulators', href: `/${locale}/admin/simulators`, icon: Calculator },
+        { name: 'Crypto Payments', href: `/${locale}/admin/crypto-payments`, icon: CreditCard },
+      ]
+    },
+    
+    // ⚙️ Settings
     { 
       name: 'Settings', 
       href: '#', 
@@ -131,12 +241,13 @@ export default function AdminLayout({ children, locale, userName, userRole }: Ad
               const active = isActive(item.href);
               
               if (item.children) {
+                const isOpen = openSections[item.name];
                 return (
                   <li key={item.name}>
                     <button
-                      onClick={() => setSettingsOpen(!settingsOpen)}
-                      className={`w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-lg transition-all ${
-                        settingsOpen
+                      onClick={() => toggleSection(item.name)}
+                      className={`w-full flex items-center justify-between px-4 py-2.5 text-sm font-medium rounded-lg transition-all ${
+                        isOpen
                           ? 'bg-slate-800 text-white'
                           : 'text-slate-300 hover:bg-slate-800 hover:text-white'
                       }`}
@@ -145,14 +256,14 @@ export default function AdminLayout({ children, locale, userName, userRole }: Ad
                         <Icon className="w-5 h-5" />
                         <span>{item.name}</span>
                       </div>
-                      {settingsOpen ? (
+                      {isOpen ? (
                         <ChevronDown className="w-4 h-4" />
                       ) : (
                         <ChevronRight className="w-4 h-4" />
                       )}
                     </button>
-                    {settingsOpen && (
-                      <ul className="mt-2 ml-4 space-y-1">
+                    {isOpen && (
+                      <ul className="mt-1 ml-4 space-y-0.5">
                         {item.children.map((child) => {
                           const ChildIcon = child.icon;
                           const childActive = isActive(child.href);
@@ -167,7 +278,7 @@ export default function AdminLayout({ children, locale, userName, userRole }: Ad
                                 }`}
                               >
                                 <ChildIcon className="w-4 h-4" />
-                                <span>{child.name}</span>
+                                <span className="text-xs">{child.name}</span>
                               </Link>
                             </li>
                           );

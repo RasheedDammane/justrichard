@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "john-smith-corporate-lawyer",
+    "name": "John Smith",
+    "title": "Senior Partner",
+    "specialization": "Corporate Law",
+    "experience": 20,
+    "hourlyRate": 1500,
+    "consultationFee": 500,
+    "currency": "AED",
+    "bio": "Experienced corporate lawyer specializing in M&A",
+    "education": [
+      {"degree": "LLB", "university": "Oxford University"},
+      {"degree": "LLM", "university": "Harvard Law School"}
+    ],
+    "practiceAreas": ["Mergers & Acquisitions", "Corporate Governance", "Contract Law"],
+    "languages": ["English", "French"],
+    "email": "john.smith@lawfirm.com",
+    "phone": "+971501111111",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isAvailable": true,
+    "isFeatured": true
+  },
+  {
+    "slug": "fatima-ali-family-lawyer",
+    "name": "Fatima Ali",
+    "title": "Attorney",
+    "specialization": "Family Law",
+    "experience": 10,
+    "hourlyRate": 800,
+    "currency": "AED",
+    "practiceAreas": ["Divorce", "Child Custody"],
+    "languages": ["English", "Arabic"],
+    "cityId": "dubai",
+    "countryId": "uae",
+    "isActive": true,
+    "isAvailable": true
+  }
+]

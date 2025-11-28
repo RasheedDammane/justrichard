@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
-import { Role } from '@prisma/client';
 
 // Using exchangerate-api.com (free tier: 1500 requests/month)
 const EXCHANGE_RATE_API_URL = 'https://api.exchangerate-api.com/v4/latest/';
@@ -11,7 +10,7 @@ export async function POST(request: Request) {
   try {
     const session = await getServerSession(authOptions);
     
-    if (!session || session.user.role !== Role.ADMIN) {
+    if (!session || (session.user.role !== 'ADMIN' && session.user.role !== 'MANAGER')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 

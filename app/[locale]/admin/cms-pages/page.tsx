@@ -1,17 +1,12 @@
-import { getServerSession } from 'next-auth';
-import { redirect } from 'next/navigation';
-import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
-import { Role } from '@prisma/client';
 import { FileText, Globe, CheckCircle, XCircle } from 'lucide-react';
 import Link from 'next/link';
 
-export default async function AdminCMSPagesPage({ params: { locale } }: { params: { locale: string } }) {
-  const session = await getServerSession(authOptions);
+export default async function AdminCMSPagesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  
+  // La protection est gérée par le layout admin
 
-  if (!session || (session.user.role !== Role.ADMIN && session.user.role !== Role.MANAGER)) {
-    redirect(`/${locale}/auth/login`);
-  }
 
   const pages = await prisma.cMSPage.findMany({
     include: {

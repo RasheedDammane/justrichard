@@ -17,9 +17,16 @@ export async function GET(request: Request) {
 
     const cities = await prisma.city.findMany({
       where: whereClause,
-      include: {
-        region: true,
-        district: true,
+      select: {
+        id: true,
+        name: true,
+        slug: true,
+        countryId: true,
+        regionId: true,
+        districtId: true,
+        latitude: true,
+        longitude: true,
+        isActive: true,
       },
       orderBy: { name: 'asc' },
     });

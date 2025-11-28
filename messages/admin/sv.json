@@ -1,0 +1,519 @@
+{
+  "admin": {
+    "common": {
+      "add": "Lägg till",
+      "edit": "Redigera",
+      "delete": "Ta bort",
+      "save": "Spara",
+      "saving": "Sparar...",
+      "cancel": "Avbryt",
+      "select": "Välj",
+      "search": "Sök",
+      "filter": "Filtrera",
+      "export": "Exportera",
+      "import": "Importera",
+      "refresh": "Uppdatera",
+      "total": "Totalt",
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "featured": "Utvald",
+      "available": "Tillgänglig",
+      "unavailable": "Ej tillgänglig",
+      "status": "Status",
+      "actions": "Åtgärder",
+      "inTotal": "{count} totalt",
+      "loading": "Laddar...",
+      "noData": "Ingen data tillgänglig",
+      "confirm": "Bekräfta",
+      "confirmDelete": "Är du säker på att du vill ta bort detta objekt?",
+      "success": "Framgång",
+      "error": "Fel",
+      "required": "Obligatorisk",
+      "view": "Visa"
+    },
+    "navigation": {
+      "dashboard": "Instrumentpanel",
+      "users": "Användare",
+      "properties": "Fastigheter",
+      "services": "Tjänster",
+      "bookings": "Bokningar",
+      "categories": "Kategorier",
+      "partners": "Partners",
+      "doctors": "Läkare",
+      "lawyers": "Advokater",
+      "coaches": "Tränare",
+      "maids": "Hemhjälp",
+      "motorbikes": "Motorcyklar",
+      "rentalCars": "Hyrbilar",
+      "yachts": "Yachter",
+      "activities": "Aktiviteter",
+      "suppliers": "Leverantörer",
+      "settings": "Inställningar",
+      "logout": "Logga ut"
+    },
+    "dashboard": {
+      "title": "Instrumentpanel",
+      "welcome": "Välkommen, {name}",
+      "overview": "Översikt",
+      "recentActivity": "Senaste aktivitet",
+      "quickStats": "Snabbstatistik",
+      "totalUsers": "Totalt antal användare",
+      "totalBookings": "Totalt antal bokningar",
+      "totalRevenue": "Total intäkt",
+      "activeProviders": "Aktiva leverantörer"
+    },
+    "users": {
+      "title": "Användarhantering",
+      "subtitle": "Hantera alla plattformsanvändare",
+      "new": "Ny användare",
+      "edit": "Redigera användare",
+      "addNew": "Lägg till ny användare",
+      "listTitle": "Användarlista",
+      "deactivate": "Inaktivera",
+      "stats": {
+        "totalUsers": "Totalt antal användare",
+        "customers": "Kunder",
+        "providers": "Leverantörer",
+        "admins": "Administratörer"
+      },
+      "table": {
+        "user": "Användare",
+        "contact": "Kontakt",
+        "email": "E-post",
+        "role": "Roll",
+        "bookings": "Bokningar",
+        "reviews": "Recensioner",
+        "registration": "Registrering",
+        "status": "Status",
+        "createdAt": "Skapad",
+        "actions": "Åtgärder"
+      }
+    },
+    "services": {
+      "title": "Tjänstehantering",
+      "subtitle": "Hantera alla plattformstjänster",
+      "new": "Ny tjänst",
+      "edit": "Redigera tjänst",
+      "addNew": "Ny tjänst",
+      "listTitle": "Tjänstelista",
+      "stats": {
+        "total": "Totalt antal tjänster",
+        "active": "Aktiva tjänster",
+        "totalBookings": "Totalt antal bokningar"
+      },
+      "table": {
+        "service": "Tjänst",
+        "category": "Kategori",
+        "bookings": "Bokningar",
+        "reviews": "Recensioner",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "bookings": {
+      "title": "Bokningshantering",
+      "subtitle": "Hantera alla plattformsbokningar",
+      "new": "Ny bokning",
+      "edit": "Redigera bokning",
+      "addNew": "Lägg till ny bokning",
+      "listTitle": "Bokningslista",
+      "stats": {
+        "total": "Totalt",
+        "pending": "Väntande",
+        "confirmed": "Bekräftad",
+        "completed": "Slutförd",
+        "cancelled": "Avbruten",
+        "revenue": "Intäkt"
+      },
+      "status": {
+        "pending": "Väntande",
+        "confirmed": "Bekräftad",
+        "completed": "Slutförd",
+        "cancelled": "Avbruten"
+      },
+      "table": {
+        "client": "Kund",
+        "service": "Tjänst",
+        "dates": "Datum",
+        "type": "Typ",
+        "startDate": "Startdatum",
+        "endDate": "Slutdatum",
+        "status": "Status",
+        "total": "Totalt",
+        "actions": "Åtgärder"
+      }
+    },
+    "categories": {
+      "title": "Kategorihantering",
+      "subtitle": "Hantera alla tjänstekategorier",
+      "new": "Ny kategori",
+      "edit": "Redigera kategori",
+      "addNew": "Ny kategori",
+      "listTitle": "Kategorilista",
+      "stats": {
+        "total": "Totalt antal kategorier",
+        "active": "Aktiva kategorier",
+        "totalServices": "Totalt antal tjänster"
+      },
+      "table": {
+        "category": "Kategori",
+        "services": "Tjänster",
+        "order": "Ordning",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "partners": {
+      "title": "Partnerhantering",
+      "subtitle": "Hantera alla partners och partnerskap",
+      "new": "Ny partner",
+      "edit": "Redigera partner",
+      "addNew": "Ny partner",
+      "listTitle": "Partnerlista",
+      "stats": {
+        "total": "Totalt antal partners",
+        "active": "Aktiva partners",
+        "pending": "Väntande",
+        "revenue": "Total intäkt"
+      },
+      "table": {
+        "partner": "Partner",
+        "services": "Tjänster",
+        "revenue": "Intäkt",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "doctors": {
+      "title": "Läkarhantering",
+      "subtitle": "Hantera alla läkare och vårdpersonal",
+      "new": "Ny läkare",
+      "edit": "Redigera läkare",
+      "addNew": "Ny läkare",
+      "listTitle": "Läkarlista",
+      "stats": {
+        "total": "Totalt antal läkare",
+        "active": "Aktiva läkare",
+        "totalBookings": "Totalt antal bokningar",
+        "avgRating": "Genomsnittligt betyg"
+      },
+      "table": {
+        "doctor": "Läkare",
+        "location": "Plats",
+        "bookings": "Bokningar",
+        "reviews": "Recensioner",
+        "rating": "Betyg",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "lawyers": {
+      "title": "Advokathantering",
+      "subtitle": "Hantera alla advokater och juridiska yrkesverksamma",
+      "new": "Ny advokat",
+      "edit": "Redigera advokat",
+      "addNew": "Ny advokat",
+      "listTitle": "Advokatlista",
+      "stats": {
+        "total": "Totalt antal advokater",
+        "active": "Aktiva advokater",
+        "totalBookings": "Totalt antal bokningar",
+        "avgRating": "Genomsnittligt betyg"
+      },
+      "table": {
+        "lawyer": "Advokat",
+        "location": "Plats",
+        "bookings": "Bokningar",
+        "reviews": "Recensioner",
+        "rating": "Betyg",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "coaches": {
+      "title": "Tränarhantering",
+      "subtitle": "Hantera alla tränare och fitnessproffs",
+      "new": "Ny tränare",
+      "edit": "Redigera tränare",
+      "addNew": "Ny tränare",
+      "listTitle": "Tränarlista",
+      "stats": {
+        "total": "Totalt antal tränare",
+        "active": "Aktiva tränare",
+        "totalBookings": "Totalt antal bokningar",
+        "avgRating": "Genomsnittligt betyg"
+      },
+      "table": {
+        "coach": "Tränare",
+        "location": "Plats",
+        "bookings": "Bokningar",
+        "reviews": "Recensioner",
+        "rating": "Betyg",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "activities": {
+      "title": "Aktivitetshantering",
+      "subtitle": "Hantera alla aktiviteter och upplevelser",
+      "new": "Ny aktivitet",
+      "edit": "Redigera aktivitet",
+      "addNew": "Ny aktivitet",
+      "listTitle": "Aktivitetslista",
+      "stats": {
+        "total": "Totalt antal aktiviteter",
+        "active": "Aktiva aktiviteter",
+        "totalBookings": "Totalt antal bokningar",
+        "avgRating": "Genomsnittligt betyg"
+      },
+      "table": {
+        "activity": "Aktivitet",
+        "location": "Plats",
+        "bookings": "Bokningar",
+        "reviews": "Recensioner",
+        "rating": "Betyg",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "suppliers": {
+      "title": "Leverantörshantering",
+      "subtitle": "Hantera alla leverantörer och säljare",
+      "new": "Ny leverantör",
+      "edit": "Redigera leverantör",
+      "addNew": "Ny leverantör",
+      "listTitle": "Leverantörslista",
+      "stats": {
+        "total": "Totalt antal leverantörer",
+        "active": "Aktiva leverantörer",
+        "pending": "Väntande",
+        "revenue": "Total intäkt"
+      },
+      "table": {
+        "supplier": "Leverantör",
+        "services": "Tjänster",
+        "revenue": "Intäkt",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "transfers": {
+      "title": "Transferhantering",
+      "subtitle": "Hantera alla transferer och transporttjänster",
+      "new": "Ny transfer",
+      "edit": "Redigera transfer",
+      "addNew": "Ny transfer",
+      "listTitle": "Transferlista",
+      "stats": {
+        "total": "Totalt antal transferer",
+        "active": "Aktiva transferer",
+        "pending": "Väntande",
+        "revenue": "Total intäkt"
+      },
+      "table": {
+        "transfer": "Transfer",
+        "services": "Tjänster",
+        "revenue": "Intäkt",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "blog": {
+      "title": "Blogghantering",
+      "subtitle": "Hantera alla blogginlägg och innehåll",
+      "new": "Nytt inlägg",
+      "edit": "Redigera inlägg",
+      "addNew": "Nytt inlägg",
+      "listTitle": "Blogginlägg",
+      "stats": {
+        "total": "Totalt antal inlägg",
+        "published": "Publicerade",
+        "totalViews": "Totalt antal visningar",
+        "totalComments": "Totalt antal kommentarer"
+      },
+      "table": {
+        "post": "Inlägg",
+        "author": "Författare",
+        "views": "Visningar",
+        "comments": "Kommentarer",
+        "likes": "Gillningar",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    },
+    "chatbots": {
+      "title": "Chatbothantering",
+      "subtitle": "Hantera alla chatbotar och AI-assistenter",
+      "new": "Ny chatbot",
+      "edit": "Redigera chatbot",
+      "addNew": "Ny chatbot",
+      "import": "Importera chatbot",
+      "listTitle": "Chatbotlista"
+    },
+    "notifications": {
+      "title": "Aviseringshantering",
+      "subtitle": "Hantera alla systemaviseringar",
+      "new": "Ny avisering",
+      "edit": "Redigera avisering",
+      "addNew": "Skicka avisering",
+      "listTitle": "Aviseringslista"
+    },
+    "analytics": {
+      "title": "Analyser och rapporter",
+      "subtitle": "Visa analyser och generera rapporter",
+      "new": "Ny rapport",
+      "edit": "Redigera rapport",
+      "listTitle": "Analysinstrumentpanel"
+    },
+    "promotions": {
+      "title": "Kampanjhantering",
+      "subtitle": "Hantera alla kampanjer och erbjudanden",
+      "new": "Ny kampanj",
+      "edit": "Redigera kampanj",
+      "addNew": "Ny kampanj",
+      "listTitle": "Kampanjlista"
+    },
+    "cmsPages": {
+      "title": "CMS-sidor",
+      "subtitle": "Hantera alla CMS-sidor",
+      "listTitle": "CMS-sidor"
+    },
+    "media": {
+      "title": "Mediabibliotek",
+      "subtitle": "Hantera alla mediafiler",
+      "listTitle": "Mediafiler"
+    },
+    "data": {
+      "title": "Datahantering",
+      "subtitle": "Importera och exportera data",
+      "new": "Ny import",
+      "import": "Importera data",
+      "export": "Exportera data"
+    },
+    "simulators": {
+      "title": "Simulatorhantering",
+      "subtitle": "Hantera alla prissimulatorer",
+      "new": "Ny simulator",
+      "edit": "Redigera simulator",
+      "addNew": "Ny simulator",
+      "listTitle": "Simulatorlista"
+    },
+    "cryptoPayments": {
+      "title": "Kryptobetalningar",
+      "subtitle": "Hantera kryptovalutatransaktioner",
+      "new": "Ny transaktion",
+      "edit": "Redigera transaktion",
+      "listTitle": "Kryptotransaktioner"
+    },
+    "logs": {
+      "title": "Systemloggar",
+      "subtitle": "Visa alla systemloggar och aktiviteter",
+      "activityLogs": "Aktivitetsloggar",
+      "errorLogs": "Felloggar",
+      "viewAll": "Visa alla loggar",
+      "listTitle": "Loggar"
+    },
+    "currencies": {
+      "title": "Valutahantering",
+      "subtitle": "Hantera alla valutor",
+      "new": "Ny valuta",
+      "edit": "Redigera valuta",
+      "addNew": "Ny valuta",
+      "listTitle": "Valutalista"
+    },
+    "geography": {
+      "title": "Geografihantering",
+      "subtitle": "Hantera länder, städer och platser",
+      "listTitle": "Geografi"
+    },
+    "exchangeRates": {
+      "title": "Växelkurser",
+      "subtitle": "Hantera valutaväxelkurser",
+      "listTitle": "Växelkurser"
+    },
+    "styles": {
+      "title": "Stilhantering",
+      "subtitle": "Anpassa applikationens utseende",
+      "listTitle": "Stilar"
+    },
+    "routes": {
+      "title": "Rutthantering",
+      "subtitle": "Hantera applikationsrutter",
+      "new": "Ny rutt",
+      "edit": "Redigera rutt",
+      "listTitle": "Rutter"
+    },
+    "maids": {
+      "title": "Hemhjälp",
+      "subtitle": "{count} hemhjälp totalt",
+      "new": "Ny hemhjälp",
+      "edit": "Redigera hemhjälp",
+      "addNew": "Lägg till ny hemhjälp"
+    },
+    "motorbikes": {
+      "title": "Motorcyklar",
+      "subtitle": "{count} motorcyklar totalt",
+      "new": "Ny motorcykel",
+      "edit": "Redigera motorcykel",
+      "addNew": "Lägg till ny motorcykel"
+    },
+    "rentalCars": {
+      "title": "Hyrbilar",
+      "subtitle": "{count} hyrbilar totalt",
+      "new": "Ny bil",
+      "edit": "Redigera bil",
+      "addNew": "Lägg till ny hyrbil"
+    },
+    "yachts": {
+      "title": "Yachter",
+      "subtitle": "{count} yachter totalt",
+      "new": "Ny yacht",
+      "edit": "Redigera yacht",
+      "addNew": "Lägg till ny yacht"
+    },
+    "properties": {
+      "title": "Fastighetshantering",
+      "subtitle": "{count} fastighet(er) • {published} publicerade",
+      "new": "Ny fastighet",
+      "edit": "Redigera fastighet",
+      "addNew": "Lägg till fastighet",
+      "noProperties": "Inga fastigheter",
+      "addFirstProperty": "Börja med att lägga till din första fastighet",
+      "stats": {
+        "total": "Totalt",
+        "draft": "Utkast",
+        "published": "Publicerade",
+        "sold": "Sålda",
+        "rented": "Uthyrda"
+      },
+      "filters": {
+        "all": "Alla",
+        "draft": "Utkast",
+        "published": "Publicerade",
+        "sold": "Sålda",
+        "rented": "Uthyrda"
+      },
+      "form": {
+        "title": "Titel",
+        "description": "Beskrivning",
+        "propertyType": "Fastighetstyp",
+        "listingType": "Annonstyp",
+        "status": "Status",
+        "price": "Pris",
+        "area": "Yta (m²)",
+        "bedrooms": "Sovrum",
+        "bathrooms": "Badrum",
+        "featured": "Utvald",
+        "images": "Bilder"
+      },
+      "table": {
+        "property": "Fastighet",
+        "type": "Typ",
+        "price": "Pris",
+        "location": "Plats",
+        "status": "Status",
+        "actions": "Åtgärder"
+      }
+    }
+  }
+}

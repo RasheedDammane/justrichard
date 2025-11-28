@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Burj Khalifa",
+    "slug": "burj-khalifa",
+    "description": "World's tallest building",
+    "developer": "Emaar Properties",
+    "location": "Downtown Dubai",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "address": "1 Sheikh Mohammed bin Rashid Blvd, Downtown Dubai",
+    "latitude": 25.1972,
+    "longitude": 55.2744,
+    "yearCompleted": 2010,
+    "floors": 163,
+    "height": 828,
+    "units": 900,
+    "buildingType": "RESIDENTIAL_COMMERCIAL",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Spa",
+      "Concierge",
+      "Valet Parking",
+      "Security 24/7"
+    ],
+    "images": ["/images/buildings/burj-khalifa.jpg"],
+    "isIconic": true,
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "name": "Princess Tower",
+    "slug": "princess-tower",
+    "description": "One of the world's tallest residential buildings",
+    "developer": "Tameer",
+    "location": "Dubai Marina",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "yearCompleted": 2012,
+    "floors": 101,
+    "height": 414,
+    "units": 763,
+    "buildingType": "RESIDENTIAL",
+    "amenities": [
+      "Pool",
+      "Gym",
+      "Sauna",
+      "Play Area",
+      "Parking"
+    ],
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "name": "Address Downtown",
+    "slug": "address-downtown",
+    "description": "Luxury hotel and residences",
+    "developer": "Emaar Properties",
+    "location": "Downtown Dubai",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "yearCompleted": 2008,
+    "floors": 63,
+    "buildingType": "HOTEL_RESIDENTIAL",
+    "amenities": [
+      "5-Star Hotel Services",
+      "Spa",
+      "Multiple Restaurants",
+      "Pool",
+      "Gym"
+    ],
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "name": "JBR - Jumeirah Beach Residence",
+    "slug": "jbr-jumeirah-beach-residence",
+    "description": "Beachfront residential community",
+    "developer": "Dubai Properties",
+    "location": "Jumeirah Beach Residence",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "yearCompleted": 2008,
+    "units": 6000,
+    "buildingType": "RESIDENTIAL_COMPLEX",
+    "amenities": [
+      "Beach Access",
+      "The Walk",
+      "Restaurants",
+      "Retail Outlets",
+      "Gym",
+      "Pool"
+    ],
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "name": "Emirates Towers",
+    "slug": "emirates-towers",
+    "description": "Iconic twin towers",
+    "location": "Sheikh Zayed Road",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "yearCompleted": 2000,
+    "floors": 54,
+    "buildingType": "COMMERCIAL_HOTEL",
+    "amenities": [
+      "Business Center",
+      "Hotel",
+      "Restaurants",
+      "Shopping"
+    ],
+    "isIconic": true,
+    "isActive": true,
+    "isFeatured": true
+  },
+  {
+    "name": "Marina 101",
+    "slug": "marina-101",
+    "description": "Supertall skyscraper in Dubai Marina",
+    "location": "Dubai Marina",
+    "cityId": "dubai",
+    "countryId": "uae",
+    "floors": 101,
+    "height": 425,
+    "buildingType": "RESIDENTIAL",
+    "amenities": [
+      "Pool",
+      "Gym",
+      "Spa",
+      "Restaurants"
+    ],
+    "isActive": true
+  }
+]

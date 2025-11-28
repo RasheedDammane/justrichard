@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { prisma } from '@/lib/prisma';
 import Hero from '@/components/Hero';
 import ProcessSteps from '@/components/ProcessSteps';
+import DoctorListClient from './DoctorListClient';
 
 interface ServicePageProps {
   params: {
@@ -17,6 +18,24 @@ export const metadata: Metadata = {
 
 export default async function medicalPage({ params }: ServicePageProps) {
   const { locale } = params;
+
+  // Fetch doctors from database
+  let doctors: any[] = [];
+  
+  try {
+    doctors = await prisma.doctor.findMany({
+      where: {
+        isActive: true,
+      },
+      orderBy: [
+        { isPremium: 'desc' },
+        { rating: 'desc' },
+        { firstName: 'asc' },
+      ],
+    });
+  } catch (error) {
+    console.error('Error fetching doctors:', error);
+  }
 
   // Process steps
   const processSteps = [
@@ -55,8 +74,8 @@ export default async function medicalPage({ params }: ServicePageProps) {
         title="Doctors"
         subtitle="Qualified medical professionals for consultations and treatments"
         description="Connect with verified doctors who are rated and reviewed by customers."
-        ctaText="Browse Professionals"
-        ctaLink={`/${locale}/api/doctors`}
+        ctaText="Browse Doctors"
+        ctaLink="#doctors"
         secondaryCtaText="How It Works"
         secondaryCtaLink="#how-it-works"
         breadcrumbs={[
@@ -83,12 +102,12 @@ export default async function medicalPage({ params }: ServicePageProps) {
               <p className="text-gray-600 mb-4">
                 Professional general consultation services by verified experts.
               </p>
-              <Link
-                href={`/${locale}/api/doctors`}
+              <a
+                href="#doctors"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
-                Find Professionals →
-              </Link>
+                Find Doctors →
+              </a>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
@@ -98,12 +117,12 @@ export default async function medicalPage({ params }: ServicePageProps) {
               <p className="text-gray-600 mb-4">
                 Professional specialist consultation services by verified experts.
               </p>
-              <Link
-                href={`/${locale}/api/doctors`}
+              <a
+                href="#doctors"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
-                Find Professionals →
-              </Link>
+                Find Doctors →
+              </a>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
@@ -113,12 +132,12 @@ export default async function medicalPage({ params }: ServicePageProps) {
               <p className="text-gray-600 mb-4">
                 Professional home visits services by verified experts.
               </p>
-              <Link
-                href={`/${locale}/api/doctors`}
+              <a
+                href="#doctors"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
-                Find Professionals →
-              </Link>
+                Find Doctors →
+              </a>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
@@ -128,12 +147,12 @@ export default async function medicalPage({ params }: ServicePageProps) {
               <p className="text-gray-600 mb-4">
                 Professional online consultation services by verified experts.
               </p>
-              <Link
-                href={`/${locale}/api/doctors`}
+              <a
+                href="#doctors"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
-                Find Professionals →
-              </Link>
+                Find Doctors →
+              </a>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
@@ -143,14 +162,30 @@ export default async function medicalPage({ params }: ServicePageProps) {
               <p className="text-gray-600 mb-4">
                 Professional health checkups services by verified experts.
               </p>
-              <Link
-                href={`/${locale}/api/doctors`}
+              <a
+                href="#doctors"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
-                Find Professionals →
-              </Link>
+                Find Doctors →
+              </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Featured Doctors */}
+      <section id="doctors" className="py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Find Your Doctor
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Browse our verified doctors and find the expert that matches your needs
+            </p>
+          </div>
+
+          <DoctorListClient doctors={doctors} locale={locale} />
         </div>
       </section>
 
@@ -223,12 +258,12 @@ export default async function medicalPage({ params }: ServicePageProps) {
           <p className="text-xl mb-8 text-blue-100">
             Join thousands of satisfied customers who trust CommunityHub
           </p>
-          <Link
-            href={`/${locale}/api/doctors`}
+          <a
+            href="#doctors"
             className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-lg shadow-lg"
           >
-            Browse All Professionals
-          </Link>
+            Browse All Doctors
+          </a>
         </div>
       </section>
     </div>

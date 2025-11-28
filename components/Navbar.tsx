@@ -76,6 +76,9 @@ export default function Navbar({ session }: { session: any }) {
                 <Link href={`/${locale}/services/medical`} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   👨‍⚕️ Medical
                 </Link>
+                <Link href={`/${locale}/food`} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  🍽️ Food & Grocery
+                </Link>
               </div>
             </div>
             
